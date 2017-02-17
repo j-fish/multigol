@@ -1,4 +1,4 @@
 # multigol
-nodejs javascript multi player game of life
-install packages with npm
-adapt lauch
+nodejs javascript multi player game of life<br>
+install packages with npm<br>
+adapt launch
