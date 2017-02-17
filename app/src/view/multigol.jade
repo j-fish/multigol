@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    link(rel='stylesheet', href='css/multigol.css', type='text/css')
+    script(src='/socket.io/socket.io.js')
+    script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+    script(src='http://code.jquery.com/jquery-1.11.1.js')
+    meta(http-equiv="content-type", charset="UTF-8")
+  body
+    canvas(id="gol_canvas_grid", style="position: absolute; top: 0; left: 0; z-index: -1")
+    canvas(id="gol_canvas", style="position: absolute; top: 0; left: 0; z-index: 0")
+      Your browser does not support canvas. Please try again with a different browser.
+    include goldata.jade
+    include cmds.jade
+    #multigol-clients.multigol-sidepane
+    #gol-library.multigol-sidepane
+      each lib, i in library
+        a(href="#", class="gollib-pattern-link", id="pattern_link_id_#{lib.id}", 
+          onfocus="if (this.blur) this.blur()", 
+          onclick="GetGolLibPattern('pattern_id_#{lib.id}', 'pattern_link_id_#{lib.id}')", 
+          onmouseover="DisplayPatternDescrition('#{lib.hashid}#{lib.id}')", 
+          onmouseout="DisplayPatternDescrition('#{lib.hashid}#{lib.id}')") #{lib.name}
+        span(id="pattern_id_#{lib.id}", hidden=true) #{lib.code}
+        br
+        div(id="#{lib.hashid}#{lib.id}", class="gol-pattern-description", style="display: none;") #{lib.desc}
+    #multigol-tchat.multigol-sidepane
+      textarea#multigol-tchat-textarea(rows="5")
+      #multigol-tchat-conatiner
+    include enterdialog.jade
+
+script(src='js/multigol.js')
+script(src='js/utils/multigol.hashtable.js')
+script(src='js/utils/multigol.utils.js')
+script(src='js/utils/multigol.dom.js')
+script(src='js/multigol.draw.js')
+script(src='js/multigol.lib.js')
+script(src='js/utils/multigol.mouse.utils.js')
+script(src='js/multigol.events.js')

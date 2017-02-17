@@ -1,0 +1,13 @@
+each client, i in clients
+	div.multigol-client(id="#{client.nicknamehash}#{client.hexc}")
+		- var img = parseInt(client.cellimg)
+		if img > 0
+			img.multigol-client-icon(id="client-icon-#{client.nicknamehash}" src="#{client.b64img}")
+			span(id="is-client-icon-#{client.nicknamehash}" hidden=true) #{client.cellimg}
+			canvas(id="client-icon-tmp-canvas#{client.nicknamehash}", width="12", height="12", hidden=true)
+		else
+			div.multigol-client-color(style="background-color: #{client.hexc}")
+			span(id="is-client-icon-#{client.nicknamehash}" hidden=true) #{client.cellimg}
+		div.multigol-client-nickname #{client.nickname}
+			br
+			span.multigol-client-cellcount(id="multigol-client-cellcount#{client.nicknamehash}")

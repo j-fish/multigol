@@ -1,0 +1,410 @@
+//  script(type='text/javascript').
+//    var ColorPicker = require('color-picker');
+//  var picker = new ColorPicker;
+//  picker.el.appendTo('body');
+//  picker.on('change', function(color){
+//    $('.rgb').text(color.toString()).css('background', color);
+//    _cellColor = color.toString();
+//  });
+
+
+<script type="text/javascript">
+
+    var tmp = '<a class="gollib-pattern-link" id="pattern_link_id_{{id}}" href="#"' + 
+        'onfocus="if (this.blur) this.blur()" '+  
+        'onclick="GetGolLibPattern(\'pattern_id_{{id}}\', \'pattern_link_id_{{id}}\')" ' +
+        'onmouseover="DisplayPatternDescrition(\'{{hashid}}\')" ' +
+        'onmouseout="DisplayPatternDescrition(\'{{hashid}}\')">{{name}}</a>' +
+        '<span id="pattern_id_{{id}}" hidden>{{code}}</span><br>' +
+        '<div class="gol-pattern-description" id="{{hashid}}" style="display: none;">' +
+        '{{description}}</div>';
+
+    var tagid = 0;
+    
+    for (var i = 0; i < libdata.length; ++i) {
+
+        Console.log('libdata length = ' + libdata.length);
+
+        var args = {
+            name: libdata[i].name,
+            id: tagid.toString(),
+            description: libdata[i].desc,
+            code: libdata[i].code,
+            hashid: libdata[i].name.toString() + tagid.toString()
+        };
+
+        var html = Mustache.render(tmp, args);
+        $('#gol-library').append(html);
+
+        ++tagid;
+    }
+</script>
+
+
+
+app.use(express.static(__dirname + '/src'));
+
+app.get('/', function(req, res) {
+
+    //var template = 'C:\\Users\\thw\\Documents\\WEB\\multigol\\app\\src\\view\\gollib.mustache';
+    // 'C:\\Users\\thw\\Documents\\WEB\\multigol\\app\\src\\view\\toto.mustache'; 
+    var file = 'C:\\Users\\thw\\Documents\\WEB\\multigol\\app\\multigol.html';
+    //var html = '';
+
+    /*fs.readFile(template, function (err, data) {
+        if (err) { throw err; }
+        html = mustache.render(data.toString(), Scanlib()); 
+    });*/
+
+    //res.sendFile(file);
+
+    // pass a local variable to the view
+    var lib = Scanlib();
+    res.render(file, { data: lib }, function(err, html) {
+        res.send(html);
+    });
+
+});
+
+
+
+
+
+var file = 'C:\\Users\\thw\\Documents\\WEB\\multigol\\app\\multigol.html';
+    var lib = Scanlib();
+    res.render(file, { data: 'toto' }, function(err, html) {
+        res.send(html);
+    });
+
+
+
+
+
+
+
+<script type="text/javascript">
+$.get('src/view/gollib.mst', function(template) {
+    var rendered = Mustache.render(template, data);
+    $('#gol-library').html(rendered);
+  });
+</script>
+
+
+
+
+#gol-library
+      each lib, i in library
+        a(href="#", id="pattern_link_id_" + #{lib.id})
+        span(hidden=true, id="pattern_id_" + #{lib.id}, style="display: none") #{lib.code}
+        #gol-pattern-description #{lib.desc}
+
+
+        each lib, i in library
+        a(href="#") #{lib.name}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var liner = require('liner');
+    var source = fs.createReadStream(file);
+    source.pipe(liner);
+    liner.on('readable', function () {
+         var line;
+         while (line = liner.read()) {
+              if (line.indexOf('%pattern-name%') > -1) {
+                pattern = line.replace('%pattern-name%', '');
+                pattern = pattern.replace(' ', '');
+                pattern = pattern.replace('\\n', '');
+              }
+
+              if (line.indexOf('%pattern-description%') > -1) {
+                  description = line.replace('%pattern-description%', '');
+                  description = description.replace(' ', '');
+                  description = description.replace('\\n', '');
+              }
+
+              if (line.indexOf('%pattern-code%') > -1) {
+                  patternCode = line.replace('%pattern-code%', '');
+                  patternCode = patternCode.replace(' ', '');
+                  patternCode = patternCode.replace('\\n', '');
+              }
+
+              if (pattern !== '' && description !== '' && patternCode !== '') {
+                  data.push(
+                    {'name':pattern, 'desc':description, 'code':patternCode, 'id':c}
+                  );
+                  ++c;
+                  var pattern = '';
+                  var description = '';
+                  var patternCode = '';
+              }
+         }
+    });
+
+
+
+
+
+
+
+
+
+    /**
+ *
+ */
+function Scanlib() {
+
+    var file = 'C:\\Users\\thw\\Documents\\WEB\\nodemultigol\\app\\src\\data\\gol-lexicon.txt';
+    var libdata = [];
+    var pattern = '';
+    var description = '';
+    var patternCode = '';
+    var c = 0;
+
+    //get the filesystem module
+    stream = fs.createReadStream(file, {
+        flags: 'r',
+        encoding: 'utf-8',
+        fd: null,
+        bufferSize: 1
+    }); 
+    var line = '';
+    //start reading the file
+    stream.addListener('data', function (char) {
+        // pause stream if a newline char is found
+        stream.pause();
+        if(char == '\n'){
+            (function(){
+            
+                if (line.indexOf('%pattern-name%') > -1) {
+                    pattern = line.replace('%pattern-name%', '');
+                    pattern = pattern.replace(' ', '');
+                    pattern = pattern.replace('\\n', '');
+                }
+
+                if (line.indexOf('%pattern-description%') > -1) {
+                    description = line.replace('%pattern-description%', '');
+                    description = description.replace(' ', '');
+                    description = description.replace('\\n', '');
+                }
+
+                if (line.indexOf('%pattern-code%') > -1) {
+                    patternCode = line.replace('%pattern-code%', '');
+                    patternCode = patternCode.replace(' ', '');
+                    patternCode = patternCode.replace('\\n', '');
+                }
+
+                if (pattern !== '' && description !== '' && patternCode !== '') {
+                    libdata.push(
+                        {name:pattern, desc:description, code:patternCode, id:c}
+                    );
+                    ++c;
+                    var pattern = '';
+                    var description = '';
+                    var patternCode = '';
+                    console.log('pushed to array. length=' + libdata.length);
+                }
+
+                line = '';
+                stream.resume();
+            })();
+        } else {
+
+            line += char;
+            stream.resume();
+        }
+    });
+
+    console.log('end of ScanLib() func. Data array length=' + libdata.length);
+    return libdata;
+}
+
+
+
+
+/**
+ *
+ */
+function Scanlib() {
+
+
+
+
+    var pattern = '';
+    var description = '';
+    var patternCode = '';
+    var c = 0;
+
+    new lazy(
+      fs.createReadStream('C:\\Users\\thw\\Documents\\WEB\\nodemultigol\\app\\src\\data\\gol-lexicon.txt')
+          ).lines.forEach(function(l) {
+
+          var line = l.toString();
+
+          if (line.indexOf('%pattern-name%') > -1) {
+              pattern = line.replace('%pattern-name%', '');
+              pattern = pattern.replace(' ', '');
+              pattern = pattern.replace('\\n', '');
+          }
+
+          if (line.indexOf('%pattern-description%') > -1) {
+              description = line.replace('%pattern-description%', '');
+              description = description.replace(' ', '');
+              description = description.replace('\\n', '');
+          }
+
+          if (line.indexOf('%pattern-code%') > -1) {
+              patternCode = line.replace('%pattern-code%', '');
+              patternCode = patternCode.replace(' ', '');
+              patternCode = patternCode.replace('\\n', '');
+          }
+
+          if (pattern !== '' && description !== '' && patternCode !== '') {
+              libdata.push({name:pattern, desc:description, code:patternCode, id:c});
+              ++c;
+              var pattern = '';
+              var description = '';
+              var patternCode = '';
+          }
+
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ */
+function ScanLib() {
+
+    var file = 'C:\\Users\\thw\\Documents\\WEB\\nodemultigol\\app\\src\\data\\gol-lexicon.txt';
+    var LineByLineReader = require('line-by-line'),
+    lr = new LineByLineReader(file);
+
+    var pattern = '';
+    var description = '';
+    var patternCode = '';
+    var c = 0;
+    var libdata = [];
+
+    lr.on('error', function (err) {
+        console.log(err);
+    });
+
+    lr.on('line', function (line) {
+        
+        if (line.indexOf('%pattern-name%') > -1) {
+            pattern = line.replace('%pattern-name%', '');
+            pattern = pattern.replace(' ', '');
+            pattern = pattern.replace('\\n', '');
+        }
+
+        if (line.indexOf('%pattern-description%') > -1) {
+            description = line.replace('%pattern-description%', '');
+            description = description.replace(' ', '');
+            description = description.replace('\\n', '');
+        }
+
+        if (line.indexOf('%pattern-code%') > -1) {
+            patternCode = line.replace('%pattern-code%', '');
+            patternCode = patternCode.replace(' ', '');
+            patternCode = patternCode.replace('\\n', '');
+        }
+
+        if (pattern !== '' && description !== '' && patternCode !== '') {
+            libdata.push({name:pattern, desc:description, code:patternCode, id:c});
+            ++c;
+            var pattern = '';
+            var description = '';
+            var patternCode = '';
+        }
+    });
+
+    lr.on('end', function () {
+        // All lines are read, file is closed now.
+        // return array of lib data.
+        return libdata;
+    });
+}
+
+
+
+output at this point =
+<a href="#" 
+id="pattern_link_id_0" 
+onfocus="if (this.blur) this.blur()"
+onclick="GetGolLibPattern('pattern_id_0', 'pattern_link_id_0')" 
+onmouseover="DisplayPatternDescrition('00')" 
+class="gollib-pattern-link">
+</a>
+
+<span id="pattern_id_0" hidden></span>
+<br>
+<div id="00" style="display: none" class="gol-pattern-description"></div>
+
+
+
+
+    /**************************************
+     * TEMP
+     */
+    _hashTable.setItem('60$60', {life:1, hexc:_cellColor});
+    _hashTable.setItem('60$61', {life:1, hexc:_cellColor});
+    _hashTable.setItem('60$62', {life:1, hexc:_cellColor});
+    _hashTable.setItem('59$62', {life:1, hexc:_cellColor});
+    _hashTable.setItem('58$61', {life:1, hexc:_cellColor});
+
+    _hashTable.setItem('80$60', {life:1, hexc:'#216570'});
+    _hashTable.setItem('81$60', {life:1, hexc:'#216570'});
+    _hashTable.setItem('81$58', {life:1, hexc:'#216570'});
+    _hashTable.setItem('83$59', {life:1, hexc:'#216570'});
+    _hashTable.setItem('84$60', {life:1, hexc:'#216570'});
+    _hashTable.setItem('85$60', {life:1, hexc:'#216570'});
+    _hashTable.setItem('86$60', {life:1, hexc:'#216570'});
+    /**************************************/
+
+
+
+
+
+
+    /*
+function LoadTMPImage(fileInput) {
+
+    var tgt = evt.target || window.event.srcElement, files = tgt.files;
+
+    // FileReader support
+    if (FileReader && files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            $('#multigol-tmpimg-input').src = fr.result;
+        }
+        fr.readAsDataURL(files[0]);
+    }
+
+    //$('#multigol-tmpimg-input').src = fileInput.value;
+    var c = $('#multigol-tmpimg-canvas');
+    c.width = 12;
+    c.height = 12;
+    var ctx = c.getContext('2d');
+    var img = document.getElementById("preview");
+    ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 12, 12);
+}
+*/

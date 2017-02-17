@@ -1,0 +1,35 @@
+#enter-dialog-fader.fader
+  #enter-dialog.dialog
+    p Welcome :)
+    p Pick a nick & color or icon then you're ready to go.
+    input#enter-dialog-nickname.multigol-input(type="text", 
+      name="nickname-val", 
+      placeholder="nickname", 
+      maxlength="101")
+    br
+    br
+    select#enter-dialog-color.multigol-input(name="cellcolor-val")
+      option(value="blue") blue
+      option(value="green") green
+      option(value="cyan") cyan
+      option(value="black") black
+      option(value="brown") brown
+      option(value="red") red
+      option(value="orange") orange
+      option(value="pink") pink
+      option(value="yellow") yellow
+      option(value="gray") gray
+    br
+    br
+    input#multigol-tmpimg-file.multigol-input(type="file", hidden=true)
+    canvas#multigol-tmpimg-canvas(width="20", height="20", hidden=true)
+    button#enter-dialog-file.dialog-button() upload any icon
+    #multigol-tmpimg-input-wrapper
+      img#multigol-tmpimg-input(src="null")
+      img#multigol-tmpimg-loading-img(src="../res/icons/loader.gif", hidden=true)
+    br
+    br
+    br
+    button#enter-dialog-button.dialog-button(
+      onclick="EnterDialogSubmit('enter-dialog-nickname', 'enter-dialog-color', 'enter-dialog-fader', 'enter-dialog')", 
+      disabled=true) start playing multigol

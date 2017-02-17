@@ -1,0 +1,1823 @@
+%pattern-name%101
+%pattern-description%(p5) Found by Achim Flammenkamp in August 1994. The name was suggested by Bill Gosper, noting that the phase shown below displays the period in binary.
+%pattern-code%4$0-5$0-12$0-13$0-3$1-5$1-12$1-14$1-3$2-14$2-0$3-1$3-3$3-14$3-16$3-17$3-0$4-1$4-3$4-5$4-8$4-9$4-12$4-14$4-16$4-17$4-3$5-5$5-7$5-10$5-12$5-14$5-3$6-5$6-7$6-10$6-12$6-14$6-0$7-1$7-3$7-5$7-8$7-9$7-12$7-14$7-16$7-17$7-0$8-1$8-3$8-14$8-16$8-17$8-3$9-14$9-3$10-5$10-12$10-14$10-4$11-5$11-12$11-13$11
+
+%pattern-name%1-2-3
+%pattern-description%(p3) Found by Dave Buckingham, August 1972. This is one of only three essentially different p3 oscillators with only three cells in the rotor. The others are stillater and cuphook.
+%pattern-code%2$0-3$0-0$1-3$1-0$2-1$2-3$2-5$2-6$2-1$3-3$3-6$3-1$4-6$4-8$4-9$4-2$5-3$5-4$5-6$5-8$5-9$5-5$6-4$7-4$8-5$8
+
+%pattern-name%1-2-3-4
+%pattern-description%(p4) See also Achim`s p4.
+%pattern-code%5$0-4$1-6$1-3$2-5$2-7$2-3$3-7$3-0$4-1$4-3$4-5$4-7$4-9$4-10$4-0$5-2$5-8$5-10$5-3$6-4$6-5$6-6$6-7$6-5$8-4$9-6$9-5$10
+
+%pattern-name%4-8-12 diamond
+%pattern-description%The following pure glider generator.
+%pattern-code%4$0-5$0-6$0-7$0-2$2-3$2-4$2-5$2-6$2-7$2-8$2-9$2-0$4-1$4-2$4-3$4-4$4-5$4-6$4-7$4-8$4-9$4-10$4-11$4-2$6-3$6-4$6-5$6-6$6-7$6-8$6-9$6-4$8-5$8-6$8-7$8
+
+%pattern-name%4 boats
+%pattern-description%(p2)
+%pattern-code%3$0-2$1-4$1-1$2-3$2-4$2-0$3-2$3-5$3-6$3-1$4-2$4-5$4-7$4-3$5-4$5-6$5-3$6-5$6-4$7
+
+%pattern-name%Achim`s p144
+%pattern-description%(p144) This was found (minus the blocks shown below) on a cylinder of width 22 by Achim Flammenkamp in July 1994. Dean Hickerson reduced it to a finite form using figure-8s the same day. The neater finite form shown here - replacing the figure-8s with blocks - was found by David Bell in August 1994. See factory for a use of this oscillator.
+%pattern-code%0$0-1$0-26$0-27$0-0$1-1$1-26$1-27$1-18$2-19$2-17$3-20$3-18$4-19$4-14$5-13$6-15$6-12$7-16$7-12$8-15$8-12$10-15$10-11$11-15$11-12$12-14$12-13$13-8$14-9$14-7$15-10$15-8$16-9$16-0$17-1$17-26$17-27$17-0$18-1$18-26$18-27$18
+
+%pattern-name%Achim`s p16
+%pattern-description%(p16) Found by Achim Flammenkamp, July 1994.
+%pattern-code%7$0-8$0-7$1-9$1-2$2-7$2-9$2-10$2-1$3-2$3-8$3-0$4-3$4-0$5-1$5-2$5-10$7-11$7-12$7-9$8-12$8-4$9-10$9-11$9-2$10-3$10-5$10-10$10-3$11-5$11-4$12-5$12
+
+%pattern-name%Achim`s p4
+%pattern-description%(p4) Dave Buckingham found this in a less compact form (using two halves of sombreros) in 1976. The form shown here was found by Achim Flammenkamp in 1988. The rotor is two copies of the rotor of 1-2-3-4, so the oscillator is sometimes called the "dual 1-2-3-4".
+%pattern-code%2$0-3$0-7$0-8$0-1$1-4$1-6$1-9$1-1$2-3$2-4$2-6$2-7$2-9$2-0$3-1$3-9$3-10$3-2$4-4$4-6$4-8$4-0$5-1$5-9$5-10$5-1$6-3$6-4$6-6$6-7$6-9$6-1$7-4$7-6$7-9$7-2$8-3$8-7$8-8$8
+
+%pattern-name%Achim`s p8
+%pattern-description%(p8) Found by Achim Flammenkamp, July 1994.
+%pattern-code%1$0-2$0-0$1-1$2-5$2-1$3-5$3-6$3-3$4-5$4-2$5-3$5-7$5-3$6-7$6-8$7-6$8-7$8
+
+%pattern-name%acorn
+%pattern-description%(stabilizes at time 5206) A methuselah found by Charles Corderman.
+%pattern-code%1$0-3$1-0$2-1$2-4$2-5$2-6$2
+
+%pattern-name%A for all
+%pattern-description%(p6) Found by Dean Hickerson in March 1993.
+%pattern-code%4$0-5$0-3$1-6$1-3$2-4$2-5$2-6$2-1$3-3$3-6$3-8$3-0$4-9$4-0$5-9$5-1$6-3$6-6$6-8$6-3$7-4$7-5$7-6$7-3$8-6$8-4$9-5$9
+
+%pattern-name%aircraft carrier
+%pattern-description%(p1) This is the smallest still life that has more than one island.
+%pattern-code%0$0-1$0-0$1-3$1-2$2-3$2
+
+%pattern-name%airforce
+%pattern-description%(p7) Found by Dave Buckingham in 1972. The rotor consists of two copies of that used in the burloaferimeter.
+%pattern-code%7$0-6$1-8$1-7$2-5$4-6$4-7$4-8$4-9$4-4$5-10$5-12$5-13$5-3$6-5$6-6$6-10$6-12$6-13$6-3$7-5$7-8$7-10$7-0$8-1$8-3$8-7$8-8$8-10$8-0$9-1$9-3$9-9$9-4$10-5$10-6$10-7$10-8$10-6$12-5$13-7$13-6$14
+
+%pattern-name%AK47 reaction
+%pattern-description%The following reaction (found by Rich Schroeppel and Dave Buckingham) in which a honey farm predecessor, catalysed by an eater and a block, reappears at another location 47 generations later, having produced a glider and a traffic light. This is the basis of a very small (but pseudo) p94 glider gun found by Paul Callahan in July 1994, and was in 1990 the basis for the Dean Hickerson`s construction of the first true p94 gun. (This latter gun was enormous, and has now been superseded by comparatively small Herschel loop guns.)
+%pattern-code%5$0-4$1-6$1-3$2-7$2-3$3-7$3-3$4-7$4-4$5-6$5-5$6-2$8-3$8-3$9-0$10-1$10-2$10-8$10-9$10-0$11-8$11-9$11
+
+%pattern-name%almosymmetric
+%pattern-description%(p2) Found in 1971.
+%pattern-code%4$0-0$1-1$1-4$1-6$1-0$2-2$2-7$3-8$3-1$4-0$5-7$5-0$6-1$6-3$6-5$6-5$7
+
+%pattern-name%ants
+%pattern-description%(p5 wick) The standard form is shown below. It is also possible for any ant to be displaced by one or two cells relative to either or both of its neighbouring ants. Dean Hickerson found fenceposts for both ends of this wick in October 1992 and February 1993. See electric fence, and also wickstretcher.
+%pattern-code%0$0-1$0-5$0-6$0-10$0-11$0-15$0-16$0-20$0-21$0-25$0-26$0-30$0-31$0-35$0-36$0-40$0-41$0-2$1-3$1-7$1-8$1-12$1-13$1-17$1-18$1-22$1-23$1-27$1-28$1-32$1-33$1-37$1-38$1-42$1-43$1-2$2-3$2-7$2-8$2-12$2-13$2-17$2-18$2-22$2-23$2-27$2-28$2-32$2-33$2-37$2-38$2-42$2-43$2-0$3-1$3-5$3-6$3-10$3-11$3-15$3-16$3-20$3-21$3-25$3-26$3-30$3-31$3-35$3-36$3-40$3-41$3
+
+%pattern-name%anvil
+%pattern-description%The following induction coil.
+%pattern-code%1$0-2$0-3$0-4$0-0$1-5$1-1$2-2$2-3$2-5$2-3$3-5$3-6$3
+
+%pattern-name%ark
+%pattern-description%A pair of mutually stabilizing switch engines. The archetype is Noah`s ark. The diagram below shows an ark found by Nick Gotts that takes until generation 736692 to stabilize, and can therefore be considered as a methuselah.
+%pattern-code%27$0-28$1-29$2-28$3-27$4-29$5-30$5-31$5-0$25-1$25-2$26-2$27-3$28-4$28-5$28-6$28
+
+%pattern-name%aVerage
+%pattern-description%(p5) Found by Dave Buckingham, 1973. The average number of live rotor cells is five (V), which is also the period.
+%pattern-code%3$0-4$0-4$1-5$1-6$1-2$2-7$2-1$3-3$3-4$3-5$3-6$3-8$3-1$4-3$4-8$4-11$4-0$5-1$5-3$5-4$5-5$5-8$5-10$5-12$5-1$6-3$6-8$6-11$6-1$7-3$7-4$7-5$7-6$7-8$7-2$8-7$8-4$9-5$9-6$9-3$10-4$10
+
+%pattern-name%B29
+%pattern-description%(c/4 diagonally, p4) The following spaceship, found by Hartmut Holzwart in September 2004.
+%pattern-code%7$0-8$0-9$0-7$1-0$2-1$2-2$2-9$2-0$3-7$3-9$3-1$4-6$4-7$4-9$4-10$4-11$4-12$4-3$5-4$5-5$5-6$5-8$5-9$5-10$5-11$5-12$5-14$5-15$5-4$6-5$6-13$6-14$6-16$6
+
+%pattern-name%B-52 bomber
+%pattern-description%The following p104 double-barrelled glider gun. It uses a B-heptomino and emits one glider every 52 generations. It was found by Noam Elkies in March 1996, except that Elkies used blockers instead of molds, the improvement being found by David Bell later the same month.
+%pattern-code%1$0-2$0-1$1-2$1-20$1-19$2-21$2-34$2-36$2-20$3-33$3-0$4-1$4-9$4-10$4-34$4-37$4-0$5-1$5-3$5-9$5-10$5-34$5-36$5-38$5-3$6-27$6-35$6-38$6-3$7-27$7-28$7-36$7-37$7-0$8-3$8-21$8-22$8-28$8-1$9-2$9-21$9-21$10-22$10-23$10-36$11-37$11-36$12-37$12-1$13-2$13-0$14-3$14-0$15-2$15-4$15-21$15-23$15-28$15-29$15-35$15-36$15-1$16-4$16-22$16-23$16-28$16-29$16-35$16-36$16-38$16-5$17-18$17-22$17-38$17-2$18-4$18-17$18-19$18-38$18-18$19-35$19-38$19-36$20-37$20
+
+%pattern-name%babbling brook
+%pattern-description%Any oscillator whose rotor consists of a string of cells each of which is adjacent to exactly two other rotor cells, except for the endpoints which are adjacent to only one other rotor cell. Compare muttering moat. Examples include the beacon, the great on-off, the light bulb and the spark coil. The following less trivial example (by Dean Hickerson, August 1997) is the only one known with more than four cells in its rotor. It is p4 and has a 6-cell rotor.
+%pattern-code%7$0-5$1-6$1-7$1-12$1-13$1-4$2-8$2-9$2-12$2-1$3-4$3-6$3-7$3-10$3-12$3-0$4-2$4-4$4-9$4-10$4-13$4-14$4-1$5-2$5-5$5-6$5-11$5-13$5-15$5-3$6-5$6-8$6-9$6-11$6-14$6-3$7-6$7-7$7-11$7-2$8-3$8-8$8-9$8-10$8-8$9
+
+%pattern-name%backrake
+%pattern-description%Another term for a backwards rake. A p8 example by Jason Summers is shown below. See total aperiodic for a p12 example.
+%pattern-code%5$0-6$0-7$0-19$0-20$0-21$0-4$1-8$1-18$1-22$1-3$2-4$2-9$2-17$2-22$2-23$2-2$3-4$3-6$3-7$3-9$3-10$3-16$3-17$3-19$3-20$3-22$3-24$3-1$4-2$4-4$4-9$4-11$4-12$4-14$4-15$4-17$4-22$4-24$4-25$4-0$5-5$5-9$5-12$5-14$5-17$5-21$5-26$5-12$6-14$6-0$7-1$7-9$7-10$7-12$7-14$7-16$7-17$7-25$7-26$7-12$8-14$8-6$9-7$9-8$9-18$9-19$9-20$9-6$10-10$10-20$10-6$11-8$11-13$11-14$11-15$11-12$12-15$12-20$12-21$12-15$13-11$14-15$14-11$15-15$15-15$16-12$17-14$17
+
+%pattern-name%baker
+%pattern-description%(c p4 fuse) A fuse by Keith McClelland.
+%pattern-code%14$0-15$0-13$1-15$1-12$2-11$3-10$4-9$5-8$6-7$7-6$8-5$9-4$10-3$11-0$12-1$12-2$12-1$13
+
+%pattern-name%baker`s dozen
+%pattern-description%(p12) A loaf hassled by two blocks and two caterers. The original form (using p4 and p6 oscillators to do the hassling) was found by Robert Wainwright in August 1989.
+%pattern-code%0$0-1$0-11$0-12$0-0$1-1$1-2$1-3$1-5$1-11$1-12$1-0$2-2$2-5$2-6$2-7$2-11$3-4$4-5$4-10$4-12$4-4$5-10$5-13$5-18$5-11$6-12$6-17$6-18$6-15$8-16$8-17$8-20$8-22$8-10$9-11$9-17$9-19$9-20$9-21$9-22$9-10$10-11$10-21$10-22$10
+
+%pattern-name%bakery
+%pattern-description%(p1) A common formation of two bi-loaves.
+%pattern-code%4$0-5$0-3$1-6$1-3$2-5$2-1$3-2$3-4$3-8$3-0$4-3$4-7$4-9$4-0$5-2$5-6$5-9$5-1$6-5$6-7$6-8$6-4$7-6$7-3$8-6$8-4$9-5$9
+
+%pattern-name%barge
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-1$2-3$2-2$3
+
+%pattern-name%beacon
+%pattern-description%(p2) The third most common oscillator. Found by Conway, March 1970.
+%pattern-code%0$0-1$0-0$1-3$2-2$3-3$3
+
+%pattern-name%beacon maker
+%pattern-description%(c p8 fuse)
+%pattern-code%14$0-15$0-13$1-15$1-12$2-11$3-10$4-9$5-8$6-7$7-6$8-5$9-4$10-3$11-0$12-1$12-2$12-2$13-2$14
+
+%pattern-name%beehive
+%pattern-description%(p1) The second most common still life.
+%pattern-code%1$0-2$0-0$1-3$1-1$2-2$2
+
+%pattern-name%beehive and dock
+%pattern-description%(p1)
+%pattern-code%3$0-4$0-2$1-5$1-3$2-4$2-1$4-2$4-3$4-4$4-0$5-5$5-0$6-1$6-4$6-5$6
+
+%pattern-name%beehive with tail
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-0$1-3$1-1$2-2$2-4$2-4$3-4$4-5$4
+
+%pattern-name%bent keys
+%pattern-description%(p3) Found by Dean Hickerson, August 1989. See also odd keys and short keys.
+%pattern-code%1$0-10$0-0$1-2$1-9$1-11$1-1$2-3$2-4$2-7$2-8$2-10$2-4$3-7$3-4$4-7$4
+
+%pattern-name%B-heptomino
+%pattern-description%(stabilizes at time 148) This is a very common pattern. It often arises with the cell at top left shifted one space to the left, which does not affect the subsequent evolution. B-heptominoes acquired particular importance in 1996 due to Dave Buckingham`s work on B tracks - see in particular My Experience with B-heptominos in Oscillators.
+%pattern-code%0$0-2$0-3$0-0$1-1$1-2$1-1$2
+
+%pattern-name%bi-block
+%pattern-description%(p1) The smallest pseudo still life.
+%pattern-code%0$0-1$0-3$0-4$0-0$1-1$1-3$1-4$1
+
+%pattern-name%biclock
+%pattern-description%The following pure glider generator consisting of two clocks.
+%pattern-code%2$0-0$1-1$1-2$2-3$2-1$3-5$3-3$4-4$4-5$5-6$5-4$6
+
+%pattern-name%big glider
+%pattern-description%(c/4 diagonally, p4) This was found by Dean Hickerson in December 1989 and was the first known diagonal spaceship other than the glider.
+%pattern-code%3$0-4$0-5$0-3$1-6$1-7$1-8$1-4$2-6$2-0$3-1$3-9$3-0$4-2$4-7$4-10$4-0$5-9$5-10$5-1$6-2$6-1$7-4$7-10$7-12$7-13$7-1$8-11$8-12$8-14$8-3$9-5$9-12$9-13$9-16$9-4$10-5$10-7$10-12$10-13$10-17$10-8$11-16$11-7$12-8$12-9$12-10$12-14$12-16$12-7$13-9$13-10$13-14$13-15$13-16$13-17$13-8$14-12$14-13$14-15$14-13$15-14$15-9$16-11$16-12$16-13$16-10$17-13$17
+
+%pattern-name%big S
+%pattern-description%(p1)
+%pattern-code%4$0-5$0-3$1-6$1-3$2-5$2-6$2-0$3-1$3-3$3-0$4-3$4-1$5-2$5
+
+%pattern-name%bi-loaf
+%pattern-description%This term has been used in at least three different senses. A bi-loaf can be half a bakery.
+%pattern-code%1$0-0$1-2$1-0$2-3$2-1$3-2$3-4$3-3$4-5$4-3$5-6$5-4$6-5$6
+
+%pattern-name%bipole
+%pattern-description%(p2) The barberpole of length 2.
+%pattern-code%0$0-1$0-0$1-2$1-2$3-4$3-3$4-4$4
+
+%pattern-name%bi-pond
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-0$1-3$1-0$2-3$2-1$3-2$3-4$3-5$3-3$4-6$4-3$5-6$5-4$6-5$6
+
+%pattern-name%biting off more than they can chew
+%pattern-description%(p3) Found by Peter Raynham, July 1972.
+%pattern-code%0$0-0$1-1$1-2$1-3$2-2$3-3$3-3$4-4$4-4$5-5$5-3$6-6$6-3$7-6$7-7$7-4$8-5$8-7$8-8$8-9$8-8$9-10$9-10$10-10$11-11$11
+
+%pattern-name%blinker
+%pattern-description%(p2) The smallest and most common oscillator. Found by Conway, March 1970.
+%pattern-code%0$0-1$0-2$0
+
+%pattern-name%blinker puffer
+%pattern-description%Any puffer whose output is blinkers. However, the term is particularly used for p8 c/2 puffers. The first such blinker puffer was found by Robert Wainwright in 1984, and was unexpectedly simple£
+%pattern-code%3$0-1$1-5$1-0$2-0$3-5$3-0$4-1$4-2$4-3$4-4$4-1$8-2$8-0$9-1$9-3$9-4$9-5$9-1$10-2$10-3$10-4$10-2$11-3$11-5$13-6$13-3$14-8$14-2$15-2$16-8$16-2$17-3$17-4$17-5$17-6$17-7$17
+
+%pattern-name%puffer
+%pattern-description% Since then many more blinker puffers have been found. The following one was found by David Bell in 1992 when he was trying to extend an x66.
+%pattern-code%13$0-14$0-15$0-12$1-13$1-14$1-15$1-16$1-11$2-12$2-14$2-15$2-16$2-12$3-13$3-9$6-11$6-2$7-8$7-11$7-1$8-2$8-3$8-4$8-5$8-9$8-11$8-0$9-1$9-5$9-6$9-8$9-9$9-1$10-9$10-2$11-3$11-6$11-9$11-10$12-2$13-3$13-6$13-9$13-1$14-9$14-0$15-1$15-5$15-6$15-8$15-9$15-1$16-2$16-3$16-4$16-5$16-9$16-11$16-2$17-8$17-11$17-9$18-11$18-12$21-13$21-11$22-12$22-14$22-15$22-16$22-12$23-13$23-14$23-15$23-16$23-13$24-14$24-15$24
+
+%pattern-name%blinkers bit pole
+%pattern-description%(p2) Found by Robert Wainwright, June 1977.
+%pattern-code%5$0-6$0-0$1-1$1-2$1-4$1-6$1-1$3-3$3-6$3-0$4-5$4-0$5-1$5-5$5
+
+%pattern-name%blinker ship
+%pattern-description%A growing spaceship in which the wick consists of a line of blinkers. An example by Paul Schick based on his Schick engine is shown below. Here the front part is p12 and moves at c/2, while the back part is p26 and moves at 6c/13. Every 156 generations 13 blinkers are created and 12 are destroyed, so the wick becomes one blinker longer.
+%pattern-code%10$0-11$0-12$0-13$0-10$1-14$1-10$2-1$3-2$3-11$3-14$3-0$4-1$4-3$4-4$4-1$5-2$5-3$5-4$5-8$5-2$6-3$6-7$6-9$6-10$6-19$6-24$6-25$6-26$6-6$7-10$7-19$7-24$7-26$7-2$8-3$8-7$8-9$8-10$8-19$8-24$8-25$8-26$8-1$9-2$9-3$9-4$9-8$9-0$10-1$10-3$10-4$10-1$11-2$11-11$11-14$11-10$12-10$13-14$13-10$14-11$14-12$14-13$14
+
+%pattern-name%block
+%pattern-description%(p1) The most common still life.
+%pattern-code%0$0-1$0-0$1-1$1
+
+%pattern-name%blockade
+%pattern-description%(p1) A common formation of four blocks. The final form of lumps of muck.
+%pattern-code%0$0-1$0-0$1-1$1-1$4-2$4-20$4-21$4-1$5-2$5-20$5-21$5-21$8-22$8-21$9-22$9
+
+%pattern-name%block and dock
+%pattern-description%(p1)
+%pattern-code%3$0-4$0-3$1-4$1-1$3-2$3-3$3-4$3-0$4-5$4-0$5-1$5-4$5-5$5
+
+%pattern-name%block and glider
+%pattern-description%(stabilizes at time 106)
+%pattern-code%0$0-1$0-0$1-2$1-2$2-3$2
+
+%pattern-name%blocker
+%pattern-description%(p8) Found by Robert Wainwright. See also filter.
+%pattern-code%6$0-8$0-5$1-0$2-1$2-4$2-9$2-0$3-1$3-3$3-6$3-8$3-9$3-4$4-5$4
+
+%pattern-name%block on table
+%pattern-description%(p1)
+%pattern-code%2$0-3$0-2$1-3$1-0$3-1$3-2$3-3$3-0$4-3$4
+
+%pattern-name%block pusher
+%pattern-description%A pattern emitting streams of gliders which can repeatedly push a block further away. This can be used as part of a sliding block memory.  The following pattern, in which three gliders push a block one cell diagonally, is an example of how a block pusher works.
+%pattern-code%19$0-21$0-19$1-20$1-20$2-3$6-2$7-2$8-3$8-4$8-0$13-1$13-5$13-0$14-1$14-5$14-7$14-5$15-6$15
+
+%pattern-name%blom
+%pattern-description%(stabilizes at time 23314) The following methuselah, found by Dean Hickerson in July 2002.
+%pattern-code%0$0-11$0-1$1-2$1-3$1-4$1-11$1-2$2-3$2-11$2-10$3-8$4-10$4
+
+%pattern-name%blonker
+%pattern-description%(p6) The following oscillator, found by Nicolay Beluchenko in April 2004.
+%pattern-code%0$0-3$0-4$0-9$0-0$1-1$1-4$1-6$1-7$1-9$1-4$2-6$2-5$3-6$3-7$4-7$5-11$5-9$6-11$6-10$7
+
+%pattern-name%boat
+%pattern-description%(p1) The only 5-cell still life.
+%pattern-code%0$0-1$0-0$1-2$1-1$2
+
+%pattern-name%boat-bit
+%pattern-description%A binary digit represented by the presence of a boat next to a snake (or other suitable object, such as an aircraft carrier). The bit can be toggled by a glider travelling along a certain path. A correctly timed glider on a crossing path can detect whether the transition was from 1 to 0 (in which case the crossing glider is deleted) or from 0 to 1 (in which case it passes unharmed). Three gliders therefore suffice for a non-destructive read. The mechanisms involved are shown in the diagram below. Here the bit is shown in state 0. It is about to be set to 1 and then switched back to 0 again. The first crossing glider will survive, but the second will be destroyed. (In January 1997 David Bell found a method of reading the bit while setting it to 0. A MWSS is fired at the boat-bit. If it is already 0 then the MWSS passes unharmed, but if it is 1 then the boat and the MWSS are destroyed and, with the help of an eater1, converted into a glider which travels back along exactly the same path that is used by the gliders that toggle the boat-bit.)
+%pattern-code%6$0-7$1-5$2-6$2-7$2-16$10-14$11-16$11-10$12-11$12-15$12-16$12-11$13-12$13-10$14-21$14-23$14-24$14-21$15-22$15-24$15-1$21-1$22-2$22-0$23-2$23
+
+%pattern-name%boat maker
+%pattern-description%(c p4 fuse)
+%pattern-code%16$0-17$0-15$1-17$1-14$2-13$3-12$4-11$5-10$6-9$7-8$8-7$9-6$10-5$11-0$12-1$12-2$12-3$12-4$12-4$13-4$14-4$15-4$16
+
+%pattern-name%boat-tie
+%pattern-description%(p1) A 10-cell still life consisting of two boats placed tip-to-tip. The name is a pun on "bow tie".
+%pattern-code%1$0-0$1-2$1-1$2-2$2-3$3-4$3-3$4-5$4-4$5
+
+%pattern-name%boojum reflector
+%pattern-description%(p1) Dave Greene`s name for the following reflector which he found in April 2001, and which is currently the smallest known stable reflector.
+%pattern-code%4$0-6$0-13$0-14$0-5$1-6$1-13$1-14$1-5$2-40$9-39$10-41$10-39$11-41$11-20$12-21$12-38$12-39$12-41$12-42$12-20$13-21$13-38$14-39$14-41$14-42$14-2$15-3$15-38$15-39$15-41$15-1$16-3$16-43$16-1$17-42$17-43$17-0$18-1$18-34$20-35$20-34$21-35$21-40$21-41$21-11$22-12$22-40$22-42$22-10$23-12$23-42$23-10$24-42$24-43$24-9$25-10$25-34$25-35$25-34$26-35$26-29$29-28$30-30$30-29$31
+
+%pattern-name%bookend
+%pattern-description%The following induction coil. It is generation 1 of century.
+%pattern-code%2$0-3$0-0$1-3$1-0$2-1$2-2$2
+
+%pattern-name%bookends
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-5$0-6$0-0$1-2$1-4$1-6$1-2$2-4$2-1$3-2$3-4$3-5$3
+
+%pattern-name%boss
+%pattern-description%(p4) Found by Dave Buckingham, 1972.
+%pattern-code%5$0-4$1-6$1-4$2-6$2-3$3-4$3-6$3-7$3-2$4-8$4-1$5-3$5-5$5-7$5-9$5-1$6-3$6-7$6-9$6-0$7-1$7-3$7-7$7-9$7-10$7-0$8-3$8-5$8-7$8-10$8-2$9-8$9-3$10-4$10-6$10-7$10-4$11-6$11-4$12-6$12-5$13
+
+%pattern-name%bottle
+%pattern-description%(p8) Found by Achim Flammenkamp in August 1994. The name is a back-formation from ship in a bottle.
+%pattern-code%4$0-5$0-12$0-13$0-3$1-6$1-11$1-14$1-3$2-5$2-12$2-14$2-1$3-2$3-5$3-6$3-7$3-10$3-11$3-12$3-15$3-16$3-0$4-7$4-10$4-17$4-0$5-2$5-3$5-14$5-15$5-17$5-1$6-3$6-14$6-16$6-3$7-4$7-13$7-14$7-3$10-4$10-13$10-14$10-1$11-3$11-14$11-16$11-0$12-2$12-3$12-14$12-15$12-17$12-0$13-7$13-10$13-17$13-1$14-2$14-5$14-6$14-7$14-10$14-11$14-12$14-15$14-16$14-3$15-5$15-12$15-14$15-3$16-6$16-11$16-14$16-4$17-5$17-12$17-13$17
+
+%pattern-name%brain
+%pattern-description%(c/3 orthogonally, p3) Found by David Bell, May 1992.
+%pattern-code%1$0-2$0-3$0-13$0-14$0-15$0-0$1-2$1-4$1-5$1-11$1-12$1-14$1-16$1-0$2-2$2-4$2-12$2-14$2-16$2-1$3-3$3-4$3-6$3-7$3-9$3-10$3-12$3-13$3-15$3-5$4-7$4-9$4-11$4-3$5-5$5-7$5-9$5-11$5-13$5-2$6-3$6-5$6-7$6-9$6-11$6-13$6-14$6-2$7-3$7-4$7-7$7-9$7-12$7-13$7-14$7-2$8-3$8-6$8-10$8-13$8-14$8-1$9-6$9-7$9-9$9-10$9-15$9-1$10-15$10
+
+%pattern-name%buckaroo
+%pattern-description%A queen bee shuttle stabilized at one end by an eater in such a way that it can turn a glider, as shown below. This was found by Dave Buckingham in the 1970s. The name is due to Bill Gosper.
+%pattern-code%2$0-0$1-2$1-1$2-2$2-11$3-9$4-11$4-8$5-10$5-7$6-10$6-22$6-23$6-8$7-10$7-22$7-23$7-3$8-4$8-9$8-11$8-2$9-4$9-11$9-2$10-1$11-2$11
+
+%pattern-name%bullet heptomino
+%pattern-description%Generation 1 of the T-tetromino.
+%pattern-code%1$0-0$1-1$1-2$1-0$2-1$2-2$2
+
+%pattern-name%bun
+%pattern-description%The following induction coil. By itself this is a common predecessor of the honey farm. See also cis-mirrored R-bee.
+%pattern-code%1$0-2$0-0$1-3$1-1$2-2$2-3$2
+
+%pattern-name%bunnies
+%pattern-description%(stabilizes at time 17332) This is a parent of rabbits and was found independently by Robert Wainwright and Andrew Trevorrow.
+%pattern-code%0$0-6$0-2$1-6$1-2$2-5$2-7$2-1$3-3$3
+
+%pattern-name%burloaferimeter
+%pattern-description%(p7) Found by Dave Buckingham in 1972. See also airforce.
+%pattern-code%4$0-5$0-5$1-4$2-3$3-5$3-6$3-7$3-3$4-5$4-8$4-0$5-1$5-3$5-7$5-9$5-0$6-1$6-3$6-8$6-4$7-5$7-6$7-7$7-4$9-5$9-4$10-5$10
+
+%pattern-name%butterfly
+%pattern-description%The following pattern, or the formation of two beehives that it evolves into after 33 generations. (Compare teardrop, where the beehives are five cells closer together.)
+%pattern-code%0$0-0$1-1$1-0$2-2$2-1$3-2$3-3$3
+
+%pattern-name%by flops
+%pattern-description%(p2) Found by Robert Wainwright.
+%pattern-code%3$0-1$1-3$1-5$2-0$3-1$3-2$3-3$3-4$3-5$4-1$5-3$5-3$6
+
+%pattern-name%Canada goose
+%pattern-description%(c/4 diagonally, p4) Found by Jason Summers, January 1999. It consists of a glider plus a tagalong.
+%pattern-code%0$0-1$0-2$0-0$1-10$1-11$1-1$2-8$2-9$2-10$2-12$2-3$3-4$3-7$3-8$3-4$4-8$5-4$6-5$6-9$6-3$7-5$7-7$7-8$7-3$8-5$8-8$8-10$8-11$8-2$9-7$9-8$9-2$10-3$10-2$11-3$11
+
+%pattern-name%candelabra
+%pattern-description%(p3) By Charles Trawick. See also the note under cap.
+%pattern-code%4$0-5$0-10$0-11$0-1$1-4$1-11$1-14$1-0$2-2$2-4$2-11$2-13$2-15$2-1$3-4$3-6$3-7$3-8$3-9$3-11$3-14$3-4$4-6$4-9$4-11$4-5$5-10$5
+
+%pattern-name%candlefrobra
+%pattern-description%(p3) Found by Robert Wainwright in November 1984.
+%pattern-code%5$0-1$1-3$1-4$1-6$1-8$1-9$1-0$2-2$2-6$2-8$2-9$2-1$3-6$3-5$4-6$4
+
+%pattern-name%candlefrobra paired
+%pattern-description%The following diagram shows that a pair of these can act in some ways like killer toads. See also snacker.
+%pattern-code%4$0-16$0-0$1-1$1-3$1-5$1-6$1-8$1-12$1-14$1-15$1-17$1-19$1-20$1-0$2-1$2-3$2-7$2-9$2-11$2-13$2-17$2-19$2-20$2-3$3-8$3-12$3-17$3-3$4-4$4-16$4-17$4-9$7-10$7-11$7-9$8-12$8-9$9-9$10-13$10-9$11-13$11-9$12-10$13-12$13
+
+%pattern-name%canoe
+%pattern-description%(p1)
+%pattern-code%3$0-4$0-4$1-3$2-0$3-2$3-0$4-1$4
+
+%pattern-name%cap
+%pattern-description%The following induction coil. It can also be easily be stabilized to form a p3 oscillator - see candelabra for a slight variation on this.
+%pattern-code%1$0-2$0-0$1-3$1-0$2-1$2-2$2-3$2
+
+%pattern-name%carnival shuttle
+%pattern-description%(p12) Found by Robert Wainwright in September 1984 (using MW emulators at the end, instead of the monograms shown here).
+%pattern-code%33$0-37$0-0$1-1$1-5$1-6$1-33$1-34$1-35$1-36$1-37$1-1$2-3$2-5$2-9$2-12$2-19$2-20$2-24$2-27$2-35$2-1$3-2$3-4$3-5$3-8$3-9$3-13$3-14$3-19$3-20$3-23$3-24$3-28$3-29$3-34$3-36$3-1$4-3$4-5$4-9$4-12$4-19$4-20$4-24$4-27$4-35$4-0$5-1$5-5$5-6$5-33$5-34$5-35$5-36$5-37$5-33$6-37$6
+
+%pattern-name%caterer
+%pattern-description%(p3) Found by Dean Hickerson, August 1989. Compare with jam. In terms of its minimum population of 12 this is the smallest p3 oscillator. See also double caterer and triple caterer.
+%pattern-code%2$0-0$1-4$1-5$1-6$1-7$1-0$2-4$2-0$3-3$4-1$5-2$5
+
+%pattern-name%cauldron
+%pattern-description%(p8) Found in 1971 independently by Don Woods and Robert Wainwright. Compare with Hertz oscillator.
+%pattern-code%5$0-4$1-6$1-5$2-3$4-4$4-5$4-6$4-7$4-0$5-2$5-8$5-10$5-0$6-1$6-3$6-7$6-9$6-10$6-3$7-7$7-3$8-7$8-4$9-5$9-6$9-4$11-5$11-7$11-4$12-6$12-7$12
+
+%pattern-name%centinal
+%pattern-description%(p100) Found by Bill Gosper. This combines the mechanisms of the p46 and p54 shuttles (see twin bees shuttle and p54 shuttle).
+%pattern-code%0$0-1$0-50$0-51$0-1$1-50$1-1$2-3$2-25$2-26$2-48$2-50$2-2$3-3$3-12$3-25$3-26$3-39$3-40$3-48$3-49$3-11$4-12$4-39$4-41$4-10$5-11$5-41$5-11$6-12$6-15$6-16$6-39$6-40$6-41$6-11$10-12$10-15$10-16$10-39$10-40$10-41$10-10$11-11$11-41$11-11$12-12$12-39$12-41$12-2$13-3$13-12$13-25$13-26$13-39$13-40$13-48$13-49$13-1$14-3$14-25$14-26$14-48$14-50$14-1$15-50$15-0$16-1$16-50$16-51$16
+
+%pattern-name%century
+%pattern-description%(stabilizes at time 103) This is a common pattern which evolves into three blocks and a blinker. In June 1996 Dave Buckingham built a neat p246 glider gun using a century as the engine. See also bookend and diuresis.
+%pattern-code%2$0-3$0-0$1-1$1-2$1-1$2
+
+%pattern-name%chemist
+%pattern-description%(p5)
+%pattern-code%7$0-7$1-8$1-9$1-10$2-5$3-6$3-7$3-10$3-13$3-14$3-4$4-6$4-8$4-10$4-12$4-14$4-4$5-8$5-10$5-12$5-1$6-2$6-4$6-10$6-12$6-13$6-2$7-4$7-6$7-10$7-0$8-2$8-4$8-6$8-8$8-10$8-0$9-1$9-4$9-7$9-8$9-9$9-4$10-5$11-6$11-7$11-7$12
+
+%pattern-name%C-heptomino
+%pattern-description%Name given by Conway to the following heptomino, a less common variant of the B-heptomino.
+%pattern-code%1$0-2$0-3$0-0$1-1$1-2$1-1$2
+
+%pattern-name%Cheshire cat
+%pattern-description%A block predecessor by C. R. Tompkins that unaccountably appeared both in Scientific American and in Winning Ways. See also grin.
+%pattern-code%1$0-4$0-1$1-2$1-3$1-4$1-0$2-5$2-0$3-2$3-3$3-5$3-0$4-5$4-1$5-2$5-3$5-4$5
+
+%pattern-name%chicken wire
+%pattern-description%A type of stable agar of density 1/2. The simplest version is formed from the tile. 
+%pattern-code%0$0-1$0-2$1-3$1
+
+%pattern-name%chicken wire
+%pattern-description%But the "wires" can have length greater than two and may notall be the same.
+%pattern-code%0$0-1$0-5$0-6$0-7$0-8$0-2$1-3$1-4$1-9$1-10$1-11$1-12$1-13$1
+
+%pattern-name%cis-beacon on anvil
+%pattern-description%(p2)
+%pattern-code%3$0-4$0-4$1-1$2-1$3-2$3-1$5-2$5-3$5-4$5-0$6-5$6-1$7-2$7-3$7-5$7-3$8-5$8-6$8
+
+%pattern-name%cis-beacon on table
+%pattern-description%(p2)
+%pattern-code%2$0-3$0-3$1-0$2-0$3-1$3-0$5-1$5-2$5-3$5-0$6-3$6
+
+%pattern-name%cis-boat with tail
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-0$2-1$2-3$2-3$3-3$4-4$4
+
+%pattern-name%cis fuse with two tails
+%pattern-description%(p1) See also pulsar quadrant.
+%pattern-code%3$0-1$1-2$1-3$1-0$2-4$2-5$2-1$3-4$3-2$4-4$4-3$5
+
+%pattern-name%cis-mirrored R-bee
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-4$0-5$0-0$1-2$1-4$1-6$1-0$2-2$2-4$2-6$2-1$3-5$3
+
+%pattern-name%clock
+%pattern-description%(p2) Found by Simon Norton, May 1970. This is the fifth or sixth most common oscillator, being about as frequent as the pentadecathlon, but much less frequent than the blinker, toad, beacon or pulsar. But it`s surprisingly rare considering its small size.
+%pattern-code%2$0-0$1-2$1-1$2-3$2-1$3
+
+%pattern-name%clock II
+%pattern-description%(p4) Compare with pinwheel.
+%pattern-code%6$0-7$0-6$1-7$1-4$3-5$3-6$3-7$3-0$4-1$4-3$4-8$4-0$5-1$5-3$5-6$5-8$5-3$6-6$6-8$6-10$6-11$6-3$7-5$7-8$7-10$7-11$7-4$8-5$8-6$8-7$8-4$10-5$10-4$11-5$11
+
+%pattern-name%Coe ship
+%pattern-description%(c/2 orthogonally, p16) A puffer engine discovered by Tim Coe in October 1995.
+%pattern-code%4$0-5$0-6$0-7$0-8$0-9$0-2$1-3$1-9$1-0$2-1$2-3$2-9$2-4$3-8$3-6$4-6$5-7$5-5$6-6$6-7$6-8$6-5$7-6$7-8$7-9$7-7$8-8$8
+
+%pattern-name%Coe`s p8
+%pattern-description%(p8) Found by Tim Coe in August 1997.
+%pattern-code%0$0-1$0-0$1-1$1-4$1-5$1-5$2-6$2-4$3-7$3-7$4-10$4-11$4-5$5-7$5-10$5-11$5
+
+%pattern-name%conduit
+%pattern-description%Any arrangement of still lifes and/or oscillators which move an active object to another location, perhaps also transforming it into a different active object at the same time, but without leaving any permanent debris (except perhaps gliders, or other spaceships) and without any of the still lifes or oscillators being permanently damaged. Probably the most important conduit is the following remarkable one (Dave Buckingham, July 1996) in which a B-heptomino is transformed into a Herschel in 59 generations.
+%pattern-code%9$0-10$0-12$0-0$1-2$1-3$1-10$1-11$1-12$1-0$2-1$2-3$2-11$2-9$4-10$4-9$5-10$5
+
+%pattern-name%confused eaters
+%pattern-description%(p4) Found by Dave Buckingham before 1973.
+%pattern-code%0$0-0$1-1$1-2$1-3$2-2$3-2$4-5$4-5$5-3$6-5$6-3$7-4$7-7$7-8$7-7$8-9$8-9$9-9$10-10$10
+
+%pattern-name%converter
+%pattern-description%A conduit in which the input object is not of the same type as the output object. This term tends to be preferred when either the input object or the output object is a spaceship.  The following diagram shows a p8 pi-heptomino-to-HWSS converter. This was originally found by Dave Buckingham in a larger form (using a figure-8 instead of the boat). The improvement shown here is by Bill Gosper (August 1996). Dieter Leithner has since found (much larger) oscillators of periods 44, 46 and 60 to replace the Kok`s galaxy.
+%pattern-code%1$0-3$0-6$0-1$1-2$1-3$1-5$1-7$1-8$1-0$2-7$2-13$2-1$3-7$3-8$3-12$3-14$3-13$4-14$4-0$5-1$5-7$5-1$6-8$6-0$7-1$7-3$7-5$7-6$7-7$7-2$8-5$8-7$8-12$9-13$9-14$9-12$10-14$10-12$11-14$11
+
+%pattern-name%Cordership
+%pattern-description%Any spaceship based on switch engines. These necessarily move at a speed of c/12 diagonally with a period of 96 (or a multiple thereof). The first was found by Dean Hickerson in April 1991. Corderships are the slowest spaceships so far constructed, although arbitrarily slow spaceships are known to exist (see universal constructor). Hickerson`s original Cordership used 13 switch engines. He soon reduced this to 10, and in August 1993 to 7. In July 1998 he reduced it to 6. In January 2004, Paul Tooke found the 3-engine Cordership shown below.
+%pattern-code%32$0-33$0-35$0-31$1-32$1-33$1-35$1-42$1-44$1-30$2-35$2-37$2-42$2-31$3-32$3-39$3-41$3-45$3-32$4-36$4-39$4-42$4-43$4-35$5-37$5-38$5-42$5-34$6-36$6-53$6-54$6-34$7-36$7-53$7-54$7-61$14-62$14-52$15-53$15-61$15-62$15-39$16-49$16-51$16-52$16-53$16-54$16-34$17-38$17-39$17-40$17-41$17-42$17-48$17-49$17-51$17-55$17-56$17-33$18-35$18-43$18-44$18-49$18-52$18-53$18-55$18-56$18-33$19-41$19-43$19-44$19-50$19-51$19-52$19-53$19-54$19-55$19-34$20-43$20-44$20-51$20-35$21-39$21-40$21-41$21-42$21-40$22-41$22-42$22-24$23-26$23-36$23-37$23-24$24-26$24-28$24-35$24-37$24-23$25-26$25-27$25-29$25-34$25-35$25-24$26-25$26-29$26-31$26-33$26-34$26-36$26-24$27-25$27-29$27-30$27-32$27-33$27-34$27-35$27-36$27-28$28-30$28-31$28-35$28-36$28-27$29-29$29-2$30-3$30-5$30-1$31-2$31-3$31-5$31-12$31-14$31-0$32-5$32-7$32-12$32-1$33-2$33-9$33-11$33-15$33-2$34-6$34-9$34-12$34-13$34-25$34-5$35-7$35-8$35-12$35-24$35-25$35-26$35-4$36-6$36-24$36-27$36-4$37-6$37-23$37-28$37-24$38-24$40-27$40-25$41-27$41-21$43-20$44-21$44-22$44-19$45-20$45-22$45-23$45-9$46-18$46-19$46-21$46-27$46-4$47-8$47-9$47-10$47-11$47-12$47-17$47-18$47-25$47-26$47-3$48-5$48-13$48-14$48-17$48-18$48-26$48-27$48-3$49-11$49-13$49-14$49-4$50-13$50-14$50-5$51-9$51-10$51-11$51-12$51-10$52-11$52-12$52-11$56-12$56-11$57-12$57
+
+%pattern-name%cousins
+%pattern-description%(p3) This contains two copies of the stillater rotor.
+%pattern-code%5$0-7$0-8$0-3$1-4$1-5$1-7$1-9$1-0$2-2$2-9$2-0$3-1$3-3$3-4$3-6$3-7$3-9$3-11$3-12$3-3$4-5$4-10$4-12$4-3$5-5$5-7$5-8$5-9$5-4$6-5$6-7$6
+
+%pattern-name%cover
+%pattern-description%The following induction coil. See scrubber for an example of its use.
+%pattern-code%4$0-2$1-3$1-4$1-1$2-1$3-0$4-1$4
+
+%pattern-name%cow
+%pattern-description%(c p8 fuse)
+%pattern-code%0$0-1$0-9$0-10$0-13$0-14$0-17$0-18$0-21$0-22$0-25$0-26$0-29$0-30$0-33$0-34$0-37$0-38$0-41$0-42$0-45$0-46$0-49$0-50$0-53$0-54$0-0$1-1$1-6$1-8$1-9$1-10$1-13$1-14$1-17$1-18$1-21$1-22$1-25$1-26$1-29$1-30$1-33$1-34$1-37$1-38$1-41$1-42$1-45$1-46$1-49$1-50$1-53$1-54$1-58$1-59$1-4$2-5$2-7$2-57$2-59$2-4$3-5$3-9$3-10$3-11$3-12$3-13$3-14$3-15$3-16$3-17$3-18$3-19$3-20$3-21$3-22$3-23$3-24$3-25$3-26$3-27$3-28$3-29$3-30$3-31$3-32$3-33$3-34$3-35$3-36$3-37$3-38$3-39$3-40$3-41$3-42$3-43$3-44$3-45$3-46$3-47$3-48$3-49$3-50$3-51$3-52$3-53$3-54$3-55$3-56$3-57$3-4$4-5$4-7$4-58$4-0$5-1$5-6$5-8$5-9$5-10$5-13$5-14$5-17$5-18$5-21$5-22$5-25$5-26$5-29$5-30$5-33$5-34$5-37$5-38$5-41$5-42$5-45$5-46$5-49$5-50$5-53$5-54$5-57$5-58$5-0$6-1$6-9$6-10$6-13$6-14$6-17$6-18$6-21$6-22$6-25$6-26$6-29$6-30$6-33$6-34$6-37$6-38$6-41$6-42$6-45$6-46$6-49$6-50$6-53$6-54$6
+
+%pattern-name%crane
+%pattern-description%(c/4 diagonally, p4) The following spaceship found by Nicolay Beluchenko in September 2005, a minor modification of a tubeater found earlier by Hartmut Holzwart. The wing is of the same form as in the swan and Canada goose.
+%pattern-code%1$0-2$0-0$1-1$1-2$2-4$3-5$3-9$3-4$4-5$4-8$4-10$4-7$5-8$5-10$5-7$6-8$6-7$7-8$7-17$8-18$8-9$9-14$9-15$9-17$9-9$10-10$10-11$10-14$10-15$10-9$11-10$11-11$11-14$11-15$11-10$12-11$12-12$14-11$15-12$15-11$16-12$17-13$19-14$19-14$20-16$20-17$20-18$21-15$22-16$22-15$23-16$23-17$24-18$25-19$25
+
+%pattern-name%cross
+%pattern-description%(p3) Found by Robert Wainwright in October 1989. 
+%pattern-code%2$0-3$0-4$0-5$0-2$1-5$1-0$2-1$2-2$2-5$2-6$2-7$2-0$3-7$3-0$4-7$4-0$5-1$5-2$5-5$5-6$5-7$5-2$6-5$6-2$7-3$7-4$7-5$7
+
+%pattern-name%Hartmut Holzwart oscillator
+%pattern-description%In February 1993, Hartmut Holzwart noticed that this is merely the smallest of an infinite family of p3 oscillators. The next smallest member is shown below.
+%pattern-code%2$0-3$0-4$0-5$0-7$0-8$0-9$0-10$0-2$1-5$1-7$1-10$1-0$2-1$2-2$2-5$2-6$2-7$2-10$2-11$2-12$2-0$3-12$3-0$4-12$4-0$5-1$5-2$5-10$5-11$5-12$5-2$6-10$6-0$7-1$7-2$7-10$7-11$7-12$7-0$8-12$8-0$9-12$9-0$10-1$10-2$10-5$10-6$10-7$10-10$10-11$10-12$10-2$11-5$11-7$11-10$11-2$12-3$12-4$12-5$12-7$12-8$12-9$12-10$12
+
+%pattern-name%crowd
+%pattern-description%(p3) Found by Dave Buckingham in January 1973.
+%pattern-code%11$0-9$1-10$1-11$1-5$2-6$2-8$2-5$3-9$3-7$4-8$4-10$4-3$5-4$5-5$5-6$5-10$5-0$6-2$6-8$6-10$6-12$6-13$6-0$7-1$7-3$7-5$7-11$7-13$7-3$8-7$8-8$8-9$8-10$8-3$9-5$9-6$9-4$10-8$10-5$11-7$11-8$11-2$12-3$12-4$12-2$13
+
+%pattern-name%crown
+%pattern-description%The p12 part of the following p12 oscillator, where it is hassled by caterer, a jam and a HW emulator. This oscillator was found by Noam Elkies in January 1995.
+%pattern-code%10$0-10$1-17$1-3$2-8$2-12$2-16$2-17$2-3$3-4$3-9$3-10$3-11$3-9$4-10$4-11$4-14$4-15$4-16$4-19$4-21$4-1$5-4$5-5$5-6$5-16$5-18$5-19$5-20$5-21$5-0$6-2$6-4$6-20$6-21$6-0$7-3$7-1$8-2$8-11$8-12$8-6$9-7$9-9$9-14$9-16$9-17$9-6$10-17$10-7$11-8$11-15$11-16$11-4$12-5$12-6$12-9$12-10$12-11$12-12$12-13$12-14$12-17$12-18$12-19$12-4$13-7$13-16$13-19$13-5$14-6$14-17$14-18$14
+
+%pattern-name%crystal
+%pattern-description%A regular growth that is sometimes formed when a stream of gliders, or other spaceships, is fired into some junk.  The most common example is initiated by the following collision of a glider with a block. With a glider stream of even period at least 82, this gives a crystal which forms a pair beehives for every 11 gliders which hit it.
+%pattern-code%1$0-2$1-6$1-7$1-0$2-1$2-2$2-6$2-7$2
+
+%pattern-name%cuphook
+%pattern-description%(p3) Found by Rich Schroeppel, October 1970. This is one of only three essentially different p3 oscillators with only three cells in the rotor. The others are 1-2-3 and stillater.
+%pattern-code%4$0-5$0-0$1-1$1-3$1-5$1-0$2-1$2-3$2-3$3-3$4-6$4-4$5-5$5-7$5-7$6-7$7-8$7
+
+%pattern-name%compact cuphook
+%pattern-description%
+%pattern-code%4$0-5$0-3$1-5$1-3$2-0$3-1$3-3$3-0$4-1$4-3$4-6$4-3$5-5$5-6$5-3$6-2$7-3$7
+
+%pattern-name%dart
+%pattern-description%(c/3 orthogonally, p3) Found by David Bell, May 1992.
+%pattern-code%7$0-6$1-8$1-5$2-9$2-6$3-7$3-8$3-4$5-5$5-9$5-10$5-2$6-6$6-8$6-12$6-1$7-2$7-6$7-8$7-12$7-13$7-0$8-6$8-8$8-14$8-1$9-3$9-4$9-6$9-8$9-10$9-11$9-13$9
+
+%pattern-name%dead spark coil
+%pattern-description%(p1) Compare spark coil.
+%pattern-code%0$0-1$0-5$0-6$0-0$1-2$1-4$1-6$1-2$2-4$2-0$3-2$3-4$3-6$3-0$4-1$4-5$4-6$4
+
+%pattern-name%diamond ring
+%pattern-description%(p3) Found by Dave Buckingham in 1972.
+%pattern-code%6$0-5$1-7$1-4$2-6$2-8$2-4$3-8$3-2$4-3$4-6$4-9$4-10$4-1$5-6$5-11$5-0$6-2$6-4$6-5$6-7$6-8$6-10$6-12$6-1$7-6$7-11$7-2$8-3$8-6$8-9$8-10$8-4$9-8$9-4$10-6$10-8$10-5$11-7$11-6$12
+
+%pattern-name%diehard
+%pattern-description%Any pattern that vanishes, but only after a long time. The following example vanishes in 130 generations, which is probably the limit for patterns of 7 or fewer cells. Note that there is no limit for higher numbers of cells - e.g., for 8 cells we could have a glider heading towards an arbitrarily distant blinker.
+%pattern-code%6$0-0$1-1$1-1$2-5$2-6$2-7$2
+
+%pattern-name%dinner table
+%pattern-description%(p12) Found by Robert Wainwright in 1972.
+%pattern-code%1$0-1$1-2$1-3$1-11$1-12$1-4$2-11$2-3$3-4$3-9$3-11$3-9$4-10$4-5$6-6$6-7$6-5$7-6$7-7$7-2$8-3$8-1$9-3$9-8$9-9$9-1$10-8$10-0$11-1$11-9$11-10$11-11$11-11$12
+
+%pattern-name%diuresis
+%pattern-description%(p90) Found by David Eppstein in October 1998. His original stabilization used pentadecathlons. The stabilization with complicated still lifes shown here (in two slightly different forms) was found by Dean Hickerson the following day. The name is due to Bill Gosper (see kidney).
+%pattern-code%5$0-6$0-23$0-24$0-6$1-23$1-6$2-8$2-21$2-23$2-7$3-8$3-21$3-22$3-4$5-5$5-24$5-25$5-4$6-6$6-17$6-18$6-23$6-25$6-5$7-16$7-18$7-24$7-2$8-16$8-17$8-27$8-2$9-3$9-4$9-5$9-6$9-7$9-16$9-22$9-23$9-24$9-25$9-26$9-27$9-7$10-22$10-4$11-5$11-24$11-25$11-4$12-25$12-5$13-24$13-2$14-3$14-4$14-7$14-22$14-25$14-26$14-27$14-2$15-5$15-6$15-7$15-16$15-22$15-23$15-24$15-28$15-3$16-16$16-17$16-25$16-26$16-27$16-4$17-5$17-16$17-18$17-24$17-6$18-17$18-18$18-23$18-26$18-27$18-4$19-5$19-24$19-25$19-27$19-1$20-4$20-25$20-0$21-2$21-4$21-7$21-8$21-21$21-22$21-25$21-1$22-4$22-6$22-8$22-21$22-23$22-25$22-26$22-4$23-6$23-23$23-26$23-5$24-6$24-23$24-24$24
+
+%pattern-name%dock
+%pattern-description%The following induction coil.
+%pattern-code%1$0-2$0-3$0-4$0-0$1-5$1-0$2-1$2-4$2-5$2
+
+%pattern-name%do-see-do
+%pattern-description%The following reaction, found by David Bell in 1996, in which two gliders appear to circle around each other as they are reflected 90 degrees by a twin bees shuttle. Four copies of the reaction can be used to create a p92 glider loop which repeats the do-see-do reaction forever.
+%pattern-code%53$0-55$0-53$1-54$1-54$2-48$19-49$19-48$20-46$21-48$21-46$22-47$22-30$23-32$23-30$24-31$24-31$25-23$27-24$27-25$27-0$28-1$28-10$28-11$28-12$28-21$28-22$28-24$28-26$28-27$28-0$29-1$29-10$29-14$29-20$29-26$29-27$29-10$30-15$30-21$30-22$30-24$30-26$30-27$30-11$31-15$31-23$31-24$31-25$31-11$33-15$33-10$34-15$34-0$35-1$35-10$35-14$35-27$35-28$35-0$36-1$36-10$36-11$36-12$36-27$36-28$36
+
+%pattern-name%double block reaction
+%pattern-description%A certain reaction that can be used to stabilize the twin bees shuttle (qv). This was discovered by David Bell in October 1996.  The same reaction sometimes works in other situations, as shown in the following diagram where a pair of blocks eats an R-pentomino and a LWSS. (The LWSS version was known at least as early 1994, when Paul Callahan saw it form spontaneously as a result of firing a LWSS stream at some random junk.)
+%pattern-code%1$0-2$0-3$0-4$0-10$0-11$0-0$1-4$1-11$1-12$1-14$1-15$1-4$2-11$2-14$2-15$2-0$3-3$3-13$5-14$5-13$6-14$6
+
+%pattern-name%double caterer
+%pattern-description%(p3) Found by Dean Hickerson, October 1989. Compare caterer and triple caterer.
+%pattern-code%5$0-6$0-10$0-4$1-7$1-10$1-11$1-12$1-4$2-5$2-7$2-13$2-6$3-8$3-9$3-10$3-11$3-13$3-2$4-3$4-4$4-6$4-8$4-12$4-14$4-15$4-1$5-4$5-7$5-11$5-14$5-16$5-0$6-2$6-5$6-9$6-11$6-12$6-17$6-1$7-12$7-13$7-15$7-16$7-17$7-2$8-3$8-5$8-6$8-8$8-9$8-13$8-3$9-7$9-13$9-15$9-16$9-17$9-3$10-7$10-14$10-15$10-18$10-17$11-18$11
+
+%pattern-name%double ewe
+%pattern-description%(p3) Found by Robert Wainwright before September 1971.
+%pattern-code%6$0-7$0-7$1-6$2-6$3-7$3-9$4-10$4-6$5-7$5-8$5-10$5-0$6-2$6-3$6-5$6-0$7-1$7-3$7-5$7-5$8-9$8-4$9-8$9-9$9-14$9-15$9-4$10-5$10-10$10-11$10-15$10-10$11-14$11-14$12-16$12-18$12-19$12-14$13-16$13-17$13-19$13-9$14-11$14-12$14-13$14-9$15-10$15-12$16-13$16-13$17-12$18-12$19-13$19
+
+%pattern-name%dove
+%pattern-description%The following induction coil.
+%pattern-code%1$0-2$0-0$1-3$1-1$2-4$2-2$3-3$3-4$3
+
+%pattern-name%dragon
+%pattern-description%(c/6 orthogonally, p6) This spaceship, discovered by Paul Tooke in April 2000, was the first known c/6 spaceship. All other known orthogonal c/6 spaceships are flotillas involving at least two dragons.
+%pattern-code%13$0-16$0-17$0-24$0-27$0-28$0-29$0-5$1-9$1-10$1-11$1-12$1-14$1-15$1-16$1-17$1-18$1-19$1-24$1-27$1-28$1-29$1-1$2-2$2-3$2-4$2-5$2-10$2-15$2-20$2-21$2-22$2-0$3-7$3-8$3-10$3-17$3-18$3-20$3-21$3-22$3-25$3-27$3-28$3-29$3-1$4-2$4-3$4-4$4-5$4-7$4-8$4-9$4-18$4-19$4-20$4-21$4-25$4-27$4-28$4-29$4-5$5-8$5-23$5-8$6-9$6-20$6-21$6-23$6-24$6-8$7-9$7-20$7-21$7-23$7-24$7-5$8-8$8-23$8-1$9-2$9-3$9-4$9-5$9-7$9-8$9-9$9-18$9-19$9-20$9-21$9-25$9-27$9-28$9-29$9-0$10-7$10-8$10-10$10-17$10-18$10-20$10-21$10-22$10-25$10-27$10-28$10-29$10-1$11-2$11-3$11-4$11-5$11-10$11-15$11-20$11-21$11-22$11-5$12-9$12-10$12-11$12-12$12-14$12-15$12-16$12-17$12-18$12-19$12-24$12-27$12-28$12-29$12-13$13-16$13-17$13-24$13-27$13-28$13-29$13
+
+%pattern-name%eater
+%pattern-description%Any still life that has the ability to interact with certain patterns without suffering any permanent damage. (If it doesn`t suffer even temporary damage then it may be referred to as a rock.) The eater1 is a very common eater, and the term "eater" is often used specifically for this object. Other eaters include eater2, eater3, eater4 and even the humble block. (In fact the block was the first known eater, being found capable of eating beehives from a queen bee.) Another useful eater is shown below, feasting on a glider.
+%pattern-code%3$0-3$1-5$1-3$2-4$2-7$4-8$4-3$5-7$5-8$5-2$6-4$6-1$7-3$7-1$8-0$9-1$9
+
+%pattern-name%eater1
+%pattern-description%(p1) Usually simply called an eater, and also called a fishhook. Its ability to eat various objects was discovered by Bill Gosper in 1971.
+%pattern-code%0$0-1$0-0$1-2$1-2$2-2$3-3$3
+
+%pattern-name%eater2
+%pattern-description%(p1) This eater was found by Dave Buckingham in the 1970s. Mostly it works like the ordinary eater (see eater1) but with two slight differences that make it useful despite its size; it takes longer to recover from each bite and it acts like an eater in two directions. The first property means that, among other things, it can eat a glider in a position that would destroy a fishhook. This novel glider-eating action is occasionally of use in itself, and combined with the symmetry means that an eater2 can eat gliders along four different paths. 
+%pattern-code%3$0-5$0-6$0-1$1-2$1-3$1-5$1-6$1-0$2-1$3-2$3-3$3-5$3-6$3-3$4-5$4-3$5-5$5-4$6
+
+%pattern-name%eater2 variant
+%pattern-description%The following eater2 variant (Stephen Silver, May 1998) can be useful for obtaining smaller bounding boxes. A more compact variant with the same purpose can be seen under gliderless.
+%pattern-code%0$0-1$0-0$1-2$2-4$2-5$2-1$3-2$3-4$3-5$3-1$5-2$5-4$5-5$5-2$6-4$6-2$7-4$7-3$8
+
+%pattern-name%eater3
+%pattern-description%(p1) This large symmetric eater, found by Dave Buckingham, has a very different eating action from the eater1 and eater2. The loaf can take bites out things, being flipped over in the process. The rest of the object merely flips it back again.
+%pattern-code%9$0-10$0-4$1-5$1-8$1-11$1-1$2-4$2-9$2-11$2-0$3-2$3-4$3-10$3-1$4-4$4-6$4-7$4-4$5-7$5-5$6-10$6-6$7-7$7-8$7-9$7-10$7-8$9-7$10-9$10-8$11
+
+%pattern-name%eater4
+%pattern-description%(p1) Another eater by Dave Buckingham, which he found in 1971, but did not recognize as an eater until 1975 or 1976. It can`t eat gliders, but it can be used for various other purposes. The four NE-most centre cells regrow in a few generations after being destroyed by taking a bite out of something.
+%pattern-code%3$0-4$0-3$1-0$2-1$2-3$2-0$3-3$3-4$3-1$4-2$4-7$4-3$5-4$5-5$5-6$5-7$5-3$6-8$6-9$6-4$7-5$7-8$7-6$8-8$8-6$9-8$9-10$9-13$9-7$10-8$10-10$10-11$10-12$10-13$10-9$11-9$12-11$12-10$13-11$13
+
+%pattern-name%eater/block frob
+%pattern-description%(p4) Found by Dave Buckingham in 1976 or earlier.
+%pattern-code%1$0-2$0-2$1-2$2-4$2-3$3-5$3-5$4-6$4-8$4-9$4-8$5-9$5-2$6-3$6-3$7-0$8-1$8-2$8-0$9
+
+%pattern-name%eater plug
+%pattern-description%(p2) Found by Robert Wainwright, February 1973.
+%pattern-code%7$0-5$1-6$1-7$1-4$2-5$3-2$4-5$4-1$5-3$5-4$5-1$6-0$7-1$7
+
+%pattern-name%ecologist
+%pattern-description%(c/2 orthogonally, p20) This consists of the classic puffer train with a LWSS added to suppress the debris. See also space rake.
+%pattern-code%0$0-1$0-2$0-3$0-9$0-10$0-0$1-4$1-8$1-9$1-11$1-12$1-0$2-9$2-10$2-11$2-12$2-1$3-4$3-10$3-11$3-5$5-15$5-16$5-3$6-4$6-5$6-14$6-15$6-16$6-17$6-18$6-2$7-6$7-12$7-17$7-18$7-2$8-7$8-8$8-9$8-10$8-11$8-17$8-18$8-2$9-3$9-5$9-7$9-8$9-9$9-10$9-15$9-16$9-4$10-8$10-9$10-11$10-12$10-13$10-5$11-7$11-0$14-1$14-2$14-3$14-0$15-4$15-0$16-1$17-4$17
+
+%pattern-name%edge-repair spaceship
+%pattern-description%A spaceship which has an edge that possesses no spark and yet is able to perturb things because of its ability to repair certain types of damage to itself. The most useful examples are the following two small p3 c/3 spaceships. 
+%pattern-code%34$0-8$1-32$1-33$1-34$1-36$1-37$1-38$1-7$2-8$2-9$2-10$2-31$2-32$2-39$2-2$3-6$3-10$3-11$3-13$3-14$3-26$3-30$3-33$3-37$3-38$3-1$4-2$4-3$4-4$4-10$4-13$4-14$4-25$4-26$4-27$4-28$4-0$5-4$5-12$5-15$5-24$5-28$5-1$6-3$6-6$6-25$6-27$6-30$6-5$7-29$7
+
+%pattern-name%edge-repair spaceship 2
+%pattern-description%These were found by David Bell in 1992, but the usefulness of the edge-repair property wasn`t recognised until July 1997. The following diagram (showing an edge-repair spaceship deleting a Herschel) demonstrates the self-repairing action.
+%pattern-code%16$0-0$1-15$1-16$1-17$1-18$1-0$2-2$2-10$2-14$2-18$2-19$2-21$2-22$2-0$3-1$3-2$3-9$3-10$3-11$3-12$3-18$3-21$3-22$3-2$4-8$4-12$4-20$4-23$4-9$5-11$5-14$5-13$6
+
+%pattern-name%edge-repair spaceship 3
+%pattern-description%In October 2000, David Bell found that a T-tetromino component of a c/4 spaceship can also be self-repairing. Stephen Silver noticed that it could be used to delete beehives and, in November 2000, found the smallest known c/4 spaceship with this edge-repair component - in fact, two copies of the component.
+%pattern-code%1$0-2$0-0$1-3$1-1$2-2$2-7$4-9$4-7$5-7$6-9$6-12$6-15$6-10$7-11$8-13$8-14$8-16$8-12$9-13$9-14$9-16$9-11$10-16$10-19$10-21$10-22$10-8$11-12$11-13$11-17$11-19$11-20$11-21$11-22$11-8$12-9$12-12$12-15$12-17$12-18$12-23$12-28$12-8$13-17$13-18$13-23$13-26$13-27$13-28$13-13$14-14$14-18$14-19$14-23$14-26$14-27$14-1$15-2$15-0$16-3$16-1$17-2$17
+
+%pattern-name%edge shooter
+%pattern-description%A gun which fires its gliders (or whatever) right at the edge of the pattern, so that it can be used to fire them closely parallel to others. This is useful for constructing complex guns. Compare glider pusher, which can in fact be used for making edge shooters.  The following diagram shows a p46 edge shooter found by Paul Callahan in June 1994.
+%pattern-code%0$0-1$0-14$0-15$0-18$0-23$0-24$0-27$0-28$0-0$1-1$1-14$1-16$1-17$1-24$1-25$1-27$1-28$1-15$2-22$2-24$2-15$3-16$3-17$3-22$3-23$3-15$5-16$5-17$5-22$5-23$5-15$6-22$6-24$6-0$7-1$7-14$7-16$7-17$7-24$7-25$7-0$8-1$8-14$8-15$8-18$8-23$8-24$8-31$15-32$15-33$15-37$15-38$15-39$15-30$16-34$16-36$16-40$16-29$17-33$17-34$17-36$17-37$17-41$17-29$18-31$18-32$18-38$18-39$18-41$18-31$19-39$19-31$30-32$30-38$30-39$30-31$31-32$31-38$31-39$31
+
+%pattern-name%E-heptomino
+%pattern-description%Name given by Conway to the following heptomino.
+%pattern-code%1$0-2$0-3$0-0$1-1$1-1$2-2$2
+
+%pattern-name%electric fence
+%pattern-description%(p5) A stabilization of ants. Dean Hickerson, February 1993.
+%pattern-code%10$0-9$1-11$1-36$1-37$1-2$2-7$2-8$2-9$2-11$2-17$2-37$2-41$2-44$2-51$2-57$2-58$2-1$3-3$3-6$3-11$3-12$3-16$3-18$3-37$3-39$3-40$3-41$3-44$3-45$3-46$3-50$3-52$3-57$3-1$4-3$4-6$4-8$4-9$4-17$4-38$4-42$4-43$4-47$4-49$4-52$4-59$4-0$5-1$5-3$5-4$5-6$5-8$5-10$5-11$5-12$5-13$5-14$5-20$5-39$5-40$5-44$5-47$5-49$5-51$5-52$5-54$5-55$5-58$5-59$5-1$6-3$6-6$6-10$6-13$6-16$6-24$6-25$6-29$6-30$6-34$6-35$6-40$6-41$6-43$6-44$6-47$6-49$6-52$6-54$6-56$6-1$7-4$7-5$7-10$7-11$7-18$7-19$7-20$7-22$7-23$7-27$7-28$7-32$7-33$7-37$7-38$7-39$7-45$7-46$7-47$7-48$7-50$7-51$7-52$7-54$7-58$7-59$7-2$8-5$8-6$8-7$8-10$8-13$8-15$8-16$8-17$8-18$8-22$8-23$8-27$8-28$8-32$8-33$8-37$8-38$8-39$8-41$8-42$8-45$8-50$8-52$8-57$8-60$8-3$9-4$9-8$9-10$9-13$9-19$9-20$9-24$9-25$9-29$9-30$9-34$9-35$9-42$9-55$9-59$9-60$9-5$10-6$10-8$10-10$10-11$10-13$10-15$10-16$10-19$10-42$10-51$10-52$10-54$10-5$11-7$11-8$11-10$11-13$11-15$11-16$11-21$11-39$11-40$11-42$11-44$11-11$12-12$12-20$12-21$12-40$12-43$12-44$12-38$13-40$13-38$14-39$14
+
+%pattern-name%elevener
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-2$1-2$2-2$3-3$3-4$3-5$4-4$5-5$5
+
+%pattern-name%Elkies` p5
+%pattern-description%(p5) Found by Noam Elkies in 1997.
+%pattern-code%1$0-0$1-3$1-4$1-5$1-2$2-3$3-5$3-8$3-2$4-3$4-5$4-6$4-7$4-8$4-4$5-4$6-6$6-5$7-6$7
+
+%pattern-name%en retard
+%pattern-description%(p3) Found by Dave Buckingham, August 1972.
+%pattern-code%5$0-4$1-6$1-0$2-1$2-3$2-5$2-7$2-9$2-10$2-1$3-3$3-7$3-9$3-0$4-3$4-5$4-7$4-10$4-1$5-2$5-8$5-9$5-3$6-4$6-6$6-7$6-3$7-5$7-7$7-4$8-6$8-2$9-4$9-6$9-8$9-2$10-3$10-7$10-8$10
+
+%pattern-name%Enterprise
+%pattern-description%(c/4 diagonally, p4) Found by Dean Hickerson, March 1993.
+%pattern-code%7$0-8$0-9$0-5$1-7$1-8$1-4$2-5$2-6$2-7$2-3$3-4$3-10$3-2$4-3$4-4$4-7$4-9$4-11$4-1$5-2$5-6$5-8$5-11$5-1$6-3$6-5$6-6$6-7$6-8$6-9$6-0$7-1$7-3$7-5$7-9$7-0$8-9$8-10$8-1$9-2$9-5$9-9$9-11$9-4$10-5$10-8$10-10$10-11$10-18$10-11$11-12$11-18$11-19$11-20$11-12$12-15$12-16$12-17$12-20$12-12$13-15$13-18$13-19$13-13$14-15$14-16$14-12$15-13$15-12$16-13$16-11$17-12$18-14$18-11$19-14$19-13$20
+
+%pattern-name%Eureka
+%pattern-description%(p30) A pre-pulsar shuttle found by Dave Buckingham in August 1980. A variant is obtained by shifting the top half two spaces to either side.
+%pattern-code%1$0-16$0-0$1-2$1-7$1-15$1-17$1-1$2-5$2-6$2-8$2-9$2-16$2-7$3-7$7-1$8-5$8-6$8-8$8-9$8-16$8-0$9-2$9-7$9-15$9-17$9-1$10-16$10
+
+%pattern-name%extremely impressive
+%pattern-description%(p6) Found by Dave Buckingham, August 1976.
+%pattern-code%4$0-5$0-3$1-5$1-6$1-7$1-3$2-8$2-0$3-1$3-3$3-7$3-8$3-0$4-1$4-3$4-9$4-10$4-4$5-5$5-6$5-7$5-8$5-11$5-10$6-11$6-6$7-5$8-7$8-6$9
+
+%pattern-name%factory
+%pattern-description%Another word for gun, but not used in the case of glider guns. The term is also used for a pattern that repeatedly manufactures objects other than spaceships or rakes. In this case the new objects do not move out of the way, and therefore must be used up in some way before the next one is made. The following shows an example of a p144 gun which consists of a p144 block factory whose output is converted into gliders by a p72 oscillator. (This gun is David Bell`s improvement of the one Bill Gosper found in July 1994. The p72 oscillator is by Robert Wainwright, 1990, and the block factory is Achim`s p144 minus one of its stabilizing blocks.)
+%pattern-code%23$0-24$0-49$0-50$0-23$1-24$1-49$1-50$1-41$2-42$2-40$3-43$3-41$4-42$4-36$6-37$6-38$6-36$7-38$7-9$8-10$8-36$8-37$8-38$8-9$9-10$9-36$9-37$9-8$10-11$10-35$10-36$10-37$10-8$11-11$11-13$11-14$11-35$11-37$11-8$12-13$12-14$12-35$12-36$12-37$12-10$13-11$13-13$13-14$13-31$14-32$14-21$15-22$15-30$15-33$15-21$16-22$16-31$16-32$16-49$17-50$17-49$18-50$18-4$20-5$20-24$20-0$21-1$21-6$21-7$21-8$21-9$21-20$21-21$21-24$21-25$21-27$21-28$21-29$21-0$22-1$22-4$22-5$22-7$22-8$22-9$22-20$22-21$22-26$22-27$22-28$22-29$22-4$23-24$23-25$23
+
+%pattern-name%Fast Forward Force Field
+%pattern-description%The following reaction found by Dieter Leithner in May 1994. In the absence of the incoming LWSS the gliders would simply annihilate one another, but as shown they allow the LWSS to advance 11 spaces in the course of the next 6 generations. A neat illusion. See also star gate. (Leithner named the Fast Forward Force Field in honour of his favourite science fiction writer, the physicist Robert L. Forward.)
+%pattern-code%7$0-14$0-8$1-15$1-16$1-2$2-3$2-6$2-7$2-8$2-14$2-15$2-0$3-1$3-3$3-4$3-0$4-1$4-2$4-3$4-13$4-1$5-2$5-12$5-13$5-12$6-14$6
+
+%pattern-name%F-heptomino
+%pattern-description%Name given by Conway to the following heptomino.
+%pattern-code%0$0-1$0-1$1-1$2-1$3-2$3-3$3
+
+%pattern-name%figure-8
+%pattern-description%(p8) Found by Simon Norton in 1970.
+%pattern-code%0$0-1$0-2$0-0$1-1$1-2$1-0$2-1$2-2$2-3$3-4$3-5$3-3$4-4$4-5$4-3$5-4$5-5$5
+
+%pattern-name%filter
+%pattern-description%Any oscillator used to delete some but not all of the spaceships in a stream. An example is the blocker, which can be positioned so as to delete every other glider in a stream of period 8n+4, and can also do the same for LWSS streams. Other examples are the MW emulator and T-nosed p4 (either of which can be used to delete every other LWSS in a stream of period 4n+2), the fountain (which does the same for MWSS streams) and a number of others, such as the p6 pipsquirter, the pentadecathlon and the p72 oscillator shown under factory. Another example, a p4 oscillator deleting every other HWSS in a stream of period 4n+2, is shown below. (The p4 oscillator here was found, with a slightly larger stator, by Dean Hickerson in November 1994.)
+%pattern-code%10$0-11$0-12$0-13$0-4$1-5$1-9$1-10$1-11$1-12$1-13$1-14$1-0$2-1$2-2$2-3$2-5$2-6$2-9$2-10$2-11$2-12$2-14$2-15$2-0$3-1$3-2$3-3$3-4$3-5$3-13$3-14$3-1$4-2$4-3$4-4$4-16$6-17$6-14$7-19$7-13$9-15$9-18$9-20$9-11$10-12$10-13$10-14$10-16$10-17$10-19$10-20$10-21$10-22$10-8$11-10$11-15$11-18$11-23$11-25$11-8$12-9$12-11$12-12$12-14$12-19$12-21$12-22$12-24$12-25$12-11$13-13$13-20$13-22$13-8$14-9$14-11$14-13$14-20$14-22$14-24$14-25$14-8$15-9$15-11$15-22$15-24$15-25$15-11$16-13$16-15$16-16$16-17$16-18$16-20$16-22$16-11$17-13$17-20$17-22$17-10$18-11$18-13$18-15$18-16$18-17$18-18$18-20$18-22$18-23$18-10$19-13$19-14$19-15$19-18$19-19$19-20$19-23$19-12$20-15$20-16$20-17$20-18$20-21$20-11$21-12$21-14$21-19$21-21$21-22$21-11$22-14$22-19$22-22$22-12$23-15$23-18$23-21$23-13$24-14$24-19$24-20$24
+
+%pattern-name%fire-spitting
+%pattern-description%(p3) Found by Nicolay Beluchenko, September 2003.
+%pattern-code%3$0-1$1-2$1-3$1-0$2-1$3-3$3-4$3-5$3-1$4-7$4-2$5-5$5-2$6-4$6-7$6-9$6-8$7-9$7
+
+%pattern-name%fleet
+%pattern-description%(p1) A common formation of two ship-ties.
+%pattern-code%4$0-5$0-4$1-6$1-5$2-6$2-7$3-8$3-0$4-1$4-7$4-9$4-0$5-2$5-8$5-9$5-1$6-2$6-3$7-4$7-3$8-5$8-4$9-5$9
+
+%pattern-name%flotilla
+%pattern-description%A spaceship composed of a number of smaller interacting spaceships. Often one or more of these is not a true spaceship and could not survive without the support of the others. The following example shows an OWSS escorted by two HWSS.
+%pattern-code%4$0-5$0-6$0-7$0-3$1-4$1-5$1-6$1-7$1-8$1-2$2-3$2-5$2-6$2-7$2-8$2-3$3-4$3-11$5-12$5-1$6-14$6-0$7-0$8-14$8-0$9-1$9-2$9-3$9-4$9-5$9-6$9-7$9-8$9-9$9-10$9-11$9-12$9-13$9-4$12-5$12-6$12-7$12-3$13-4$13-5$13-6$13-7$13-8$13-2$14-3$14-5$14-6$14-7$14-8$14-3$15-4$15
+
+%pattern-name%fly
+%pattern-description%A certain c/3 tagalong found by David Bell, April 1992. Shown here attached to the back of a small spaceship (also by Bell).
+%pattern-code%2$0-1$1-3$1-1$2-3$2-26$2-28$2-32$2-1$3-25$3-26$3-28$3-30$3-33$3-11$4-12$4-13$4-22$4-32$4-0$5-1$5-11$5-12$5-15$5-17$5-18$5-22$5-25$5-26$5-27$5-28$5-1$6-3$6-13$6-14$6-15$6-16$6-19$6-21$6-24$6-25$6-30$6-31$6-1$7-2$7-11$7-14$7-18$7-19$7-20$7-26$7-27$7-28$7-2$8-10$8-15$8-18$8-19$8-22$8-23$8-26$8-29$8-3$9-6$9-10$9-15$9-18$9-19$9-20$9-22$9-24$9-29$9-30$9-7$10-9$10-10$10-15$10-18$10-19$10-20$10-21$10-27$10-4$11-5$11-9$11-10$11-15$11-18$11-19$11-20$11-21$11-27$11-4$12-6$12-10$12-15$12-18$12-19$12-20$12-22$12-24$12-29$12-30$12-3$13-4$13-10$13-15$13-18$13-19$13-22$13-23$13-26$13-29$13-4$14-6$14-11$14-14$14-18$14-19$14-20$14-26$14-27$14-28$14-5$15-13$15-14$15-15$15-16$15-19$15-21$15-24$15-25$15-30$15-31$15-11$16-12$16-15$16-17$16-18$16-22$16-25$16-26$16-27$16-28$16-11$17-12$17-13$17-22$17-32$17-25$18-26$18-28$18-30$18-33$18-26$19-28$19-32$19
+
+%pattern-name%fore and back
+%pattern-description%(p2) Compare snake pit. Found by Achim Flammenkamp, July 1994.
+%pattern-code%0$0-1$0-3$0-4$0-0$1-1$1-3$1-5$1-6$2-0$3-1$3-2$3-4$3-5$3-6$3-0$4-1$5-3$5-5$5-6$5-2$6-3$6-5$6-6$6
+
+%pattern-name%fountain
+%pattern-description%(p4) Found by Dean Hickerson in November 1994, and named by Bill Gosper. See also filter and superfountain.
+%pattern-code%9$0-3$2-4$2-6$2-12$2-14$2-15$2-3$3-9$3-15$3-4$4-5$4-7$4-8$4-10$4-11$4-13$4-14$4-6$6-7$6-11$6-12$6-0$7-1$7-17$7-18$7-0$8-3$8-7$8-9$8-11$8-15$8-18$8-1$9-2$9-3$9-5$9-6$9-7$9-8$9-9$9-10$9-11$9-12$9-13$9-15$9-16$9-17$9-4$10-9$10-14$10-3$11-4$11-14$11-15$11-3$12-15$12-5$13-13$13-4$14-5$14-13$14-14$14
+
+%pattern-name%fourteener
+%pattern-description%(p1)
+%pattern-code%4$0-5$0-0$1-1$1-4$1-6$1-0$2-6$2-1$3-2$3-3$3-4$3-5$3-3$4
+
+%pattern-name%fox
+%pattern-description%(p2) This is the smallest asymmetric p2 oscillator. Found by Dave Buckingham, July 1977.
+%pattern-code%4$0-4$1-2$2-5$2-0$3-1$3-4$4-6$4-2$5-4$5-6$5-6$6
+
+%pattern-name%French kiss
+%pattern-description%(p3) Found by Robert Wainwright, July 1971.
+%pattern-code%0$0-0$1-1$1-2$1-3$2-2$3-5$3-6$3-2$4-7$4-3$5-4$5-7$5-6$6-7$7-8$7-9$7-9$8
+
+%pattern-name%frog II
+%pattern-description%(p3) Found by Dave Buckingham, October 1972.
+%pattern-code%2$0-3$0-7$0-8$0-2$1-4$1-6$1-8$1-4$2-6$2-3$3-5$3-7$3-3$4-4$4-6$4-7$4-1$5-2$5-8$5-9$5-0$6-3$6-5$6-7$6-10$6-1$7-3$7-7$7-9$7-0$8-1$8-3$8-7$8-9$8-10$8-4$9-5$9-6$9-3$11-5$11-6$11-3$12-4$12-6$12
+
+%pattern-name%frothing puffer
+%pattern-description%A frothing puffer (or a frothing spaceship) is a puffer (or spaceship) whose back end appears to be unstable and breaking apart, but which nonetheless survives. The exhaust festers and clings to the back of the puffer/spaceship before breaking off. The first known frothing puffers were c/2, and most were found by slightly modifying the back ends of p2 spaceships. A number of these have periods which are not a multiple of 4 (as with some line puffers). Paul Tooke has also found c/3 frothing puffers.  The following p78 c/2 frothing puffer was found by Paul Tooke in April 2001.
+%pattern-code%7$0-25$0-6$1-7$1-8$1-24$1-25$1-26$1-5$2-6$2-11$2-12$2-13$2-19$2-20$2-21$2-26$2-27$2-3$3-4$3-6$3-9$3-10$3-11$3-14$3-18$3-21$3-22$3-23$3-26$3-28$3-29$3-4$4-6$4-9$4-11$4-15$4-17$4-21$4-23$4-26$4-28$4-1$5-2$5-4$5-6$5-8$5-10$5-15$5-17$5-22$5-24$5-26$5-28$5-30$5-31$5-1$6-2$6-6$6-8$6-13$6-19$6-24$6-26$6-30$6-31$6-1$7-2$7-3$7-5$7-9$7-14$7-16$7-18$7-23$7-27$7-29$7-30$7-31$7-0$8-1$8-11$8-12$8-14$8-16$8-18$8-20$8-21$8-31$8-32$8-12$9-20$9-9$10-10$10-12$10-20$10-22$10-23$10-10$11-22$11-7$12-8$12-10$12-22$12-24$12-25$12-7$13-8$13-24$13-25$13-7$14-9$14-11$14-13$14-14$14-15$14-17$14-18$14-19$14-21$14-23$14-25$14-6$15-7$15-11$15-15$15-17$15-21$15-25$15-26$15-6$16-9$16-13$16-15$16-17$16-19$16-23$16-26$16-9$17-10$17-15$17-17$17-22$17-23$17-5$18-6$18-11$18-15$18-17$18-21$18-26$18-27$18-9$19-11$19-12$19-14$19-18$19-20$19-21$19-23$19-10$20-12$20-14$20-16$20-18$20-20$20-22$20-12$21-15$21-17$21-20$21-11$22-13$22-19$22-21$22
+
+%pattern-name%fumarole
+%pattern-description%(p5) Found by Dean Hickerson in September 1989. In terms of its 7x8 bounding box this is the smallest p5 oscillator.
+%pattern-code%3$0-4$0-1$1-6$1-1$2-6$2-1$3-6$3-2$4-5$4-0$5-2$5-5$5-7$5-0$6-1$6-6$6-7$6
+
+%pattern-name%Gabriel`s p138
+%pattern-description%(p138) The following oscillator found by Gabriel Nivasch in October 2002.
+%pattern-code%7$0-8$0-9$0-6$1-9$1-7$2-11$2-2$3-8$3-9$3-10$3-3$4-9$4-0$5-1$5-3$5-4$5-0$6-3$6-13$6-0$7-2$7-12$7-14$7-1$8-11$8-14$8-10$9-11$9-13$9-14$9-5$10-11$10-4$11-5$11-6$11-12$11-3$12-7$12-5$13-8$13-5$14-6$14-7$14
+
+%pattern-name%Garden of Eden
+%pattern-description%A configuration of ON and OFF cells that can only occur in generation 0. (This term was first used in connection with cellular automata by John W. Tukey, many years before Life.) It was known from the start that there are Gardens of Eden in Life, because of a theorem by Edward Moore that guarantees their existence in a wide class of cellular automata. Explicit examples have since been constructed, the first by Roger Banks, et al. at MIT in 1971. This example was 9 x 33. In 1974 J. Hardouin-Duparc et al. at the University of Bordeaux 1 produced a 6 x 122 example. The following shows a 12 x 12 example found by Nicolay Beluchenko in February 2006, based on a 13 x 12 one found by Achim Flammenkamp in June 2004.
+%pattern-code%2$0-4$0-5$0-6$0-0$1-1$1-3$1-5$1-6$1-7$1-8$1-9$1-11$1-0$2-2$2-4$2-5$2-7$2-9$2-1$3-2$3-3$3-4$3-6$3-8$3-9$3-10$3-0$4-2$4-4$4-5$4-7$4-8$4-9$4-11$4-1$5-2$5-3$5-5$5-6$5-8$5-10$5-2$6-6$6-7$6-8$6-11$6-1$7-3$7-4$7-6$7-8$7-10$7-0$8-1$8-2$8-4$8-5$8-6$8-7$8-9$8-11$8-0$9-1$9-3$9-4$9-5$9-6$9-10$9-1$10-3$10-5$10-6$10-9$10-1$11-2$11-4$11-7$11-8$11-10$11
+
+%pattern-name%germ
+%pattern-description%(p3) Found by Dave Buckingham, September 1972.
+%pattern-code%4$0-5$0-5$1-3$2-2$3-4$3-5$3-6$3-7$3-2$4-7$4-1$5-2$5-4$5-2$6-4$6-6$6-7$6-8$6-9$6-0$7-2$7-4$7-9$7-0$8-1$8-5$8-6$8-7$8-7$9-8$9
+
+%pattern-name%glasses
+%pattern-description%(p2) Compare scrubber and spark coil.
+%pattern-code%4$0-13$0-2$1-3$1-4$1-13$1-14$1-15$1-1$2-16$2-1$3-4$3-5$3-6$3-11$3-12$3-13$3-16$3-0$4-1$4-3$4-7$4-10$4-14$4-16$4-17$4-3$5-7$5-8$5-9$5-10$5-14$5-3$6-7$6-10$6-14$6-4$7-5$7-6$7-11$7-12$7-13$7-4$9-5$9-7$9-10$9-12$9-13$9-4$10-6$10-7$10-10$10-11$10-13$10
+
+%pattern-name%glider
+%pattern-description%(c/4 diagonally, p4) The smallest, most common and first discovered spaceship. This was found by Richard Guy in 1970 while Conway`s group was attempting to track the evolution of the R-pentomino. The name is due in part to the fact that it is glide symmetric. (It is often stated that Conway discovered the glider, but he himself has said it was Guy. See also the cryptic reference ("some guy") in Winning Ways.)
+%pattern-code%0$0-1$0-2$0-0$1-1$2
+
+%pattern-name%glider-block cycle
+%pattern-description%An infinite oscillator based on the following reaction (a variant of the rephaser). The oscillator consists of copies of this reaction displaced 2n spaces from one another (for some n>6) with blocks added between the copies in order to cause the reaction to occur again halfway through the period. The period of the resulting infinite oscillator is 8n-20. (Alternatively, in a cylindrical universe of width 2n the oscillator just consists of two gliders and two blocks.)
+%pattern-code%3$0-4$0-3$1-4$1-2$4-5$4-0$5-2$5-5$5-7$5-1$6-2$6-5$6-6$6
+
+%pattern-name%glider duplicator
+%pattern-description%Any reaction in which one input glider is converted into two output gliders. This can be done either by oscillators or by spaceships. The most useful glider duplicators are those with low periods.  The following period 30 glider duplicator demonstrates a simple glider duplicating mechanism found by Dieter Leithner. The input glider stream comes in from the upper left, and the output glider streams leave at the upper and lower right. One of the output glider streams is inverted, so an inline inverter is required to complete the duplicator.
+%pattern-code%10$0-12$0-11$1-12$1-11$2-24$6-25$6-30$6-18$7-24$7-25$7-30$7-31$7-19$8-20$8-29$8-31$8-18$9-19$9-22$14-23$14-23$15-24$15-12$16-22$16-12$17-14$17-13$18-15$18-25$18-26$18-0$19-1$19-13$19-16$19-24$19-25$19-26$19-0$20-1$20-13$20-15$20-21$20-23$20-24$20-12$21-14$21-21$21-24$21-12$22-21$22-23$22-24$22-24$23-25$23-26$23-32$23-33$23-25$24-26$24-32$24-34$24-34$25-34$26-35$26
+
+%pattern-name%gliderless
+%pattern-description%A gun is said to be gliderless if it does not use gliders. The purist definition would insist that a glider does not appear anywhere, even incidentally. For a long time the only known way to construct LWSS, MWSS and HWSS guns involved gliders, and it was not until April 1996 that Dieter Leithner constructed the first gliderless gun (a p46 LWSS gun).  The following diagram shows the p44 MWSS gun that Dieter Leithner discovered (in a somewhat larger form) in April 1997. This is the smallest known gliderless gun, and also the smallest known MWSS gun. It is based on an important p44 oscillator discovered by Dave Buckingham in early 1992, shown here in an improved form found in January 2005 by Jason Summers using a new p4 sparker by Nicolay Beluchenko. Note that a glider shape appears in this gun for three consecutive generations, but always as part of a larger cluster, so even a purist would regard this gun as gliderless.
+%pattern-code%7$0-2$1-3$1-7$1-9$1-14$1-2$2-5$2-6$2-9$2-11$2-13$2-14$2-16$2-19$2-20$2-21$2-24$2-25$2-4$3-5$3-13$3-14$3-16$3-18$3-20$3-21$3-24$3-25$3-3$4-4$4-5$4-13$4-21$4-22$4-23$4-33$4-23$5-31$5-32$5-33$5-23$6-30$6-39$6-40$6-41$6-30$7-31$7-39$7-42$7-9$8-10$8-25$8-39$8-9$9-10$9-24$9-39$9-43$9-25$10-26$10-39$10-24$11-26$11-40$11-42$11-23$13-25$13-31$13-32$13-33$13-24$14-30$14-33$14-48$14-49$14-0$15-1$15-14$15-15$15-16$15-24$15-31$15-32$15-44$15-45$15-47$15-49$15-0$16-1$16-13$16-17$16-44$16-45$16-47$16-13$17-14$17-16$17-17$17-48$17-33$18-34$18-44$18-45$18-47$18-48$18-30$19-31$19-45$19-47$19-45$20-47$20-46$21-13$22-14$22-16$22-17$22-31$22-33$22-0$23-1$23-13$23-17$23-31$23-32$23-0$24-1$24-14$24-15$24-16$24-27$25-28$25-27$26-29$26-29$27-29$28-30$28-9$30-10$30-9$31-10$31-23$33-23$34-3$35-4$35-5$35-13$35-21$35-22$35-23$35-4$36-5$36-13$36-14$36-16$36-18$36-20$36-21$36-24$36-25$36-2$37-5$37-6$37-9$37-11$37-13$37-14$37-16$37-19$37-20$37-21$37-24$37-25$37-2$38-3$38-7$38-9$38-14$38-7$39
+
+%pattern-name%glider pusher
+%pattern-description%An arrangement of a queen bee shuttle and a pentadecathlon that can push the path of a passing glider out by one half-diagonal space. This was found by Dieter Leithner in December 1993 and is shown below. It is useful for constructing complex guns where it may be necessary to produce a number of gliders travelling on close parallel paths. See also edge shooter.
+%pattern-code%9$0-10$0-9$1-10$1-10$3-9$4-11$4-9$5-11$5-10$6-7$9-8$9-10$9-12$9-13$9-7$10-13$10-8$11-12$11-1$12-9$12-10$12-11$12-2$13-0$14-1$14-2$14-17$17-22$17-15$18-16$18-18$18-19$18-20$18-21$18-23$18-24$18-17$19-22$19
+
+%pattern-name%gliders by the dozen
+%pattern-description%(stabilizes at time 184) In early references this is usually shown in a larger form whose generation 1 is generation 8 of the form shown here.
+%pattern-code%0$0-1$0-4$0-0$1-4$1-0$2-3$2-4$2
+
+%pattern-name%glider synthesis
+%pattern-description%Construction of an object by means of glider collisions. It is generally assumed that the gliders should be arranged so that they could come from infinity - that is, gliders should not have had to pass through one another to achieve the initial arrangement.  Glider syntheses for all still lifes and known oscillators with at most 14 cells were found by Dave Buckingham.  Perhaps the most interesting glider syntheses are those of spaceships, because these can be used to create corresponding guns and rakes. Many of the c/2 spaceships that are based on standard spaceships have been synthesized, mostly by Mark Niemiec. In June 1998 Stephen Silver found syntheses for some of the Corderships (although it was not until July 1999 that Jason Summers used this to build a Cordership gun). In May 2000, Noam Elkies suggested that a 2c/5 spaceship found by Tim Coe in May 1996 might be a candidate for glider synthesis. Initial attempts to construct a synthesis for this spaceship got fairly close, but it was only in March 2003 that Summers and Elkies managed to find a way perform the crucial last step. Summers then used the new synthesis to build a c/2 forward rake for the 2c/5 spaceship; this was the first example in Life of a rake which fires spaceships that travel in the same direction as the rake but more slowly.  A 3-glider synthesis of a pentadecathlon is shown in the diagram below. This was found in April 1997 by Heinrich Koenig and came as a surprise, as it was widely assumed that anything using just three gliders would already be known.
+%pattern-code%6$0-6$1-8$1-6$2-7$2-0$4-1$4-2$4-2$5-1$6-7$6-8$6-8$7-9$7-7$8
+
+%pattern-name%glider turner
+%pattern-description%An reaction in which a glider is turned by an oscillator or a spaceship. In the former case, the glider turner is usually called a reflector.  Glider turners are easily built using standard spaceships. The following diagram shows a convoy which turns a forward glider 90 degrees, with the new glider also moving forwards.
+%pattern-code%9$0-10$0-8$1-9$1-11$1-12$1-13$1-14$1-1$2-9$2-10$2-11$2-12$2-13$2-14$2-0$3-10$3-11$3-12$3-13$3-0$4-1$4-2$4-3$9-1$10-5$10-0$11-0$12-5$12-0$13-1$13-2$13-3$13-4$13-13$16-14$16-15$16-16$16-17$16-18$16-13$17-19$17-13$18-14$19-19$19-16$20-17$20
+
+%pattern-name%Gosper's famous glider gun
+%pattern-description%The first known gun, and indeed the first known finite pattern with unbounded growth, found by Bill Gosper in November 1970. It remains by far the smallest known gun. Gosper has since found other guns, see new gun and the p144 gun shown under factory.
+%pattern-code%1$5-1$6-2$5-2$6-11$5-11$6-11$7-12$4-12$8-13$3-13$9-14$3-14$9-15$6-16$4-16$8-17$5-17$6-17$7-18$6-21$3-21$4-21$5-22$3-22$4-22$5-23$2-23$6-25$1-25$2-25$6-25$7-35$3-35$4-36$3-36$4
+
+%pattern-name%glider gun Ship
+%pattern-description%no description.
+%pattern-code%24$0-22$1-24$1-12$2-13$2-20$2-21$2-34$2-35$2-11$3-15$3-20$3-21$3-34$3-35$3-0$4-1$4-10$4-16$4-20$4-21$4-0$5-1$5-10$5-14$5-16$5-17$5-22$5-24$5-10$6-16$6-24$6-11$7-15$7-12$8-13$8
+
+%pattern-name%gourmet
+%pattern-description%(p32) Found by Dave Buckingham in March 1978. Compare with pi portraitor and popover.
+%pattern-code%10$0-11$0-10$1-4$2-5$2-7$2-8$2-10$2-15$2-16$2-2$3-5$3-7$3-9$3-15$3-2$4-3$4-8$4-17$4-16$5-17$5-16$7-17$7-0$8-10$8-11$8-12$8-15$8-17$8-0$9-1$9-2$9-10$9-12$9-16$9-3$10-10$10-12$10-17$10-18$10-19$10-2$11-4$11-19$11-2$12-3$12-2$14-3$14-2$15-11$15-16$15-17$15-4$16-10$16-12$16-14$16-17$16-3$17-4$17-9$17-11$17-12$17-14$17-15$17-9$18-8$19-9$19
+
+%pattern-name%Gray counter
+%pattern-description%(p4) Found in 1971. If you look at this in the right way you will see that it cycles through the Gray codes from 0 to 3. Compare with R2D2.
+%pattern-code%6$0-5$1-7$1-4$2-6$2-8$2-1$3-4$3-8$3-11$3-0$4-2$4-4$4-8$4-10$4-12$4-1$5-4$5-8$5-11$5-4$6-6$6-8$6-5$7-7$7-6$8
+
+%pattern-name%great on-off
+%pattern-description%(p2)
+%pattern-code%2$0-3$0-1$1-4$1-1$2-3$2-0$3-1$3-3$3-6$3-4$4-5$4-7$4-7$5-4$6-5$6-6$6-4$7
+
+%pattern-name%grin
+%pattern-description%The following common parent of the block. This name relates to the infamous Cheshire cat. See also pre-block.
+%pattern-code%0$0-3$0-1$1-2$1
+
+%pattern-name%grow-by-one object
+%pattern-description%A pattern whose population increases by one cell every generation. The smallest known grow-by-one object is the following 44-cell pattern (David Bell`s one-cell improvement of a pattern found by Nicolay Beluchenko, September 2005).
+%pattern-code%8$0-9$0-7$1-8$1-9$2-11$3-12$3-10$4-9$6-12$6-13$6-1$7-2$7-8$7-9$7-14$7-0$8-1$8-7$8-13$8-2$9-7$9-9$9-13$9-14$9-4$10-7$10-12$10-13$10-15$10-4$11-5$11-13$11-14$11-8$12-13$12-15$12-16$12-7$13-9$13-12$13-14$13-15$13-8$14
+
+%pattern-name%hammer
+%pattern-description%To hammer a LWSS, MWSS or HWSS is to smash things into the rear end of it in order to transform it into a different type of spaceship. A hammer is the object used to do the hammering. In the following example by Dieter Leithner a LWSS is hammered by two more LWSS to make it into a MWSS.
+%pattern-code%0$0-3$0-4$1-8$1-9$1-0$2-4$2-7$2-8$2-9$2-15$2-16$2-17$2-18$2-1$3-2$3-3$3-4$3-7$3-8$3-10$3-15$3-19$3-8$4-9$4-10$4-15$4-9$5-16$5-19$5
+
+%pattern-name%hammerhead
+%pattern-description%A certain front end for c/2 spaceships. The central part of the hammerhead pattern is supported between two MWSS. The picture below shows a small example of a spaceship with a hammerhead front end (the front 9 columns).
+%pattern-code%16$0-1$1-2$1-14$1-18$1-0$2-1$2-3$2-4$2-5$2-13$2-1$3-2$3-3$3-4$3-5$3-13$3-18$3-2$4-3$4-4$4-5$4-6$4-12$4-14$4-15$4-16$4-17$4-6$5-7$5-8$5-10$5-12$5-13$5-6$6-7$6-8$6-13$6-6$7-7$7-8$7-10$7-11$7-12$7-10$8-11$8-10$9-11$9-6$10-7$10-8$10-10$10-11$10-12$10-6$11-7$11-8$11-13$11-6$12-7$12-8$12-10$12-12$12-13$12-2$13-3$13-4$13-5$13-6$13-12$13-14$13-15$13-16$13-17$13-1$14-2$14-3$14-4$14-5$14-13$14-18$14-0$15-1$15-3$15-4$15-5$15-13$15-1$16-2$16-14$16-18$16-16$17
+
+%pattern-name%handshake
+%pattern-description%An old MIT name for lumps of muck, from the following form (2 generations on from the stairstep hexomino)£
+%pattern-code%2$0-3$0-1$1-3$1-4$1-0$2-1$2-3$2-1$3-2$3
+
+%pattern-name%harbor
+%pattern-description%(p5) Found by Dave Buckingham in September 1978. The name is by Dean Hickerson.
+%pattern-code%5$0-6$0-10$0-11$0-5$1-7$1-9$1-11$1-6$2-10$2-5$4-6$4-10$4-11$4-0$5-1$5-4$5-6$5-10$5-12$5-15$5-16$5-0$6-2$6-4$6-5$6-11$6-12$6-14$6-16$6-1$7-15$7-1$9-15$9-0$10-2$10-4$10-5$10-11$10-12$10-14$10-16$10-0$11-1$11-4$11-6$11-10$11-12$11-15$11-16$11-5$12-6$12-10$12-11$12-6$14-10$14-5$15-7$15-9$15-11$15-5$16-6$16-10$16-11$16
+
+%pattern-name%harvester
+%pattern-description%(c p4 fuse) Found by David Poyner, this was the first published example of a fuse. The name refers to the fact the it produces debris in the form of blocks which contain the same number of cells as the fuse has burnt up.
+%pattern-code%16$0-17$0-15$1-17$1-14$2-13$3-12$4-11$5-10$6-9$7-8$8-7$9-6$10-5$11-0$12-1$12-2$12-3$12-4$12-0$13-1$13-2$13-3$13-0$14-2$14-3$14
+
+%pattern-name%hat
+%pattern-description%(p1) Found in 1971. See also twinhat and sesquihat.
+%pattern-code%2$0-1$1-3$1-1$2-3$2-0$3-1$3-3$3-4$3
+
+%pattern-name%hebdarole
+%pattern-description%(p7) Found by Noam Elkies, November 1997. Compare fumarole. The smaller version shown below was found soon after by Alan Hensel using a component found by Dave Buckingham in June 1977. The top tens rows can be stabilized by their mirror image (giving an inductor) and this was the original form found by Elkies.
+%pattern-code%11$0-12$0-4$1-5$1-9$1-14$1-18$1-19$1-1$2-4$2-7$2-9$2-14$2-16$2-19$2-22$2-0$3-2$3-4$3-6$3-7$3-9$3-14$3-16$3-17$3-19$3-21$3-23$3-1$4-4$4-7$4-9$4-11$4-12$4-14$4-16$4-19$4-22$4-4$5-5$5-10$5-13$5-18$5-19$5-11$6-12$6-7$7-10$7-13$7-16$7-6$8-8$8-9$8-14$8-15$8-17$8-7$9-16$9-3$11-4$11-19$11-20$11-3$12-6$12-7$12-8$12-9$12-14$12-15$12-16$12-17$12-20$12-4$13-6$13-8$13-10$13-13$13-15$13-17$13-19$13-3$14-4$14-6$14-10$14-11$14-12$14-13$14-17$14-19$14-20$14-7$15-8$15-15$15-16$15-9$16-10$16-13$16-14$16-9$17-12$17-14$17-10$18-11$18
+
+%pattern-name%hectic
+%pattern-description%(p30) Found by Robert Wainwright in September 1984.
+%pattern-code%22$0-23$0-22$1-23$1-9$12-20$12-21$12-25$12-26$12-7$13-9$13-22$13-23$13-24$13-6$14-8$14-21$14-25$14-0$15-1$15-5$15-8$15-22$15-24$15-0$16-1$16-6$16-8$16-23$16-7$17-9$17-16$17-18$17-9$18-16$18-17$18-17$19-21$19-21$20-22$20-29$20-20$21-22$21-29$21-31$21-15$22-30$22-32$22-37$22-38$22-14$23-16$23-30$23-33$23-37$23-38$23-13$24-17$24-30$24-32$24-14$25-15$25-16$25-29$25-31$25-12$26-13$26-17$26-18$26-29$26-15$37-16$37-15$38-16$38
+
+%pattern-name%Heisenburp device
+%pattern-description%A pattern which can detect the passage of a glider without affecting the glider`s path or timing. The first such device was constructed by David Bell in December 1992. The term is due to Bill Gosper.  The following is an example of the kind of reaction used at the heart of a Heisenburp device. The glider at bottom right alters the reaction of the other two gliders without itself being affected in any way.
+%pattern-code%0$0-6$0-1$1-2$1-6$1-8$1-0$2-1$2-6$2-7$2-9$6-10$6-8$7-10$7-10$8
+
+%pattern-name%helix
+%pattern-description%A convoy of standard spaceships used in a Caterpillar to move some piece of debris at the speed of the Caterpillar. The following diagram illustrates the idea.
+%pattern-code%31$0-17$1-30$1-31$1-32$1-16$2-17$2-18$2-23$2-24$2-25$2-30$2-32$2-33$2-9$3-10$3-11$3-16$3-18$3-19$3-23$3-26$3-31$3-32$3-33$3-36$3-37$3-38$3-9$4-12$4-17$4-18$4-19$4-23$4-31$4-32$4-36$4-9$5-17$5-18$5-23$5-27$5-37$5-9$6-13$6-23$6-27$6-0$7-1$7-2$7-9$7-13$7-23$7-0$8-3$8-9$8-24$8-26$8-0$9-10$9-12$9-0$10-1$11-3$11-10$14-9$15-10$15-11$15-9$16-11$16-12$16-10$17-11$17-12$17-10$18-11$18-15$21-16$21-17$21-15$22-18$22-23$22-29$22-30$22-31$22-15$23-22$23-23$23-24$23-29$23-32$23-37$23-15$24-21$24-22$24-24$24-29$24-36$24-37$24-38$24-4$25-5$25-6$25-16$25-18$25-21$25-22$25-23$25-29$25-35$25-36$25-38$25-4$26-7$26-21$26-22$26-23$26-30$26-32$26-35$26-36$26-37$26-4$27-21$27-22$27-23$27-35$27-36$27-37$27-4$28-22$28-23$28-35$28-36$28-37$28-5$29-7$29-36$29-37$29-43$30-42$31-43$31-44$31-41$32-42$32-44$32-41$33-42$33-43$33-42$34-43$34-41$41-30$42-31$42-32$42-40$42-41$42-42$42-16$43-17$43-18$43-24$43-29$43-32$43-39$43-40$43-42$43-10$44-15$44-18$44-23$44-24$44-25$44-32$44-39$44-40$44-41$44-9$45-10$45-11$45-18$45-23$45-25$45-26$45-32$45-39$45-40$45-41$45-9$46-11$46-12$46-18$46-24$46-25$46-26$46-29$46-31$46-40$46-41$46-10$47-11$47-12$47-15$47-17$47-24$47-25$47-26$47-1$48-10$48-11$48-12$48-24$48-25$48-26$48-0$49-1$49-2$49-10$49-11$49-12$49-24$49-25$49-0$50-2$50-3$50-10$50-11$50-1$51-2$51-3$51-42$51-1$52-2$52-41$52-42$52-43$52-40$53-41$53-43$53-40$54-41$54-42$54-41$55-42$55-9$56-10$56-11$56-8$57-11$57-11$58-11$59-8$60-10$60
+
+%pattern-name%heptapole
+%pattern-description%(p2) The barberpole of length 7.
+%pattern-code%0$0-1$0-0$1-2$1-2$3-4$3-4$5-6$5-6$7-8$7-9$8-8$9-9$9
+
+%pattern-name%Herschel
+%pattern-description%(stabilizes at time 128) The following pattern which occurs at generation 20 of the B-heptomino.
+%pattern-code%0$0-0$1-1$1-2$1-0$2-2$2-2$3
+
+%pattern-name%Herschel receiver
+%pattern-description%A pattern found by Paul Callahan in 1996, as part of the first stable glider reflector. Used as a receiver, it converts two parallel input gliders (with path separations of 2, 5, or 6) to an R-pentomino, which is then converted to a Herschel by one of two known mechanisms (the first of which was found by Dave Buckingham way back in 1972, and the second by Stephen Silver in October 1997). The version using Buckingham`s R-to-Herschel converter is shown below.
+%pattern-code%47$0-49$0-38$1-39$1-47$1-48$1-38$2-39$2-48$2-3$3-4$3-3$4-4$5-3$6-4$6-12$7-13$7-11$8-13$8-12$9-43$9-38$10-39$10-43$10-45$10-37$11-40$11-43$11-44$11-0$12-1$12-38$12-39$12-0$13-1$13-31$13-32$13-31$14-32$14-44$21-45$21-44$22-45$22-40$23-41$23-40$24-42$24-42$25-42$26-43$26-29$27-30$27-29$28-30$28-27$31-28$31-27$32-28$32
+
+%pattern-name%Herschel transmitter
+%pattern-description%Any Herschel-to-glider converter that produces two gliders on parallel tracks which can be used as input to a Herschel receiver. If the gliders are far enough apart, a suitably oriented mirror image of the receiver will also work, the first glider triggers the receiver and the second glider deletes the extra beehive.  The following diagram shows a stable Herschel transmitter found by Paul Callahan in May 1997.
+%pattern-code%6$0-7$0-5$1-7$1-3$2-4$2-5$2-2$3-6$3-13$3-2$4-3$4-5$4-6$4-13$4-14$4-15$4-13$5-15$5-15$6-0$9-1$9-3$9-0$10-2$10-3$10-15$14-16$14-15$15-16$16-17$16-18$16-18$17
+
+%pattern-name%Hertz oscillator
+%pattern-description%(p8) Compare negentropy, and also cauldron. Found by Conway`s group in 1970.
+%pattern-code%3$0-4$0-6$0-3$1-5$1-6$1-4$3-5$3-6$3-3$4-5$4-7$4-9$4-10$4-3$5-7$5-9$5-10$5-0$6-1$6-3$6-7$6-0$7-1$7-3$7-7$7-4$8-5$8-6$8-4$10-5$10-7$10-4$11-6$11-7$11
+
+%pattern-name%hexapole
+%pattern-description%(p2) The barberpole of length 6.
+%pattern-code%0$0-1$0-0$1-2$1-2$3-4$3-4$5-6$5-6$7-8$7-7$8-8$8
+
+%pattern-name%H-heptomino
+%pattern-description%Name given by Conway to the following heptomino. After one generation this is the same as the I-heptomino.
+%pattern-code%0$0-1$0-1$1-1$2-2$2-3$2-2$3
+
+%pattern-name%hivenudger
+%pattern-description%(c/2 orthogonally, p4) A spaceship found by Hartmut Holzwart in July 1992. (The name is due to Bill Gosper.) It consists of a pre-beehive escorted by four LWSS. In fact any LWSS can be replaced by a MWSS or a HWSS, so that there are 45 different single-hive hivenudgers.
+%pattern-code%0$0-1$0-2$0-3$0-9$0-12$0-0$1-4$1-8$1-0$2-8$2-12$2-1$3-4$3-8$3-9$3-10$3-11$3-5$5-6$5-5$6-6$6-5$7-6$7-1$9-4$9-8$9-9$9-10$9-11$9-0$10-8$10-12$10-0$11-4$11-8$11-0$12-1$12-2$12-3$12-9$12-12$12
+
+%pattern-name%honeycomb
+%pattern-description%(p1)
+%pattern-code%2$0-3$0-1$1-4$1-0$2-2$2-3$2-5$2-1$3-4$3-2$4-3$4
+
+%pattern-name%honey farm
+%pattern-description%(p1) A common formation of four beehives.
+%pattern-code%6$0-5$1-7$1-5$2-7$2-6$3-1$5-2$5-10$5-11$5-0$6-3$6-9$6-12$6-1$7-2$7-10$7-11$7-6$9-5$10-7$10-5$11-7$11-6$12
+
+%pattern-name%hook with tail
+%pattern-description%(p1) For a long time this was the smallest still life without a well-established name. It is now a vital component of the smallest known HWSS gun, where it acts as a rock.
+%pattern-code%0$0-2$0-0$1-1$1-3$1-3$2-3$3-4$3
+
+%pattern-name%houndstooth agar
+%pattern-description%The p2 agar that results from tiling the plane with the following pattern.
+%pattern-code%1$0-2$0-3$0-1$1-2$2-0$3-1$3-2$3
+
+%pattern-name%house
+%pattern-description%The following induction coil. It is generation 3 of the pi-heptomino. See spark coil and dead spark coil.
+%pattern-code%1$0-2$0-3$0-0$1-4$1-0$2-1$2-3$2-4$2
+
+%pattern-name%hustler
+%pattern-description%(p3) Found by Robert Wainwright, June 1971.
+%pattern-code%5$0-6$0-5$1-6$1-3$3-4$3-5$3-6$3-0$4-2$4-7$4-0$5-1$5-3$5-7$5-3$6-7$6-9$6-10$6-3$7-8$7-10$7-4$8-5$8-6$8-7$8-4$10-5$10-4$11-5$11
+
+%pattern-name%hustler II
+%pattern-description%(p4)
+%pattern-code%4$0-4$1-5$1-6$1-7$2-6$3-9$3-10$3-0$4-2$4-3$4-5$4-7$4-8$4-11$4-0$5-1$5-3$5-5$5-11$5-5$6-10$6-4$7-10$7-12$7-14$7-15$7-4$8-7$8-8$8-10$8-12$8-13$8-15$8-5$9-6$9-9$9-8$10-9$11-10$11-11$11-11$12
+
+%pattern-name%HW emulator
+%pattern-description%(p4) Found by Robert Wainwright in June 1980. See also emulator.
+%pattern-code%7$0-8$0-2$1-3$1-5$1-10$1-12$1-13$1-2$2-13$2-3$3-4$3-11$3-12$3-0$4-1$4-2$4-5$4-6$4-7$4-8$4-9$4-10$4-13$4-14$4-15$4-0$5-3$5-12$5-15$5-1$6-2$6-13$6-14$6
+
+%pattern-name%HWSS
+%pattern-description%(c/2 orthogonally, p4) A heavyweight spaceship, the fourth most common spaceship. Found by Conway in 1970. See also LWSS and MWSS.
+%pattern-code%3$0-4$0-1$1-6$1-0$2-0$3-6$3-0$4-1$4-2$4-3$4-4$4-5$4
+
+%pattern-name%HW volcano
+%pattern-description%(p5) A p5 domino sparker, found by Dean Hickerson in February 1995. There are at least two known forms for this, one of which is shown below.
+%pattern-code%9$0-8$1-10$1-6$2-7$2-8$2-10$2-5$3-10$3-11$3-13$3-5$4-7$4-8$4-12$4-13$4-20$4-21$4-4$5-5$5-7$5-9$5-10$5-20$5-22$5-9$6-11$6-12$6-13$6-14$6-15$6-22$6-25$6-27$6-28$6-2$7-4$7-5$7-7$7-8$7-10$7-16$7-21$7-22$7-24$7-26$7-27$7-29$7-5$8-6$8-12$8-13$8-14$8-15$8-24$8-29$8-0$9-4$9-6$9-9$9-13$9-15$9-20$9-21$9-23$9-25$9-26$9-27$9-28$9-30$9-31$9-0$10-4$10-6$10-9$10-10$10-12$10-14$10-15$10-17$10-18$10-23$10-25$10-30$10-32$10-5$11-6$11-10$11-11$11-12$11-14$11-15$11-17$11-19$11-20$11-21$11-23$11-26$11-27$11-28$11-32$11-2$12-4$12-5$12-7$12-8$12-10$12-11$12-25$12-27$12-30$12-32$12-34$12-35$12-11$13-18$13-20$13-22$13-24$13-27$13-28$13-30$13-32$13-34$13-4$14-5$14-7$14-9$14-11$14-12$14-19$14-20$14-22$14-24$14-26$14-30$14-32$14-34$14-5$15-7$15-8$15-10$15-13$15-21$15-23$15-24$15-27$15-28$15-29$15-30$15-32$15-33$15-5$16-10$16-12$16-21$16-25$16-26$16-4$17-5$17-10$17-11$17-20$17-21$17-25$17-28$17-27$18-28$18
+
+%pattern-name%I-heptomino
+%pattern-description%Name given by Conway to the following heptomino. After one generation this is the same as the H-heptomino.
+%pattern-code%0$0-1$0-1$1-1$2-2$2-2$3-3$3
+
+%pattern-name%infinite growth
+%pattern-description%Growth of a finite pattern such that the population tends to infinity, or at least is unbounded. Sometimes the term is used for growth of something other than population (for example, length), but here we will only consider infinite population growth. The first known pattern with infinite growth in this sense was the Gosper glider gun.  An interesting question is, What is the minimum population of a pattern that exhibits infinite growth? In 1971 Charles Corderman found that a switch engine could be stabilized by a pre-block in a number of different ways, giving 11-cell patterns with infinite growth. This record stood for more than quarter of a century until Paul Callahan found, in November 1997, two 10-cell patterns with infinite growth. The following month he found the one shown below, which is much neater, being a single cluster. This produces a stabilized switch engine of the block-laying type.
+%pattern-code%6$0-4$1-6$1-7$1-4$2-6$2-4$3-2$4-0$5-2$5
+
+%pattern-name%inline inverter
+%pattern-description%The following reaction in which a p30 gun can be used to invert the presence or absence of gliders in a p30 stream, with the output glider stream being in the same direction as the input glider stream.
+%pattern-code%16$0-17$1-15$2-16$2-17$2-23$4-25$4-21$5-25$5-13$6-21$6-12$7-13$7-14$7-15$7-20$7-25$7-34$7-35$7-11$8-12$8-14$8-16$8-21$8-34$8-35$8-0$9-1$9-10$9-11$9-12$9-14$9-17$9-21$9-25$9-0$10-1$10-11$10-12$10-14$10-16$10-23$10-25$10-12$11-13$11-14$11-15$11-13$12
+
+%pattern-name%integral sign
+%pattern-description%(p1)
+%pattern-code%3$0-4$0-2$1-4$1-2$2-0$3-2$3-0$4-1$4
+
+%pattern-name%interchange
+%pattern-description%(p2) A common formation of six blinkers.
+%pattern-code%2$0-3$0-4$0-9$0-10$0-11$0-0$2-13$2-0$3-13$3-0$4-13$4-2$6-3$6-4$6-9$6-10$6-11$6
+
+%pattern-name%Iwona
+%pattern-description%(stabilizes at time 28786) The following methuselah found by Andrzej Okrasinski in August 2004.
+%pattern-code%14$0-15$0-16$0-2$6-3$7-4$7-3$8-18$8-18$9-18$10-19$11-18$12-19$12-7$13-8$13-8$14-0$19-1$19-1$20
+
+%pattern-name%jack
+%pattern-description%(p4) Found by Robert Wainwright, April 1984.
+%pattern-code%3$0-9$0-3$1-4$1-8$1-9$1-0$2-3$2-4$2-8$2-9$2-12$2-0$3-1$3-2$3-5$3-7$3-10$3-11$3-12$3-5$4-7$4-0$5-1$5-2$5-5$5-7$5-10$5-11$5-12$5-0$6-3$6-4$6-8$6-9$6-12$6-3$7-4$7-8$7-9$7-3$8-9$8
+
+%pattern-name%jam
+%pattern-description%(p3) Found by Achim Flammenkamp in 1988, but not widely known about until its independent discovery (and naming) by Dean Hickerson in September 1989. Compare with mold. In fact this is really very like caterer. In terms of its 7x7 bounding box it ties with trice tongs as the smallest p3 oscillator.
+%pattern-code%3$0-4$0-2$1-5$1-0$2-3$2-5$2-0$3-4$3-0$4-3$5-1$6-2$6
+
+%pattern-name%Jolson
+%pattern-description%(p15) Two blocks hassled by two pentadecathlons. Found by Robert Wainwright in November 1984 and named by Bill Gosper. A p9 version using snackers instead of pentadecathlons is also possible.
+%pattern-code%1$0-2$0-9$0-10$0-0$1-3$1-8$1-11$1-0$2-3$2-8$2-11$2-0$3-3$3-8$3-11$3-1$4-2$4-9$4-10$4-7$7-5$8-8$8-10$8-11$8-6$9-7$9-10$9-11$9-6$12-7$12-8$12-9$12-5$13-6$13-7$13-8$13-9$13-10$13-4$14-5$14-6$14-7$14-8$14-9$14-10$14-11$14-3$15-4$15-11$15-12$15-4$16-5$16-6$16-7$16-8$16-9$16-10$16-11$16-5$17-6$17-7$17-8$17-9$17-10$17-6$18-7$18-8$18-9$18
+
+%pattern-name%Justyna
+%pattern-description%(stabilizes at time 26458) The following methuselah found by Andrzej Okrasinski in May 2004.
+%pattern-code%17$0-16$1-19$1-17$2-18$2-19$2-17$3-20$3-0$5-1$5-18$5-1$6-18$6-18$7-19$15-20$15-21$15-11$16-12$16-13$16
+
+%pattern-name%kickback reaction
+%pattern-description%The following collision of two gliders whose product is a single glider travelling in the opposite direction to one of the original gliders. This is important in the proof of the existence of a universal constructor, and in Bill Gosper`s total aperiodic, as well as a number of other constructions.
+%pattern-code%5$0-6$1-7$1-1$2-2$2-5$2-6$2-0$3-2$3-2$4
+
+%pattern-name%killer toads
+%pattern-description%A pair of toads acting together so that they can eat things. Here, for example, are some killer toads eating a HWSS. Similarly they can eat a MWSS (but not a LWSS). For another example see twirling T-tetsons II. See also candlefrobra.
+%pattern-code%2$0-3$0-11$0-12$0-13$0-0$1-5$1-10$1-11$1-12$1-6$2-0$3-6$3-1$4-2$4-3$4-4$4-5$4-6$4-10$5-11$5-12$5-11$6-12$6-13$6
+
+%pattern-name%Kok`s galaxy
+%pattern-description%(p8) Found by Jan Kok in 1971. See converter for a use of this sparker.
+%pattern-code%0$0-1$0-2$0-3$0-4$0-5$0-7$0-8$0-0$1-1$1-2$1-3$1-4$1-5$1-7$1-8$1-7$2-8$2-0$3-1$3-7$3-8$3-0$4-1$4-7$4-8$4-0$5-1$5-7$5-8$5-0$6-1$6-0$7-1$7-3$7-4$7-5$7-6$7-7$7-8$7-0$8-1$8-3$8-4$8-5$8-6$8-7$8-8$8
+
+%pattern-name%lake
+%pattern-description%Any still life consisting of a simple closed curve made from diagonally connected dominoes. The smallest example is the pond, and the next smallest is this (to which the term is sometimes restricted).
+%pattern-code%4$0-5$0-3$1-6$1-3$2-6$2-1$3-2$3-7$3-8$3-0$4-9$4-0$5-9$5-1$6-2$6-7$6-8$6-3$7-6$7-3$8-6$8-4$9-5$9
+
+%pattern-name%Laputa
+%pattern-description%(p2) Found by Rich Schroeppel, September 1992.
+%pattern-code%3$0-4$0-6$0-7$0-3$1-4$1-6$1-10$1-11$1-8$2-11$2-1$3-2$3-3$3-4$3-5$3-6$3-8$3-9$3-10$3-0$4-3$4-5$4-0$5-1$5-5$5-7$5-8$5-4$6-5$6-7$6-8$6
+
+%pattern-name%Lidka
+%pattern-description%(stabilizes at time 29053) A methuselah found by Andrzej Okrasinski in July 2005.
+%pattern-code%10$0-11$0-12$0-10$1-10$2-14$2-11$3-14$3-12$4-13$4-14$4-1$6-0$7-2$7-1$8
+
+%pattern-name%light bulb
+%pattern-description%(p2) Found in 1971.
+%pattern-code%1$0-2$0-4$0-1$1-3$1-4$1-2$3-3$3-4$3-1$4-5$4-1$5-5$5-2$6-4$6-0$7-2$7-4$7-6$7-0$8-1$8-5$8-6$8
+
+%pattern-name%lightspeed wire
+%pattern-description%Any wick that can burn non-destructively at the speed of light. These are potentially useful for various things, but so far no one has found the necessary mechanisms. The following diagram shows an example of a lightspeed wire, with a small defect that travels along it at the speed of light.
+%pattern-code%4$0-5$0-8$0-9$0-12$0-13$0-16$0-17$0-20$0-21$0-24$0-25$0-28$0-29$0-32$0-33$0-36$0-37$0-40$0-41$0-44$0-45$0-48$0-49$0-52$0-53$0-4$1-5$1-8$1-9$1-12$1-13$1-16$1-17$1-20$1-21$1-24$1-25$1-28$1-29$1-32$1-33$1-36$1-37$1-40$1-41$1-44$1-45$1-48$1-49$1-52$1-53$1-2$3-3$3-4$3-5$3-6$3-7$3-8$3-9$3-10$3-11$3-12$3-13$3-14$3-15$3-16$3-17$3-18$3-19$3-20$3-21$3-22$3-23$3-24$3-25$3-26$3-27$3-28$3-29$3-30$3-31$3-32$3-33$3-34$3-35$3-36$3-37$3-38$3-39$3-40$3-41$3-42$3-43$3-44$3-45$3-46$3-47$3-48$3-49$3-50$3-51$3-52$3-53$3-54$3-55$3-1$4-8$4-56$4-0$5-2$5-3$5-4$5-5$5-6$5-11$5-12$5-13$5-14$5-15$5-16$5-17$5-18$5-19$5-20$5-21$5-22$5-23$5-24$5-25$5-26$5-27$5-28$5-29$5-30$5-31$5-32$5-33$5-34$5-35$5-36$5-37$5-38$5-39$5-40$5-41$5-42$5-43$5-44$5-45$5-46$5-47$5-48$5-49$5-50$5-51$5-52$5-53$5-54$5-55$5-57$5-1$6-7$6-56$6-2$7-3$7-4$7-5$7-6$7-7$7-8$7-9$7-10$7-11$7-12$7-13$7-14$7-15$7-16$7-17$7-18$7-19$7-20$7-21$7-22$7-23$7-24$7-25$7-26$7-27$7-28$7-29$7-30$7-31$7-32$7-33$7-34$7-35$7-36$7-37$7-38$7-39$7-40$7-41$7-42$7-43$7-44$7-45$7-46$7-47$7-48$7-49$7-50$7-51$7-52$7-53$7-54$7-55$7-4$9-5$9-8$9-9$9-12$9-13$9-16$9-17$9-20$9-21$9-24$9-25$9-28$9-29$9-32$9-33$9-36$9-37$9-40$9-41$9-44$9-45$9-48$9-49$9-52$9-53$9-4$10-5$10-8$10-9$10-12$10-13$10-16$10-17$10-20$10-21$10-24$10-25$10-28$10-29$10-32$10-33$10-36$10-37$10-40$10-41$10-44$10-45$10-48$10-49$10-52$10-53$10
+
+%pattern-name%loading dock
+%pattern-description%(p3) Found by Dave Buckingham, September 1972.
+%pattern-code%4$0-2$1-3$1-4$1-1$2-5$2-6$2-0$3-2$3-3$3-7$3-1$4-5$4-6$4-8$4-2$5-3$5-7$5-4$6-5$6-6$6-4$7
+
+%pattern-name%loaf
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-0$1-3$1-1$2-3$2-2$3
+
+%pattern-name%loaflipflop
+%pattern-description%(p15) Here four pentadecathlons hassle a loaf. Found by Robert Wainwright in 1990.
+%pattern-code%16$0-15$1-16$1-17$1-15$4-16$4-17$4-15$6-17$6-15$7-17$7-15$9-16$9-17$9-15$12-16$12-17$12-16$13-1$15-4$15-6$15-7$15-9$15-12$15-28$15-29$15-0$16-1$16-4$16-9$16-12$16-13$16-17$16-18$16-26$16-31$16-1$17-4$17-6$17-7$17-9$17-12$17-16$17-19$17-25$17-32$17-16$18-18$18-24$18-33$18-17$19-24$19-33$19-24$20-33$20-25$21-32$21-26$22-31$22-28$23-29$23-18$24-19$24-20$24-17$25-21$25-16$26-22$26-15$28-23$28-15$29-23$29-16$31-22$31-17$32-21$32-18$33-19$33-20$33
+
+%pattern-name%loaf siamese barge
+%pattern-description%(p1)
+%pattern-code%2$0-3$0-1$1-4$1-0$2-2$2-4$2-1$3-3$3-2$4
+
+%pattern-name%long barge
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-1$2-3$2-2$3-4$3-3$4
+
+%pattern-name%long boat
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-1$2-3$2-2$3-3$3
+
+%pattern-name%long bookend
+%pattern-description%The following induction coil, longer than a bookend.
+%pattern-code%3$0-4$0-0$1-4$1-0$2-1$2-2$2-3$2
+
+%pattern-name%long canoe
+%pattern-description%(p1)
+%pattern-code%4$0-5$0-5$1-4$2-3$3-0$4-2$4-0$5-1$5
+
+%pattern-name%long integral
+%pattern-description%(p1)
+%pattern-code%2$0-3$0-1$1-3$1-1$2-2$3-0$4-2$4-0$5-1$5
+
+%pattern-name%long long barge
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-1$2-3$2-2$3-4$3-3$4-5$4-4$5
+
+%pattern-name%long long boat
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-1$2-3$2-2$3-4$3-3$4-4$4
+
+%pattern-name%long long canoe
+%pattern-description%(p1)
+%pattern-code%5$0-6$0-6$1-5$2-4$3-3$4-0$5-2$5-0$6-1$6
+
+%pattern-name%long long ship
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-2$1-1$2-3$2-2$3-4$3-3$4-4$4
+
+%pattern-name%long long snake
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-2$1-3$2-5$2-4$3-5$3
+
+%pattern-name%long shillelagh
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-4$0-5$0-0$1-3$1-5$1-1$2-2$2
+
+%pattern-name%long ship
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-2$1-1$2-3$2-2$3-3$3
+
+%pattern-name%long snake
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-2$1-4$1-3$2-4$2
+
+%pattern-name%loop
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-0$1-3$1-1$2-3$2-0$3-1$3-3$3-4$3
+
+%pattern-name%LW emulator
+%pattern-description%(p4) The smallest (and least useful) emulator, found by Robert Wainwright in June 1980.
+%pattern-code%2$0-3$0-5$0-8$0-10$0-11$0-2$1-11$1-3$2-4$2-9$2-10$2-0$3-1$3-2$3-5$3-6$3-7$3-8$3-11$3-12$3-13$3-0$4-3$4-10$4-13$4-1$5-2$5-11$5-12$5
+
+%pattern-name%LWSS
+%pattern-description%(c/2 orthogonally, p4) A lightweight spaceship, the smallest known orthogonally moving spaceship, and the second most common (after the glider). Found by Conway in 1970. See also MWSS and HWSS.
+%pattern-code%1$0-4$0-0$1-0$2-4$2-0$3-1$3-2$3-3$3
+
+%pattern-name%mango
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-0$1-3$1-1$2-4$2-2$3-3$3
+
+%pattern-name%mathematician
+%pattern-description%(p5) Found by Dave Buckingham, 1972.
+%pattern-code%4$0-3$1-5$1-3$2-5$2-2$3-3$3-5$3-6$3-0$4-8$4-0$5-1$5-2$5-6$5-7$5-8$5-0$7-1$7-2$7-3$7-4$7-5$7-6$7-7$7-8$7-0$8-8$8-3$9-4$9-5$9-6$9-3$10-6$10-7$10
+
+%pattern-name%mazing
+%pattern-description%(p4) In terms of its minimum population of 12 this ties with mold as the smallest p4 oscillator. Found by Dave Buckingham in December 1973. For some constructions using mazings, see popover and sixty-nine.
+%pattern-code%3$0-4$0-1$1-3$1-0$2-6$2-1$3-5$3-6$3-3$5-5$5-4$6
+
+%pattern-name%metamorphosis
+%pattern-description%An oscillator built by Robert Wainwright that uses the following reaction (found by Bill Gosper) to turn gliders into LWSS, and converts these LWSS back into gliders by colliding them head on. (There are in fact two ways to do the following reaction, because the spark of the twin bees shuttle is symmetric.)
+%pattern-code%19$0-20$1-18$2-19$2-20$2-12$8-16$8-22$8-24$8-25$8-0$9-1$9-11$9-17$9-22$9-24$9-26$9-0$10-1$10-11$10-21$10-26$10-11$11-12$11-16$11-22$11-24$11-26$11-13$12-14$12-15$12-22$12-24$12-25$12-13$14-14$14-15$14-11$15-12$15-16$15-0$16-1$16-11$16-27$16-28$16-0$17-1$17-11$17-17$17-27$17-28$17-12$18-16$18
+
+%pattern-name%metamorphosis II
+%pattern-description%An oscillator built by Robert Wainwright in December 1994 based on the following p30 glider-to-LWSS converter. This converter was first found by Paul Rendell, January 1986 or earlier, but wasn`t widely known about until Paul Callahan rediscovered it in December 1994.
+%pattern-code%22$0-21$1-21$2-22$2-23$2-9$5-11$5-9$6-12$6-0$7-1$7-12$7-13$7-0$8-1$8-10$8-14$8-15$8-5$9-6$9-12$9-13$9-4$10-9$10-12$10-9$11-11$11-16$16-15$17-16$17-17$17-14$18-15$18-16$18-17$18-18$18-13$19-15$19-17$19-19$19-13$20-14$20-18$20-19$20-16$23-15$24-17$24-15$25-17$25-16$26-15$27-16$27-15$28-16$28-15$29-16$29
+
+%pattern-name%Mickey Mouse
+%pattern-description%(p1) A name proposed by Mark Niemiec for the following still life.
+%pattern-code%1$0-2$0-7$0-8$0-0$1-3$1-6$1-9$1-0$2-3$2-4$2-5$2-6$2-9$2-1$3-2$3-7$3-8$3-3$4-4$4-5$4-6$4-3$5-6$5-4$6-5$6
+
+%pattern-name%mini pressure cooker
+%pattern-description%(p3) Found by Robert Wainwright before June 1972. Compare pressure cooker.
+%pattern-code%5$0-4$1-6$1-4$2-6$2-3$3-4$3-6$3-7$3-0$4-2$4-8$4-10$4-0$5-1$5-3$5-5$5-7$5-9$5-10$5-3$6-7$6-3$7-5$7-7$7-4$8-6$8-5$9
+
+%pattern-name%mold
+%pattern-description%(p4) Found by Achim Flammenkamp in 1988, but not widely known until Dean Hickerson rediscovered it (and named it) in August 1989. Compare with jam. In terms of its minimum population of 12 it ties with mazing as the smallest p4 oscillator. But in terms of its 6x6 bounding box it wins outright. In fact, of all oscillators that fit in a 6x7 box it is the only one with period greater than 2.
+%pattern-code%3$0-4$0-2$1-5$1-0$2-3$2-5$2-4$3-0$4-2$4-3$4-1$5
+
+%pattern-name%monogram
+%pattern-description%(p4) Found by Dean Hickerson, August 1989.
+%pattern-code%0$0-1$0-5$0-6$0-1$1-3$1-5$1-1$2-2$2-4$2-5$2-1$3-3$3-5$3-0$4-1$4-5$4-6$4
+
+%pattern-name%moose antlers
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-7$0-8$0-0$1-8$1-1$2-2$2-3$2-5$2-6$2-7$2-3$3-5$3-4$4
+
+%pattern-name%multum in parvo
+%pattern-description%(stabilizes at time 3933) A methuselah found by Charles Corderman, but not as long-lasting as his acorn.
+%pattern-code%3$0-4$0-5$0-2$1-5$1-1$2-0$3
+
+%pattern-name%muttering moat
+%pattern-description%Any oscillator whose rotor consists of a closed chain of cells each of which is adjacent to exactly two other rotor cells. Compare babbling brook. Examples include the bipole, the blinker, the clock, the cuphook, the Gray counter, the quad, the scrubber, the skewed quad and the p2 snake pit. The following diagram shows a p2 example (by Dean Hickerson, May 1993) with a larger rotor. See ring of fire for a very large one.
+%pattern-code%0$0-1$0-0$1-2$1-4$1-5$1-5$2-1$3-4$3-2$4-2$5-4$5-6$5-5$6-6$6
+
+%pattern-name%MW emulator
+%pattern-description%(p4) Found by Robert Wainwright in June 1980. See also emulator and filter.
+%pattern-code%7$0-2$1-3$1-5$1-9$1-11$1-12$1-2$2-12$2-3$3-4$3-10$3-11$3-0$4-1$4-2$4-5$4-6$4-7$4-8$4-9$4-12$4-13$4-14$4-0$5-3$5-11$5-14$5-1$6-2$6-12$6-13$6
+
+%pattern-name%MWSS
+%pattern-description%(c/2 orthogonally, p4) A middleweight spaceship, the third most common spaceship. Found by Conway in 1970. See also LWSS and HWSS.
+%pattern-code%3$0-1$1-5$1-0$2-0$3-5$3-0$4-1$4-2$4-3$4-4$4
+
+%pattern-name%MWSS out of the blue
+%pattern-description%The following reaction, found by Peter Rott in November 1997, in which a LWSS passing by a p46 oscillator creates a MWSS travelling in the opposite direction. Together with some reactions found by Dieter Leithner, and a LWSS-turning reaction which Rott had found in November 1993 (but which was not widely known until Paul Callahan rediscovered it in June 1994) this can be used to prove that there exist gliderless guns for LWSS, MWSS and HWSS for every period that is a multiple of 46.
+%pattern-code%0$0-3$0-4$1-0$2-4$2-1$3-2$3-3$3-4$3-19$9-20$9-35$9-36$9-18$10-19$10-35$10-36$10-19$11-20$11-21$11-22$11-23$11-2$12-3$12-20$12-21$12-22$12-23$12-2$13-3$13-9$13-8$14-9$14-10$14-20$14-21$14-22$14-23$14-7$15-9$15-11$15-19$15-20$15-21$15-22$15-23$15-8$16-11$16-18$16-19$16-35$16-36$16-8$17-9$17-10$17-19$17-20$17-35$17-36$17-9$18-2$23-10$23-0$25-1$25-2$25-10$25-11$25-12$25-1$26-2$26-4$26-5$26-7$26-8$26-10$26-11$26-2$27-3$27-4$27-8$27-9$27-10$27-3$28-9$28-2$39-3$39-9$39-10$39-2$40-3$40-9$40-10$40
+
+%pattern-name%MW volcano
+%pattern-description%(p5) Found by Dean Hickerson in April 1992.
+%pattern-code%6$0-4$1-8$1-3$3-9$3-1$4-2$4-3$4-5$4-6$4-7$4-9$4-10$4-11$4-0$5-4$5-5$5-7$5-8$5-12$5-0$6-2$6-3$6-4$6-6$6-8$6-9$6-10$6-11$6-1$7-3$8-5$8-7$8-9$8-10$8-12$8-2$9-3$9-5$9-6$9-7$9-9$9-11$9-12$9-3$10-5$10-8$10-3$11-6$11-7$11-2$12-3$12
+
+%pattern-name%negentropy
+%pattern-description%(p2) Compare Hertz oscillator.
+%pattern-code%3$0-4$0-6$0-3$1-5$1-6$1-4$3-5$3-6$3-3$4-5$4-7$4-9$4-10$4-3$5-4$5-7$5-9$5-10$5-0$6-1$6-3$6-7$6-0$7-1$7-3$7-7$7-4$8-5$8-6$8-4$10-5$10-7$10-4$11-6$11-7$11
+
+%pattern-name%new five
+%pattern-description%(p3) Found by Dean Hickerson, January 1990.
+%pattern-code%2$0-3$0-1$1-4$1-1$2-3$2-6$2-0$3-1$3-3$3-5$3-6$3-0$4-1$5-2$5-3$5-5$5-6$5-7$5-8$5-5$6-8$6-0$7-2$7-3$7-0$8-1$8-3$8-4$8
+
+%pattern-name%new gun
+%pattern-description%An old name for the second known basic gun (found, like the first, by Bill Gosper), shown below. A number of other ways of constructing a gun from two twin bees shuttles have since been found - see edge shooter for one of these.
+%pattern-code%25$0-26$0-32$0-33$0-25$1-26$1-32$1-33$1-27$13-28$13-30$13-31$13-26$14-32$14-25$16-33$16-25$17-28$17-30$17-33$17-25$18-26$18-27$18-31$18-32$18-33$18-17$23-0$24-1$24-17$24-18$24-0$25-1$25-18$25-19$25-13$26-14$26-17$26-18$26-13$30-14$30-17$30-18$30-0$31-1$31-18$31-19$31-27$31-28$31-0$32-1$32-17$32-18$32-27$32-28$32-17$33
+
+%pattern-name%Noah`s ark
+%pattern-description%The following diagonal puffer consisting of two switch engines. This was found by Charles Corderman in 1971. The name comes from the variety of objects it leaves behind blocks, blinkers, beehives, loaves, gliders, ships, boats, long boats, beacons and block on tables.
+%pattern-code%10$0-12$0-9$1-10$2-13$2-12$3-13$3-14$3-1$9-0$10-2$10-0$12-3$12-2$13-3$13-3$14
+
+%pattern-name%non-monotonic
+%pattern-description%A spaceship is said to be non-monotonic if its leading edge falls back in some generations. The first example (shown below) was found by Hartmut Holzwart in August 1992. This is p4 and travels at c/4. In April 1994, Holzwart found examples of p3 spaceships with this property, and this is clearly the smallest possible period. Another non-monotonic spaceship is the weekender.
+%pattern-code%10$0-11$0-13$0-6$1-7$1-8$1-10$1-12$1-13$1-14$1-2$2-4$2-15$2-19$2-20$2-0$3-1$3-6$3-7$3-13$3-17$3-18$3-19$3-20$3-2$4-4$4-5$4-8$4-13$4-14$4-15$4-17$4-8$5-13$5-2$6-4$6-5$6-8$6-13$6-14$6-15$6-17$6-0$7-1$7-6$7-7$7-13$7-17$7-18$7-19$7-20$7-2$8-4$8-15$8-19$8-20$8-6$9-7$9-8$9-10$9-12$9-13$9-14$9-10$10-11$10-13$10
+
+%pattern-name%octagon II
+%pattern-description%(p5) The first known p5 oscillator, discovered in 1971 independently by Sol Goodman and Arthur Taber. The name is due to the latter.
+%pattern-code%3$0-4$0-2$1-5$1-1$2-6$2-0$3-7$3-0$4-7$4-1$5-6$5-2$6-5$6-3$7-4$7
+
+%pattern-name%octagon IV
+%pattern-description%(p4) Found by Robert Wainwright, January 1979.
+%pattern-code%7$0-8$0-7$1-8$1-6$3-7$3-8$3-9$3-5$4-10$4-4$5-11$5-3$6-12$6-0$7-1$7-3$7-12$7-14$7-15$7-0$8-1$8-3$8-12$8-14$8-15$8-3$9-12$9-4$10-11$10-5$11-10$11-6$12-7$12-8$12-9$12-7$14-8$14-7$15-8$15
+
+%pattern-name%octomino
+%pattern-description%Any 8-cell polyomino. There are 369 such objects. The word is particularly applied to the following octomino (or its two-generation successor), which is fairly common but lacks a proper name.
+%pattern-code%2$0-3$0-2$1-3$1-0$2-1$2-2$2-1$3
+
+%pattern-name%odd keys
+%pattern-description%(p3) Found by Dean Hickerson, August 1989. See also short keys and bent keys.
+%pattern-code%10$0-1$1-9$1-11$1-0$2-2$2-3$2-4$2-7$2-8$2-10$2-1$3-4$3-7$3-4$4-7$4
+
+%pattern-name%onion rings
+%pattern-description%For each integer n>1 onion rings of order n is a stable agar of density 1/2 obtained by tiling the plane with a certain 4n x 4n pattern. The tile for order 3 onion rings is shown below - the reader should then be able to deduce the form of tiles of other orders.
+%pattern-code%6$0-7$0-8$0-9$0-10$0-11$0-1$1-2$1-3$1-4$1-6$1-11$1-1$2-4$2-6$2-8$2-9$2-11$2-1$3-4$3-6$3-8$3-9$3-11$3-1$4-2$4-3$4-4$4-6$4-11$4-6$5-7$5-8$5-9$5-10$5-11$5-0$6-1$6-2$6-3$6-4$6-5$6-0$7-5$7-7$7-8$7-9$7-10$7-0$8-2$8-3$8-5$8-7$8-10$8-0$9-2$9-3$9-5$9-7$9-10$9-0$10-5$10-7$10-8$10-9$10-10$10-0$11-1$11-2$11-3$11-4$11-5$11
+
+%pattern-name%O-pentomino
+%pattern-description%Conway`s name for the following pentomino, a traffic light predecessor, although not one of the more common ones.
+%pattern-code%0$0-1$0-2$0-3$0-4$0
+
+%pattern-name%Orion
+%pattern-description%(c/4 diagonally, p4) Found by Hartmut Holzwart, April 1993.
+%pattern-code%3$0-4$0-3$1-5$1-3$2-0$3-1$3-3$3-0$4-5$4-0$5-2$5-3$5-10$5-11$5-12$5-5$6-6$6-7$6-12$6-13$6-6$7-7$7-8$7-10$7-12$7-13$8-6$9-8$9-5$10-6$10-8$10-6$11-4$12-5$12-7$12-7$13-5$14-6$14
+
+%pattern-name%p54 shuttle
+%pattern-description%(p54) A surprising variant of the twin bees shuttle found by Dave Buckingham in 1973. See also centinal.
+%pattern-code%0$0-1$0-27$0-28$0-1$1-27$1-1$2-3$2-11$2-25$2-27$2-2$3-3$3-9$3-12$3-18$3-25$3-26$3-12$4-18$4-19$4-8$5-19$5-20$5-8$6-12$6-13$6-18$6-19$6-9$7-10$7-11$7-12$7-13$7-9$9-10$9-11$9-12$9-13$9-8$10-12$10-13$10-18$10-19$10-8$11-19$11-20$11-12$12-18$12-19$12-2$13-3$13-9$13-12$13-18$13-25$13-26$13-1$14-3$14-11$14-25$14-27$14-1$15-27$15-0$16-1$16-27$16-28$16
+
+%pattern-name%p6 shuttle
+%pattern-description%(p6) The following oscillator found by Nicolay Beluchenko in February 2004.
+%pattern-code%0$0-0$1-1$1-2$1-3$2-2$3-3$3-6$5-5$6-6$6-7$6-8$6-6$7-9$7-7$8-8$8-9$8-10$10-11$10-10$11-11$12-12$12-13$12-13$13
+
+%pattern-name%paperclip
+%pattern-description%(p1)
+%pattern-code%2$0-3$0-1$1-4$1-1$2-3$2-4$2-0$3-1$3-3$3-0$4-3$4-1$5-2$5
+
+%pattern-name%pedestle
+%pattern-description%(p5)
+%pattern-code%5$0-4$1-6$1-1$2-4$2-5$2-1$3-2$3-3$3-5$4-6$4-7$4-3$5-4$5-8$5-2$6-7$6-10$6-1$7-3$7-5$7-7$7-9$7-10$7-1$8-3$8-7$8-9$8-0$9-1$9-3$9-5$9-7$9-9$9-0$10-3$10-8$10-2$11-6$11-7$11-3$12-4$12-5$12-7$13-8$13-9$13-5$14-6$14-9$14-4$15-6$15-5$16
+
+%pattern-name%penny lane
+%pattern-description%(p4) Found by Dave Buckingham, 1972.
+%pattern-code%3$0-4$0-10$0-11$0-3$1-11$1-0$2-1$2-3$2-11$2-13$2-14$2-0$3-1$3-3$3-5$3-6$3-7$3-8$3-9$3-11$3-13$3-14$3-4$4-7$4-10$4-5$5-6$5-7$5-8$5-9$5-7$7-6$8-8$8-7$9
+
+%pattern-name%pentadecathlon
+%pattern-description%(p15) Found in 1970 by Conway while tracking the history of short rows of cells, 10 cells giving this object, which is the most natural oscillator of period greater than 3. In fact it is the fifth or sixth most common oscillator overall, being about as frequent as the clock, but much less frequent than the blinker, toad, beacon or pulsar.
+%pattern-code%2$0-7$0-0$1-1$1-3$1-4$1-5$1-6$1-8$1-9$1-2$2-7$2
+
+%pattern-name%pentant
+%pattern-description%(p5) Found by Dave Buckingham, July 1976.
+%pattern-code%0$0-1$0-1$1-1$2-3$2-2$3-3$3-8$3-9$3-9$4-5$5-6$5-7$5-8$5-5$6-2$7-6$7-7$7-8$7-2$8-3$8-4$8-5$8-8$8-5$9-4$10-4$11-5$11
+
+%pattern-name%pentapole
+%pattern-description%(p2) The barberpole of length 5.
+%pattern-code%0$0-1$0-0$1-2$1-2$3-4$3-4$5-6$5-7$6-6$7-7$7
+
+%pattern-name%pentoad
+%pattern-description%(p5) Found by Bill Gosper, June 1977. This is extensible; if an eater is moved back four spaces then another Z-hexomino can can be inserted. (This extensibility was discovered by Scott Kim.)
+%pattern-code%11$0-12$0-11$1-9$2-11$2-9$3-10$3-5$4-6$4-6$5-6$6-6$7-7$7-2$8-3$8-1$9-3$9-1$10-0$11-1$11
+
+%pattern-name%phase change
+%pattern-description%A perturbation of a periodic object which causes the object to skip ahead by one or more phases. If the perturbation is repeated indefinitely, this can effectively change the period of the object. An example of this, found by Dean Hickerson in November 1998, is shown below. In this example, the period of the oscillator would be 7 if the mold were removed, but the period is increased to 8 because of the repeated phase changes caused by the mold`s spark. 
+%pattern-code%10$0-9$1-11$1-12$1-2$2-3$2-13$2-2$3-9$3-12$3-14$3-7$4-11$4-14$4-0$5-1$5-2$5-3$5-4$5-5$5-7$5-12$5-13$5-0$6-1$7-2$7-4$7-5$7-9$7-10$7-2$8-4$8-9$8-11$8-2$9-4$9-11$9-3$10-11$10-12$10
+
+%pattern-name%p4 c/2 spaceship
+%pattern-description%The following pattern demonstrates a p4 c/2 spaceship found by Jason Summers, in which the phase is changed as it deletes a forward glider. This phase change allows the spaceship to be used to delete a glider wave produced by a rake whose period is 2 (mod 4).
+%pattern-code%8$0-7$1-8$1-9$1-11$1-12$1-6$2-7$2-11$2-13$2-14$2-5$3-6$3-9$3-15$3-6$4-12$4-16$4-18$4-19$4-20$4-5$5-6$5-12$5-16$5-18$5-21$5-3$6-4$6-6$6-8$6-9$6-14$6-16$6-18$6-22$6-4$7-6$7-9$7-10$7-22$7-1$8-2$8-4$8-7$8-10$8-20$8-1$9-2$9-4$9-10$9-11$9-21$9-23$9-24$9-25$9-1$10-3$10-17$10-18$10-19$10-21$10-23$10-25$10-26$10-0$11-1$11-3$11-4$11-16$11-17$11-19$11-22$11-24$11-26$11-14$12-15$12-17$12-21$12-22$12-23$12-26$12-27$12-33$12-34$12-13$13-17$13-24$13-33$13-35$13-12$14-18$14-21$14-22$14-24$14-26$14-27$14-33$14-11$15-14$15-16$15-23$15-25$15-11$16-17$16-18$16-23$16-24$16-25$16-13$17-24$17-10$18-12$18-24$18-9$19-10$19-12$19-14$19-15$19-16$19-8$20-10$20-12$20-16$20-7$21-8$21-10$21-6$22-10$22-16$22-17$22-6$24-7$24-9$24-10$24
+
+%pattern-name%phi
+%pattern-description%The following common spark. The name comes from the shape in the generation after the one shown here.
+%pattern-code%1$0-2$0-3$0-0$1-4$1-0$2-4$2-1$3-2$3-3$3
+
+%pattern-name%phoenix
+%pattern-description%Any pattern all of whose cells die in every generation, but which never dies as a whole. A spaceship cannot be a phoenix, and in fact every finite phoenix eventually evolves into an oscillator. The following 12-cell oscillator (found by the MIT group in December 1971) is the smallest known phoenix, and is sometimes called simply "the phoenix".
+%pattern-code%4$0-2$1-4$1-6$2-0$3-1$3-6$4-7$4-1$5-3$6-5$6-3$7
+
+%pattern-name%pi-heptomino
+%pattern-description%(stabilizes at time 173) A common pattern. The name is also applied to later generations of this object - in a pi ship, for example, the pi-heptomino itself never arises.
+%pattern-code%0$0-1$0-2$0-0$1-2$1-0$2-2$2
+
+%pattern-name%pinwheel
+%pattern-description%(p4) Found by Simon Norton, April 1970. Compare clock II.
+%pattern-code%6$0-7$0-6$1-7$1-4$3-5$3-6$3-7$3-0$4-1$4-3$4-8$4-0$5-1$5-3$5-6$5-8$5-3$6-7$6-8$6-10$6-11$6-3$7-5$7-8$7-10$7-11$7-4$8-5$8-6$8-7$8-4$10-5$10-4$11-5$11
+
+%pattern-name%pi orbital
+%pattern-description%(p168) Found by Noam Elkies, August 1995. In this oscillator, a pi-heptomino is turned ninety degrees every 42 generations. A second pi can be inserted to reduce the period to 84.
+%pattern-code%14$0-15$0-20$0-21$0-26$0-27$0-13$1-16$1-18$1-23$1-25$1-28$1-13$2-14$2-15$2-26$2-27$2-28$2-16$3-17$3-24$3-25$3-15$4-18$4-19$4-20$4-21$4-22$4-23$4-26$4-15$5-16$5-25$5-26$5-8$7-38$7-39$7-50$7-7$8-11$8-12$8-13$8-20$8-30$8-38$8-39$8-49$8-51$8-8$9-10$9-11$9-12$9-13$9-14$9-25$9-26$9-27$9-31$9-12$10-16$10-22$10-24$10-25$10-26$10-27$10-28$10-30$10-49$10-12$11-13$11-18$11-19$11-20$11-26$11-49$11-50$11-12$12-13$12-18$12-19$12-20$12-25$12-26$12-46$12-47$12-48$12-49$12-50$12-19$13-25$13-26$13-46$13-47$13-49$13-50$13-56$13-57$13-49$14-56$14-58$14-53$15-54$15-56$15-58$15-53$16-55$16-57$16-55$17-35$18-36$18-37$18-47$18-49$18-53$18-56$18-7$19-8$19-35$19-38$19-47$19-50$19-56$19-7$20-8$20-39$20-47$20-49$20-52$20-56$20-35$21-38$21-52$21-56$21-35$22-36$22-37$22-56$22-53$23-56$23-48$24-55$24-45$25-46$25-48$25-49$25-53$25-55$25-57$25-45$26-46$26-47$26-48$26-49$26-53$26-54$26-56$26-58$26-9$27-48$27-49$27-56$27-58$27-8$28-10$28-48$28-56$28-57$28-1$30-2$30-10$30-48$30-50$30-0$31-2$31-9$31-10$31-49$31-0$32-2$32-4$32-5$32-9$32-10$32-11$32-12$32-13$32-1$33-3$33-5$33-9$33-10$33-12$33-13$33-3$34-10$34-2$35-5$35-2$36-2$37-6$37-2$38-6$38-9$38-11$38-50$38-51$38-2$39-8$39-11$39-50$39-51$39-2$40-5$40-9$40-11$40-3$41-1$42-3$42-5$42-0$43-2$43-4$43-5$43-0$44-2$44-9$44-1$45-2$45-8$45-9$45-11$45-12$45-32$45-33$45-39$45-8$46-9$46-10$46-11$46-12$46-32$46-33$46-38$46-39$46-40$46-45$46-46$46-8$47-9$47-32$47-38$47-39$47-40$47-45$47-46$47-9$48-28$48-30$48-31$48-32$48-33$48-34$48-36$48-42$48-46$48-27$49-31$49-32$49-33$49-44$49-45$49-46$49-47$49-48$49-50$49-7$50-9$50-19$50-20$50-28$50-38$50-45$50-46$50-47$50-51$50-8$51-19$51-20$51-50$51-32$53-33$53-42$53-43$53-32$54-35$54-36$54-37$54-38$54-39$54-40$54-43$54-33$55-34$55-41$55-42$55-30$56-31$56-32$56-43$56-44$56-45$56-30$57-33$57-35$57-40$57-42$57-45$57-31$58-32$58-37$58-38$58-43$58-44$58
+
+%pattern-name%pi portraitor
+%pattern-description%(p32) Found by Robert Wainwright in 1984 or 1985. Compare with gourmet and popover.
+%pattern-code%11$0-12$0-6$1-7$1-9$1-14$1-16$1-17$1-6$2-17$2-7$3-8$3-15$3-16$3-4$4-5$4-6$4-9$4-10$4-11$4-12$4-13$4-14$4-17$4-18$4-19$4-4$5-7$5-16$5-19$5-1$6-2$6-4$6-6$6-17$6-19$6-21$6-22$6-1$7-3$7-5$7-18$7-20$7-22$7-3$8-20$8-1$9-4$9-19$9-22$9-4$10-12$10-13$10-14$10-19$10-0$11-4$11-12$11-14$11-19$11-23$11-0$12-4$12-12$12-14$12-19$12-23$12-4$13-19$13-1$14-4$14-19$14-22$14-3$15-20$15-1$16-3$16-5$16-18$16-20$16-22$16-1$17-2$17-4$17-6$17-17$17-19$17-21$17-22$17-4$18-7$18-16$18-19$18-4$19-5$19-6$19-9$19-10$19-11$19-12$19-13$19-14$19-17$19-18$19-19$19-7$20-8$20-15$20-16$20-6$21-17$21-6$22-7$22-9$22-14$22-16$22-17$22-11$23-12$23
+
+%pattern-name%pipsquirter
+%pattern-description%An oscillator that produces a domino spark that is orientated parallel to the direction from which it is produced (in contrast to domino sparkers like the pentadecathlon and HWSS, which produce domino sparks perpendicular to the direction of production). The following is a small p6 example found by Noam Elkies in November 1997.
+%pattern-code%5$0-5$1-3$3-7$3-1$4-2$4-3$4-5$4-7$4-8$4-9$4-0$5-4$5-5$5-10$5-0$6-2$6-3$6-6$6-7$6-9$6-11$6-1$7-4$7-5$7-8$7-9$7-11$7-2$8-3$8-6$8-7$8-9$8-11$8-13$8-14$8-4$9-7$9-9$9-11$9-13$9-14$9-4$10-5$10-6$10-7$10-9$10-10$10-8$11-6$12-8$12-6$13-7$13
+
+%pattern-name%pi ship
+%pattern-description%A growing spaceship in which the back part consists of a pi-heptomino travelling at a speed of 3c/10. The first example was constructed by David Bell. All known pi ships are too large to show here, but the following diagram shows how the pi fuse works.
+%pattern-code%12$0-11$1-13$1-0$2-1$2-10$2-11$2-13$2-14$2-23$2-24$2-0$3-1$3-23$3-24$3
+
+%pattern-name%piston
+%pattern-description%(p2) Found in 1971.
+%pattern-code%0$0-1$0-9$0-10$0-0$1-2$1-5$1-8$1-10$1-2$2-3$2-4$2-5$2-8$2-0$3-2$3-5$3-8$3-10$3-0$4-1$4-9$4-10$4
+
+%pattern-name%pi wave
+%pattern-description%A line of pi-heptominoes stabilizing one another. For example, an infinite line of pi-heptominoes arranged as shown below produces a pi wave that moves at a speed of 3c/10, and leaves no debris.
+%pattern-code%0$0-1$0-2$0-18$0-19$0-20$0-36$0-37$0-38$0-54$0-55$0-56$0-0$1-2$1-18$1-20$1-36$1-38$1-54$1-56$1-0$2-2$2-18$2-20$2-36$2-38$2-54$2-56$2
+
+%pattern-name%pond
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-0$1-3$1-0$2-3$2-1$3-2$3
+
+%pattern-name%pond on pond
+%pattern-description%(p1) This term is often used to mean bi-pond, but may also be used of the following pseudo still life.
+%pattern-code%1$0-2$0-6$0-7$0-0$1-3$1-5$1-8$1-0$2-3$2-5$2-8$2-1$3-2$3-6$3-7$3
+
+%pattern-name%popover
+%pattern-description%(p32) Found by Robert Wainwright in August 1984. Compare with gourmet and pi portraitor.
+%pattern-code%21$0-21$1-21$2-22$2-23$2-13$3-14$3-22$3-23$3-13$4-14$4-17$4-18$4-19$4-22$4-23$4-19$5-20$5-21$5-19$6-20$6-21$6-14$7-15$7-2$8-3$8-4$8-13$8-16$8-2$9-3$9-4$9-13$9-15$9-0$10-1$10-2$10-5$10-6$10-10$10-14$10-19$10-20$10-21$10-5$11-6$11-10$11-4$12-5$12-6$12-10$12-4$13-22$13-23$13-27$13-28$13-4$14-16$14-17$14-18$14-21$14-24$14-27$14-28$14-8$15-16$15-18$15-22$15-24$15-7$16-9$16-16$16-18$16-23$16-3$17-4$17-7$17-10$17-27$17-3$18-4$18-8$18-9$18-27$18-21$19-25$19-26$19-27$19-21$20-25$20-26$20-10$21-11$21-12$21-21$21-25$21-26$21-29$21-30$21-31$21-17$22-18$22-27$22-28$22-29$22-16$23-19$23-27$23-28$23-29$23-16$24-18$24-10$25-11$25-12$25-17$25-10$26-11$26-12$26-8$27-9$27-12$27-13$27-14$27-17$27-18$27-8$28-9$28-17$28-18$28-8$29-9$29-10$29-10$30-10$31
+
+%pattern-name%P-pentomino
+%pattern-description%Conway`s name for the following pentomino, a common spark.
+%pattern-code%0$0-1$0-0$1-1$1-0$2
+
+%pattern-name%pre-beehive
+%pattern-description%The following common parent of the beehive.
+%pattern-code%0$0-1$0-2$0-0$1-1$1-2$1
+
+%pattern-name%pre-block
+%pattern-description%The following common parent of the block. Another such pattern is the grin.
+%pattern-code%0$0-0$1-1$1
+
+%pattern-name%pre-pulsar
+%pattern-description%A common predecessor of the pulsar, such as that shown below. This duplicates itself in 15 generations. (It fails, however, to be a true replicator because of the way the two copies then interact.)
+%pattern-code%0$0-1$0-2$0-6$0-7$0-8$0-0$1-2$1-6$1-8$1-0$2-1$2-2$2-6$2-7$2-8$2
+
+%pattern-name%pressure cooker
+%pattern-description%(p3) Found by the MIT group in September 1971. Compare mini pressure cooker.
+%pattern-code%5$0-4$1-6$1-4$2-6$2-3$3-4$3-6$3-7$3-0$4-2$4-8$4-10$4-0$5-1$5-3$5-5$5-7$5-9$5-10$5-3$6-7$6-3$7-7$7-4$8-5$8-6$8-3$10-5$10-6$10-3$11-4$11-6$11
+
+%pattern-name%protein
+%pattern-description%(p3) Found by Dave Buckingham, November 1972.
+%pattern-code%4$0-5$0-4$1-6$2-2$3-3$3-4$3-5$3-7$3-9$3-10$3-1$4-7$4-9$4-12$4-1$5-4$5-5$5-7$5-9$5-11$5-12$5-0$6-1$6-3$6-9$6-3$7-6$7-7$7-9$7-3$8-8$8-4$9-5$9-6$9-7$9-4$11-5$11-4$12-5$12
+
+%pattern-name%pseudo-barberpole
+%pattern-description%(p5) Found by Achim Flammenkamp in August 1994. In terms of its minimum population of 15 this is the smallest known p5 oscillator.
+%pattern-code%10$0-11$0-11$1-9$2-7$3-9$3-5$5-7$5-3$7-5$7-2$9-3$9-0$10-0$11-1$11
+
+%pattern-name%puffer
+%pattern-description%An object that moves like a spaceship, except that it leaves debris behind. The first known puffers were found by Bill Gosper and travelled at c/2 orthogonally (see diagram below for the very first one, found in 1971). Not long afterwards c/12 diagonal puffers were found (see switch engine). Discounting wickstretchers (which are not puffers in the conventional sense), no new velocity was obtained after this until David Bell found the first c/3 orthogonal puffer in April 1996. Since then c/5 orthogonal puffers have also been found, the first by Tim Coe in May 1997. Jason Summers built the first c/4 orthogonal puffer in January 1999, and the first 2c/5 orthogonal puffer in February 1999. Hartmut Holzwart built the first c/4 diagonal puffer (as opposed to a wickstretcher) in February 2004.
+%pattern-code%1$0-2$0-3$0-10$0-16$0-23$0-24$0-25$0-0$1-3$1-9$1-10$1-11$1-15$1-16$1-17$1-23$1-26$1-3$2-8$2-9$2-11$2-15$2-17$2-18$2-23$2-3$3-23$3-3$4-6$4-20$4-23$4-3$5-6$5-7$5-19$5-20$5-23$5-2$6-6$6-7$6-19$6-20$6-24$6
+
+%pattern-name%puffer train
+%pattern-description%The full name for a puffer, coined by Conway before any examples were known. The term was also applied specifically to the classic puffer train found by Bill Gosper and shown below. This is very dirty, and the tail does not stabilize until generation 5533. It consists of a B-heptomino (shown here one generation before the standard form) escorted by two LWSS. (This was the second known puffer. The first is shown under puffer.)
+%pattern-code%1$0-2$0-3$0-15$0-16$0-17$0-0$1-3$1-14$1-17$1-3$2-8$2-9$2-10$2-17$2-3$3-8$3-11$3-17$3-2$4-7$4-16$4
+
+%pattern-name%puff suppressor
+%pattern-description%An attachment at the back of a line puffer that suppresses all or some of its puffing action. The example below (by Hartmut Holzwart) has a 3-cell puff suppressor at the back which suppresses the entire puff, making a p2 spaceship. If you delete this puff suppressor then you get a p60 double beehive puffer. Puff suppressors were first recognised by Alan Hensel in April 1994.
+%pattern-code%12$0-10$1-11$1-13$1-10$2-11$2-15$2-8$3-12$3-13$3-15$3-21$3-8$4-9$4-10$4-11$4-13$4-14$4-18$4-19$4-20$4-21$4-29$4-31$4-6$5-13$5-18$5-19$5-20$5-26$5-28$5-31$5-6$6-7$6-8$6-9$6-10$6-11$6-12$6-16$6-20$6-25$6-28$6-3$7-5$7-12$7-13$7-16$7-20$7-22$7-24$7-25$7-30$7-2$8-3$8-4$8-5$8-6$8-7$8-8$8-9$8-10$8-16$8-19$8-20$8-29$8-1$9-2$9-17$9-19$9-20$9-22$9-23$9-24$9-25$9-29$9-32$9-0$10-1$10-6$10-7$10-9$10-20$10-24$10-27$10-29$10-1$11-2$11-7$11-16$11-17$11-18$11-25$11-27$11-29$11-32$11-9$12-16$12-17$12-24$12-29$12-30$12-1$13-2$13-7$13-16$13-17$13-18$13-25$13-27$13-29$13-32$13-0$14-1$14-6$14-7$14-9$14-20$14-24$14-27$14-29$14-1$15-2$15-17$15-19$15-20$15-22$15-23$15-24$15-25$15-29$15-32$15-2$16-3$16-4$16-5$16-6$16-7$16-8$16-9$16-10$16-16$16-19$16-20$16-29$16-3$17-5$17-12$17-13$17-16$17-20$17-22$17-24$17-25$17-30$17-6$18-7$18-8$18-9$18-10$18-11$18-12$18-16$18-20$18-25$18-28$18-6$19-13$19-18$19-19$19-20$19-26$19-28$19-31$19-8$20-9$20-10$20-11$20-13$20-14$20-18$20-19$20-20$20-21$20-29$20-31$20-8$21-12$21-13$21-15$21-21$21-10$22-11$22-15$22-10$23-11$23-13$23-12$24
+
+%pattern-name%pulsar
+%pattern-description%(p3) Despite its size, this is the fourth most common oscillator (and by far the most common of period greater than 2) and was found very early on by Conway. See also pre-pulsar and pulsar quadrant.
+%pattern-code%2$0-3$0-4$0-8$0-9$0-10$0-0$2-5$2-7$2-12$2-0$3-5$3-7$3-12$3-0$4-5$4-7$4-12$4-2$5-3$5-4$5-8$5-9$5-10$5-2$7-3$7-4$7-8$7-9$7-10$7-0$8-5$8-7$8-12$8-0$9-5$9-7$9-12$9-0$10-5$10-7$10-12$10-2$12-3$12-4$12-8$12-9$12-10$12
+
+%pattern-name%pulsar quadrant
+%pattern-description%(p3) This consists of a quarter of the outer part of a pulsar stabilized by a cis fuse with two tails. This is reminiscent of mold and jam. Found by Dave Buckingham in July 1973. See also two pulsar quadrants.
+%pattern-code%5$0-3$1-4$1-5$1-2$2-6$2-7$2-0$3-3$3-6$3-0$4-4$4-6$4-0$5-5$5-2$7-3$7-4$7
+
+%pattern-name%pulse divider
+%pattern-description%A mechanism that lets every n-th object that reaches it pass through, and deletes all the rest, where n > 1 and the objects are typically spaceships or Herschels.  The following diagram shows a p5 glider pulse divider by Dieter Leithner (February 1998). The first glider moves the centre block and is reflected at 90 degrees. The next glider to come along will not be reflected, but will move the block back to its original position. The small size and low period of this example make it useful for constructing glider guns of certain periods. p7, p22, p36 and p46 versions of this pulse divider are also known.
+%pattern-code%5$0-6$0-5$1-6$1-18$3-19$3-17$4-20$4-17$5-19$5-22$5-25$5-0$6-16$6-17$6-19$6-21$6-22$6-23$6-24$6-25$6-1$7-2$7-14$7-18$7-19$7-0$8-1$8-17$8-18$8-21$8-22$8-23$8-13$9-17$9-19$9-22$9-24$9-8$10-9$10-17$10-18$10-21$10-22$10-24$10-8$11-9$11-14$11-18$11-19$11-23$11-16$12-17$12-19$12-21$12-22$12-17$13-19$13-21$13-17$14-19$14-22$14-18$15-21$15-22$15-2$16-3$16-3$17-0$18-1$18-2$18-0$19-12$21-13$21-12$22-13$23-14$23-15$23-15$24
+
+%pattern-name%pulshuttle V
+%pattern-description%(p30) Found by Robert Wainwright, May 1985. Compare Eureka.
+%pattern-code%13$0-28$0-12$1-14$1-22$1-27$1-29$1-13$2-20$2-21$2-23$2-24$2-28$2-22$3-2$4-3$4-10$4-11$4-30$4-31$4-38$4-39$4-0$5-5$5-8$5-13$5-28$5-33$5-36$5-41$5-0$6-5$6-8$6-13$6-28$6-33$6-36$6-41$6-0$7-5$7-8$7-13$7-22$7-28$7-33$7-36$7-41$7-2$8-3$8-10$8-11$8-20$8-21$8-23$8-24$8-30$8-31$8-38$8-39$8-22$9-2$12-3$12-10$12-11$12-30$12-31$12-38$12-39$12-0$13-5$13-8$13-13$13-22$13-28$13-33$13-36$13-41$13-0$14-5$14-8$14-13$14-20$14-21$14-23$14-24$14-28$14-33$14-36$14-41$14-0$15-5$15-8$15-13$15-22$15-28$15-33$15-36$15-41$15-2$16-3$16-10$16-11$16-30$16-31$16-38$16-39$16-22$19-2$20-3$20-10$20-11$20-20$20-21$20-23$20-24$20-30$20-31$20-38$20-39$20-0$21-5$21-8$21-13$21-22$21-28$21-33$21-36$21-41$21-0$22-5$22-8$22-13$22-28$22-33$22-36$22-41$22-0$23-5$23-8$23-13$23-28$23-33$23-36$23-41$23-2$24-3$24-10$24-11$24-30$24-31$24-38$24-39$24-22$25-13$26-20$26-21$26-23$26-24$26-28$26-12$27-14$27-22$27-27$27-29$27-13$28-28$28
+
+%pattern-name%pure glider generator
+%pattern-description%A pattern that evolves into one or more gliders, and nothing else. There was some interest in these early on, but they are no longer considered important. Here`s a neat example.
+%pattern-code%2$0-2$1-0$2-1$2-2$2-6$4-7$4-8$4-7$5-12$6-13$6-14$6-12$7-12$8
+
+%pattern-name%pushalong
+%pattern-description%Any tagalong at the front of a spaceship. The following is an example (found by David Bell in 1992) attached to the front of a MWSS.
+%pattern-code%2$0-3$0-4$0-6$0-1$1-2$1-3$1-4$1-6$1-0$2-1$2-1$3-3$3-2$4-3$4-4$4-5$4-7$4-3$5-4$5-5$5-6$8-7$8-8$8-9$8-10$8-6$9-11$9-6$10-7$11-11$11-9$12
+
+%pattern-name%pyrotechnecium
+%pattern-description%(p8) Found by Dave Buckingham in 1972.
+%pattern-code%7$0-5$1-6$1-7$1-8$1-9$1-4$2-10$2-1$3-4$3-6$3-8$3-9$3-11$3-0$4-2$4-4$4-6$4-11$4-14$4-1$5-4$5-9$5-11$5-13$5-15$5-4$6-6$6-7$6-9$6-11$6-14$6-5$7-11$7-6$8-7$8-8$8-9$8-10$8-8$9
+
+%pattern-name%Q-pentomino
+%pattern-description%Conway`s name for the following pentomino, a traffic light predecessor.
+%pattern-code%0$0-1$0-2$0-3$0-3$1
+
+%pattern-name%quad
+%pattern-description%(p2) Found by Robert Kraus, April 1971. Of all oscillators that fit in a 6x6 box this is the only flipper.
+%pattern-code%0$0-1$0-4$0-5$0-0$1-3$1-5$1-1$2-4$3-0$4-2$4-5$4-0$5-1$5-4$5-5$5
+
+%pattern-name%quadpole
+%pattern-description%(p2) The barberpole of length 4.
+%pattern-code%0$0-1$0-0$1-2$1-2$3-4$3-4$5-6$5-5$6-6$6
+
+%pattern-name%quarter
+%pattern-description%(c/4 diagonally, p4) The following 25-cell spaceship, found by Jason Summers in September 2000. See also tubstretcher.
+%pattern-code%8$0-9$0-7$1-8$1-9$2-11$3-12$3-10$4-9$6-12$6-1$7-2$7-8$7-9$7-0$8-1$8-7$8-2$9-7$9-9$9-4$10-5$10-8$10-4$11-5$11
+
+%pattern-name%quasar
+%pattern-description%(p3) Found by Robert Wainwright, August 1971. See pulsar.
+%pattern-code%10$0-11$0-12$0-16$0-17$0-18$0-8$2-13$2-15$2-20$2-8$3-13$3-15$3-20$3-8$4-13$4-15$4-20$4-10$5-11$5-12$5-16$5-17$5-18$5-8$7-9$7-10$7-18$7-19$7-20$7-2$8-3$8-4$8-7$8-12$8-16$8-21$8-24$8-25$8-26$8-7$9-12$9-16$9-21$9-0$10-5$10-7$10-12$10-16$10-21$10-23$10-28$10-0$11-5$11-23$11-28$11-0$12-5$12-8$12-9$12-10$12-18$12-19$12-20$12-23$12-28$12-2$13-3$13-4$13-24$13-25$13-26$13-2$15-3$15-4$15-24$15-25$15-26$15-0$16-5$16-8$16-9$16-10$16-18$16-19$16-20$16-23$16-28$16-0$17-5$17-23$17-28$17-0$18-5$18-7$18-12$18-16$18-21$18-23$18-28$18-7$19-12$19-16$19-21$19-2$20-3$20-4$20-7$20-12$20-16$20-21$20-24$20-25$20-26$20-8$21-9$21-10$21-18$21-19$21-20$21-10$23-11$23-12$23-16$23-17$23-18$23-8$24-13$24-15$24-20$24-8$25-13$25-15$25-20$25-8$26-13$26-15$26-20$26-10$28-11$28-12$28-16$28-17$28-18$28
+
+%pattern-name%queen bee shuttle
+%pattern-description%(p30) Found by Bill Gosper in 1970. There are a number of ways to stabilize the ends. Gosper originally stabilized shuttles against one another in a square of eight shuttles. Two simpler methods are shown here; for a third see buckaroo. The queen bee shuttle is the basis of all known true p30 guns (see Gosper glider gun).
+%pattern-code%9$0-7$1-9$1-6$2-8$2-0$3-1$3-5$3-8$3-0$4-1$4-6$4-8$4-7$5-9$5-18$5-19$5-9$6-18$6-20$6-20$7-20$8-21$8
+
+%pattern-name%R2D2
+%pattern-description%(p8) This was found, in the form shown below, by Peter Raynham in the early 1970s. The name derives from a form with a larger and less symmetric stator discovered by Noam Elkies in August 1994. Compare with Gray counter.
+%pattern-code%5$0-4$1-6$1-3$2-5$2-7$2-3$3-5$3-7$3-0$4-1$4-3$4-7$4-9$4-10$4-0$5-1$5-3$5-7$5-9$5-10$5-3$6-7$6-3$7-5$7-7$7-4$8-6$8-5$9
+
+%pattern-name%rabbits
+%pattern-description%(stabilizes at time 17331) A 9-cell methuselah found by Andrew Trevorrow in 1986. 
+%pattern-code%0$0-4$0-5$0-6$0-0$1-1$1-2$1-5$1-1$2
+
+%pattern-name%rabbits2
+%pattern-description%Found by Trevorrow in October 1995.
+%pattern-code%2$0-7$0-0$1-1$1-1$2-2$2-4$2-5$2-6$2
+
+%pattern-name%$rats
+%pattern-description%(p6) Found by Dave Buckingham, 1972.
+%pattern-code%5$0-6$0-6$1-4$2-0$3-1$3-3$3-5$3-6$3-7$3-8$3-0$4-1$4-3$4-9$4-11$4-3$5-6$5-7$5-8$5-10$5-11$5-3$6-8$6-4$7-5$7-6$7-8$7-7$8-6$9-6$10-7$10
+
+%pattern-name%reflector
+%pattern-description%Any stable or oscillating pattern that can reflect some type of spaceship (usually a glider) without suffering permanent damage. The first known reflector was the pentadecathlon, which functions as a 180-degree glider reflector (see relay). Other examples include the buckaroo, the twin bees shuttle and some oscillators based on the traffic jam reaction. Glider guns can also be made into reflectors, although these are mostly rather large.  In September 1998 Noam Elkies found some fast small-period glider reflectors. The p8 version is shown below. Replacing the figure-8 by the p6 pipsquirter gives a p6 version. A more complicated construction allows a p5 version (which, as had been anticipated, soon led to a true p55 gun - see Quetzal). And in August 1999 Elkies found a suitable p7 sparker, allowing the first p49 oscillator to be constructed.
+%pattern-code%6$0-7$0-13$0-14$0-0$1-2$1-6$1-7$1-13$1-1$2-2$2-11$2-13$2-1$3-11$3-12$3-7$4-8$4-7$5-9$5-8$6-11$8-12$8-13$8-11$9-12$9-13$9-11$10-12$10-13$10-14$11-15$11-16$11-14$12-15$12-16$12-14$13-15$13-16$13
+
+%pattern-name%relay
+%pattern-description%Any oscillator in which spaceships (typically gliders) travel in a loop. The simplest example is the p60 one shown below using two pentadecathlons. Pulling the pentadecathlons further apart allows any period of the form 60+120n to be achieved - this is the simplest proof of the existence of oscillators of arbitrarily large period.
+%pattern-code%27$0-32$0-16$1-17$1-25$1-26$1-28$1-29$1-30$1-31$1-33$1-34$1-17$2-18$2-27$2-32$2-16$3-2$4-7$4-0$5-1$5-3$5-4$5-5$5-6$5-8$5-9$5-2$6-7$6
+
+%pattern-name%rephaser
+%pattern-description%The following reaction that shifts the phase and path of a pair of gliders. There is another form of this reaction that reflects the gliders 180 degrees - see glider-block cycle.
+%pattern-code%2$0-5$0-0$1-2$1-5$1-7$1-1$2-2$2-5$2-6$2-3$5-4$5-3$6-4$6
+
+%pattern-name%reverse fuse
+%pattern-description%A fuse that produces some initial debris, but then burns cleanly. The following is a simple example.
+%pattern-code%13$0-14$0-12$1-14$1-11$2-10$3-9$4-8$5-7$6-6$7-5$8-4$9-3$10-2$11-0$12-1$12
+
+%pattern-name%revolver
+%pattern-description%(p2)
+%pattern-code%0$0-13$0-0$1-1$1-2$1-7$1-11$1-12$1-13$1-3$2-5$2-7$2-10$2-2$3-9$3-11$3-2$4-4$4-11$4-3$5-6$5-8$5-10$5-0$6-1$6-2$6-6$6-11$6-12$6-13$6-0$7-13$7
+
+%pattern-name%ring of fire
+%pattern-description%(p2) The following muttering moat found by Dean Hickerson in September 1992.
+%pattern-code%16$0-14$1-16$1-18$1-12$2-14$2-16$2-18$2-20$2-10$3-12$3-14$3-16$3-18$3-20$3-22$3-8$4-10$4-12$4-15$4-16$4-18$4-20$4-22$4-24$4-6$5-8$5-10$5-12$5-19$5-22$5-24$5-26$5-4$6-6$6-8$6-11$6-22$6-24$6-26$6-28$6-5$7-6$7-8$7-23$7-26$7-28$7-30$7-3$8-7$8-26$8-28$8-29$8-4$9-5$9-6$9-27$9-31$9-2$10-28$10-29$10-30$10-3$11-4$11-32$11-1$12-5$12-30$12-31$12-2$13-3$13-4$13-5$13-29$13-33$13-0$14-30$14-31$14-32$14-1$15-2$15-3$15-33$15-0$16-4$16-28$16-29$16-30$16-31$16-2$17-3$17-28$17-32$17-1$18-29$18-30$18-3$19-4$19-5$19-31$19-2$20-6$20-27$20-28$20-29$20-4$21-5$21-7$21-26$21-30$21-3$22-5$22-7$22-10$22-25$22-27$22-28$22-5$23-7$23-9$23-11$23-22$23-25$23-27$23-29$23-7$24-9$24-11$24-14$24-21$24-23$24-25$24-27$24-9$25-11$25-13$25-15$25-17$25-18$25-21$25-23$25-25$25-11$26-13$26-15$26-17$26-19$26-21$26-23$26-13$27-15$27-17$27-19$27-21$27-15$28-17$28-19$28-17$29
+
+%pattern-name%roteightor
+%pattern-description%(p8) Found by Robert Wainwright in 1972.
+%pattern-code%1$0-1$1-2$1-3$1-12$1-13$1-4$2-12$2-3$3-4$3-10$3-12$3-10$4-11$4-5$6-6$6-7$6-5$7-8$7-5$8-2$9-3$9-6$9-10$9-1$10-3$10-10$10-1$11-9$11-0$12-1$12-10$12-11$12-12$12-12$13
+
+%pattern-name%R-pentomino
+%pattern-description%This is by far the most active polyomino with less than six cells; all the others stabilize in at most 10 generations, but the R-pentomino does not do so until generation 1103, by which time it has a population of 116.
+%pattern-code%1$0-2$0-0$1-1$1-1$2
+
+%pattern-name%rumbling river
+%pattern-description%Any oscillator in which the rotor is connected and contained in a strip of width 2. The following p3 example is by Dean Hickerson, November 1994.
+%pattern-code%14$0-15$0-22$0-23$0-30$0-31$0-35$0-37$0-38$0-4$1-13$1-16$1-21$1-24$1-29$1-32$1-35$1-36$1-38$1-0$2-3$2-5$2-10$2-14$2-15$2-18$2-22$2-23$2-26$2-30$2-32$2-38$2-40$2-41$2-0$3-1$3-2$3-3$3-5$3-8$3-9$3-10$3-11$3-12$3-13$3-16$3-17$3-18$3-19$3-20$3-21$3-24$3-25$3-26$3-27$3-28$3-29$3-32$3-33$3-34$3-35$3-36$3-37$3-39$3-41$3-5$4-7$4-13$4-15$4-21$4-23$4-29$4-31$4-37$4-39$4-46$4-47$4-2$5-3$5-5$5-7$5-9$5-11$5-15$5-17$5-19$5-23$5-25$5-27$5-31$5-33$5-35$5-39$5-41$5-47$5-1$6-7$6-9$6-13$6-15$6-17$6-21$6-23$6-25$6-29$6-31$6-33$6-37$6-39$6-41$6-43$6-45$6-46$6-1$7-2$7-9$7-11$7-17$7-19$7-25$7-27$7-33$7-35$7-41$7-43$7-7$8-9$8-11$8-12$8-13$8-14$8-15$8-16$8-19$8-20$8-21$8-22$8-23$8-24$8-27$8-28$8-29$8-30$8-31$8-32$8-35$8-36$8-37$8-38$8-39$8-40$8-43$8-45$8-46$8-47$8-48$8-7$9-8$9-10$9-16$9-18$9-22$9-25$9-26$9-30$9-33$9-34$9-38$9-43$9-45$9-48$9-10$10-12$10-13$10-16$10-19$10-24$10-27$10-32$10-35$10-44$10-10$11-11$11-13$11-17$11-18$11-25$11-26$11-33$11-34$11
+
+%pattern-name%sailboat
+%pattern-description%(p16) A boat hassled by a Kok`s galaxy, a figure-8 and two eater3s. Found by Robert Wainwright in June 1984.
+%pattern-code%8$0-20$0-7$1-9$1-19$1-21$1-8$2-20$2-6$4-7$4-8$4-9$4-10$4-18$4-19$4-20$4-21$4-22$4-5$5-10$5-18$5-23$5-4$6-7$6-21$6-24$6-1$7-4$7-6$7-7$7-21$7-22$7-24$7-27$7-0$8-2$8-4$8-10$8-18$8-24$8-26$8-28$8-1$9-4$9-9$9-11$9-17$9-19$9-24$9-27$9-4$10-5$10-8$10-11$10-17$10-20$10-23$10-24$10-9$11-10$11-18$11-19$11-13$12-14$12-13$13-15$13-8$14-11$14-14$14-7$15-5$16-6$16-17$16-18$16-19$16-2$17-9$17-10$17-12$17-17$17-18$17-19$17-5$18-9$18-12$18-17$18-18$18-19$18-5$19-6$19-7$19-9$19-13$19-20$19-21$19-22$19-2$20-14$20-20$20-21$20-22$20-3$21-7$21-9$21-10$21-11$21-20$21-21$21-22$21-4$22-7$22-11$22-4$23-6$23-7$23-14$23-10$24-11$24-9$25-5$26-8$26
+
+%pattern-name%Schick engine
+%pattern-description%(c/2 orthogonally, p12) This spaceship, found by Paul Schick in 1972, produces a large spark (the 15 live cells at the rear in the phase shown below) which can be perturbed by other c/2 spaceships to form a variety of puffers. The diagram below shows the smallest form of the Schick engine, using two LWSS. It is also possible to use two MWSS or two HWSS, or even a LWSS and a HWSS.
+%pattern-code%0$0-1$0-2$0-3$0-0$1-4$1-14$1-0$2-12$2-13$2-1$3-4$3-7$3-8$3-14$3-15$3-16$3-6$4-7$4-8$4-15$4-16$4-17$4-1$5-4$5-7$5-8$5-14$5-15$5-16$5-0$6-12$6-13$6-0$7-4$7-14$7-0$8-1$8-2$8-3$8
+
+%pattern-name%scorpion
+%pattern-description%(p1)
+%pattern-code%3$0-1$1-2$1-3$1-0$2-4$2-5$2-0$3-2$3-4$3-6$3-1$4-2$4-4$4-6$4-5$5
+
+%pattern-name%scrubber
+%pattern-description%(p2) Found in 1971.
+%pattern-code%4$0-2$1-3$1-4$1-1$2-1$3-4$3-5$3-6$3-0$4-1$4-3$4-7$4-3$5-7$5-3$6-7$6-9$6-10$6-4$7-5$7-6$7-9$7-9$8-6$9-7$9-8$9-6$10
+
+%pattern-name%seal
+%pattern-description%(c/6 diagonally, p6) The first c/6 diagonal spaceship, found by Nicolay Beluchenko in September 2005.
+%pattern-code%3$0-6$0-7$0-1$1-2$1-3$1-5$1-7$1-9$1-1$2-4$2-5$2-6$2-9$2-10$2-0$3-3$3-4$3-5$3-6$3-7$3-8$3-10$3-12$3-13$3-14$3-1$4-4$4-5$4-6$4-8$4-10$4-11$4-12$4-13$4-14$4-6$5-8$5-10$5-12$5-0$6-2$6-6$6-8$6-10$6-11$6-12$6-13$6-14$6-0$7-3$7-5$7-8$7-10$7-11$7-15$7-3$8-6$8-7$8-15$8-16$8-17$8-1$9-5$9-6$9-7$9-8$9-9$9-11$9-12$9-13$9-16$9-17$9-4$10-14$10-2$11-4$11-14$11-4$12-5$12-7$12-8$12-9$12-10$12-11$12-15$12-6$13-8$13-9$13-10$13-13$13-19$13-20$13-6$14-9$14-13$14-15$14-16$14-17$14-19$14-20$14-8$15-9$15-13$15-14$15-15$15-17$15-20$15-24$15-8$16-9$16-14$16-15$16-17$16-18$16-19$16-20$16-24$16-25$16-26$16-19$17-21$17-24$17-13$18-15$18-21$18-22$18-25$18-26$18-13$19-16$19-22$19-24$19-25$19-26$19-32$19-13$20-17$20-22$20-23$20-26$20-30$20-33$20-15$21-16$21-17$21-23$21-24$21-33$21-15$22-17$22-20$22-23$22-29$22-30$22-33$22-17$23-20$23-21$23-23$23-24$23-26$23-29$23-16$24-24$24-26$24-17$25-21$25-22$25-23$25-24$25-18$26-22$26-23$28-22$29-24$29-21$30-22$30-21$31-23$31-21$32-22$32-23$33-22$34
+
+%pattern-name%sesquihat
+%pattern-description%(p1) Halfway between a hat and a twinhat.
+%pattern-code%4$0-0$1-1$1-3$1-5$1-1$2-3$2-5$2-1$3-3$3-5$3-6$3-2$4
+
+%pattern-name%shillelagh
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-3$1-4$1-1$2-2$2-4$2
+
+%pattern-name%ship
+%pattern-description%(p1) The term is also used as a synonym of spaceship.
+%pattern-code%0$0-1$0-0$1-2$1-1$2-2$2
+
+%pattern-name%ship in a bottle
+%pattern-description%(p16) Found by Bill Gosper in August 1994. See also bottle.
+%pattern-code%4$0-5$0-12$0-13$0-3$1-6$1-11$1-14$1-3$2-5$2-12$2-14$2-1$3-2$3-5$3-6$3-7$3-10$3-11$3-12$3-15$3-16$3-0$4-7$4-10$4-17$4-0$5-2$5-3$5-14$5-15$5-17$5-1$6-3$6-14$6-16$6-3$7-4$7-8$7-9$7-13$7-14$7-7$8-9$8-7$9-8$9-3$10-4$10-13$10-14$10-1$11-3$11-14$11-16$11-0$12-2$12-3$12-14$12-15$12-17$12-0$13-7$13-10$13-17$13-1$14-2$14-5$14-6$14-7$14-10$14-11$14-12$14-15$14-16$14-3$15-5$15-12$15-14$15-3$16-6$16-11$16-14$16-4$17-5$17-12$17-13$17
+
+%pattern-name%ship-tie
+%pattern-description%(p1) The name is by analogy with boat-tie.
+%pattern-code%0$0-1$0-0$1-2$1-1$2-2$2-3$3-4$3-3$4-5$4-4$5-5$5
+
+%pattern-name%ship tie boat
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-2$1-1$2-2$2-3$3-4$3-3$4-5$4-4$5
+
+%pattern-name%short keys
+%pattern-description%(p3) Found by Dean Hickerson, August 1989. See also bent keys and odd keys.
+%pattern-code%1$0-10$0-0$1-2$1-3$1-4$1-7$1-8$1-9$1-11$1-1$2-4$2-7$2-10$2-4$3-7$3
+
+%pattern-name%side
+%pattern-description%Half a sidewalk. In itself this is unstable and requires an induction coil.
+%pattern-code%0$0-1$0-0$1-2$1-3$1-4$1-4$2
+
+%pattern-name%sidecar
+%pattern-description%A small tagalong for a HWSS that was found by Hartmut Holzwart in 1992. The resulting spaceship (shown below) has a phase with only 24 cells, making it in this respect the smallest known spaceship other than the standard spaceships and some trivial two-spaceship flotillas derived from them. Note also that a HWSS can support two sidecars at once.
+%pattern-code%1$0-0$1-6$1-0$2-6$2-0$3-1$3-2$3-3$3-4$3-6$3-4$5-5$5-2$6-7$6-1$7-1$8-7$8-1$9-2$9-3$9-4$9-5$9-6$9
+
+%pattern-name%sidewalk
+%pattern-description%(p1)
+%pattern-code%1$0-2$0-4$0-5$0-2$1-4$1-1$2-4$2-1$3-3$3-0$4-1$4-3$4-4$4
+
+%pattern-name%siesta
+%pattern-description%(p5) Found by Dave Buckingham in 1973. Compare sombreros.
+%pattern-code%11$0-12$0-3$1-4$1-10$1-12$1-3$2-5$2-10$2-5$3-9$3-10$3-12$3-3$4-5$4-6$4-12$4-13$4-14$4-1$5-2$5-3$5-9$5-11$5-15$5-0$6-4$6-6$6-12$6-13$6-14$6-1$7-2$7-3$7-9$7-10$7-12$7-3$8-5$8-6$8-10$8-5$9-10$9-12$9-3$10-5$10-11$10-12$10-3$11-4$11
+
+%pattern-name%Silver`s p5
+%pattern-description%(p5) The following oscillator found by Stephen Silver in February 2000.
+%pattern-code%0$0-1$0-0$1-1$2-4$2-3$3-4$3-3$4-7$4-9$4-10$4-2$5-7$5-8$5-10$5-2$6-3$6
+
+%pattern-name%singular flip flop
+%pattern-description%(p2) Found by Robert Wainwright, July 1972.
+%pattern-code%2$0-2$1-4$1-0$2-5$2-0$3-1$3-2$3-3$3-4$3-5$3-2$5-3$5-2$6-3$6
+
+%pattern-name%six Ls
+%pattern-description%(p3) This is a compact form of loading dock.
+%pattern-code%3$0-1$1-2$1-3$1-6$1-0$2-4$2-5$2-6$2-0$3-1$3-2$3-4$4-5$4-6$4-0$5-1$5-2$5-6$5-0$6-3$6-4$6-5$6-3$7
+
+%pattern-name%sixty-nine
+%pattern-description%(p4) Found by Robert Wainwright, October 1978.
+%pattern-code%9$0-8$1-10$1-6$3-10$3-11$3-5$4-11$4-6$5-8$5-8$6-9$6-16$6-16$7-2$8-8$8-9$8-14$8-15$8-16$8-2$9-14$9-15$9-0$10-1$10-2$10-10$10-11$10-14$10-15$10-18$10-19$10-20$10-0$11-1$11-8$11-10$11-11$11-16$11-17$11-18$11-0$12-1$12-4$12-5$12-6$12-8$12-10$12-16$12-17$12-18$12-2$13-3$13-4$13-2$14-3$14-4$14-11$14-10$15-12$15-8$17-12$17-13$17-7$18-13$18-8$19-10$19-10$20-11$20
+
+%pattern-name%skewed quad
+%pattern-description%(p2)
+%pattern-code%1$0-2$0-1$1-5$1-6$1-2$2-4$2-6$2-0$4-2$4-4$4-0$5-1$5-5$5-4$6-5$6
+
+%pattern-name%skewed traffic light
+%pattern-description%(p3) Found by Robert Wainwright, August 1989.
+%pattern-code%13$0-14$0-12$1-15$1-13$2-15$2-9$3-10$3-14$3-10$4-12$4-13$4-12$5-12$6-0$8-1$8-10$8-11$8-12$8-19$8-0$9-1$9-2$9-3$9-5$9-14$9-18$9-19$9-0$10-2$10-5$10-6$10-7$10-9$10-14$10-9$11-14$11-16$11-17$11-18$11-21$11-23$11-4$12-5$12-9$12-18$12-20$12-21$12-22$12-23$12-4$13-11$13-12$13-13$13-22$13-23$13-11$15-11$16-10$17-11$17-13$17-9$18-13$18-14$18-8$19-10$19-8$20-11$20-9$21-10$21
+
+%pattern-name%slide gun
+%pattern-description%A gun which fires sideways from an extending arm. The arm consists of streams of spaceships which are pushing a pattern away from the body of the gun and releasing an output spaceship every time they do so. Each output spaceship therefore travels along a different path.  Dieter Leithner constructed the first slide gun in July 1994 (although he used the term "side shooting gun"). The following pattern shows the key reaction of this slide gun. The three gliders shown will push the block one cell diagonally, thereby extending the length of the arm by one cell, and at the same time they release an output glider sideways. (In 1999, Jason Summers constructed slide guns using other reactions.)
+%pattern-code%14$0-15$0-14$1-15$1-8$2-9$2-10$2-10$3-9$4-15$4-16$4-14$5-16$5-16$6-1$17-1$18-2$18-0$19-2$19
+
+%pattern-name%small lake
+%pattern-description%(p1) See also lake.
+%pattern-code%4$0-3$1-5$1-3$2-5$2-1$3-2$3-6$3-7$3-0$4-8$4-1$5-2$5-6$5-7$5-3$6-5$6-3$7-5$7-4$8
+
+%pattern-name%smiley
+%pattern-description%(p8) Found by Achim Flammenkamp in July 1994 and named by Alan Hensel.
+%pattern-code%0$0-1$0-3$0-5$0-6$0-3$1-0$2-6$2-1$3-2$3-3$3-4$3-5$3-0$6-1$6-2$6-4$6-5$6-6$6
+
+%pattern-name%snacker
+%pattern-description%(p9) Found by Mark Niemiec in 1972. This is a pentadecathlon with stabilizers which force it into a lower period.
+%pattern-code%0$0-1$0-18$0-19$0-1$1-18$1-1$2-3$2-16$2-18$2-2$3-3$3-16$3-17$3-7$4-12$4-5$5-6$5-8$5-9$5-10$5-11$5-13$5-14$5-7$6-12$6-2$7-3$7-16$7-17$7-1$8-3$8-16$8-18$8-1$9-18$9-0$10-1$10-18$10-19$10
+
+%pattern-name%snail
+%pattern-description%(c/5 orthogonally, p5) The first known c/5 spaceship, discovered by Tim Coe in January 1996. For some time it was the slowest known orthogonal spaceship.
+%pattern-code%1$0-1$1-0$2-1$3-2$3-3$3-21$3-22$3-23$3-27$3-28$3-29$3-1$4-2$4-4$4-14$4-18$4-20$4-27$4-28$4-29$4-2$5-14$5-15$5-17$5-25$5-30$5-31$5-32$5-33$5-6$6-13$6-17$6-19$6-23$6-24$6-26$6-32$6-33$6-3$7-6$7-8$7-9$7-10$7-14$7-15$7-25$7-34$7-35$7-37$7-3$8-4$8-6$8-12$8-18$8-36$8-9$9-11$9-12$9-13$9-14$9-15$9-16$9-17$9-9$11-11$11-12$11-13$11-14$11-15$11-16$11-17$11-3$12-4$12-6$12-12$12-18$12-36$12-3$13-6$13-8$13-9$13-10$13-14$13-15$13-25$13-34$13-35$13-37$13-6$14-13$14-17$14-19$14-23$14-24$14-26$14-32$14-33$14-2$15-14$15-15$15-17$15-25$15-30$15-31$15-32$15-33$15-1$16-2$16-4$16-14$16-18$16-20$16-27$16-28$16-29$16-1$17-2$17-3$17-21$17-22$17-23$17-27$17-28$17-29$17-0$18-1$19-1$20
+
+%pattern-name%snake
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-3$0-0$1-2$1-3$1
+
+%pattern-name%snake bridge snake
+%pattern-description%(p1)
+%pattern-code%4$0-5$0-4$1-5$2-4$3-5$3-0$4-1$4-3$4-0$5-2$5-3$5
+
+%pattern-name%snake dance
+%pattern-description%(p3) Found by Robert Wainwright, May 1972.
+%pattern-code%3$0-4$0-6$0-3$1-5$1-6$1-0$2-1$2-3$2-1$3-4$3-6$3-7$3-8$3-0$4-3$4-5$4-8$4-0$5-1$5-2$5-4$5-7$5-5$6-7$6-8$6-2$7-3$7-5$7-2$8-4$8-5$8
+
+%pattern-name%snake pit
+%pattern-description%This term has been used for two different oscillators; the p2 snake pit (essentially the same as fore and back)
+%pattern-code%0$0-2$0-3$0-5$0-6$0-0$1-1$1-3$1-5$1-6$2-0$3-1$3-2$3-4$3-5$3-6$3-0$4-1$5-3$5-5$5-6$5-0$6-1$6-3$6-4$6-6$6
+
+%pattern-name%snake pit p3
+%pattern-description%p3 snake pit.
+%pattern-code%5$0-6$0-4$1-7$1-4$2-6$2-7$2-1$3-2$3-4$3-0$4-2$4-4$4-6$4-7$4-8$4-9$4-0$5-10$5-1$6-2$6-3$6-4$6-6$6-8$6-10$6-6$7-8$7-9$7-3$8-4$8-6$8-3$9-6$9-4$10-5$10
+
+%pattern-name%snake siamese snake
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-3$0-4$0-6$0-0$1-2$1-3$1-5$1-6$1
+
+%pattern-name%sombreros
+%pattern-description%(p6) Found by Dave Buckingham in 1972. If the two halves are moved three spaces closer to one another then the period drops to 4, and the result is just a less compact form of Achim`s p4. Compare also siesta.
+%pattern-code%3$0-4$0-13$0-14$0-3$1-5$1-12$1-14$1-5$2-12$2-3$3-5$3-6$3-11$3-12$3-14$3-1$4-2$4-3$4-14$4-15$4-16$4-0$5-4$5-6$5-11$5-13$5-17$5-1$6-2$6-3$6-14$6-15$6-16$6-3$7-5$7-6$7-11$7-12$7-14$7-5$8-12$8-3$9-5$9-12$9-14$9-3$10-4$10-13$10-14$10
+
+%pattern-name%spacefiller
+%pattern-description%Any pattern that grows at a quadratic rate by filling space with an agar. The first example was found in September 1993 by Hartmut Holzwart, following a suggestion by Alan Hensel. The diagram below shows a smaller spacefiller found by Tim Coe. See also Max. Spacefillers can be considered as breeders (more precisely, MMS breeders), but they are very different from ordinary breeders. The word "spacefiller" was suggested by Harold McIntosh and soon became the accepted term.
+%pattern-code%18$0-17$1-18$1-19$1-12$2-13$2-14$2-19$2-20$2-11$3-14$3-15$3-16$3-19$3-21$3-22$3-10$4-14$4-16$4-19$4-21$4-10$5-15$5-17$5-19$5-21$5-23$5-24$5-12$6-17$6-19$6-23$6-24$6-0$7-1$7-2$7-3$7-9$7-11$7-16$7-20$7-22$7-23$7-24$7-0$8-4$8-5$8-7$8-9$8-10$8-11$8-13$8-14$8-24$8-25$8-0$9-6$9-7$9-13$9-1$10-4$10-5$10-7$10-10$10-13$10-15$10-16$10-7$11-9$11-11$11-13$11-15$11-17$11-23$11-24$11-25$11-26$11-1$12-4$12-5$12-7$12-10$12-13$12-16$12-17$12-19$12-21$12-22$12-26$12-0$13-6$13-7$13-11$13-13$13-15$13-19$13-20$13-26$13-0$14-4$14-5$14-7$14-9$14-10$14-13$14-16$14-19$14-21$14-22$14-25$14-0$15-1$15-2$15-3$15-9$15-11$15-13$15-15$15-17$15-19$15-10$16-11$16-13$16-16$16-19$16-21$16-22$16-25$16-13$17-19$17-20$17-26$17-1$18-2$18-12$18-13$18-15$18-16$18-17$18-19$18-21$18-22$18-26$18-2$19-3$19-4$19-6$19-10$19-15$19-17$19-23$19-24$19-25$19-26$19-2$20-3$20-7$20-9$20-14$20-2$21-3$21-5$21-7$21-9$21-11$21-16$21-5$22-7$22-10$22-12$22-16$22-4$23-5$23-7$23-10$23-11$23-12$23-15$23-6$24-7$24-12$24-13$24-14$24-7$25-8$25-9$25-8$26
+
+%pattern-name%space rake
+%pattern-description%The following p20 forwards glider rake, which was the first known rake. It consists of an ecologist with a LWSS added to turn the dying debris into gliders.
+%pattern-code%11$0-12$0-18$0-19$0-20$0-21$0-9$1-10$1-12$1-13$1-17$1-21$1-9$2-10$2-11$2-12$2-21$2-10$3-11$3-17$3-20$3-8$5-7$6-8$6-17$6-18$6-6$7-16$7-19$7-7$8-8$8-9$8-10$8-11$8-16$8-19$8-8$9-9$9-10$9-11$9-15$9-16$9-18$9-19$9-11$10-16$10-17$10-18$14-19$14-20$14-21$14-0$15-3$15-17$15-21$15-4$16-21$16-0$17-4$17-17$17-20$17-1$18-2$18-3$18-4$18
+
+%pattern-name%spaceship
+%pattern-description%Any finite pattern that reappears (without additions or losses) after a number of generations and displaced by a non-zero amount. By far the most natural spaceships are the glider, LWSS, MWSS and HWSS. For further examples see B29, big glider, brain, Canada goose, Coe ship, Cordership, crane, dart, dragon, ecologist, edge-repair spaceship, Enterprise, flotilla, fly, hammerhead, hivenudger, non-monotonic, Orion, puff suppressor, pushalong, quarter, Schick engine, seal, sidecar, snail, still life tagalong, sparky, swan, turtle, wasp, weekender and x66. See also Caterpillar.  It is known that there exist spaceships travelling in all rational directions and at arbitrarily slow speeds (see universal constructor). Before 1989, however, the only known examples travelled at c/4 diagonally (gliders) or c/2 orthogonally (everything else). In 1989 Dean Hickerson started to use automated searches to look for new spaceships, and had considerable success. Other people have continued these searches using tools such as lifesrc and gfind, and as a result we now have a great variety of spaceships travelling at twelve different velocities. The following table details the discovery of spaceships with new velocities.  A period p spaceship that displaces itself (m,n) during its period, where m>=n, is said to be of type (m,n)/p. It was proved by Conway in 1970 that p>=2m+2n. (This follows immediately from the easily-proved fact that a pattern cannot advance diagonally at a rate greater than one half diagonal step every other generation.)  The following diagram shows one of only two known c/5 diagonal spaceships. It was found by Jason Summers in January 2005.
+%pattern-code%10$0-11$0-9$1-12$1-8$2-9$2-9$3-11$3-12$3-10$4-12$4-13$4-14$4-10$5-11$5-13$5-14$5-15$5-12$6-17$6-18$6-12$7-13$7-14$7-19$7-20$7-2$8-12$8-14$8-1$9-2$9-3$9-12$9-15$9-0$10-4$10-5$10-0$11-3$11-5$11-13$11-14$11-16$11-19$11-1$12-3$12-4$12-6$12-7$12-8$12-9$12-13$12-17$12-18$12-19$12-20$12-4$13-5$13-7$13-11$13-12$13-20$13-4$14-5$14-7$14-8$14-11$14-21$14-5$15-9$15-18$15-20$15-21$15-11$16-19$16-6$17-12$17-19$17-6$18-12$18-15$18-7$19-11$19-12$19-16$19-17$19-7$20-12$20-13$20-15$20-14$21-15$21
+
+%pattern-name%spark coil
+%pattern-description%(p2) Found in 1971.
+%pattern-code%0$0-1$0-6$0-7$0-0$1-2$1-5$1-7$1-2$2-5$2-0$3-2$3-5$3-7$3-0$4-1$4-6$4-7$4
+
+%pattern-name%sparky
+%pattern-description%A certain c/4 tagalong, shown here attached to the back of a spaceship.
+%pattern-code%10$0-10$1-26$1-27$1-6$2-7$2-9$2-11$2-12$2-13$2-24$2-25$2-29$2-0$3-2$3-3$3-5$3-6$3-8$3-9$3-12$3-14$3-18$3-19$3-21$3-22$3-23$3-24$3-0$4-4$4-5$4-8$4-10$4-11$4-14$4-15$4-16$4-19$4-21$4-22$4-25$4-26$4-30$4-0$5-2$5-3$5-8$5-9$5-10$5-12$5-14$5-15$5-16$5-23$5-24$5-27$5-8$6-9$6-11$6-27$6-30$6-0$7-2$7-3$7-8$7-9$7-10$7-12$7-14$7-15$7-16$7-23$7-24$7-27$7-0$8-4$8-5$8-8$8-10$8-11$8-14$8-15$8-16$8-19$8-21$8-22$8-25$8-26$8-30$8-0$9-2$9-3$9-5$9-6$9-8$9-9$9-12$9-14$9-18$9-19$9-21$9-22$9-23$9-24$9-6$10-7$10-9$10-11$10-12$10-13$10-24$10-25$10-29$10-10$11-26$11-27$11-10$12
+
+%pattern-name%S-pentomino
+%pattern-description%Conway`s name for the following pentomino, which rapidly dies.
+%pattern-code%2$0-3$0-0$1-1$1-2$1
+
+%pattern-name%spider
+%pattern-description%(c/5 orthogonally, p5) This is the smallest known c/5 spaceship, and was found by David Bell in April 1997. Its side sparks have proved very useful in constructing c/5 puffers, including rakes. See also pre-pulsar.
+%pattern-code%6$0-10$0-11$0-12$0-18$0-19$0-20$0-24$0-3$1-4$1-6$1-7$1-8$1-9$1-10$1-12$1-13$1-17$1-18$1-20$1-21$1-22$1-23$1-24$1-26$1-27$1-1$2-3$2-4$2-6$2-12$2-14$2-16$2-18$2-24$2-26$2-27$2-29$2-0$3-4$3-6$3-10$3-11$3-12$3-13$3-14$3-16$3-17$3-18$3-19$3-20$3-24$3-26$3-30$3-4$4-5$4-6$4-12$4-13$4-17$4-18$4-24$4-25$4-26$4-1$5-4$5-6$5-7$5-8$5-22$5-23$5-24$5-26$5-29$5-3$6-27$6
+
+%pattern-name%spiral
+%pattern-description%(p1) Found by Robert Wainwright in 1971.
+%pattern-code%0$0-1$0-6$0-1$1-4$1-5$1-6$1-1$2-3$2-2$3-4$3-3$4-5$4-0$5-1$5-2$5-5$5-0$6-5$6-6$6
+
+%pattern-name%squaredance
+%pattern-description%The p2 agar formed by tiling the plane with the following pattern. Found by Don Woods in 1971.
+%pattern-code%0$0-1$0-4$1-5$1-2$2-7$2-2$3-7$3-4$4-5$4-0$5-1$5-3$6-6$6-3$7-6$7
+
+%pattern-name%stairstep hexomino
+%pattern-description%(stabilizes at time 63) The following predecessor of the blockade.
+%pattern-code%2$0-3$0-1$1-2$1-0$2-1$2
+
+%pattern-name%star
+%pattern-description%(p3) Found by Hartmut Holzwart, February 1993.
+%pattern-code%5$0-4$1-5$1-6$1-2$2-3$2-4$2-6$2-7$2-8$2-2$3-8$3-1$4-2$4-8$4-9$4-0$5-1$5-9$5-10$5-1$6-2$6-8$6-9$6-2$7-8$7-2$8-3$8-4$8-6$8-7$8-8$8-4$9-5$9-6$9-5$10
+
+%pattern-name%stillater
+%pattern-description%(p3) Found by Robert Wainwright, September 1985. This is one of only three essentially different p3 oscillators with only three cells in the rotor. The others are 1-2-3 and cuphook.
+%pattern-code%3$0-2$1-4$1-6$1-7$1-2$2-4$2-5$2-7$2-0$3-1$3-1$4-3$4-5$4-6$4-1$5-3$5-6$5-2$6-5$6-3$7-4$7
+
+%pattern-name%still life
+%pattern-description%Any stable pattern, usually assumed to be finite and nonempty. For the purposes of enumerating still lifes this definition is, however, unsatisfactory because, for example, any pair of blocks would count as a still life, and there would therefore be an infinite number of 8-bit still lifes. For this reason a stricter definition is often used, counting a stable pattern as a single still life only if its islands cannot be divided into two nonempty sets both of which are stable in their own right. Compare pseudo still life.  The requirement that a still life not be decomposable into two separate stable patterns may seem a bit arbitrary, as it does not rule out the possibility that it might be decomposable into more than two. This is shown by the patterns in the following diagram, both found by Gabriel Nivasch in July 2001. On the left is a 32-cell pattern that can be broken down into three stable pieces but not into two. On the right is a 34-cell pattern that can be broken down into four stable pieces but not into two or three. (Note that, as a consequence of the Four-Colour Theorem, four is as high as you need ever go.) It is arguable that patterns like these ought not to be considered as single still lifes.
+%pattern-code%6$0-7$0-19$0-20$0-2$1-4$1-7$1-14$1-15$1-17$1-20$1-1$2-3$2-4$2-6$2-14$2-16$2-17$2-19$2-1$3-6$3-7$3-19$3-20$3-0$4-1$4-3$4-4$4-14$4-16$4-17$4-21$4-3$5-4$5-6$5-7$5-12$5-13$5-14$5-16$5-17$5-19$5-20$5-0$6-1$6-6$6-11$6-19$6-1$7-3$7-4$7-6$7-12$7-13$7-14$7-16$7-17$7-19$7-0$8-3$8-5$8-14$8-16$8-18$8-0$9-1$9
+
+%pattern-name%still life tagalong
+%pattern-description%A tagalong which takes the form of a still life in at least one phase. An example is shown below.
+%pattern-code%2$0-3$0-1$1-2$1-4$1-5$1-2$2-3$2-4$2-5$2-3$3-4$3-3$5-4$5-5$5-6$5-7$5-2$6-3$6-4$6-5$6-6$6-7$6-8$6-1$7-2$7-4$7-5$7-6$7-7$7-8$7-2$8-3$8-8$10-10$10-16$10-17$10-6$11-11$11-15$11-18$11-6$12-7$12-13$12-15$12-18$12-1$13-4$13-7$13-8$13-9$13-10$13-12$13-16$13-17$13-0$14-8$14-9$14-0$15-4$15-0$16-1$16-2$16-3$16
+
+%pattern-name%superfountain
+%pattern-description%(p4) A p4 sparker which produces a 1-cell spark that is separated from the rest of the oscillator by two clear rows of cells. The first superfountain was found by Noam Elkies in February 1998. In January 2006 Nicolay Beluchenko found the much smaller one shown below. See also fountain.
+%pattern-code%11$0-5$3-8$3-14$3-17$3-3$4-4$4-7$4-9$4-10$4-11$4-12$4-13$4-15$4-18$4-19$4-5$5-17$5-3$6-5$6-6$6-16$6-17$6-19$6-1$7-3$7-7$7-8$7-9$7-13$7-14$7-15$7-19$7-21$7-0$8-1$8-2$8-4$8-18$8-20$8-21$8-22$8-10$9-12$9-4$10-5$10-6$10-10$10-12$10-16$10-17$10-18$10-4$11-7$11-11$11-15$11-18$11-3$12-4$12-5$12-6$12-9$12-11$12-13$12-16$12-17$12-18$12-19$12-3$13-4$13-7$13-8$13-9$13-11$13-13$13-14$13-15$13-18$13-19$13-2$14-6$14-10$14-12$14-16$14-20$14-3$15-6$15-8$15-10$15-12$15-14$15-16$15-19$15-4$16-6$16-8$16-9$16-13$16-14$16-16$16-18$16-5$17-17$17
+
+%pattern-name%superstring
+%pattern-description%An infinite orthogonal row of cells stabilized on one side so that it moves at the speed of light, often leaving debris behind. The first examples were found in 1971 by Edward Fitzgerald and Robert Wainwright. Superstrings were studied extensively by Peter Rott during 1992-1994, and he found examples with many different periods. (But no odd periods. In August 1998 Stephen Silver proved that odd-period superstrings are impossible.)  Sometimes a finite section of a superstring can be made to run between two tracks ("waveguides"). This gives a fuse which can be made as wide as desired. The first example was found by Tony Smithurst and uses tubs. (This is shown below. The superstring itself is p4 with a repeating section of width 9 producing one blinker per period and was one of those discovered in 1971. With the track in place, however, the period is 8. This track can also be used with a number of other superstrings.) Shortly after seeing this example, in March 1997 Peter Rott found another superstring track consisting of boats. At present these are the only two waveguides known. Both are destroyed by the superstring as it moves along - it would be interesting to find one that remains intact.  See titanic toroidal traveler for another example of a superstring.
+%pattern-code%1$0-2$0-0$1-3$1-7$1-11$1-15$1-19$1-23$1-27$1-31$1-35$1-39$1-43$1-47$1-51$1-55$1-59$1-4$2-6$2-8$2-10$2-12$2-14$2-16$2-18$2-20$2-22$2-24$2-26$2-28$2-30$2-32$2-34$2-36$2-38$2-40$2-42$2-44$2-46$2-48$2-50$2-52$2-54$2-56$2-58$2-60$2-0$3-3$3-7$3-11$3-15$3-19$3-23$3-27$3-31$3-35$3-39$3-43$3-47$3-51$3-55$3-59$3-1$4-2$4-3$4-2$5-3$5-2$6-3$6-3$7-3$8-3$9-3$10-3$11-3$12-3$13-2$14-3$14-2$15-3$15-1$16-2$16-3$16-0$17-3$17-7$17-11$17-15$17-19$17-23$17-27$17-31$17-35$17-39$17-43$17-47$17-51$17-55$17-59$17-4$18-6$18-8$18-10$18-12$18-14$18-16$18-18$18-20$18-22$18-24$18-26$18-28$18-30$18-32$18-34$18-36$18-38$18-40$18-42$18-44$18-46$18-48$18-50$18-52$18-54$18-56$18-58$18-60$18-0$19-3$19-7$19-11$19-15$19-19$19-23$19-27$19-31$19-35$19-39$19-43$19-47$19-51$19-55$19-59$19-1$20-2$20
+
+%pattern-name%surprise
+%pattern-description%(p3) Found by Dave Buckingham, November 1972.
+%pattern-code%3$0-8$0-9$0-3$1-4$1-5$1-8$1-1$2-2$2-6$2-8$2-0$3-3$3-4$3-6$3-8$3-9$3-1$4-8$4-0$5-1$5-3$5-5$5-6$5-9$5-1$6-3$6-7$6-8$6-1$7-4$7-5$7-6$7-0$8-1$8-6$8
+
+%pattern-name%swan
+%pattern-description%(c/4 diagonally, p4) A diagonal spaceship producing some useful sparks. Found by Tim Coe in February 1996.
+%pattern-code%1$0-12$0-13$0-0$1-1$1-2$1-3$1-4$1-11$1-12$1-0$2-3$2-4$2-13$2-21$2-22$2-2$3-3$3-5$3-11$3-12$3-19$3-20$3-21$3-23$3-11$4-12$4-16$4-18$4-19$4-5$5-7$5-14$5-15$5-10$6-11$6-12$6-14$6-19$6-7$7-8$7-9$7-13$7-18$7-8$8-16$8-8$9-15$9-11$11
+
+%pattern-name%switch engine
+%pattern-description%The following pattern, which in itself is unstable, but which can be used to make c/12 diagonal puffers and spaceships.
+%pattern-code%1$0-3$0-0$1-1$2-4$2-3$3-4$3-5$3
+
+%pattern-name%table
+%pattern-description%The following induction coil.
+%pattern-code%0$0-1$0-2$0-3$0-0$1-3$1
+
+%pattern-name%table on table
+%pattern-description%(p1)
+%pattern-code%0$0-3$0-0$1-1$1-2$1-3$1-0$3-1$3-2$3-3$3-0$4-3$4
+
+%pattern-name%teardrop
+%pattern-description%The following induction coil, or the formation of two beehives that it evolves into after 20 generations. (Compare butterfly, where the beehives are five cells further apart.)
+%pattern-code%0$0-1$0-2$0-0$1-3$1-0$2-3$2-1$3-2$3
+
+%pattern-name%technician
+%pattern-description%(p5) Found by Dave Buckingham, January 1973.
+%pattern-code%5$0-4$1-6$1-4$2-5$2-2$3-3$3-1$4-5$4-6$4-7$4-0$5-3$5-4$5-8$5-10$5-1$6-2$6-7$6-9$6-10$6-3$7-5$7-7$7-3$8-7$8-4$9-5$9-6$9-6$10-8$10-7$11-8$11
+
+%pattern-name%test tube baby
+%pattern-description%(p2)
+%pattern-code%0$0-1$0-6$0-7$0-0$1-2$1-5$1-7$1-2$2-5$2-2$3-5$3-3$4-4$4
+
+%pattern-name%tetromino
+%pattern-description%Any 4-cell polyomino. There are five such objects, shown below. The first is the block, the second is the T-tetromino and the remaining three rapidly evolve into beehives.
+%pattern-code%0$0-1$0-8$0-9$0-10$0-17$0-18$0-19$0-20$0-27$0-28$0-29$0-36$0-37$0-0$1-1$1-9$1-29$1-37$1-38$1
+
+%pattern-name%thumb
+%pattern-description%A spark-like protrusion which flicks out in a manner resembling a thumb being flicked.  Here are two examples. On the left is a p9 thumb sparker found by Dean Hickerson in October 1998. On the right is a p4 one found by David Eppstein in June 2000.
+%pattern-code%7$0-22$0-3$1-4$1-8$1-18$1-19$1-23$1-3$2-9$2-11$2-12$2-18$2-24$2-0$3-1$3-3$3-5$3-12$3-19$3-20$3-21$3-23$3-25$3-26$3-0$4-1$4-3$4-5$4-6$4-8$4-9$4-10$4-11$4-24$4-25$4-27$4-3$5-5$5-17$5-18$5-19$5-20$5-21$5-22$5-27$5-3$6-5$6-7$6-8$6-9$6-17$6-22$6-23$6-24$6-25$6-26$6-4$7-6$7-10$7-20$7-6$8-9$8-10$8-19$8-21$8-22$8-23$8-24$8-6$9-7$9-19$9-21$9-24$9-20$10
+
+%pattern-name%thunderbird
+%pattern-description%(stabilizes at time 243)
+%pattern-code%0$0-1$0-2$0-1$2-1$3-1$4
+
+%pattern-name%time bomb
+%pattern-description%The following pattern by Doug Petrie, which is really just a glider-producing switch engine in disguise. See infinite growth for some better examples of a similar nature.
+%pattern-code%1$0-13$0-14$0-0$1-2$1-7$1-14$1-7$2-12$2-2$3-5$3-9$3-12$3-2$4-3$4-10$4-3$5
+
+%pattern-name%titanic toroidal traveler
+%pattern-description%The superstring with the following repeating segment. The front part becomes p16, but the eventual fate of the detached back part is unknown.
+%pattern-code%0$0-1$0-2$0-3$0-4$0-5$0-0$1-1$1-2$1
+
+%pattern-name%T-nosed p4
+%pattern-description%(p4) Found by Robert Wainwright in October 1989. See also filter.
+%pattern-code%5$0-5$1-4$2-5$2-6$2-3$6-4$6-5$6-6$6-7$6-2$7-4$7-5$7-6$7-8$7-2$8-4$8-6$8-8$8-1$9-2$9-4$9-6$9-8$9-9$9-0$10-3$10-4$10-6$10-7$10-10$10-0$11-1$11-9$11-10$11
+
+%pattern-name%T-nosed p6
+%pattern-description%(p6) Found by Achim Flammenkamp in September 1994. There is also a much larger and fully symmetric version found by Flammenkamp in August 1994.
+%pattern-code%6$0-7$0-11$0-12$0-6$1-8$1-10$1-12$1-7$2-11$2-2$4-4$4-6$4-12$4-14$4-16$4-0$5-1$5-2$5-4$5-6$5-7$5-11$5-12$5-14$5-16$5-17$5-18$5-2$6-4$6-6$6-12$6-14$6-16$6-7$8-11$8-6$9-8$9-10$9-12$9-6$10-7$10-11$10-12$10
+
+%pattern-name%toad
+%pattern-description%(p2) Found by Simon Norton, May 1970. This is the second most common oscillator, although blinkers are more than a hundred times as frequent. See also killer toads.
+%pattern-code%1$0-2$0-3$0-0$1-1$1-2$1
+
+%pattern-name%toad-flipper
+%pattern-description%A toad hassler that works in the manner of the following example. Two domino sparkers, here pentadecathlons, apply their sparks to the toad in order to flip it over. When the sparks are applied again it is flipped back. Either or both domino sparkers can be moved down two spaces from the position shown and the toad-flipper will still work, but because of symmetry there are really only two different types. Compare toad-sucker.
+%pattern-code%1$0-16$0-1$1-16$1-0$2-2$2-15$2-17$2-1$3-16$3-1$4-8$4-16$4-1$5-8$5-9$5-16$5-1$6-8$6-9$6-16$6-0$7-2$7-9$7-15$7-17$7-1$8-16$8-1$9-16$9
+
+%pattern-name%toad-sucker
+%pattern-description%A toad hassler that works in the manner of the following example. Two domino sparkers, here pentadecathlons, apply their sparks to the toad in order to shift it. When the sparks are applied again it is shifted back. Either or both domino sparkers can be moved down two spaces from the position shown and the toad-sucker will still work, but because of symmetry there are really only three different types. Compare toad-flipper.
+%pattern-code%1$0-1$1-16$1-0$2-2$2-16$2-1$3-15$3-17$3-1$4-8$4-16$4-1$5-8$5-9$5-16$5-1$6-8$6-9$6-16$6-0$7-2$7-9$7-16$7-1$8-15$8-17$8-1$9-16$9-16$10
+
+%pattern-name%toaster
+%pattern-description%(p5) Found by Dean Hickerson, April 1992.
+%pattern-code%4$0-11$0-12$0-3$1-5$1-7$1-8$1-11$1-3$2-5$2-7$2-9$2-11$2-2$3-3$3-5$3-9$3-11$3-12$3-0$4-4$4-5$4-7$4-9$4-10$4-14$4-3$5-11$5-3$6-11$6-0$7-4$7-5$7-7$7-9$7-10$7-14$7-2$8-3$8-5$8-9$8-11$8-12$8-3$9-5$9-7$9-9$9-11$9-3$10-5$10-7$10-8$10-11$10-4$11-11$11-12$11
+
+%pattern-name%total aperiodic
+%pattern-description%Any finite pattern which evolves in such a way that no cell in the Life plane is eventually periodic. The first example was found by Bill Gosper in November 1997. A few days later he found the following much smaller example consisting of three copies of a p12 backrake by Dave Buckingham.
+%pattern-code%41$0-40$1-41$1-42$1-39$2-40$2-42$2-48$2-39$3-40$3-41$3-47$3-48$3-49$3-40$4-41$4-46$4-49$4-50$4-54$4-55$4-56$4-46$5-47$5-48$5-53$5-56$5-56$6-56$7-56$8-40$9-41$9-42$9-55$9-40$10-43$10-40$11-40$12-41$13-38$20-39$20-40$20-38$21-41$21-53$21-38$22-52$22-53$22-54$22-38$23-51$23-52$23-54$23-38$24-51$24-52$24-53$24-39$25-52$25-53$25-35$28-36$28-37$28-34$29-35$29-36$29-37$29-38$29-34$30-35$30-36$30-38$30-39$30-47$30-48$30-57$30-37$31-38$31-46$31-47$31-48$31-49$31-58$31-46$32-47$32-49$32-50$32-54$32-58$32-48$33-49$33-55$33-56$33-57$33-58$33-20$36-21$37-1$38-2$38-16$38-21$38-54$38-55$38-56$38-0$39-1$39-2$39-3$39-17$39-18$39-19$39-20$39-21$39-56$39-0$40-1$40-3$40-4$40-56$40-2$41-3$41-55$41-36$42-37$43-21$44-22$44-33$44-37$44-22$45-23$45-34$45-35$45-36$45-37$45-53$45-54$45-21$46-22$46-50$46-51$46-52$46-54$46-55$46-21$47-50$47-51$47-52$47-53$47-54$47-51$48-52$48-53$48-22$50-23$50-13$51-14$51-15$51-16$51-21$51-22$51-23$51-24$51-12$52-16$52-21$52-22$52-24$52-25$52-1$53-2$53-3$53-4$53-5$53-16$53-23$53-24$53-0$54-5$54-15$54-5$55-4$56
+
+%pattern-name%T-pentomino
+%pattern-description%Conway`s name for the following pentomino, which is a common parent of the T-tetromino.
+%pattern-code%0$0-1$0-2$0-1$1-1$2
+
+%pattern-name%tractor beam
+%pattern-description%A stream of spaceships that can draw an object towards the source of the stream. The example below shows a tractor beam pulling a loaf; this was used by Dean Hickerson to construct a sawtooth.
+%pattern-code%21$0-24$0-5$1-6$1-7$1-8$1-20$1-35$1-36$1-37$1-38$1-5$2-9$2-20$2-24$2-35$2-39$2-5$3-14$3-15$3-20$3-21$3-22$3-23$3-35$3-44$3-45$3-1$4-2$4-6$4-9$4-13$4-14$4-15$4-16$4-28$4-29$4-36$4-39$4-43$4-44$4-45$4-46$4-0$5-3$5-12$5-13$5-15$5-16$5-27$5-28$5-30$5-31$5-42$5-43$5-45$5-46$5-0$6-2$6-13$6-14$6-28$6-29$6-30$6-31$6-43$6-44$6-1$7-29$7-30$7
+
+%pattern-name%traffic circle
+%pattern-description%(p100)
+%pattern-code%21$0-22$0-27$0-28$0-21$1-23$1-26$1-28$1-23$2-26$2-22$3-23$3-26$3-27$3-21$4-22$4-23$4-26$4-27$4-28$4-23$5-26$5-31$6-30$7-32$7-33$7-34$8-26$9-30$9-33$9-35$9-26$10-32$10-35$10-26$11-33$11-34$11-9$12-10$12-8$13-11$13-22$13-23$13-24$13-28$13-29$13-30$13-7$14-9$14-11$14-6$15-7$15-8$15-10$15-26$15-6$16-7$16-8$16-26$16-26$17-12$18-13$18-14$18-0$19-1$19-4$19-21$19-22$19-23$19-0$20-3$20-4$20-10$20-16$20-1$21-2$21-3$21-4$21-5$21-10$21-16$21-19$21-25$21-43$21-46$21-47$21-10$22-16$22-19$22-25$22-43$22-44$22-47$22-19$23-25$23-33$23-34$23-35$23-42$23-43$23-44$23-45$23-46$23-1$24-2$24-3$24-4$24-5$24-12$24-13$24-14$24-0$25-3$25-4$25-21$25-22$25-23$25-31$25-37$25-0$26-1$26-4$26-31$26-37$26-42$26-43$26-44$26-45$26-46$26-31$27-37$27-43$27-44$27-47$27-43$28-46$28-47$28-33$29-34$29-35$29-39$30-40$30-38$31-39$31-40$31-37$32-39$32-40$32-36$33-38$33-20$34-21$34-22$34-36$34-39$34-37$35-38$35-13$36-14$36-19$36-22$36-12$37-15$37-12$38-14$38-16$38-13$39-16$39-17$40-14$41-16$41-21$42-24$42-19$43-20$43-21$43-24$43-25$43-26$43-20$44-21$44-24$44-25$44-21$45-24$45-19$46-21$46-24$46-26$46-19$47-20$47-25$47-26$47
+
+%pattern-name%traffic jam
+%pattern-description%Any traffic light hassler, such as traffic circle. The term is also applied to the following reaction, used in most traffic light hasslers, in which two traffic lights interact in such a way as to reappear after 25 generations with an extra 6 spaces between them.
+%pattern-code%2$0-3$0-4$0-11$1-12$1-13$1-0$2-6$2-0$3-6$3-9$3-15$3-0$4-6$4-9$4-15$4-9$5-15$5-2$6-3$6-4$6-11$7-12$7-13$7
+
+%pattern-name%traffic light
+%pattern-description%(p2) A common formation of four blinkers.
+%pattern-code%2$0-3$0-4$0-0$2-6$2-0$3-6$3-0$4-6$4-2$6-3$6-4$6
+
+%pattern-name%trans-beacon on table
+%pattern-description%(p2)
+%pattern-code%4$0-5$0-5$1-2$2-2$3-3$3-0$5-1$5-2$5-3$5-0$6-3$6
+
+%pattern-name%trans-boat with tail
+%pattern-description%(p1)
+%pattern-code%0$0-1$0-0$1-2$1-1$2-3$2-3$3-3$4-4$4
+
+%pattern-name%trans-loaf with tail
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-0$2-3$2-1$3-2$3-4$3-4$4-4$5-5$5
+
+%pattern-name%transparent block reaction
+%pattern-description%A certain reaction between a block and a Herschel predecessor in which the block reappears in its original place some time later, the reaction having effectively passed through it. This reaction was found by Dave Buckingham in 1988. It has been used in some Herschel conduits, and in the gunstars. Because the reaction involves a Herschel predecessor rather than an actual Herschel, the following diagram shows instead a B-heptomino (which by itself would evolve into a block and a Herschel).
+%pattern-code%0$0-0$1-1$1-12$1-13$1-1$2-2$2-12$2-13$2-0$3-1$3
+
+%pattern-name%trice tongs
+%pattern-description%(p3) Found by Robert Wainwright, February 1982. In terms of its 7x7 bounding box this ties with jam as the smallest p3 oscillator.
+%pattern-code%2$0-2$1-3$1-4$1-0$2-1$2-5$2-1$3-3$3-5$3-1$4-2$5-3$5-6$5-5$6-6$6
+
+%pattern-name%triple caterer
+%pattern-description%(p3) Found by Dean Hickerson, October 1989. Compare caterer and double caterer.
+%pattern-code%5$0-6$0-4$1-7$1-10$1-11$1-4$2-5$2-7$2-11$2-6$3-8$3-9$3-10$3-15$3-2$4-3$4-4$4-6$4-8$4-13$4-14$4-15$4-1$5-4$5-7$5-12$5-0$6-2$6-5$6-9$6-12$6-13$6-1$7-2$8-3$8-5$8-6$8-8$8-9$8-11$8-12$8-3$9-7$9-11$9-3$10-7$10-11$10
+
+%pattern-name%triplet
+%pattern-description%Any 3-cell polyplet. There are 5 such objects, shown below. The first two are the two triominoes, and the other three vanish in two generations.
+%pattern-code%0$0-19$0-27$0-35$0-0$1-1$1-8$1-9$1-10$1-17$1-18$1-26$1-28$1-36$1-37$2
+
+%pattern-name%tripole
+%pattern-description%(p2) The barberpole of length 3.
+%pattern-code%0$0-1$0-0$1-2$1-2$3-4$3-5$4-4$5-5$5
+
+%pattern-name%tritoad
+%pattern-description%(p3) Found by Dave Buckingham, October 1977.
+%pattern-code%9$0-10$0-9$1-10$2-13$2-14$2-7$3-8$3-9$3-11$3-14$3-6$4-11$4-12$4-14$4-16$4-17$4-6$5-8$5-9$5-12$5-14$5-16$5-17$5-3$6-4$6-6$6-10$6-11$6-14$6-3$7-6$7-7$7-11$7-13$7-14$7-0$8-1$8-3$8-5$8-8$8-9$8-11$8-0$9-1$9-3$9-5$9-6$9-11$9-3$10-6$10-8$10-9$10-10$10-3$11-4$11-7$11-8$12-7$13-8$13
+
+%pattern-name%true
+%pattern-description%Opposite of pseudo. A gun emitting a period n stream of spaceships (or rakes) is said to be a true period n gun if its mechanism oscillates with period n. (The same distinction between true and pseudo also exists for puffers.) True period n guns are known to exist for all periods greater than 61 (see My Experience with B-heptominos in Oscillators), but only a few smaller periods have been achieved, namely 22, 24, 30, 36, 44, 46, 48, 50, 54, 55, 56 and 60. (Credits for these small period guns are; p30, p46 and p60 by Bill Gosper in 1970-1971, p44 by Dave Buckingham in 1992, p50 by Dean Hickerson in 1996, p24 and p48 by Noam Elkies in 1997, p54 and p56 by Dieter Leithner in early 1998, p55 by Stephen Silver in late 1998, p22 by David Eppstein in 2000 and p36 by Jason Summers in 2004.)  The following diagram shows the p22 gun (David Eppstein, August 2000, using two copies of a p22 oscillator found earlier the same day by Jason Summers).
+%pattern-code%18$0-19$0-19$1-27$1-19$2-21$2-36$2-37$2-20$3-21$3-34$3-35$3-38$3-24$4-25$4-26$4-34$4-35$4-37$4-38$4-24$5-25$5-27$5-28$5-36$5-37$5-38$5-24$6-27$6-28$6-41$6-42$6-25$7-26$7-41$7-43$7-35$8-43$8-43$9-44$9-0$11-1$11-25$11-1$12-23$12-25$12-1$13-3$13-17$13-18$13-19$13-24$13-25$13-2$14-3$14-7$14-16$14-20$14-6$15-8$15-9$15-16$15-21$15-5$16-10$16-17$16-18$16-20$16-30$16-6$17-10$17-19$17-23$17-24$17-31$17-7$18-8$18-9$18-23$18-25$18-29$18-30$18-31$18-25$19-25$20-26$20
+
+%pattern-name%T-tetromino
+%pattern-description%The following common predecessor of a traffic light.
+%pattern-code%0$0-1$0-2$0-1$1
+
+%pattern-name%tub
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-1$2
+
+%pattern-name%tubber
+%pattern-description%(p3) Found by Robert Wainwright before June 1972.
+%pattern-code%4$0-6$0-4$1-5$1-7$1-7$2-8$2-9$2-4$3-5$3-10$3-0$4-1$4-3$4-6$4-7$4-10$4-1$5-3$5-8$5-10$5-11$5-0$6-4$6-8$6-12$6-1$7-2$7-4$7-9$7-11$7-2$8-5$8-6$8-9$8-11$8-12$8-2$9-7$9-8$9-3$10-4$10-5$10-5$11-7$11-8$11-6$12-8$12
+
+%pattern-name%tubeater
+%pattern-description%A pattern that consumes the output of a tubstretcher. The smallest known tubeater was found by Hartmut Holzwart, and is shown below in conjunction with the smallest known tubstretcher.
+%pattern-code%7$0-8$0-7$1-9$1-7$2-10$3-10$4-11$4-10$5-11$5-9$6-10$6-0$7-1$7-8$7-9$7-13$7-0$8-2$8-6$8-7$8-10$8-12$8-14$8-0$9-6$9-7$9-8$9-13$9-15$9-3$10-14$10-16$10-3$11-4$11-15$11-17$11-16$12-18$12-17$13-19$13-23$13-18$14-19$14-22$14-24$14-21$15-22$15-24$15-21$16-22$16-21$17-22$17-31$18-32$18-23$19-28$19-29$19-31$19-23$20-24$20-25$20-28$20-29$20-23$21-24$21-25$21-28$21-29$21-24$22-25$22-26$24-25$25-26$25-25$26-26$27-27$29-28$29-28$30-30$30-31$30-32$31-29$32-30$32-29$33-30$33-31$34-32$35-33$35
+
+%pattern-name%tubstretcher
+%pattern-description%Any wickstretcher in which the wick is two diagonal lines of cells forming, successively, a tub, a barge, a long barge, etc. The first one was found by Hartmut Holzwart in June 1993, although at the time this was considered to be a boatstretcher (as it was shown with an extra cell, making the tub into a boat). The following small example is by Nicolay Beluchenko (August 2005), using a quarter.
+%pattern-code%7$0-8$0-9$0-7$1-8$2-10$3-11$3-11$4-8$6-9$6-13$6-0$7-1$7-2$7-8$7-9$7-12$7-14$7-0$8-7$8-9$8-13$8-1$9-6$9-7$9-3$10-4$10-5$10-6$10-8$10-4$11-5$11
+
+%pattern-name%tub with tail
+%pattern-description%(p1)
+%pattern-code%1$0-0$1-2$1-1$2-3$2-3$3-3$4-4$4
+
+%pattern-name%tumbler
+%pattern-description%(p14) The smallest known p14 oscillator. Found by George Collins in 1970.
+%pattern-code%1$0-7$0-0$1-2$1-6$1-8$1-0$2-3$2-5$2-8$2-2$3-6$3-2$4-3$4-5$4-6$4
+
+%pattern-name%tumbling T-tetson
+%pattern-description%(p8) A T-tetromino hassled by two figure-8s. Found by Robert Wainwright.
+%pattern-code%1$0-2$0-3$0-0$1-19$1-20$1-0$2-4$2-17$2-19$2-20$2-0$3-3$3-5$3-16$3-2$4-4$4-7$4-19$4-3$5-7$5-15$5-16$5-18$5-7$6-15$6-16$6-4$7-5$7-6$7-11$7-9$8-10$8-11$9
+
+%pattern-name%turning toads
+%pattern-description%(p4 wick) Found by Dean Hickerson, October 1989.
+%pattern-code%14$0-15$0-21$0-22$0-28$0-29$0-35$0-36$0-42$0-43$0-7$1-13$1-20$1-27$1-34$1-41$1-6$2-7$2-11$2-16$2-18$2-23$2-25$2-30$2-32$2-37$2-39$2-44$2-46$2-48$2-50$2-51$2-2$3-3$3-5$3-7$3-8$3-9$3-11$3-14$3-15$3-18$3-21$3-22$3-25$3-28$3-29$3-32$3-35$3-36$3-39$3-42$3-43$3-46$3-49$3-52$3-54$3-55$3-0$4-3$4-5$4-6$4-48$4-49$4-50$4-51$4-52$4-54$4-57$4-0$5-1$5-3$5-50$5-51$5-54$5-56$5-57$5-3$6-54$6-3$7-4$7-53$7-54$7
+
+%pattern-name%turtle
+%pattern-description%(c/3 orthogonally, p3) Found by Dean Hickerson.
+%pattern-code%1$0-2$0-3$0-11$0-1$1-2$1-5$1-7$1-8$1-10$1-11$1-3$2-4$2-5$2-10$2-1$3-4$3-6$3-10$3-0$4-5$4-10$4-0$5-5$5-10$5-1$6-4$6-6$6-10$6-3$7-4$7-5$7-10$7-1$8-2$8-5$8-7$8-8$8-10$8-11$8-1$9-2$9-3$9-11$9
+
+%pattern-name%twin bees shuttle
+%pattern-description%(p46) Found by Bill Gosper in 1971, this is the basis of all known p46 oscillators, and so of all known true p46 guns (see new gun for an example). There are numerous ways to stabilize the ends, two of which are shown in the diagram. On the left is David Bell`s double block reaction (which results in a shorter, but wider, shuttle than usual), and on the right is the stabilization by a single block. This latter method produces a very large spark which is useful in a number of ways (see, for example, metamorphosis). Adding a symmetrically placed block below this one suppresses the spark. See also p54 shuttle.
+%pattern-code%1$0-2$0-1$1-2$1-15$3-0$4-1$4-15$4-16$4-25$4-26$4-0$5-1$5-16$5-17$5-25$5-26$5-11$6-12$6-15$6-16$6-11$10-12$10-15$10-16$10-0$11-1$11-16$11-17$11-0$12-1$12-15$12-16$12-15$13-1$15-2$15-1$16-2$16
+
+%pattern-name%twinhat
+%pattern-description%(p1) See also hat and sesquihat.
+%pattern-code%2$0-6$0-1$1-3$1-5$1-7$1-1$2-3$2-5$2-7$2-0$3-1$3-3$3-5$3-7$3-8$3-4$4
+
+%pattern-name%twirling T-tetsons II
+%pattern-description%(p60) Found by Robert Wainwright. This is a pre-pulsar hassled by killer toads.
+%pattern-code%7$0-8$0-12$0-13$0-6$1-14$1-9$2-11$2-7$3-8$3-12$3-13$3-21$7-22$7-23$7-20$8-21$8-22$8-13$9-0$10-1$10-2$10-12$10-13$10-14$10-1$11-2$11-3$11-20$12-21$12-22$12-21$13-22$13-23$13-1$15-2$15-3$15-0$16-1$16-2$16-12$16-13$16-14$16-13$17-10$20-11$20-15$20-16$20-12$21-14$21-9$22-17$22-10$23-11$23-15$23-16$23
+
+%pattern-name%two eaters
+%pattern-description%(p3) Found by Bill Gosper, September 1971.
+%pattern-code%0$0-1$0-1$1-1$2-3$2-2$3-3$3-5$4-6$4-5$5-7$5-7$6-7$7-8$7
+
+%pattern-name%two pulsar quadrants
+%pattern-description%(p3) Found by Dave Buckingham, July 1973. Compare pulsar quadrant.
+%pattern-code%4$0-4$1-3$2-4$2-2$3-0$4-3$4-6$4-7$4-8$4-0$5-4$5-6$5-0$6-5$6-2$8-3$8-4$8
+
+%pattern-name%unix
+%pattern-description%(p6) Two blocks eating a long barge. This is a useful sparker, found by Dave Buckingham in February 1976. The name derives from the fact that it was for some time the mascot of the Unix lab of the mathematics faculty at the University of Waterloo.
+%pattern-code%1$0-2$0-1$1-2$1-1$3-0$4-2$4-0$5-3$5-6$5-7$5-4$6-6$6-7$6-2$7-3$7
+
+%pattern-name%U-pentomino
+%pattern-description%Conway`s name for the following pentomino, which rapidly dies.
+%pattern-code%0$0-2$0-0$1-1$1-2$1
+
+%pattern-name%very long house
+%pattern-description%The following induction coil.
+%pattern-code%1$0-2$0-3$0-4$0-5$0-0$1-3$1-6$1-0$2-1$2-5$2-6$2
+
+%pattern-name%V-pentomino
+%pattern-description%Conway`s name for the following pentomino, a loaf predecessor.
+%pattern-code%0$0-0$1-0$2-1$2-2$2
+
+%pattern-name%washerwoman
+%pattern-description%(2c/3 p18 fuse) A fuse by Earl Abbe.
+%pattern-code%0$0-0$1-1$1-6$1-12$1-18$1-24$1-30$1-36$1-42$1-48$1-54$1-0$2-1$2-2$2-5$2-7$2-11$2-13$2-17$2-19$2-23$2-25$2-29$2-31$2-35$2-37$2-41$2-43$2-47$2-49$2-53$2-55$2-0$3-1$3-6$3-12$3-18$3-24$3-30$3-36$3-42$3-48$3-54$3-0$4
+
+%pattern-name%washing machine
+%pattern-description%(p2) Found by Robert Wainwright before June 1972.
+%pattern-code%1$0-2$0-4$0-5$0-0$1-2$1-3$1-6$1-0$2-1$2-6$2-1$3-5$3-0$4-5$4-6$4-0$5-3$5-4$5-6$5-1$6-2$6-4$6-5$6
+
+%pattern-name%wasp
+%pattern-description%(c/3 orthogonally, p3) The following spaceship which produces a domino spark at the back. It is useful for perturbing other objects. Found by David Bell, March 1998.
+%pattern-code%10$0-11$0-13$0-14$0-8$1-9$1-11$1-13$1-14$1-16$1-17$1-5$2-6$2-7$2-9$2-12$2-13$2-14$2-17$2-18$2-19$2-20$2-1$3-2$3-3$3-8$3-9$3-10$3-16$3-21$3-0$4-2$4-4$4-6$4-7$4-8$4-10$4-19$4-20$4-0$5-2$5-4$5-6$5-7$5-8$5-9$5-1$6-3$6-8$6-11$6-10$7-2$8-2$9
+
+%pattern-name%wavefront
+%pattern-description%(p4) Found by Dave Buckingham, 1976 or earlier.
+%pattern-code%8$0-9$0-8$1-9$2-8$3-9$3-5$4-6$4-10$4-11$4-4$5-7$5-8$5-9$5-12$5-4$6-10$6-11$6-5$7-9$7-0$8-1$8-3$8-5$8-9$8-0$9-2$9-3$9-5$9-7$9-8$9-4$10-6$10-4$11-6$11-5$12
+
+%pattern-name%weekender
+%pattern-description%(2c/7 orthogonally, p7) Found by David Eppstein in January 2000. In April 2000 Stephen Silver found a tagalong for a pair of weekenders. At present, n weekenders pulling n-1 tagalongs constitute the only known spaceships of this speed or period.
+%pattern-code%1$0-14$0-1$1-14$1-0$2-2$2-13$2-15$2-1$3-14$3-1$4-14$4-2$5-6$5-7$5-8$5-9$5-13$5-6$6-7$6-8$6-9$6-2$7-3$7-4$7-5$7-10$7-11$7-12$7-13$7-4$9-11$9-5$10-6$10-9$10-10$10
+
+%pattern-name%why not
+%pattern-description%(p2) Found by Dave Buckingham, July 1977.
+%pattern-code%3$0-3$1-5$1-1$2-0$3-2$3-3$3-4$3-5$3-6$3-1$4-3$5-5$5-3$6
+
+%pattern-name%wickstretcher
+%pattern-description%A spaceship-like object which stretches a wick that is fixed at the other end. The wick here is assumed to be in some sense connected, otherwise most puffers would qualify as wickstretchers. The first example of a wickstretcher was found in October 1992 (front end by Hartmut Holzwart and back end by Dean Hickerson) and stretches ants at a speed of c/4. This is shown below with an improved back end found by Hickerson the following month.
+%pattern-code%17$0-18$0-13$1-14$1-19$1-12$2-13$2-14$2-16$2-0$3-2$3-3$3-6$3-7$3-11$3-15$3-16$3-17$3-18$3-20$3-22$3-27$3-28$3-36$3-37$3-0$4-5$4-6$4-9$4-18$4-20$4-21$4-22$4-27$4-32$4-33$4-35$4-38$4-40$4-41$4-43$4-0$5-2$5-3$5-8$5-9$5-11$5-12$5-17$5-29$5-33$5-35$5-37$5-38$5-40$5-42$5-43$5-6$6-14$6-28$6-29$6-35$6-38$6-40$6-44$6-45$6-5$7-15$7-17$7-22$7-23$7-24$7-28$7-33$7-36$7-38$7-40$7-41$7-42$7-46$7-5$8-15$8-17$8-22$8-23$8-24$8-26$8-27$8-29$8-32$8-33$8-35$8-37$8-41$8-44$8-45$8-47$8-6$9-14$9-28$9-29$9-31$9-35$9-36$9-41$9-42$9-47$9-0$10-2$10-3$10-8$10-9$10-11$10-12$10-17$10-28$10-37$10-38$10-40$10-42$10-44$10-45$10-47$10-48$10-0$11-5$11-6$11-9$11-18$11-20$11-21$11-22$11-31$11-35$11-39$11-40$11-42$11-45$11-47$11-0$12-2$12-3$12-6$12-7$12-11$12-15$12-16$12-17$12-18$12-20$12-22$12-30$12-32$12-36$12-37$12-42$12-45$12-47$12-12$13-13$13-14$13-16$13-31$13-37$13-39$13-40$13-41$13-46$13-13$14-14$14-19$14-37$14-39$14-17$15-18$15-38$15
+
+%pattern-name%windmill
+%pattern-description%(p4) Found by Dean Hickerson, November 1989.
+%pattern-code%11$0-9$1-10$1-12$1-7$2-8$2-10$3-11$3-7$4-8$4-9$4-0$6-1$6-2$6-3$7-4$7-7$7-8$7-9$7-11$7-12$7-10$8-11$8-12$8-13$8-14$8-15$8-16$8-1$9-2$9-3$9-4$9-5$9-6$9-7$9-5$10-6$10-8$10-9$10-10$10-13$10-14$10-15$11-16$11-17$11-8$13-9$13-10$13-6$14-7$14-9$15-10$15-5$16-7$16-8$16-6$17
+
+%pattern-name%wing
+%pattern-description%The following induction coil. This is generation 2 of block and glider.
+%pattern-code%1$0-2$0-0$1-3$1-1$2-3$2-2$3-3$3
+
+%pattern-name%worker bee
+%pattern-description%(p9) Found by Dave Buckingham in 1972. Unlike the similar snacker this produces no sparks, and so is not very important. Like the snacker, the worker bee is extensible - it is, in fact, a finite version of the infinite oscillator which consists of six ON cells and two OFF cells alternating along a line. Note that Dean Hickerson`s new snacker ends also work here.
+%pattern-code%0$0-1$0-14$0-15$0-1$1-14$1-1$2-3$2-12$2-14$2-2$3-3$3-12$3-13$3-5$5-6$5-7$5-8$5-9$5-10$5-2$7-3$7-12$7-13$7-1$8-3$8-12$8-14$8-1$9-14$9-0$10-1$10-14$10-15$10
+
+%pattern-name%W-pentomino
+%pattern-description%Conway`s name for the following pentomino, a common loaf predecessor.
+%pattern-code%0$0-0$1-1$1-1$2-2$2
+
+%pattern-name%x66
+%pattern-description%(c/2 orthogonally, p4) Found by Hartmut Holzwart, July 1992. Half of this can be escorted by a HWSS. The name refers to the fact that every cell (live or dead) has at most 6 live neighbours (in contrast to spaceships based on LWSS, MWSS or HWSS). In fact this spaceship was found by a search with this restriction.
+%pattern-code%2$0-0$1-1$1-0$2-3$2-4$2-5$2-8$2-0$3-5$3-6$3-7$3-1$4-2$4-3$4-6$4-7$4-1$6-2$6-3$6-6$6-7$6-0$7-5$7-6$7-7$7-0$8-3$8-4$8-5$8-8$8-0$9-1$9-2$10
+
+%pattern-name%X-pentomino
+%pattern-description%Conway`s name for the following pentomino, a traffic light predecessor.
+%pattern-code%1$0-0$1-1$1-2$1-1$2
+
+%pattern-name%Y-pentomino
+%pattern-description%Conway`s name for the following pentomino, which rapidly dies.
+%pattern-code%2$0-0$1-1$1-2$1-3$1
+
+%pattern-name%Z-hexomino
+%pattern-description%The following hexomino. The Z-hexomino features in the pentoad, and also in Achim`s p144.
+%pattern-code%0$0-1$0-1$1-1$2-1$3-2$3
