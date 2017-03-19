@@ -4,7 +4,7 @@
 /*
  * Draw all visible cells.
  */
-function Draw(ht, totalCells) {
+function draw(ht, totalCells) {
 
     // Reset zone population.
     gol.setZonePopulation(0);
@@ -23,7 +23,7 @@ function Draw(ht, totalCells) {
 
     	xy = cell.toString().split('$');
         var clientNickname = ht.getItem(cell).nickname;
-        var clientNicknameHash = HashCode(ht.getItem(cell).nickname);
+        var clientNicknameHash = hashCode(ht.getItem(cell).nickname);
 
         var elem = document.getElementById('is-client-icon-' + clientNicknameHash);
         if (elem != null) {

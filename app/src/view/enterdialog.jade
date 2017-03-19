@@ -25,11 +25,11 @@
     canvas#multigol-tmpimg-canvas(width="20", height="20", hidden=true)
     button#enter-dialog-file.dialog-button() upload any icon
     #multigol-tmpimg-input-wrapper
-      img#multigol-tmpimg-input(src="null")
+      img#multigol-tmpimg-input(src="")
       img#multigol-tmpimg-loading-img(src="../res/icons/loader.gif", hidden=true)
     br
     br
     br
     button#enter-dialog-button.dialog-button(
-      onclick="EnterDialogSubmit('enter-dialog-nickname', 'enter-dialog-color', 'enter-dialog-fader', 'enter-dialog')", 
+      onclick="enterDialogSubmit('enter-dialog-nickname', 'enter-dialog-color', 'enter-dialog-fader', 'enter-dialog')", 
       disabled=true) start playing multigol

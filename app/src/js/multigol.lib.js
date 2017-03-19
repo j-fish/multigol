@@ -4,7 +4,7 @@
 /*
 * Simply display library element.
 */
-function DisplayLib() {
+function displayLib() {
     $('#gol-library').css('display') == 'none' ? 
         $('gol-library').show() : $('gol-library').hide();
 }
@@ -12,7 +12,7 @@ function DisplayLib() {
 /*
 * Display or hide the pattern description on mouseover.
 */
-function DisplayPatternDescrition(id) {
+function displayPatternDescrition(id) {
     $('#' + id).css('display') == 'none' ?
         $('#' + id).show() : $('#' + id).hide();
 }
@@ -20,7 +20,7 @@ function DisplayPatternDescrition(id) {
 /*
 * Get pattern from lib. Events drag & drop simulation.
 */
-function GetGolLibPattern(patternId, linkId) {
+function getGolLibPattern(patternId, linkId) {
 
     if (gol.isAllowLibTransfer() === false) {
         return;
@@ -31,7 +31,7 @@ function GetGolLibPattern(patternId, linkId) {
     gol.applyXyFromLibStringValue(pattern);
     gol.setXyFromLib(pattern.split('-')); // get all the coordinates.
     gol.setLibTransfer(true); // transfering is true.
-    CursorCopy();
+    cursorCopy();
     // Set link as visited.
     $('#' + linkId).css({ 'background-color': '#7DE3D7'});
 }

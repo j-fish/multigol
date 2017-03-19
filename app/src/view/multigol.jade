@@ -17,9 +17,9 @@ html(lang="en")
       each lib, i in library
         a(href="#", class="gollib-pattern-link", id="pattern_link_id_#{lib.id}", 
           onfocus="if (this.blur) this.blur()", 
-          onclick="GetGolLibPattern('pattern_id_#{lib.id}', 'pattern_link_id_#{lib.id}')", 
-          onmouseover="DisplayPatternDescrition('#{lib.hashid}#{lib.id}')", 
-          onmouseout="DisplayPatternDescrition('#{lib.hashid}#{lib.id}')") #{lib.name}
+          onclick="getGolLibPattern('pattern_id_#{lib.id}', 'pattern_link_id_#{lib.id}')", 
+          onmouseover="displayPatternDescrition('#{lib.hashid}#{lib.id}')", 
+          onmouseout="displayPatternDescrition('#{lib.hashid}#{lib.id}')") #{lib.name}
         span(id="pattern_id_#{lib.id}", hidden=true) #{lib.code}
         br
         div(id="#{lib.hashid}#{lib.id}", class="gol-pattern-description", style="display: none;") #{lib.desc}

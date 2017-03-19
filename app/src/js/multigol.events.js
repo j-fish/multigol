@@ -1,9 +1,9 @@
 var domUtils = new DOMUtils();
 var gol = new GOL();
-gol.Init();
+gol.init();
 var mouseUtils = new MouseUtils();
-mouseUtils.Init(gol);
-gol.AddListeners(mouseUtils);
+mouseUtils.init(gol);
+gol.addListeners(mouseUtils);
 
 /*******************************************
  * Window events
@@ -12,7 +12,7 @@ window.onload = function () {
 
     $('body').css('overflow', 'hidden');
 
-    InitEnterDialog(); 
+    initEnterDialog(); 
 
     // gol cmds :
     $('#gol-cmd').css('top', 6); 
@@ -23,20 +23,20 @@ window.onload = function () {
     // Tchat :
     $('#multigol-tchat').css('height', $(window).height());
 
-    InitGolCommands();
+    initGolCommands();
 
     /////////////////////////////////////////////////////////////
     // Bluring of a & button tags :
     var aElements = document.getElementsByTagName('a');
     for (var i = 0, len = aElements.length; i < len; i++) {
         aElements[i].onfocus = function () {
-              if (this.blur) this.blur();
+            if (this.blur) this.blur();
         }
     }
     aElements = document.getElementsByTagName('button');
     for (var i = 0, len = aElements.length; i < len; i++) {
         aElements[i].onfocus = function () {
-              if (this.blur) this.blur();
+            if (this.blur) this.blur();
         }
     }
     /////////////////////////////////////////////////////////////
@@ -44,10 +44,10 @@ window.onload = function () {
 
 window.onresize = function() {
     // resize library view.
-    HideAllSidePanes();
+    hideAllSidePanes();
     $('#gol-library').css('height', $(window).height());
-    gol.InitCanvas('gol_canvas');
-    gol.InitGridCanvas('gol_canvas_grid');
+    gol.initCanvas('gol_canvas');
+    gol.initGridCanvas('gol_canvas_grid');
 }
 
 document.getElementById('multigol-tmpimg-file').onchange = function(evt) {
@@ -84,13 +84,13 @@ document.getElementById('multigol-tmpimg-file').onchange = function(evt) {
 };
 
 window.onbeforeunload = function () {
-    Quit();
+    quit();
 };
 
 /*
  * Move spatial zone up, down, left or right.
  */
-function MoveSpatialZone(direction) {
+function moveSpatialZone(direction) {
 
     switch (direction) {
         case 'up':
@@ -113,7 +113,7 @@ function MoveSpatialZone(direction) {
 /**
  *
  */
-function InitEnterDialog() {
+function initEnterDialog() {
 
     document.getElementById('enter-dialog').style.top = 
         (height() / 2) - (document.getElementById('enter-dialog').clientHeight / 2) + 'px';
@@ -150,7 +150,7 @@ function InitEnterDialog() {
 /*
 *
 */
-function InitGolCommands() {
+function initGolCommands() {
 
     /////////////////////////////////////////////////////////////
     // Init cmd events :
@@ -160,26 +160,26 @@ function InitGolCommands() {
     $('#gol-cmd-lib').on('click', function() {
         $('#multigol-clients').hide(120);
         $('#multigol-tchat').hide(120);
-        UpdateCmdDisplay('gol-library');
+        updateCmdDisplay('gol-library');
     });
     $('#gol-cmd-cli').on('click', function() {
         $('#gol-library').hide(120);
         $('#multigol-tchat').hide(120);
-        UpdateCmdDisplay('multigol-clients');
+        updateCmdDisplay('multigol-clients');
     });
     $('#gol-cmd-tchat').on('click', function() {
         $('#gol-library').hide(120);
         $('#multigol-clients').hide(120);
-        UpdateCmdDisplay('multigol-tchat');
+        updateCmdDisplay('multigol-tchat');
     });
     $('#gol-cmd-reset').on('click', function() {
-        ResetToDefaultZoom();
+        resetToDefaultZoom();
     });
     $('#gol-cmd-zoomout').on('click', function() {
-        ZoomOutGol();
+        zoomOutGol();
     });
     $('#gol-cmd-zoomin').on('click', function() {
-        ZoomInGol();
+        zoomInGol();
     });
     /////////////////////////////////////////////////////////////
 
@@ -200,14 +200,14 @@ function InitGolCommands() {
 /*
  * Canvas click event listener.
  */
-function CanvasClickEvent(e) {
-    mouseUtils.CanvasClicked(e);
+function canvasClickEvent(e) {
+    mouseUtils.canvasClicked(e);
 }
 
 /**
  * Enter dialog submit event.
  */
-function EnterDialogSubmit(nickname, color, fader, dialog) {
+function enterDialogSubmit(nickname, color, fader, dialog) {
 
     gol.setCellColor($('#' + color).val());
     gol.setNickName($('#' + nickname).val());
@@ -244,7 +244,7 @@ function EnterDialogSubmit(nickname, color, fader, dialog) {
     $('#' + dialog).hide();
     gol.getSocket().emit('app-join', gol.getNickName() + '$' + gol.getCellColor() + '$' +
         gol.getCellimg().toString() + '$' + gol.getB64cell());
-    AddKeyEvents();
+    addKeyEvents();
     gol.setJoinable('go');
     $('#' + fader).remove();
     $('#' + dialog).remove();
@@ -270,7 +270,7 @@ $('#enter-dialog-nickname').bind('change paste keyup', function() {
 /*
  * key too cmd.
  */
-function ExecuteKeyEvent() {
+function executeKeyEvent() {
 
     if (KEY_STATUS.up) {
         gol.decrementZoneDisplay(1);
@@ -283,20 +283,20 @@ function ExecuteKeyEvent() {
     }
 
     if (KEY_STATUS.substract) {
-        ZoomOutGol();
+        zoomOutGol();
     } else if (KEY_STATUS.add) {
-        ZoomInGol();
+        zoomInGol();
     }
 
     if (KEY_STATUS.esc) {
-        HideAllSidePanes();
+        hideAllSidePanes();
     }
 }
 
 /**
  *
  */
-function AddKeyEvents() {
+function addKeyEvents() {
 
     /*
      * Sets up the document to listen to onkeydown events (fired when
@@ -325,7 +325,7 @@ function AddKeyEvents() {
                 $("#multigol-tchat-textarea").val('');
             }
 
-            if (keyCode == '27') { HideAllSidePanes(); }
+            if (keyCode == '27') { hideAllSidePanes(); }
 
             return;
         }
@@ -335,7 +335,7 @@ function AddKeyEvents() {
             KEY_STATUS[KEY_CODES[keyCode]] = true;
         }
         // Execute key command :
-        ExecuteKeyEvent();
+        executeKeyEvent();
     }
 
     /*
@@ -361,7 +361,7 @@ function AddKeyEvents() {
 /**
  * quit app.
  */
-function Quit() {
+function quit() {
     gol.getSocket().emit('app-exit', gol.getNickName() + '$' + gol.getCellColor() + '$' + 
         gol.getCellimg() + '$' + gol.getB64cell());
 }
@@ -371,7 +371,7 @@ function Quit() {
 /*
  * Zoom in.
  */
-function ZoomInGol() {
+function zoomInGol() {
 
     var cellSize = gol.getCellSize();
     if (cellSize < 30) {
@@ -390,7 +390,7 @@ function ZoomInGol() {
 /*
  * Zoom out.
  */
-function ZoomOutGol() {
+function zoomOutGol() {
 
     var cellSize = gol.getCellSize();
     if (cellSize > 1) {
@@ -409,7 +409,7 @@ function ZoomOutGol() {
 /*
 *
 */
-function ResetToDefaultZoom() {
+function resetToDefaultZoom() {
 
     var cellSize = gol.getDefaultCellSize();
     gol.setCellSize(cellSize);
@@ -424,7 +424,7 @@ function ResetToDefaultZoom() {
 /*
 *
 */
-function UpdateCmdDisplay(id) {
+function updateCmdDisplay(id) {
 
     $('#' + id).css('display') == 'none' ? 
         $('#' + id).show(120, function() {
@@ -441,7 +441,7 @@ function UpdateCmdDisplay(id) {
 /**
  * Hide all side panes (tchat, lib or clients)
  */
-function HideAllSidePanes() {
+function hideAllSidePanes() {
     $('#multigol-clients').hide();
     $('#multigol-tchat').hide();
     $('#gol-library').hide();

@@ -5,14 +5,14 @@ var MouseUtils = function() {
 
 	var _GOL = null;
 
-	this.Init = function(gol) {
+	this.init = function(gol) {
 		_GOL = gol;
 	};
 
 	/*
 	*
 	*/
-	this.CanvasClicked = function(e) {
+	this.canvasClicked = function(e) {
 
 		if (_GOL.isAllowLibTransfer() === false) {
 			return;
@@ -39,7 +39,7 @@ var MouseUtils = function() {
 	            _GOL.getCellColor() + '~' + _GOL.getNickName() + '~' + _GOL.getXyFromLibStringValue());
 	        _GOL.setLibTransfer(false);
 	        _GOL.setAllowLibTransfer(false);
-	        CursorDeny();
+	        cursorDeny();
 	    }
 	};
 }

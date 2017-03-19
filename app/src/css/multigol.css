@@ -186,7 +186,7 @@ html, body {
 
 #enter-dialog-button {
 	width : 335px;
-	position: absolute;
+	/*position: absolute;*/
 	top: 274px;
 }
 

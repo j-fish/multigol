@@ -19,8 +19,8 @@ var gol = require('./src/js/srvside/multigol.srvside.js');
 var libdata = [];
 var clients = [];
 var clientCellCount = [];
-libreader.BuildLibrary(libdata, __dirname + '/src/data/gol-lexicon.txt');
-gol.Init(io);
+libreader.buildLibrary(libdata, __dirname + '/src/data/gol-lexicon.txt');
+gol.init(io);
 
 /* 
  * Set our default template engine to "jade" which prevents the need 
@@ -41,7 +41,7 @@ app.get('/', function(req, res) {
 
 io.on('connection', function(socket) {
 
-    console.log('|_ a client connected @ '.green + utils.GetDateTime());	
+    console.log('|_ a client connected @ '.green + utils.getDateTime());	
 
     socket.on('hashmap-append', function(data) {
 
@@ -60,7 +60,7 @@ io.on('connection', function(socket) {
 
         for (var i = 9; i < lib.length; i++) {    
             var xy = lib[i].split('$');
-            gol.IORunLibInput(mousex, mousey, xy[0], xy[1], color, zonex, zoney, gridW, gridH, client, cellSize);
+            gol.iORunLibInput(mousex, mousey, xy[0], xy[1], color, zonex, zoney, gridW, gridH, client, cellSize);
         }
 
         io.emit('hashmap-append-done', client);
@@ -92,7 +92,7 @@ io.on('connection', function(socket) {
             var client = clients[i].split('$');
             var l = templateData.push({
                 'nickname':client[0], 
-                'nicknamehash':utils.HashCode(client[0]),
+                'nicknamehash':utils.hashCode(client[0]),
                 'hexc':client[1],
                 'cellimg':client[2],
                 'b64img':client[3]
@@ -102,7 +102,7 @@ io.on('connection', function(socket) {
         client = data.split('$');
         console.log('|_ client joined: '.cyan + client[0] + '-' + 
             client[1].toString() + '-' + client[2].toString() +
-            ' @ '.cyan + utils.GetDateTime());
+            ' @ '.cyan + utils.getDateTime());
 
         var template = __dirname + '/src/view/clients.jade';
         var html = jade.renderFile(template, {clients: templateData});
@@ -124,7 +124,7 @@ io.on('connection', function(socket) {
                 var client = clients[i].split('$');
                 templateData.push({
                     'nickname':client[0], 
-                    'nicknamehash':utils.HashCode(client[0]),
+                    'nicknamehash':utils.hashCode(client[0]),
                     'hexc':client[1],
                     'cellimg':client[2],
                     'b64img':client[3]
@@ -132,12 +132,12 @@ io.on('connection', function(socket) {
             }
 
             // remove all cell of client color, then emit.
-            gol.RemoveCellsByNickname(clientToRemove[0].toString());
+            gol.removeCellsByNickname(clientToRemove[0].toString());
             
             var client = data.split('$');
             console.log('|_ client left: '.magenta + client[0] + '-' + 
                 client[1].toString() + '-' + client[2].toString() +
-                ' @ '.magenta + utils.GetDateTime());
+                ' @ '.magenta + utils.getDateTime());
         
             var template = __dirname + '/src/view/clients.jade';
             var html = jade.renderFile(template, {clients: templateData});
@@ -172,7 +172,7 @@ io.on('connection', function(socket) {
     });
 
     socket.on('disconnect', function() {
-        console.log('|_ user disconnected @ '.magenta + utils.GetDateTime());
+        console.log('|_ user disconnected @ '.magenta + utils.getDateTime());
     });
 
 });

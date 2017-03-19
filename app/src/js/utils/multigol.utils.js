@@ -32,13 +32,13 @@ function bodyHeight() {
 /*************************************************
  * Cursor stuff.
  */
-function CursorClear() {
+function cursorClear() {
     $('#gol_canvas').css('cursor', 'default');
 }
-function CursorCopy() {
+function cursorCopy() {
     $('#gol_canvas').css('cursor', 'copy');
 }
-function CursorDeny() {
+function cursorDeny() {
     $('#gol_canvas').css('cursor', 'not-allowed');   
 }
 
@@ -73,13 +73,14 @@ for (var code in KEY_CODES) {
 /*
 *
 */
-function HashCode(str) {
+function hashCode(str) {
     var hash = 0;
     if (str.length == 0) return hash;
     for (i = 0; i < str.length; i++) {
         char = str.charCodeAt(i);
-        hash = ((hash<<5)-hash)+char;
-        hash = hash & hash; // Convert to 32bit integer
+        hash = ((hash << 5) - hash) + char;
+        // Convert to 32bit integer :
+        hash = hash & hash;
     }
     return hash;
 }

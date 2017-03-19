@@ -13,7 +13,7 @@ var _ready = true;
 /**
  * 
  */
-exports.Init = function(io) {
+exports.init = function(io) {
 
     _io = io;
     console.log('____________________________________________________'.random);
@@ -22,7 +22,7 @@ exports.Init = function(io) {
     _newBornCellsHashTable = new HashTable();
     _dyingCellsHashTable = new HashTable();
 
-    StartGOL();
+    startGol();
 };
 
 /*
@@ -43,12 +43,12 @@ exports.Init = function(io) {
 * cellSize : cellSize used by client (from >0 to 30 @see client side gol script)
 * clientNickname for retreiving data from global hash table.
 */
-exports.IORunLibInput = function(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize) {
+exports.iORunLibInput = function(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize) {
 
     var gridX = parseInt(x / cellSize) + parseInt(xx) + parseInt(gW * zX);
     var gridY = parseInt(y / cellSize) + parseInt(yy) + parseInt(gH * zY);
 
-    if (CheckCoordinates(gridX, gridY) === false) {
+    if (checkCoordinates(gridX, gridY) === false) {
         return;
     }
 
@@ -59,6 +59,7 @@ exports.IORunLibInput = function(x, y, xx, yy, cellColor, zX, zY, gW, gH, client
         //logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize, gridX, gridY);
     }
 }
+
 function logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize, gridX, gridY) {
     console.log('x = ' + x);
     console.log('y = ' + y);
@@ -76,14 +77,14 @@ function logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellS
 /*
 * Check value for NaN or other reasons. 
 */
-function CheckCoordinates(x, y) {
+function checkCoordinates(x, y) {
     return x != NaN && y != NaN;
 }
 
 /**
  * Remove cells by color.
  */
-exports.RemoveCellsByColor = function(color) {
+exports.removeCellsByColor = function(color) {
 
     for (var cell in _hashTable.items) {
         if (_hashTable.getItem(cell).hexc == color) {
@@ -95,7 +96,7 @@ exports.RemoveCellsByColor = function(color) {
 /**
  * Remove cells by nickname.
  */
-exports.RemoveCellsByNickname = function(nn) {
+exports.removeCellsByNickname = function(nn) {
 
     for (var cell in _hashTable.items) {
         if (_hashTable.getItem(cell).nickname == nn) {
@@ -107,23 +108,23 @@ exports.RemoveCellsByNickname = function(nn) {
 /*
 * Start the process.
 */
-function StartGOL() {
+function startGol() {
 
     _interval = setInterval(function() {   
         if (_ready === false) {
             return;
         }
-        Main();
+        main();
     }, _intervalSpeed);
 }
 
 /**
- * Main calls here.
+ * main calls here.
  */ 
-function Main() {
+function main() {
 
     _ready = false;
-    IterateGOL();
+    iterateGOL();
     var data = '';
     for (var cell in _hashTable.items) {
         data += _hashTable.getItem(cell).nickname + '$';
@@ -137,15 +138,15 @@ function Main() {
 }
 
 /*
-* Main GOL loop.
+* main GOL loop.
 * Decide if Cell lives or dies.
 */
-function IterateGOL() { 
+function iterateGOL() { 
     
     var totalCells = 0;
 
     for (var cell in _hashTable.items) { // Search for cells around the coordiantes.
-        if (CellLife(cell, false) === false) { // Dying cell.
+        if (cellLife(cell, false) === false) { // Dying cell.
             _dyingCellsHashTable.setItem(cell, _hashTable.getItem(cell));
         } else {
             // If return === true just leave the cell in the hashtable.
@@ -177,7 +178,7 @@ function IterateGOL() {
 * Param : deadCell is boolean. If seeking for new born cells this param = true.
 * This function is used in a recursive way when dealing with dead cells.
 */
-function CellLife(cell, deadCell) {
+function cellLife(cell, deadCell) {
     
     var liveCount = 0;
     var xy = cell.toString().split('$');
@@ -211,7 +212,7 @@ function CellLife(cell, deadCell) {
             // If it's an alive cell we are not interested here. Only dead cells can live on the 
             // condition that they have exactly 3 live cells surrounding them.
             if (_hashTable.hasItem(neighbourCells[i]) === false) {
-                if (CellLife(neighbourCells[i], true) === true) { // Recursive call here for liveCount = exactly 3.  
+                if (cellLife(neighbourCells[i], true) === true) { // Recursive call here for liveCount = exactly 3.  
                     _newBornCellsHashTable.setItem(neighbourCells[i], _hashTable.getItem(cell)); // Then it's a new born cell.
                 } 
             }

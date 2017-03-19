@@ -6,7 +6,7 @@ var DOMUtils = function DOM() {
 	/*
 	 * Display zone information.
 	 */
-	this.SetZoneInfo = function(displayZone, zonePopulation) {
+	this.setZoneInfo = function(displayZone, zonePopulation) {
 	    $('#zone').text('spatial zone: x' + displayZone[0].toString() + '-y' + displayZone[1].toString());
 	    $('#population').text('zone population: ' + zonePopulation.toString());
 	}
@@ -14,7 +14,7 @@ var DOMUtils = function DOM() {
 	/*
 	* Update new clients.
 	*/
-	this.UpdateClients = function(data) {
+	this.updateClients = function(data) {
 		$('#multigol-clients').html('');
 		$('#multigol-clients').html(data);
 	}
@@ -22,7 +22,7 @@ var DOMUtils = function DOM() {
 	/**
 	 * Update cell count by client.
 	 */ 
-	this.UpdateCellcount = function(data) {
+	this.updateCellcount = function(data) {
 
 		var cellcounts = JSON.parse(data);
 		for (var i = 0; i < cellcounts.length; ++i) {
@@ -35,7 +35,7 @@ var DOMUtils = function DOM() {
 	/*
 	*
 	*/
-	this.UpdateTchat = function(data) {
+	this.updateTchat = function(data) {
 
 		var tchatmsg = JSON.parse(data);
         var msgHtml = '<div class="multigol-client">'; 
@@ -50,4 +50,4 @@ var DOMUtils = function DOM() {
 		$('#multigol-tchat-conatiner').append(msgHtml);
 	}
 
-} // End class.
+}

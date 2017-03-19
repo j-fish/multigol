@@ -5,7 +5,7 @@
 /*
 * get yy:mm:dd:hh:mm:ss
 */
-exports.GetDateTime = function() {
+exports.getDateTime = function() {
 
     var date = new Date();
 
@@ -33,13 +33,14 @@ exports.GetDateTime = function() {
 /**
  *
  */
-exports.HashCode = function(str) {
+exports.hashCode = function(str) {
     var hash = 0;
     if (str.length == 0) return hash;
     for (i = 0; i < str.length; i++) {
         char = str.charCodeAt(i);
-        hash = ((hash<<5)-hash)+char;
-        hash = hash & hash; // Convert to 32bit integer
+        hash = ((hash << 5) - hash) + char;
+        // Convert to 32bit integer :
+        hash = hash & hash;
     }
     return hash;
 }

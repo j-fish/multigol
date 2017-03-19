@@ -92,4 +92,5 @@ function HashTable(obj) {
         this.items = {};
         this.length = 0;
     };
-} // End.
+
+}

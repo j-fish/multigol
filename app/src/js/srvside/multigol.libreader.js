@@ -4,7 +4,7 @@
 /**
  * Hash string to integer.
  */ 
-function HashString(str) {
+function hashString(str) {
     var hash = 0;
     if (str.length == 0) return hash;
     for (i = 0; i < str.length; i++) {
@@ -18,7 +18,7 @@ function HashString(str) {
 /*
 * Build library data.
 */
-exports.BuildLibrary = function(libArray, filePath) {
+exports.buildLibrary = function(libArray, filePath) {
     
     var file = filePath;
     var LineByLineReader = require('line-by-line'),
@@ -30,9 +30,7 @@ exports.BuildLibrary = function(libArray, filePath) {
     var c = 0;
     var check = 0;
 
-    lr.on('error', function(err) {
-        console.log('|_' + err);
-    });
+    lr.on('error', function(err) { console.log('|_' + err); });
 
     lr.on('line', function(line) {
 
@@ -52,7 +50,7 @@ exports.BuildLibrary = function(libArray, filePath) {
         }
 
         if (check === 3) {
-            var hId = HashString(pattern) + c.toString();
+            var hId = hashString(pattern) + c.toString();
             libArray.push({'name':pattern, 'desc':description, 'code':patternCode, 'id':c, 'hashid':hId});
             ++c;
             pattern = '';
