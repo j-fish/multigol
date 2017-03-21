@@ -1,7 +1,3 @@
-/*************************************************
-* UTILS
-**************************************************/
-
 /*
 * get yy:mm:dd:hh:mm:ss
 */
@@ -28,19 +24,4 @@ exports.getDateTime = function() {
 
     return year + ":" + month + ":" + day + ":" + hour + ":" + min + ":" + sec;
 
-}
-
-/**
- *
- */
-exports.hashCode = function(str) {
-    var hash = 0;
-    if (str.length == 0) return hash;
-    for (i = 0; i < str.length; i++) {
-        char = str.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
-        // Convert to 32bit integer :
-        hash = hash & hash;
-    }
-    return hash;
 }

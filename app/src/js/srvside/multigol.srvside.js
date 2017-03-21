@@ -1,6 +1,3 @@
-/*************************************************
-* MULTIGOL. Variables.
-**************************************************/
 var _generation = 0;
 var _intervalSpeed = 200;
 var _interval;
@@ -10,14 +7,14 @@ var _dyingCellsHashTable;
 var _io;
 var _ready = true;
 
-/**
- * 
- */
 exports.init = function(io) {
 
+    var fs = require('fs');
+    eval(fs.readFileSync(__dirname + '/../dto/multigol.hashtable.js').toString());
+
     _io = io;
-    console.log('____________________________________________________'.random);
-    console.log('|_ init server multigol.'.random);
+    console.log('____________________________________________________'.white);
+    console.log('|_ init server multigol.'.white);
     _hashTable = new HashTable();
     _newBornCellsHashTable = new HashTable();
     _dyingCellsHashTable = new HashTable();
@@ -56,9 +53,35 @@ exports.iORunLibInput = function(x, y, xx, yy, cellColor, zX, zY, gW, gH, client
 
     if (_hashTable.hasItem(key) === false) {
         _hashTable.setItem(key, {life:1, nickname:clientNickname, hexc:cellColor});
-        //logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize, gridX, gridY);
     }
 }
+
+/**
+ * Remove cells by nickname.
+ */
+exports.removeCellsByNickname = function(nn) {
+
+    for (var cell in _hashTable.items) {
+        if (_hashTable.getItem(cell).nickname == nn) {
+            _hashTable.removeItem(cell);
+        }
+    }
+}
+
+/**
+ * Remove cells by color.
+ */
+exports.removeCellsByColor = function(color) {
+
+    for (var cell in _hashTable.items) {
+        if (_hashTable.getItem(cell).hexc == color) {
+            _hashTable.removeItem(cell);
+        }
+    }
+}
+
+/*****************************************************/
+/* private scope *************************************/
 
 function logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize, gridX, gridY) {
     console.log('x = ' + x);
@@ -79,30 +102,6 @@ function logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellS
 */
 function checkCoordinates(x, y) {
     return x != NaN && y != NaN;
-}
-
-/**
- * Remove cells by color.
- */
-exports.removeCellsByColor = function(color) {
-
-    for (var cell in _hashTable.items) {
-        if (_hashTable.getItem(cell).hexc == color) {
-            _hashTable.removeItem(cell);
-        }
-    }
-}
-
-/**
- * Remove cells by nickname.
- */
-exports.removeCellsByNickname = function(nn) {
-
-    for (var cell in _hashTable.items) {
-        if (_hashTable.getItem(cell).nickname == nn) {
-            _hashTable.removeItem(cell);
-        }
-    }
 }
 
 /*
@@ -230,98 +229,3 @@ function cellLife(cell, deadCell) {
         return false;
     }
 }
-
-/*************************************************
-* HashTable obj.
-**************************************************/
-/**
- * @param {type} obj
- * @returns {HashTable}
- */
-function HashTable(obj) {
-
-    this.length = 0;
-    this.items = {};
-
-    for (var p in obj) {
-        if (obj.hasOwnProperty(p)) {
-            this.items[p] = obj[p];
-            this.length++;
-        }
-    }
-
-    this.setItem = function(key, value) {
-        var previous = undefined;
-        if (this.hasItem(key)) {
-            previous = this.items[key];
-        } else {
-            this.length++;
-        }
-        this.items[key] = value;
-
-        return previous;
-    };
-    
-    this.getKey = function(value) {
-        for (var key in this.items) {
-            if (this.getItem(key) === value) {
-                return key.toString();
-            }
-        }
-    };
-
-    this.getItem = function(key) {
-        return this.hasItem(key) ? this.items[key] : undefined;
-    };
-
-    this.hasItem = function(key) {
-        return this.items.hasOwnProperty(key);
-    };
-
-    this.removeItem = function(key) {
-
-        if (this.hasItem(key)) {
-            var previous = this.items[key];
-            this.length--;
-            delete this.items[key];
-            return previous;
-        } else {
-            return undefined;
-        }
-    };
-
-    this.keys = function() {
-        var keys = [];
-        for (var k in this.items) {
-            if (this.hasItem(k)) {
-                keys.push(k);
-            }
-        }
-
-        return keys;
-    };
-
-    this.values = function() {
-        var values = [];
-        for (var k in this.items) {
-            if (this.hasItem(k)) {
-                values.push(this.items[k]);
-            }
-        }
-
-        return values;
-    };
-
-    this.each = function(fn) {
-        for (var k in this.items) {
-            if (this.hasItem(k)) {
-                fn(k, this.items[k]);
-            }
-        }
-    };
-
-    this.clear = function() {
-        this.items = {};
-        this.length = 0;
-    };
-} // End.

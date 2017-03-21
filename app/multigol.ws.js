@@ -6,14 +6,19 @@ console.log("dirname=" + __dirname);
 /*************************************************
 * Variables.
 **************************************************/
+
 var express = require('express');
 var fs = require('fs');
+eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.hashstring.js').toString());
+eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.client.js').toString());
 var jade = require('jade');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var libreader = require('./src/js/srvside/multigol.libreader.js');
+var libreader = require('./src/js/srvside/multigol.srvside.libreader.js');
 var utils = require('./src/js/srvside/multigol.srvside.utils.js');
+var clientUtils = require('./src/js/srvside/multigol.srvside.client.utils.js');
+var templateBuilder = require('./src/js/srvside/multigol.srvside.template.builder.js');
 var colors = require('colors');
 var gol = require('./src/js/srvside/multigol.srvside.js');
 var libdata = [];
@@ -32,16 +37,42 @@ app.use(express.static(__dirname + '/src'));
 /**
  * http request and http response.
  */
-app.get('/', function(req, res) {
+app.get('/multigol', function(req, res) {
     var template = __dirname + '/src/view/multigol.jade';
     var html = jade.renderFile(template, {library: libdata});
     res.send(html);
 });
-/* END HTTP REQ RES. */
 
 io.on('connection', function(socket) {
 
     console.log('|_ a client connected @ '.green + utils.getDateTime());	
+
+    socket.on('app-join-check', function(data) {
+        io.emit('app-joinable', clientUtils.checkJoin(
+            data, clients) === false ? undefined : 'go');
+    });
+
+    socket.on('app-join', function(data) {
+        var client = JSON.parse(data);
+        clients.push(new User(client.userName, 
+            hashString(client.userName), 
+            client.hexc, client.cellImg, client.b64img, 
+            client.address, client.port));
+        var html = templateBuilder.buildClients(jade, clients);
+        console.log('|_ client joined: '.cyan + client.userName
+            + '-' + utils.getDateTime());
+        io.emit('app-join', html);
+    });
+
+    socket.on('app-exit', function(data) {
+        if (clients.length <= 0) return;
+        clients = clientUtils.clearClient(clients, data);
+        var html = templateBuilder.buildClients(jade, clients);
+        gol.removeCellsByNickname(data);
+        console.log('|_ client left: '.magenta + data + 
+            ' @ '.magenta + utils.getDateTime());
+        io.emit('app-exit', html);
+    });
 
     socket.on('hashmap-append', function(data) {
 
@@ -66,111 +97,6 @@ io.on('connection', function(socket) {
         io.emit('hashmap-append-done', client);
     });
 
-    socket.on('hashmap-append-done', function(data) {});
-
-    socket.on('app-join-check', function(data) {
-
-        console.log('|_ checking nickname '.gray + data + ' is joinable'.gray);
-        var joinable = true;
-        for (var i = 0; i < clients.length; i++) {
-            var client = clients[i].split('$');
-            if (data == 'undefined' || data === undefined || 
-                data === null || client[0] == data) {
-                joinable = false;
-                break;
-            }
-        }
-
-        io.emit('app-joinable', joinable === false ? undefined : 'go');
-    });
-
-    socket.on('app-join', function(data) {
-
-        clients.push(data);
-        var templateData = [];
-        for (var i = 0; i < clients.length; i++) {
-            var client = clients[i].split('$');
-            var l = templateData.push({
-                'nickname':client[0], 
-                'nicknamehash':utils.hashCode(client[0]),
-                'hexc':client[1],
-                'cellimg':client[2],
-                'b64img':client[3]
-            });
-        }
-
-        client = data.split('$');
-        console.log('|_ client joined: '.cyan + client[0] + '-' + 
-            client[1].toString() + '-' + client[2].toString() +
-            ' @ '.cyan + utils.getDateTime());
-
-        var template = __dirname + '/src/view/clients.jade';
-        var html = jade.renderFile(template, {clients: templateData});
-
-        io.emit('app-join', html);
-    });
-
-    socket.on('app-exit', function(data) {
-
-        if (clients.length > 0) {
-
-            var index = clients.indexOf(data);
-            var clientToRemove = clients[index].split('$');
-            if (index > -1) {
-                clients.splice(index, 1);
-            }
-            var templateData = [];
-            for (var i = 0; i < clients.length; i++) {
-                var client = clients[i].split('$');
-                templateData.push({
-                    'nickname':client[0], 
-                    'nicknamehash':utils.hashCode(client[0]),
-                    'hexc':client[1],
-                    'cellimg':client[2],
-                    'b64img':client[3]
-                });
-            }
-
-            // remove all cell of client color, then emit.
-            gol.removeCellsByNickname(clientToRemove[0].toString());
-            
-            var client = data.split('$');
-            console.log('|_ client left: '.magenta + client[0] + '-' + 
-                client[1].toString() + '-' + client[2].toString() +
-                ' @ '.magenta + utils.getDateTime());
-        
-            var template = __dirname + '/src/view/clients.jade';
-            var html = jade.renderFile(template, {clients: templateData});
-            io.emit('app-exit', html);
-        }
-    });
-    
-    socket.on('notify-cellcount', function(data) {
-
-        if (clients.length === 0) {
-            return;
-        } 
-
-        if (clientCellCount.length > clients.length) {
-            clientCellCount = [];
-        }
-
-        clientCellCount.push(data);
-
-        if (clientCellCount.length === clients.length) {
-            var result = JSON.stringify(clientCellCount);
-            clientCellCount = [];
-            io.emit('notify-cellcount-all', result);
-        }
-    });
-
-    socket.on('notify-tchat', function(data) {
-        io.emit('notify-tchat-all', data);
-    });
-
-    socket.on('notify-total-cellcount', function(data) {
-    });
-
     socket.on('disconnect', function() {
         console.log('|_ user disconnected @ '.magenta + utils.getDateTime());
     });
@@ -181,8 +107,8 @@ io.on('connection', function(socket) {
  *
  */
 http.listen(3000, function() {
-    console.log('|_ nodejs multiplayer Game Of Life'.random);
-    console.log('|_ listening on localhost:3000'.random);
+    console.log('|_ nodejs multiplayer Game Of Life'.yellow);
+    console.log('|_ listening on localhost:3000'.yellow);
 });
 
 
