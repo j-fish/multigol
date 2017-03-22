@@ -14,18 +14,12 @@ window.onload = function () {
 
     initEnterDialog(); 
 
-    // gol cmds :
     $('#gol-cmd').css('top', 6); 
-    // Library :
     $('#gol-library').css('height', $(window).height());
-    // Clients :
     $('#multigol-clients').css('height', $(window).height());
-    // Tchat :
-    $('#multigol-tchat').css('height', $(window).height());
 
     initGolCommands();
 
-    /////////////////////////////////////////////////////////////
     // Bluring of a & button tags :
     var aElements = document.getElementsByTagName('a');
     for (var i = 0, len = aElements.length; i < len; i++) {
@@ -39,7 +33,6 @@ window.onload = function () {
             if (this.blur) this.blur();
         }
     }
-    /////////////////////////////////////////////////////////////
 };
 
 window.onresize = function() {
@@ -48,7 +41,7 @@ window.onresize = function() {
     $('#gol-library').css('height', $(window).height());
     gol.initCanvas('gol_canvas');
     gol.initGridCanvas('gol_canvas_grid');
-}
+};
 
 document.getElementById('multigol-tmpimg-file').onchange = function(evt) {
     
@@ -159,18 +152,11 @@ function initGolCommands() {
     });
     $('#gol-cmd-lib').on('click', function() {
         $('#multigol-clients').hide(120);
-        $('#multigol-tchat').hide(120);
         updateCmdDisplay('gol-library');
     });
     $('#gol-cmd-cli').on('click', function() {
         $('#gol-library').hide(120);
-        $('#multigol-tchat').hide(120);
         updateCmdDisplay('multigol-clients');
-    });
-    $('#gol-cmd-tchat').on('click', function() {
-        $('#gol-library').hide(120);
-        $('#multigol-clients').hide(120);
-        updateCmdDisplay('multigol-tchat');
     });
     $('#gol-cmd-reset').on('click', function() {
         resetToDefaultZoom();
@@ -181,11 +167,11 @@ function initGolCommands() {
     $('#gol-cmd-zoomin').on('click', function() {
         zoomInGol();
     });
+    $('#gol-cmd-close-all').on('click', function() {
+        hideAllSidePanes();
+    });
     /////////////////////////////////////////////////////////////
 
-    /**
-     *
-     */
     $('.gol-cmd-items').mouseover(function() {
         $('#' + this.id + '-desc').css('display', 'inline');
     });
@@ -298,69 +284,31 @@ function executeKeyEvent() {
     }
 }
 
-/**
- *
- */
 function addKeyEvents() {
 
-    /*
-     * Sets up the document to listen to onkeydown events (fired when
-     * any key on the keyboard is pressed down). When a key is pressed,
-     * it sets the appropriate direction to true to let us know which
-     * key it was.
-     */
     document.onkeydown = function (e) {
 
         // Firefox and opera use charCode instead of keyCode to
         // return which key was pressed.
         var keyCode = (e.keyCode) ? e.keyCode : e.charCode;
 
-        if ($('#multigol-tchat-textarea').is(':focus')) {
-
-            if (keyCode == 13) { 
-                e.preventDefault();
-                // send message...
-                var data = { 
-                    msg: $("#multigol-tchat-textarea").val(),
-                    nickname: gol.getNickName(),
-                    base64: gol.getB64cell(),
-                    hexc: gol.getCellColor()
-                }
-                gol.getSocket().emit('notify-tchat', JSON.stringify(data));
-                $("#multigol-tchat-textarea").val('');
-            }
-
-            if (keyCode == '27') { hideAllSidePanes(); }
-
-            return;
-        }
-
         if (KEY_CODES[keyCode]) {
             e.preventDefault();
             KEY_STATUS[KEY_CODES[keyCode]] = true;
         }
+
         // Execute key command :
         executeKeyEvent();
-    }
+    };
 
-    /*
-     * Sets up the document to listen to ownkeyup events (fired when
-     * any key on the keyboard is released). When a key is released,
-     * it sets teh appropriate direction to false to let us know which
-     * key it was. Resets key document.onkeydown key event to false.
-     */
     document.onkeyup = function (e) {
-
-        if ($('#multigol-tchat-textarea').is(':focus')) {
-            return;
-        }
 
         var keyCode = (e.keyCode) ? e.keyCode : e.charCode;
         if (KEY_CODES[keyCode]) {
             e.preventDefault();
             KEY_STATUS[KEY_CODES[keyCode]] = false;
         }
-    }
+    };
 }
 
 /**
@@ -372,9 +320,6 @@ function quit() {
 
 //////////////////////////////////////////////////
 // Display & Zoom in-out :
-/*
- * Zoom in.
- */
 function zoomInGol() {
 
     var cellSize = gol.getCellSize();
@@ -391,9 +336,6 @@ function zoomInGol() {
     }
 }
 
-/*
- * Zoom out.
- */
 function zoomOutGol() {
 
     var cellSize = gol.getCellSize();
@@ -410,9 +352,6 @@ function zoomOutGol() {
     }
 }
 
-/*
-*
-*/
 function resetToDefaultZoom() {
 
     var cellSize = gol.getDefaultCellSize();
@@ -422,12 +361,9 @@ function resetToDefaultZoom() {
     gol.setGridWidth(canvasW / cellSize);
     gol.setGridHeight(canvasH / cellSize);
     gol.setDrawDetailedCells(true);
-    HideAllSidePanes();
+    hideAllSidePanes();
 }
 
-/*
-*
-*/
 function updateCmdDisplay(id) {
 
     $('#' + id).css('display') == 'none' ? 
@@ -442,13 +378,9 @@ function updateCmdDisplay(id) {
         });
 }
 
-/**
- * Hide all side panes (tchat, lib or clients)
- */
 function hideAllSidePanes() {
 
     $('#multigol-clients').hide();
-    $('#multigol-tchat').hide();
     $('#gol-library').hide();
     $('#gol_canvas').css('margin-left', '0px');
     $('#gol_canvas_grid').css('margin-left', '0px');

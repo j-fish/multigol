@@ -9,14 +9,9 @@ var MouseUtils = function() {
 		_GOL = gol;
 	};
 
-	/*
-	*
-	*/
 	this.canvasClicked = function(e) {
 
-		if (_GOL.isAllowLibTransfer() === false) {
-			return;
-		}
+		if (_GOL.isAllowLibTransfer() === false) return;
 
 		var displayZone = _GOL.getDisplayZone();
 	    var x = e.clientX - _GOL.getCanvas().clientLeft;
@@ -28,15 +23,14 @@ var MouseUtils = function() {
 	    
 	    x -= _GOL.getCanvas().offsetLeft;
 	    y -= _GOL.getCanvas().offsetTop;
-
 	    _GOL.setMouseX(x);
 	    _GOL.setMouseY(y);
 
 	    if (_GOL.getLibTransfer() === true) {
-	        _GOL.getSocket().emit('hashmap-append', x + '~' + y + '~' + _GOL.getCellSize() + '~' + 
-	            displayZone[0] + '~' + displayZone[1] + '~' + 
-	            _GOL.getGridWidth() + '~' + _GOL.getGridHeight() + '~' +
-	            _GOL.getCellColor() + '~' + _GOL.getNickName() + '~' + _GOL.getXyFromLibStringValue());
+	    	var pattern = new Pattern(x, y, _GOL.getCellSize(), displayZone[0], displayZone[1],
+	    		_GOL.getGridWidth(), _GOL.getGridHeight(), _GOL.getCellColor(), 
+	    		_GOL.getNickName(), _GOL.getXyFromLibStringValue());
+	        _GOL.getSocket().emit('hashmap-append', pattern.toJSON());
 	        _GOL.setLibTransfer(false);
 	        _GOL.setAllowLibTransfer(false);
 	        cursorDeny();

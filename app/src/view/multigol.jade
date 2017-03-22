@@ -23,14 +23,12 @@ html(lang="en")
         span(id="pattern_id_#{lib.id}", hidden=true) #{lib.code}
         br
         div(id="#{lib.hashid}#{lib.id}", class="gol-pattern-description", style="display: none;") #{lib.desc}
-    #multigol-tchat.multigol-sidepane
-      textarea#multigol-tchat-textarea(rows="5")
-      #multigol-tchat-conatiner
     include enterdialog.jade
 
 script(src='js/dto/multigol.hashtable.js')
 script(src='js/dto/multigol.hashstring.js')
 script(src='js/dto/multigol.client.js')
+script(src='js/dto/multigol.pattern.js')
 script(src='js/cside/multigol.js')
 script(src='js/cside/utils/multigol.utils.js')
 script(src='js/cside/utils/multigol.dom.js')

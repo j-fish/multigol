@@ -1,0 +1,16 @@
+        /*var lib = data.split('~');
+        var mousex = lib[0];
+        var mousey = lib[1];
+        var cellSize = lib[2];
+        var zonex = lib[3];
+        var zoney = lib[4];
+        var gridW = lib[5];
+        var gridH = lib[6];
+        var color = lib[7];
+        var client = lib[8];
+
+        for (var i = 9; i < lib.length; i++) {    
+            var xy = lib[i].split('$');
+            gol.iORunLibInput(mousex, mousey, xy[0], xy[1], color, zonex, 
+                zoney, gridW, gridH, client, cellSize);
+        }*/

@@ -3,18 +3,16 @@
 node C:\Users\thw\Documents\WEB\multigol\app\multigol.ws.js
  */
 console.log("dirname=" + __dirname);
-/*************************************************
-* Variables.
-**************************************************/
-
 var express = require('express');
 var fs = require('fs');
 eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.hashstring.js').toString());
 eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.client.js').toString());
+eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.pattern.js').toString());
 var jade = require('jade');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var patternAppender = require('./src/js/srvside/multigol.srvside.append.pattern.js');
 var libreader = require('./src/js/srvside/multigol.srvside.libreader.js');
 var utils = require('./src/js/srvside/multigol.srvside.utils.js');
 var clientUtils = require('./src/js/srvside/multigol.srvside.client.utils.js');
@@ -34,9 +32,7 @@ gol.init(io);
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/src'));
 
-/**
- * http request and http response.
- */
+/* http request and http response. */
 app.get('/multigol', function(req, res) {
     var template = __dirname + '/src/view/multigol.jade';
     var html = jade.renderFile(template, {library: libdata});
@@ -75,25 +71,8 @@ io.on('connection', function(socket) {
     });
 
     socket.on('hashmap-append', function(data) {
-
-        // append data to global hash map:
         console.log('|_ hashmap-append: '.gray + data.toString().gray);
-        var lib = data.split('~');
-        var mousex = lib[0];
-        var mousey = lib[1];
-        var cellSize = lib[2];
-        var zonex = lib[3];
-        var zoney = lib[4];
-        var gridW = lib[5];
-        var gridH = lib[6];
-        var color = lib[7];
-        var client = lib[8];
-
-        for (var i = 9; i < lib.length; i++) {    
-            var xy = lib[i].split('$');
-            gol.iORunLibInput(mousex, mousey, xy[0], xy[1], color, zonex, zoney, gridW, gridH, client, cellSize);
-        }
-
+        var client = patternAppender.append(gol, data);
         io.emit('hashmap-append-done', client);
     });
 
@@ -101,11 +80,19 @@ io.on('connection', function(socket) {
         console.log('|_ user disconnected @ '.magenta + utils.getDateTime());
     });
 
+    socket.on('notify-cellcount', function(data) {
+        if (clients.length === 0) return;
+        if (clientCellCount.length > clients.length) clientCellCount = [];
+        clientCellCount.push(data);
+        if (clientCellCount.length === clients.length) {
+            var result = JSON.stringify(clientCellCount);
+            clientCellCount = [];
+            io.emit('notify-cellcount-all', result);
+        }
+    });
+
 });
 
-/**
- *
- */
 http.listen(3000, function() {
     console.log('|_ nodejs multiplayer Game Of Life'.yellow);
     console.log('|_ listening on localhost:3000'.yellow);

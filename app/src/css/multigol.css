@@ -94,26 +94,6 @@ a.gollib-pattern-link {
     word-wrap: break-word;      /* IE */
 }
 
-#multigol-tchat-conatiner {
-	display: block;
-	border-top: 1px solid lightgray;
-}
-
-#multigol-tchat-textarea {
-	width: 99%;
-	border: none;
-	max-height: 600px;
-	resize: vertical;
-	display: block;
-	font-family: consolas;
-}
-
-.tchat-msg-text {
-	margin-left: 6px;
-	margin-right: 6px;
-	display: inline;
-}
-
 .gollib-pattern-link {
 	margin-left: 6px;
 	margin-right: 6px;
