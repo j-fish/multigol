@@ -1,7 +1,3 @@
-/********************************
- * to lauch from terminal :
-node C:\Users\thw\Documents\WEB\multigol\app\multigol.ws.js
- */
 console.log("dirname=" + __dirname);
 var express = require('express');
 var fs = require('fs');
