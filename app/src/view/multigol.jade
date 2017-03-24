@@ -8,8 +8,8 @@ html(lang="en")
     meta(http-equiv="content-type", charset="UTF-8")
   body
     canvas(id="gol_canvas_grid", style="position: absolute; top: 0; left: 0; z-index: -1")
-    canvas(id="gol_canvas", style="position: absolute; top: 0; left: 0; z-index: 0")
-      Your browser does not support canvas. Please try again with a different browser.
+    canvas(id="gol_canvas", style="position: absolute; top: 0; left: 0; z-index: 0") 
+    canvas(id="gol_canvas_draw", style="position: absolute; top: 0; left: 0; z-index: 1; display: none") 
     include goldata.jade
     include cmds.jade
     #multigol-clients.multigol-sidepane

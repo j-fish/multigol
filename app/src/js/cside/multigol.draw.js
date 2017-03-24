@@ -24,12 +24,10 @@ function draw(ht, totalCells) {
     	xy = cell.toString().split('$');
         var clientNickname = ht.getItem(cell).nickname;
         var clientNicknameHash = hashString(ht.getItem(cell).nickname);
-
-        var elem = document.getElementById('is-client-icon-' + clientNicknameHash);
-        if (elem != null) {
-            var cellimg = elem.innerText || elem.textContent;
-        }
         var painted = false;
+        var elem = document.getElementById('is-client-icon-' + clientNicknameHash);
+        
+        if (elem != null) var cellimg = elem.innerText || elem.textContent;
 
         if (gol.isDrawDetailedCells()) {
         

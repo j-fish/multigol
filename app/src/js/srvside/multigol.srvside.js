@@ -83,27 +83,6 @@ exports.removeCellsByColor = function(color) {
 /*****************************************************/
 /* private scope *************************************/
 
-function logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize, gridX, gridY) {
-    console.log('x = ' + x);
-    console.log('y = ' + y);
-    console.log('xx = ' + xx);
-    console.log('yy = ' + yy);
-    console.log('zx = ' + zX);
-    console.log('zy = ' + zY);
-    console.log('gw = ' + gW);
-    console.log('gh = ' + gH);
-    console.log('gx = ' + gridX);
-    console.log('gy = ' + gridY);
-    console.log('cellsize = ' + cellSize);
-}
-
-/*
-* Check value for NaN or other reasons. 
-*/
-function checkCoordinates(x, y) {
-    return x != NaN && y != NaN;
-}
-
 /*
 * Start the process.
 */
@@ -144,8 +123,10 @@ function iterateGOL() {
     
     var totalCells = 0;
 
-    for (var cell in _hashTable.items) { // Search for cells around the coordiantes.
-        if (cellLife(cell, false) === false) { // Dying cell.
+    // Search for cells around the coordiantes.
+    for (var cell in _hashTable.items) { 
+        if (cellLife(cell, false) === false) { 
+            // Dying cell.
             _dyingCellsHashTable.setItem(cell, _hashTable.getItem(cell));
         } else {
             // If return === true just leave the cell in the hashtable.
@@ -155,7 +136,8 @@ function iterateGOL() {
 
     // Add all new born cells (_newBornCellsHashTable) to main hashtable for next iteration.
     for (var cell in _newBornCellsHashTable.items) {
-        _hashTable.setItem(cell, _newBornCellsHashTable.getItem(cell)); // Add cell to hashtable.
+        // Add cell to hashtable.
+        _hashTable.setItem(cell, _newBornCellsHashTable.getItem(cell));
         ++totalCells;
     }
 
@@ -196,9 +178,12 @@ function cellLife(cell, deadCell) {
             (x - 1) + '$' +  y
         );
 
-    for (var i = 0; i < neighbourCells.length; i++) { // Search & count cells around the param cell.
-        if (_hashTable.hasItem(neighbourCells[i]) === true) { // Don't deal with dead cells here.
-            if (_hashTable.getItem(neighbourCells[i]).life == 1) { // It's an alive one.     
+    for (var i = 0; i < neighbourCells.length; i++) { 
+        // Search & count cells around the param cell.
+        // Don't deal with dead cells here.
+        if (_hashTable.hasItem(neighbourCells[i]) === true) { 
+            if (_hashTable.getItem(neighbourCells[i]).life == 1) { 
+                // It's an alive one.     
                 liveCount++; // So count it.
             }
         }
@@ -211,21 +196,49 @@ function cellLife(cell, deadCell) {
             // If it's an alive cell we are not interested here. Only dead cells can live on the 
             // condition that they have exactly 3 live cells surrounding them.
             if (_hashTable.hasItem(neighbourCells[i]) === false) {
-                if (cellLife(neighbourCells[i], true) === true) { // Recursive call here for liveCount = exactly 3.  
-                    _newBornCellsHashTable.setItem(neighbourCells[i], _hashTable.getItem(cell)); // Then it's a new born cell.
+                if (cellLife(neighbourCells[i], true) === true) { 
+                    // Recursive call here for liveCount = exactly 3.  
+                    // Then it's a new born cell.
+                    _newBornCellsHashTable.setItem(neighbourCells[i], _hashTable.getItem(cell)); 
                 } 
             }
         }
     }
 
     // Check the amount of living cells found around the param one.
-    if ((liveCount === 2 || liveCount === 3) && deadCell === false) { // Cell survives.
+    if ((liveCount === 2 || liveCount === 3) && deadCell === false) { 
+        // Cell survives.
         return true;
-    } else if (liveCount === 3 && deadCell === true) { // Cell is born.
+    } else if (liveCount === 3 && deadCell === true) { 
+        // Cell is born.
         return true;
-    } else if (liveCount > 3) { // Cell dies 
+    } else if (liveCount > 3) { 
+        // Cell dies 
         return false;
-    } else { // Cell dies (count is < 2).
+    } else { 
+        // Cell dies (count is < 2).
         return false;
     }
+}
+
+function logInput(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize, gridX, gridY) {
+
+    console.log('x = ' + x);
+    console.log('y = ' + y);
+    console.log('xx = ' + xx);
+    console.log('yy = ' + yy);
+    console.log('zx = ' + zX);
+    console.log('zy = ' + zY);
+    console.log('gw = ' + gW);
+    console.log('gh = ' + gH);
+    console.log('gx = ' + gridX);
+    console.log('gy = ' + gridY);
+    console.log('cellsize = ' + cellSize);
+}
+
+/*
+* Check value for NaN or other reasons. 
+*/
+function checkCoordinates(x, y) {
+    return x != NaN && y != NaN;
 }

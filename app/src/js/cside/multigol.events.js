@@ -167,6 +167,9 @@ function initGolCommands() {
     $('#gol-cmd-zoomin').on('click', function() {
         zoomInGol();
     });
+    $('#gol-cmd-draw').on('click', function() {
+        // TODO
+    });
     $('#gol-cmd-close-all').on('click', function() {
         hideAllSidePanes();
     });

@@ -12,10 +12,13 @@ var jade = require('jade');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var auth = require('./src/js/srvside/multigol.srvside.auth.js');
 var patternAppender = require('./src/js/srvside/multigol.srvside.append.pattern.js');
+var sanitizer = require('./src/js/srvside/multigol.srvside.sanitize.js');
 var libreader = require('./src/js/srvside/multigol.srvside.libreader.js');
 var utils = require('./src/js/srvside/multigol.srvside.utils.js');
 var clientUtils = require('./src/js/srvside/multigol.srvside.client.utils.js');
+var userBuilder = require('./src/js/srvside/multigol.srvside.user.builder.js');
 var templateBuilder = require('./src/js/srvside/multigol.srvside.template.builder.js');
 var colors = require('colors');
 var gol = require('./src/js/srvside/multigol.srvside.js');
@@ -32,8 +35,8 @@ gol.init(io);
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/src'));
 
-/* http request and http response. */
-app.get('/multigol', function(req, res) {
+/* http request & auth */
+app.get('/multigol', auth.auth, function(req, res) {
     var template = __dirname + '/src/view/multigol.jade';
     var html = jade.renderFile(template, {library: libdata});
     res.send(html);
@@ -49,11 +52,8 @@ io.on('connection', function(socket) {
     });
 
     socket.on('app-join', function(data) {
-        var client = JSON.parse(data);
-        clients.push(new User(client.userName, 
-            hashString(client.userName), 
-            client.hexc, client.cellImg, client.b64img, 
-            client.address, client.port));
+        var client = userBuilder.build(data, sanitizer);
+        clients.push(client);
         var html = templateBuilder.buildClients(jade, clients);
         console.log('|_ client joined: '.cyan + client.userName
             + '-' + utils.getDateTime());
@@ -62,9 +62,11 @@ io.on('connection', function(socket) {
 
     socket.on('app-exit', function(data) {
         if (clients.length <= 0) return;
-        clients = clientUtils.clearClient(clients, data);
+        clients = clientUtils.clearClient(clients, sanitizer.perform(data));
         var html = templateBuilder.buildClients(jade, clients);
-        gol.removeCellsByNickname(data);
+        // Here, the remove cells by nick name is optional. to
+        // activate, decomment.
+        //gol.removeCellsByNickname(data);
         console.log('|_ client left: '.magenta + data + 
             ' @ '.magenta + utils.getDateTime());
         io.emit('app-exit', html);
@@ -72,7 +74,7 @@ io.on('connection', function(socket) {
 
     socket.on('hashmap-append', function(data) {
         console.log('|_ hashmap-append: '.gray + data.toString().gray);
-        var client = patternAppender.append(gol, data);
+        var client = patternAppender.append(gol, data, sanitizer);
         io.emit('hashmap-append-done', client);
     });
 
@@ -81,9 +83,10 @@ io.on('connection', function(socket) {
     });
 
     socket.on('notify-cellcount', function(data) {
+        var count = sanitizer.perform(data);
         if (clients.length === 0) return;
         if (clientCellCount.length > clients.length) clientCellCount = [];
-        clientCellCount.push(data);
+        clientCellCount.push(count);
         if (clientCellCount.length === clients.length) {
             var result = JSON.stringify(clientCellCount);
             clientCellCount = [];
