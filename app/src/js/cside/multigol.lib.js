@@ -28,7 +28,7 @@ function getGolLibPattern(patternId, linkId) {
 
     // Get coordiantes.
     var pattern = $('#' + patternId).text();
-    gol.applyXyFromLibStringValue(pattern);
+    gol.setXyFromLibStringValue(gol.applyXyFromLibStringValue(pattern));
     gol.setXyFromLib(pattern.split('-')); // get all the coordinates.
     gol.setLibTransfer(true); // transfering is true.
     cursorCopy();

@@ -7,9 +7,9 @@ html(lang="en")
     script(src='http://code.jquery.com/jquery-1.11.1.js')
     meta(http-equiv="content-type", charset="UTF-8")
   body
-    canvas(id="gol_canvas_grid", style="position: absolute; top: 0; left: 0; z-index: -1")
-    canvas(id="gol_canvas", style="position: absolute; top: 0; left: 0; z-index: 0") 
-    canvas(id="gol_canvas_draw", style="position: absolute; top: 0; left: 0; z-index: 1; display: none") 
+    canvas(id="gol_canvas_grid", style="position: absolute; top: 0; left: 0; z-index: -2")
+    canvas(id="gol_canvas", style="position: absolute; top: 0; left: 0; z-index: -1") 
+    canvas(id="gol_canvas_draw", style="position: absolute; top: 0; left: 0; z-index: 0; display: none") 
     include goldata.jade
     include cmds.jade
     #multigol-clients.multigol-sidepane
@@ -35,4 +35,5 @@ script(src='js/cside/utils/multigol.dom.js')
 script(src='js/cside/multigol.draw.js')
 script(src='js/cside/multigol.lib.js')
 script(src='js/cside/utils/multigol.mouse.utils.js')
+script(src='js/cside/multigol.pattern.draw.js')
 script(src='js/cside/multigol.events.js')

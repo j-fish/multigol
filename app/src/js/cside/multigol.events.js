@@ -1,7 +1,8 @@
 var domUtils = new DOMUtils();
 var gol = new GOL();
-gol.init();
 var mouseUtils = new MouseUtils();
+var patternDrawer = new PatternDraw();
+gol.init();
 mouseUtils.init(gol);
 gol.addListeners(mouseUtils);
 
@@ -33,6 +34,9 @@ window.onload = function () {
             if (this.blur) this.blur();
         }
     }
+
+    patternDrawer.init(gol, 'gol_canvas_draw');
+    hideDrawCanvas();
 };
 
 window.onresize = function() {
@@ -41,6 +45,7 @@ window.onresize = function() {
     $('#gol-library').css('height', $(window).height());
     gol.initCanvas('gol_canvas');
     gol.initGridCanvas('gol_canvas_grid');
+    patternDrawer.init(gol, $('#gol_canvas_draw'));
 };
 
 document.getElementById('multigol-tmpimg-file').onchange = function(evt) {
@@ -168,12 +173,28 @@ function initGolCommands() {
         zoomInGol();
     });
     $('#gol-cmd-draw').on('click', function() {
-        // TODO
+        hideAllSidePanes();
+        hideAllIcons();
+        $('#gol-status-data').hide();
+        showDrawCanvas();
     });
     $('#gol-cmd-close-all').on('click', function() {
         hideAllSidePanes();
     });
+    
     /////////////////////////////////////////////////////////////
+    // Init pattern draw cmd events :
+    $('#gol-cmd-close-pattern-draw').on('click', function() {
+        hideDrawCanvas();
+        showAllIcons();
+    });
+
+    $('.gol-pattern-cmd-items').mouseover(function() {
+        $('#' + this.id + '-desc').css('display', 'inline');
+    });
+    $('.gol-pattern-cmd-items').mouseleave(function() {
+        $('#' + this.id + '-desc').hide(30);
+    });
 
     $('.gol-cmd-items').mouseover(function() {
         $('#' + this.id + '-desc').css('display', 'inline');
@@ -381,6 +402,16 @@ function updateCmdDisplay(id) {
         });
 }
 
+function showDrawCanvas() {
+    $('#gol_canvas_draw').show();
+    $('.gol-pattern-cmd-items').show();
+}
+
+function hideDrawCanvas() {
+    $('#gol_canvas_draw').hide();
+    $('.gol-pattern-cmd-items').hide();
+}
+
 function hideAllSidePanes() {
 
     $('#multigol-clients').hide();
@@ -388,4 +419,12 @@ function hideAllSidePanes() {
     $('#gol_canvas').css('margin-left', '0px');
     $('#gol_canvas_grid').css('margin-left', '0px');
     $('#gol-cmd').css('margin-left', '0px');
+}
+
+function hideAllIcons() {
+    $('.gol-cmd-items').hide();
+}
+
+function showAllIcons() {
+    $('.gol-cmd-items').show();
 }
