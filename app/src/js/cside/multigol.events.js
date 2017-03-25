@@ -188,6 +188,11 @@ function initGolCommands() {
         hideDrawCanvas();
         showAllIcons();
     });
+    $('#gol-cmd-send-pattern').on('click', function() {
+        patternDrawer.send();
+        hideDrawCanvas();
+        showAllIcons();
+    });
 
     $('.gol-pattern-cmd-items').mouseover(function() {
         $('#' + this.id + '-desc').css('display', 'inline');
@@ -357,6 +362,8 @@ function zoomInGol() {
         if (cellSize >= 4) {
             gol.setDrawDetailedCells(true);
         }
+
+        gol.initGridCanvas('gol_canvas_grid');
     }
 }
 
@@ -373,6 +380,8 @@ function zoomOutGol() {
         if (cellSize < 4) {
             gol.setDrawDetailedCells(false);
         }
+
+        gol.initGridCanvas('gol_canvas_grid');
     }
 }
 
@@ -409,7 +418,7 @@ function showDrawCanvas() {
 
 function hideDrawCanvas() {
     $('#gol_canvas_draw').hide();
-    $('.gol-pattern-cmd-items').hide();
+    $('.gol-pattern-cmd-items').hide('fast');
 }
 
 function hideAllSidePanes() {
@@ -422,9 +431,9 @@ function hideAllSidePanes() {
 }
 
 function hideAllIcons() {
-    $('.gol-cmd-items').hide();
+    $('.gol-cmd-items').hide('fast');
 }
 
 function showAllIcons() {
-    $('.gol-cmd-items').show();
+    $('.gol-cmd-items').show('fast');
 }

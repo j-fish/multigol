@@ -27,6 +27,7 @@ var MouseUtils = function() {
 	    _GOL.setMouseY(y);
 
 	    if (_GOL.getLibTransfer() === true) {
+	    	
 	    	var pattern = new Pattern(x, y, _GOL.getCellSize(), displayZone[0], displayZone[1],
 	    		_GOL.getGridWidth(), _GOL.getGridHeight(), _GOL.getCellColor(), 
 	    		_GOL.getNickName(), _GOL.getXyFromLibStringValue());
