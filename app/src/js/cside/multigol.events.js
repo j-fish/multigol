@@ -175,10 +175,18 @@ function initGolCommands() {
     $('#gol-cmd-draw').on('click', function() {
         hideAllSidePanes();
         hideAllIcons();
-        $('#gol-status-data').hide();
         showDrawCanvas();
     });
     $('#gol-cmd-close-all').on('click', function() {
+        hideAllSidePanes();
+    });
+
+    /////////////////////////////////////////////////////////////
+    // side pane events :
+    $('#multigol-clients').mouseleave(function() {
+        hideAllSidePanes();
+    });
+    $('#gol-library').mouseleave(function() {
         hideAllSidePanes();
     });
     

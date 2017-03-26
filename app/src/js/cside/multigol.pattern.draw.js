@@ -37,32 +37,47 @@ var PatternDraw = function PatternDraw() {
 
 	    var x = e.clientX - _canvas.clientLeft;
 		var y = e.clientY - _canvas.clientTop;
+		var tmpCell;
+		var cellFound = false;
 	    x -= _canvas.offsetLeft;
 	    y -= _canvas.offsetTop;
 	    // Affect virtual grid coordinates based on celle size.
 	    x = Math.floor(x / _gol.getCellSize());
 	    y = Math.floor(y / _gol.getCellSize());
 
-	    _hastTable.setItem(formatCell(x, y), ++_cellCount);
-	    draw(x, y);
+	    tmpCell = formatCell(x, y);
+	    // If canvas has cell then remove it (as if unselected).
+	    for (var cell in _hastTable.items) {
+	    	if (cell.toString() === tmpCell) {
+	    		_hastTable.removeItem(tmpCell);
+	    		clearCanvas();
+	    		reDraw();
+	    		return;
+	    	}
+	    }
+
+	    _hastTable.setItem(formatCell(x, y), _cellCount.toString());
+	    draw(x, y);    
     };
 
     this.send = function() {
-
-    	/* Code from Mouse utils canvasClicked :
-    	var pattern = new Pattern(x, y, _GOL.getCellSize(), displayZone[0], displayZone[1],
-	    		_GOL.getGridWidth(), _GOL.getGridHeight(), _GOL.getCellColor(), 
-	    		_GOL.getNickName(), _GOL.getXyFromLibStringValue());
-	        _GOL.getSocket().emit('hashmap-append', pattern.toJSON());
-	    */
-
-    	var pattern = '';
-    	for (var cell in _hastTable.items) {
-    		pattern += cell.toString() + '~';
-    	}
-
+		var pattern = '';
+    	for (var cell in _hastTable.items) pattern += cell.toString() + '~';
+    	_hastTable.clear();
+    	if (pattern.length <= 0) return;
     	pattern = pattern.substring(0, pattern.length - 1);
-    	alert(pattern);
+    	clearCanvas();
+	    _gol.getSocket().emit('hashmap-append', 
+	    	new Pattern(0, 0, _gol.getCellSize(), _gol.getDisplayZone()[0], 
+    		_gol.getDisplayZone()[1], _gol.getGridWidth(), _gol.getGridHeight(), 
+    		_gol.getCellColor(), _gol.getNickName(), pattern)
+	    );
+    };
+
+    var clearCanvas = function() {
+    	_ctx.clearRect(0, 0, _canvas.width, _canvas.height);
+    	_ctx.fillStyle = 'rgba(130,120,120,' + 0.7 + ')';
+        _ctx.fillRect(0, 0, _canvas.width, _canvas.height);
     };
 
     var draw = function(x, y) {
@@ -99,6 +114,14 @@ var PatternDraw = function PatternDraw() {
                 cellSize, cellSize);
         }
 
+    };
+
+    var reDraw = function() {
+    	var xy;
+    	for (var cell in _hastTable.items) {
+    		xy = cell.toString().split('$');
+    		draw(xy[0], xy[1]);
+    	}
     };
 
     var formatCell = function(x, y) {

@@ -19,6 +19,7 @@ a.gollib-pattern-link {
 	background-color: rgba(240,240,240,0.7);
 	font-size: 14px;
 	font-family: consolas;
+	z-index: -1;
 }
 
 #gol-cmd {
