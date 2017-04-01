@@ -1,7 +1,7 @@
 /** 
  * User/client properties.
  */
-var User = function User(userName, userNameHash, hexc, cellimg, b64img, address, port) {
+var User = function User(userName, userNameHash, hexc, cellimg, b64img, address, port, universe) {
 
     var _userName = userName;
     var _userNameHash = userNameHash;
@@ -10,6 +10,7 @@ var User = function User(userName, userNameHash, hexc, cellimg, b64img, address,
     var _b64img = b64img;
     var _address = address;
     var _port = port;
+    var _universe = universe;
 
     this.getUserName = function() {
         return _userName;
@@ -63,8 +64,12 @@ var User = function User(userName, userNameHash, hexc, cellimg, b64img, address,
         return _port;
     };
 
-     this.setPort = function(value) {
+    this.setPort = function(value) {
         _port = value;
+    };
+
+    this.getUniverse = function() {
+        return _universe;
     };
 
     this.toJSON = function() {
@@ -76,7 +81,8 @@ var User = function User(userName, userNameHash, hexc, cellimg, b64img, address,
             cellImg: _cellImg,
             b64img: _b64img,
     		userAddress: _address,
-    		userPort: _port
+    		userPort: _port,
+            universe: _universe
     	});
     };
 

@@ -34,4 +34,8 @@ function getGolLibPattern(patternId, linkId) {
     cursorCopy();
     // Set link as visited.
     $('#' + linkId).css({ 'background-color': '#7DE3D7'});
+
+    showDrawCanvas();
+    hideAllSidePanes();
+    hideAllIcons();    
 }

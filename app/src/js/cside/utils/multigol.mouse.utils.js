@@ -3,38 +3,35 @@
  */
 var MouseUtils = function() {
 
-	var _GOL = null;
+	var _gol;
 
 	this.init = function(gol) {
-		_GOL = gol;
+		_gol = gol;
 	};
 
 	this.canvasClicked = function(e) {
 
-		if (_GOL.isAllowLibTransfer() === false) return;
-
-		var displayZone = _GOL.getDisplayZone();
-	    var x = e.clientX - _GOL.getCanvas().clientLeft;
-		var y = e.clientY - _GOL.getCanvas().clientTop;
+		/*
+		var x = e.clientX - _gol.getCanvas().clientLeft;
+		var y = e.clientY - _gol.getCanvas().clientTop;
 
 		// The following code works for Chrome & FF. A more basic version above.
 	    //var x = e.clientX; // + document.body.scrollLeft + document.documentElement.scrollLeft;
 	    //var y = e.clientY; // + document.body.scrollTop + document.documentElement.scrollTop;
 	    
-	    x -= _GOL.getCanvas().offsetLeft;
-	    y -= _GOL.getCanvas().offsetTop;
-	    _GOL.setMouseX(x);
-	    _GOL.setMouseY(y);
+	    x -= _gol.getCanvas().offsetLeft;
+	    y -= _gol.getCanvas().offsetTop;
 
-	    if (_GOL.getLibTransfer() === true) {
-	    	
-	    	var pattern = new Pattern(x, y, _GOL.getCellSize(), displayZone[0], displayZone[1],
-	    		_GOL.getGridWidth(), _GOL.getGridHeight(), _GOL.getCellColor(), 
-	    		_GOL.getNickName(), _GOL.getXyFromLibStringValue());
-	        _GOL.getSocket().emit('hashmap-append', pattern.toJSON());
-	        _GOL.setLibTransfer(false);
-	        _GOL.setAllowLibTransfer(false);
+	    if (_gol.isLibTransfer() === true) {
+
+	    	var pattern = new Pattern(x, y, _gol.getCellSize(), displayZone[0], displayZone[1],
+	    		_gol.getGridWidth(), _gol.getGridHeight(), _gol.getCellColor(), 
+	    		_gol.getNickName(), _gol.getXyFromLibStringValue());
+	        _gol.getSocket().emit('hashmap-append', pattern.toJSON());
+	        _gol.setLibTransfer(false);
+	        _gol.setAllowLibTransfer(false);
 	        cursorDeny();
 	    }
+	    */
 	};
 }

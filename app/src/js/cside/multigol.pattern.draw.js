@@ -11,7 +11,7 @@ var PatternDraw = function PatternDraw() {
 
 	this.init = function(gol, drawCanvasId) {
 		_gol = gol;
-		_cellCount = -1;
+		_cellCount = 0;
 		this.initCanvas(drawCanvasId);
 		_hastTable = new HashTable();
 		this.addListeners();
@@ -35,29 +35,53 @@ var PatternDraw = function PatternDraw() {
 
     this.canvasClicked = function(e) {
 
-	    var x = e.clientX - _canvas.clientLeft;
-		var y = e.clientY - _canvas.clientTop;
-		var tmpCell;
-		var cellFound = false;
-	    x -= _canvas.offsetLeft;
-	    y -= _canvas.offsetTop;
-	    // Affect virtual grid coordinates based on celle size.
-	    x = Math.floor(x / _gol.getCellSize());
-	    y = Math.floor(y / _gol.getCellSize());
+        var x = e.clientX - _canvas.clientLeft;
+        var y = e.clientY - _canvas.clientTop;
+        var tmpCell;
+        var cellFound = false;
+        x -= _canvas.offsetLeft;
+        y -= _canvas.offsetTop;
+        // Affect virtual grid coordinates based on celle size.
+        x = Math.floor(x / _gol.getCellSize());
+        y = Math.floor(y / _gol.getCellSize());
 
-	    tmpCell = formatCell(x, y);
-	    // If canvas has cell then remove it (as if unselected).
-	    for (var cell in _hastTable.items) {
-	    	if (cell.toString() === tmpCell) {
-	    		_hastTable.removeItem(tmpCell);
-	    		clearCanvas();
-	    		reDraw();
-	    		return;
-	    	}
-	    }
+        if (_gol.isLibTransfer() === true) {
 
-	    _hastTable.setItem(formatCell(x, y), _cellCount.toString());
-	    draw(x, y);    
+            _hastTable.clear();
+            _cellCount = 0;
+            clearCanvas();
+            var libData = gol.getXyFromLib();
+            var xy;
+            for (var i = 0; i < libData.length; ++i) {
+                xy = libData[i].split('$');
+                tmpCell = formatCell(parseInt(x) + parseInt(xy[0]), parseInt(y) + parseInt(xy[1]));
+                ++_cellCount;
+                _hastTable.setItem(tmpCell, _cellCount.toString());
+                reDraw(); 
+            }
+
+            _gol.setLibTransfer(false);
+            _gol.setAllowLibTransfer(false);
+            cursorDeny();
+
+        } else {
+
+            tmpCell = formatCell(x, y);
+            // If canvas has cell then remove it (as if unselected).
+            for (var cell in _hastTable.items) {
+                if (cell.toString() === tmpCell) {
+                    _hastTable.removeItem(tmpCell);
+                    --_cellCount;
+                    clearCanvas();
+                    reDraw();
+                    return;
+                }
+            }
+
+            ++_cellCount;
+            _hastTable.setItem(tmpCell, _cellCount.toString());
+            draw(x, y); 
+        }
     };
 
     this.send = function() {
@@ -72,6 +96,35 @@ var PatternDraw = function PatternDraw() {
     		_gol.getDisplayZone()[1], _gol.getGridWidth(), _gol.getGridHeight(), 
     		_gol.getCellColor(), _gol.getNickName(), pattern)
 	    );
+    };
+
+    this.rotate = function() {
+        
+        /*
+         * TODO : finish.
+        var l, xy;
+        var i, j = 0;
+        var m = [];
+        var min = Number.MAX_VALUE;
+        var max = -1;
+
+        for (var cell in _hastTable.items) {
+            xy = cell.toString().split('$');
+            min = xy[0] < min ? xy[0] : min;
+            max = xy[0] > max ? xy[0] : max;
+        }   
+
+        l = max - min;
+        for (var k = 0; k < l; k++) m[k] = [];
+
+        for (var cell in _hastTable.items) {
+            if (i < l) m[i][j] = cell;
+            else m[++i][j] = cell;
+            j++;
+        }
+
+        console.log(m.toString());
+        */
     };
 
     var clearCanvas = function() {

@@ -1,6 +1,3 @@
-/**
- *
- */
 exports.build = function(data, sanitizer) {
 
 	var fs = require('fs');
@@ -15,5 +12,6 @@ exports.build = function(data, sanitizer) {
     	sanitizer.perform(client.cellImg), 
 		sanitizer.perform(client.b64img), 
         sanitizer.perform(client.address), 
-    	sanitizer.perform(client.port));
+    	sanitizer.perform(client.port),
+    	0);
 }

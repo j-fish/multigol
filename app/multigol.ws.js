@@ -4,6 +4,7 @@ var fs = require('fs');
 eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.hashstring.js').toString());
 eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.client.js').toString());
 eval(fs.readFileSync(__dirname + '/src/js/dto/multigol.pattern.js').toString());
+eval(fs.readFileSync(__dirname + '/src/js/srvside/multigol.srvside.js').toString());
 var jade = require('jade');
 var app = express();
 var http = require('http').Server(app);
@@ -16,13 +17,16 @@ var utils = require('./src/js/srvside/multigol.srvside.utils.js');
 var clientUtils = require('./src/js/srvside/multigol.srvside.client.utils.js');
 var userBuilder = require('./src/js/srvside/multigol.srvside.user.builder.js');
 var templateBuilder = require('./src/js/srvside/multigol.srvside.template.builder.js');
+var htBuilder = require('./src/js/srvside/multigol.srvside.hashtable.builder.js');
 var colors = require('colors');
-var gol = require('./src/js/srvside/multigol.srvside.js');
+var gol = new GOLSrv();
+var universes = [];
+var tmpNSPACE = '0';
 var libdata = [];
 var clients = [];
 var clientCellCount = [];
 libreader.buildLibrary(libdata, __dirname + '/src/data/gol-lexicon.txt');
-gol.init(io);
+gol.init(io, htBuilder);
 
 /* 
  * Set our default template engine to "jade" which prevents the need 
@@ -50,10 +54,29 @@ io.on('connection', function(socket) {
     socket.on('app-join', function(data) {
         var client = userBuilder.build(data, sanitizer);
         clients.push(client);
+        socket.join(tmpNSPACE);
         var html = templateBuilder.buildClients(jade, clients);
         console.log('|_ client joined: '.cyan + client.userName
             + '-' + utils.getDateTime());
-        io.emit('app-join', html);
+        io.in(tmpNSPACE).emit('app-join', html);
+    });
+
+    socket.on('hashmap-append', function(data) {
+        console.log('|_ hashmap-append: '.gray + data.toString().gray);
+        var client = patternAppender.append(gol, data, sanitizer);
+        io.in(tmpNSPACE).emit('hashmap-append-done', client);
+    });
+
+    socket.on('notify-cellcount', function(data) {
+        var count = sanitizer.perform(data);
+        if (clients.length === 0) return;
+        if (clientCellCount.length > clients.length) clientCellCount = [];
+        clientCellCount.push(count);
+        if (clientCellCount.length === clients.length) {
+            var result = JSON.stringify(clientCellCount);
+            clientCellCount = [];
+            io.in(tmpNSPACE).emit('notify-cellcount-all', result);
+        }
     });
 
     socket.on('app-exit', function(data) {
@@ -65,29 +88,11 @@ io.on('connection', function(socket) {
         //gol.removeCellsByNickname(data);
         console.log('|_ client left: '.magenta + data + 
             ' @ '.magenta + utils.getDateTime());
-        io.emit('app-exit', html);
-    });
-
-    socket.on('hashmap-append', function(data) {
-        console.log('|_ hashmap-append: '.gray + data.toString().gray);
-        var client = patternAppender.append(gol, data, sanitizer);
-        io.emit('hashmap-append-done', client);
+        io.in(tmpNSPACE).emit('app-exit', html);
     });
 
     socket.on('disconnect', function() {
         console.log('|_ user disconnected @ '.magenta + utils.getDateTime());
-    });
-
-    socket.on('notify-cellcount', function(data) {
-        var count = sanitizer.perform(data);
-        if (clients.length === 0) return;
-        if (clientCellCount.length > clients.length) clientCellCount = [];
-        clientCellCount.push(count);
-        if (clientCellCount.length === clients.length) {
-            var result = JSON.stringify(clientCellCount);
-            clientCellCount = [];
-            io.emit('notify-cellcount-all', result);
-        }
     });
 
 });

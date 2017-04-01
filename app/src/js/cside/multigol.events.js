@@ -3,7 +3,7 @@ var gol = new GOL();
 var mouseUtils = new MouseUtils();
 var patternDrawer = new PatternDraw();
 gol.init();
-mouseUtils.init(gol);
+mouseUtils.init(gol, patternDrawer);
 gol.addListeners(mouseUtils);
 
 /*******************************************
@@ -201,6 +201,9 @@ function initGolCommands() {
         hideDrawCanvas();
         showAllIcons();
     });
+    $('#gol-cmd-turn-pattern').on('click', function() {
+        patternDrawer.rotate();
+    });
 
     $('.gol-pattern-cmd-items').mouseover(function() {
         $('#' + this.id + '-desc').css('display', 'inline');
@@ -245,7 +248,7 @@ function enterDialogSubmit(nickname, color, fader, dialog) {
     }
     gol.setNickName(tmpNickname);
 
-    if (gol.getJoinable() === false || tmpNickname == '' || 
+    if (gol.isJoinable() === false || tmpNickname == '' || 
         tmpNickname == undefined || tmpNickname == 'undefined') {
         $('#' + nickname).css('border', '1px solid red');
         $('#enter-dialog-button').attr('disabled', 'disabled');
@@ -269,7 +272,7 @@ function enterDialogSubmit(nickname, color, fader, dialog) {
 
     var client = new User(gol.getNickName(), gol.getNickName(), 
             gol.getCellColor(), gol.getCellimg().toString(),  gol.getB64cell(), 
-            undefined, undefined);
+            undefined, undefined, 0);
     
     gol.getSocket().emit('app-join', client.toJSON());
     addKeyEvents();
