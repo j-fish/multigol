@@ -8,6 +8,8 @@ var PatternDraw = function PatternDraw() {
 	var _ctx;
 	var _hastTable;
 	var _cellCount;
+    var _tmpX = undefined, _tmpY = undefined;
+    var _patternMode;
 
 	this.init = function(gol, drawCanvasId) {
 		_gol = gol;
@@ -15,6 +17,7 @@ var PatternDraw = function PatternDraw() {
 		this.initCanvas(drawCanvasId);
 		_hastTable = new HashTable();
 		this.addListeners();
+        _patternMode = false;
 	};
 
 	this.initCanvas = function(drawCanvasId) {
@@ -35,6 +38,7 @@ var PatternDraw = function PatternDraw() {
 
     this.canvasClicked = function(e) {
 
+        if (_patternMode) return;
         var x = e.clientX - _canvas.clientLeft;
         var y = e.clientY - _canvas.clientTop;
         var tmpCell;
@@ -44,9 +48,12 @@ var PatternDraw = function PatternDraw() {
         // Affect virtual grid coordinates based on celle size.
         x = Math.floor(x / _gol.getCellSize());
         y = Math.floor(y / _gol.getCellSize());
+        _tmpX = _tmpX === undefined ? x : _tmpX;
+        _tmpY = _tmpY === undefined ? y : _tmpY;
 
         if (_gol.isLibTransfer() === true) {
 
+            _patternMode = true;
             _hastTable.clear();
             _cellCount = 0;
             clearCanvas();
@@ -64,7 +71,7 @@ var PatternDraw = function PatternDraw() {
             _gol.setAllowLibTransfer(false);
             cursorDeny();
 
-        } else {
+        } else if (!_patternMode) {
 
             tmpCell = formatCell(x, y);
             // If canvas has cell then remove it (as if unselected).
@@ -96,35 +103,53 @@ var PatternDraw = function PatternDraw() {
     		_gol.getDisplayZone()[1], _gol.getGridWidth(), _gol.getGridHeight(), 
     		_gol.getCellColor(), _gol.getNickName(), pattern)
 	    );
+        _patternMode = false;
+        _tmpX = undefined;
+        _tmpY = undefined;
     };
 
     this.rotate = function() {
-        
-        /*
-         * TODO : finish.
-        var l, xy;
-        var i, j = 0;
-        var m = [];
-        var min = Number.MAX_VALUE;
-        var max = -1;
+
+        var l = 0, ll = 0;
+        var xy, m, mrot;
+        var minX = Number.MAX_VALUE, minY = Number.MAX_VALUE;
+        var maxX = -1, maxY = -1;
+        _cellCount = 0;
+        var c = 0;
 
         for (var cell in _hastTable.items) {
             xy = cell.toString().split('$');
-            min = xy[0] < min ? xy[0] : min;
-            max = xy[0] > max ? xy[0] : max;
+            minX = xy[0] < minX ? xy[0] : minX;
+            maxX = xy[0] > maxX ? xy[0] : maxX;
+            minY = xy[1] < minY ? xy[1] : minY;
+            maxY = xy[1] > maxY ? xy[1] : maxY;
         }   
 
-        l = max - min;
-        for (var k = 0; k < l; k++) m[k] = [];
+        l = (maxX - minX) + 1;
+        ll = (maxY - minY) + 1;
+        l = ll > l ? ll : l;
 
+        m = buildMatrix(l);
+        mrot = buildMatrix(l);
         for (var cell in _hastTable.items) {
-            if (i < l) m[i][j] = cell;
-            else m[++i][j] = cell;
-            j++;
+            xy = cell.toString().split('$');
+            m[parseInt(xy[0]) - _tmpX][parseInt(xy[1]) - _tmpY] = true;
         }
 
-        console.log(m.toString());
-        */
+        _hastTable.clear();
+        for (var i = 0; i < l; ++i) {
+            for (var j = 0; j < l; ++j) {
+                mrot[i][j] = m[l - j - 1][i];
+                if (mrot[i][j] === true) {
+                    ++_cellCount;
+                    _hastTable.setItem(formatCell(i + _tmpX, j + _tmpY), 
+                        _cellCount.toString());
+                }
+            }
+        }
+
+        clearCanvas();        
+        reDraw();
     };
 
     var clearCanvas = function() {
@@ -170,15 +195,22 @@ var PatternDraw = function PatternDraw() {
     };
 
     var reDraw = function() {
-    	var xy;
-    	for (var cell in _hastTable.items) {
-    		xy = cell.toString().split('$');
+    	
+        var xy;
+        for (var cell in _hastTable.items) {
+            xy = cell.toString().split('$');
     		draw(xy[0], xy[1]);
     	}
     };
 
     var formatCell = function(x, y) {
     	return x.toString() + '$' + y.toString();
+    };
+
+    var buildMatrix = function(l) {
+        var m = new Array(l);
+        for (var i = 0; i < l; i++) m[i] = new Array(l);
+        return m;        
     };
 
 }

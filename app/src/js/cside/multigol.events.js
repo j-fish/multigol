@@ -195,11 +195,13 @@ function initGolCommands() {
     $('#gol-cmd-close-pattern-draw').on('click', function() {
         hideDrawCanvas();
         showAllIcons();
+        cursorClear();
     });
     $('#gol-cmd-send-pattern').on('click', function() {
         patternDrawer.send();
         hideDrawCanvas();
         showAllIcons();
+        cursorClear();
     });
     $('#gol-cmd-turn-pattern').on('click', function() {
         patternDrawer.rotate();

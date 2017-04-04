@@ -33,13 +33,13 @@ function bodyHeight() {
  * Cursor stuff.
  */
 function cursorClear() {
-    $('#gol_canvas').css('cursor', 'default');
+    $('#gol_canvas_draw').css('cursor', 'default');
 }
 function cursorCopy() {
-    $('#gol_canvas').css('cursor', 'copy');
+    $('#gol_canvas_draw').css('cursor', 'copy');
 }
 function cursorDeny() {
-    $('#gol_canvas').css('cursor', 'not-allowed');   
+    $('#gol_canvas_draw').css('cursor', 'not-allowed');   
 }
 
 /*
