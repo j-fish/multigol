@@ -32,6 +32,15 @@ var PatternDraw = function PatternDraw() {
         _ctx.fillRect(0, 0, _canvas.width, _canvas.height);
 	};
 
+    this.cleanup = function() {
+        _patternMode = false;
+        _hastTable.clear();
+        _tmpX = undefined;
+        _tmpY = undefined;
+        clearCanvas();
+        reDraw();
+    };
+
 	this.addListeners = function() {
         _canvas.addEventListener('click', this.canvasClicked, false);
     };
@@ -68,7 +77,7 @@ var PatternDraw = function PatternDraw() {
             }
 
             _gol.setLibTransfer(false);
-            _gol.setAllowLibTransfer(false);
+            _gol.setAllowLibTransfer(true);
             cursorDeny();
 
         } else if (!_patternMode) {
@@ -110,10 +119,11 @@ var PatternDraw = function PatternDraw() {
 
     this.rotate = function() {
 
+        /*
         var l = 0, ll = 0;
         var xy, m, mrot;
         var minX = Number.MAX_VALUE, minY = Number.MAX_VALUE;
-        var maxX = -1, maxY = -1;
+        var maxX = -Number.MAX_VALUE, maxY = -Number.MAX_VALUE;
         _cellCount = 0;
         var c = 0;
 
@@ -128,6 +138,8 @@ var PatternDraw = function PatternDraw() {
         l = (maxX - minX) + 1;
         ll = (maxY - minY) + 1;
         l = ll > l ? ll : l;
+
+        console.log('tx:' + _tmpX + ' ty:' + _tmpY + ' l:' + l + ' ll:' + ll);
 
         m = buildMatrix(l);
         mrot = buildMatrix(l);
@@ -150,6 +162,7 @@ var PatternDraw = function PatternDraw() {
 
         clearCanvas();        
         reDraw();
+        */
     };
 
     var clearCanvas = function() {

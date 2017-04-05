@@ -196,6 +196,9 @@ function initGolCommands() {
         hideDrawCanvas();
         showAllIcons();
         cursorClear();
+        gol.setLibTransfer(false);
+        gol.setAllowLibTransfer(true);
+        patternDrawer.cleanup();
     });
     $('#gol-cmd-send-pattern').on('click', function() {
         patternDrawer.send();
@@ -431,7 +434,7 @@ function showDrawCanvas() {
 
 function hideDrawCanvas() {
     $('#gol_canvas_draw').hide();
-    $('.gol-pattern-cmd-items').hide('fast');
+    $('.gol-pattern-cmd-items').hide();
 }
 
 function hideAllSidePanes() {
