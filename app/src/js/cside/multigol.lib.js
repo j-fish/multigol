@@ -37,5 +37,5 @@ function getGolLibPattern(patternId, linkId) {
 
     showDrawCanvas();
     hideAllSidePanes();
-    hideAllIcons();    
+    hideAllIcons();   
 }

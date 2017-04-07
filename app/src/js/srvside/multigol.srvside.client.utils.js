@@ -3,7 +3,7 @@
  */
 exports.checkJoin = function(userName, clients) {
 
-	console.log('|_ checking nickname '.gray + userName);
+	console.log('|_ checking nickname '.black + userName);
     var joinable = true;
     for (var i = 0; i < clients.length; i++) {
         if (userName == 'undefined' || userName === undefined || 

@@ -205,11 +205,35 @@ function initGolCommands() {
         hideDrawCanvas();
         showAllIcons();
         cursorClear();
+        gol.setLibTransfer(false);
+        gol.setAllowLibTransfer(true);
+        patternDrawer.cleanup();
     });
+
+
+
+
+    $('#gol-cmd-pattern-lib').on('click', function() {
+        gol.setLibTransfer(false);
+        gol.setAllowLibTransfer(true);
+        patternDrawer.cleanup();
+        updateCmdDisplay('gol-library');
+    });
+
+
+
+
     $('#gol-cmd-turn-pattern').on('click', function() {
         patternDrawer.rotate();
     });
-
+    $('#gol-cmd-zoomout-pattern').on('click', function() {
+        zoomOutGol();
+        patternDrawer.reDraw();
+    });
+    $('#gol-cmd-zoomin-pattern').on('click', function() {
+        zoomInGol();
+        patternDrawer.reDraw();
+    });
     $('.gol-pattern-cmd-items').mouseover(function() {
         $('#' + this.id + '-desc').css('display', 'inline');
     });
@@ -419,10 +443,12 @@ function updateCmdDisplay(id) {
         $('#' + id).show(120, function() {
             $('#gol_canvas').css('margin-left', '360px');
             $('#gol_canvas_grid').css('margin-left', '360px');
+            $('#gol_canvas_draw').css('margin-left', '360px');
             $('#gol-cmd').css('margin-left', '360px');
         }) : $('#' + id).hide(120, function() {
             $('#gol_canvas').css('margin-left', '0px');
             $('#gol_canvas_grid').css('margin-left', '0px');
+            $('#gol_canvas_draw').css('margin-left', '0px');
             $('#gol-cmd').css('margin-left', '0px');
         });
 }
@@ -444,6 +470,7 @@ function hideAllSidePanes() {
     $('#gol_canvas').css('margin-left', '0px');
     $('#gol_canvas_grid').css('margin-left', '0px');
     $('#gol-cmd').css('margin-left', '0px');
+    $('#gol_canvas_draw').css('margin-left', '0px');
 }
 
 function hideAllIcons() {

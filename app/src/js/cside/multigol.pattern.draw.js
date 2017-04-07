@@ -6,7 +6,7 @@ var PatternDraw = function PatternDraw() {
 	var _gol;
 	var _canvas;
 	var _ctx;
-	var _hastTable; // main map for drawing.
+	var _hashTable; // main map for drawing.
     var _tHashTable; // secondary map for transposing.
 	var _cellCount;
     var _tmpX = undefined, _tmpY = undefined;
@@ -16,7 +16,7 @@ var PatternDraw = function PatternDraw() {
 		_gol = gol;
 		_cellCount = 0;
 		this.initCanvas(drawCanvasId);
-		_hastTable = new HashTable();
+		_hashTable = new HashTable();
         _tHashTable = new HashTable();
 		this.addListeners();
         _patternMode = false;
@@ -36,7 +36,9 @@ var PatternDraw = function PatternDraw() {
 
     this.cleanup = function() {
         _patternMode = false;
-        _hastTable.clear();
+        _hashTable.clear();
+        _tHashTable.clear();
+        _cellCount = 0;
         _tmpX = undefined;
         _tmpY = undefined;
         clearCanvas();
@@ -65,7 +67,7 @@ var PatternDraw = function PatternDraw() {
         if (_gol.isLibTransfer() === true) {
 
             _patternMode = true;
-            _hastTable.clear();
+            _hashTable.clear();
             _cellCount = 0;
             clearCanvas();
             var libData = gol.getXyFromLib();
@@ -74,7 +76,7 @@ var PatternDraw = function PatternDraw() {
                 xy = libData[i].split('$');
                 tmpCell = formatCell(parseInt(x) + parseInt(xy[0]), parseInt(y) + parseInt(xy[1]));
                 ++_cellCount;
-                _hastTable.setItem(tmpCell, _cellCount.toString());
+                _hashTable.setItem(tmpCell, _cellCount.toString());
                 _tHashTable.setItem(formatCell(parseInt(xy[0]), parseInt(xy[1])), _cellCount.toString());
                 reDraw(); 
             }
@@ -87,9 +89,10 @@ var PatternDraw = function PatternDraw() {
 
             tmpCell = formatCell(x, y);
             // If canvas has cell then remove it (as if unselected).
-            for (var cell in _hastTable.items) {
+            for (var cell in _hashTable.items) {
                 if (cell.toString() === tmpCell) {
-                    _hastTable.removeItem(tmpCell);
+                    _hashTable.removeItem(tmpCell);
+                    _tHashTable.removeItem(tmpCell);
                     --_cellCount;
                     clearCanvas();
                     reDraw();
@@ -98,15 +101,16 @@ var PatternDraw = function PatternDraw() {
             }
 
             ++_cellCount;
-            _hastTable.setItem(tmpCell, _cellCount.toString());
+            _tHashTable.setItem(tmpCell, _cellCount.toString());
+            _hashTable.setItem(tmpCell, _cellCount.toString());
             draw(x, y); 
         }
     };
 
     this.send = function() {
 		var pattern = '';
-    	for (var cell in _hastTable.items) pattern += cell.toString() + '~';
-    	_hastTable.clear();
+    	for (var cell in _hashTable.items) pattern += cell.toString() + '~';
+    	_hashTable.clear();
     	if (pattern.length <= 0) return;
     	pattern = pattern.substring(0, pattern.length - 1);
     	clearCanvas();
@@ -123,13 +127,13 @@ var PatternDraw = function PatternDraw() {
     this.rotate = function() {
         
         var w = 0, h = 0, l = 0;
-        var xy, m, mTransposed;
+        var xy, m;
         var minX = Number.MAX_VALUE, minY = Number.MAX_VALUE;
         var maxX = -Number.MAX_VALUE, maxY = -Number.MAX_VALUE;
         _cellCount = 0;
         var c = 0;
 
-        for (var cell in _tHashTable.items) {
+        for (var cell in _hashTable.items) {
             xy = cell.toString().split('$');
             minX = xy[0] < minX ? xy[0] : minX;
             maxX = xy[0] > maxX ? xy[0] : maxX;
@@ -140,9 +144,6 @@ var PatternDraw = function PatternDraw() {
         w = (maxX - minX) + 1;
         h = (maxY - minY) + 1;
         l = h > w ? h : w;
-
-        console.log('tx:' + _tmpX + ' ty:' + _tmpY + ' w:' + w + ' h:' + h + ' l:' + l);
-
         
         m = buildMatrix(l, l);
         for (var cell in _tHashTable.items) {
@@ -150,84 +151,34 @@ var PatternDraw = function PatternDraw() {
             m[parseInt(xy[0])][parseInt(xy[1])] = true;
         }
 
-        //logM(m, l, l);
-        
-        _hastTable.clear(); 
+        _hashTable.clear(); 
         _tHashTable.clear();       
-        mTransposed = buildMatrix(l, l);
         for (var x = 0; x < l; x++) {
             for (var y = 0; y < l; y++) {
-                mTransposed[x][y] = m[l - y - 1][x];
-                if (mTransposed[x][y]) {
+                if (m[l - y - 1][x]) {
                     ++_cellCount;
-                    _hastTable.setItem(formatCell(x + _tmpX, y + _tmpY), 
+                    _hashTable.setItem(formatCell(x + _tmpX, y + _tmpY), 
                         _cellCount.toString());
                     _tHashTable.setItem(formatCell(x, y), _cellCount.toString());
                 }
             }
         }
 
-        //logM(mTransposed, l, l);
-        
-        /*
-        _hastTable.clear();
-        for (var i = 0; i < ll; ++i) {
-            for (var j = 0; j < l; ++j) {
-                if (m[i][j] === true) {
-                    ++_cellCount;
-                    _hastTable.setItem(formatCell(i + _tmpX, j + _tmpY), 
-                        _cellCount.toString());
-                }
-            }
-        }
-        */
-
-        /*
-        mTransposed = buildMatrix(l, ll);
-        for (var x = 0; x < l; x++) {
-            for (var y = 0; y < ll; y++) {
-                mTransposed[x][y] = m[y][x];
-            }
-        }
-
-        logM(mTransposed, l, ll);
-
-        _hastTable.clear();
-        for (var i = 0; i < l; ++i) {
-            for (var j = 0; j < l; ++j) {
-                if (mTransposed[i][j] === true) {
-                    ++_cellCount;
-                    _hastTable.setItem(formatCell(i + _tmpX, j + _tmpY), 
-                        _cellCount.toString());
-                }
-            }
-        }
-        */
-
-        /*for (var i = 0; i < l; ++i) {
-            for (var j = 0; j < l; ++j) {
-                mTransposed[i][j] = m[l - j - 1][i];
-                if (mTransposed[i][j] === true) {
-                    ++_cellCount;
-                    _hastTable.setItem(formatCell(i + _tmpX, j + _tmpY), 
-                        _cellCount.toString());
-                }
-            }
-        }*/
-
         clearCanvas();        
         reDraw();
     };
 
-    var logM = function(m, w, h) {
+    this.reDraw = function() {
+        clearCanvas();
+        reDraw();        
+    };
 
-        var s = '';
-        for (var y = 0; y < w; y++) {
-            for (var x = 0; x < h; x++) s += m[x][y] === true ? 'X' : ' ';
-            s += '\n';
+    var reDraw = function() {
+        var xy;
+        for (var cell in _hashTable.items) {
+            xy = cell.toString().split('$');
+            draw(xy[0], xy[1]);
         }
-
-        console.log('\n' + s);
     };
 
     var clearCanvas = function() {
@@ -272,15 +223,6 @@ var PatternDraw = function PatternDraw() {
 
     };
 
-    var reDraw = function() {
-    	
-        var xy;
-        for (var cell in _hastTable.items) {
-            xy = cell.toString().split('$');
-    		draw(xy[0], xy[1]);
-    	}
-    };
-
     var formatCell = function(x, y) {
     	return x.toString() + '$' + y.toString();
     };
@@ -289,6 +231,17 @@ var PatternDraw = function PatternDraw() {
         var m = new Array(w);
         for (var i = 0; i < w; i++) m[i] = new Array(h);
         return m;        
+    };
+
+    var logM = function(m, w, h) {
+
+        var s = '';
+        for (var y = 0; y < w; y++) {
+            for (var x = 0; x < h; x++) s += m[x][y] === true ? 'X' : ' ';
+            s += '\n';
+        }
+
+        console.log('\n' + s);
     };
 
 }
