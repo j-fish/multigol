@@ -57,7 +57,7 @@ io.on('connection', function(socket) {
         socket.join(tmpNSPACE);
         var html = templateBuilder.buildClients(jade, clients);
         console.log('|_ client joined: '.cyan + client.userName
-            + '-' + utils.getDateTime());
+            + '-' + utils.getDateTime() + ' clients:' + clients.length);
         io.in(tmpNSPACE).emit('app-join', html);
     });
 

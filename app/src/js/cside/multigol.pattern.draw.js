@@ -6,7 +6,8 @@ var PatternDraw = function PatternDraw() {
 	var _gol;
 	var _canvas;
 	var _ctx;
-	var _hastTable;
+	var _hastTable; // main map for drawing.
+    var _tHashTable; // secondary map for transposing.
 	var _cellCount;
     var _tmpX = undefined, _tmpY = undefined;
     var _patternMode;
@@ -16,6 +17,7 @@ var PatternDraw = function PatternDraw() {
 		_cellCount = 0;
 		this.initCanvas(drawCanvasId);
 		_hastTable = new HashTable();
+        _tHashTable = new HashTable();
 		this.addListeners();
         _patternMode = false;
 	};
@@ -73,6 +75,7 @@ var PatternDraw = function PatternDraw() {
                 tmpCell = formatCell(parseInt(x) + parseInt(xy[0]), parseInt(y) + parseInt(xy[1]));
                 ++_cellCount;
                 _hastTable.setItem(tmpCell, _cellCount.toString());
+                _tHashTable.setItem(formatCell(parseInt(xy[0]), parseInt(xy[1])), _cellCount.toString());
                 reDraw(); 
             }
 
@@ -118,16 +121,15 @@ var PatternDraw = function PatternDraw() {
     };
 
     this.rotate = function() {
-
-        /*
-        var l = 0, ll = 0;
-        var xy, m, mrot;
+        
+        var w = 0, h = 0, l = 0;
+        var xy, m, mTransposed;
         var minX = Number.MAX_VALUE, minY = Number.MAX_VALUE;
         var maxX = -Number.MAX_VALUE, maxY = -Number.MAX_VALUE;
         _cellCount = 0;
         var c = 0;
 
-        for (var cell in _hastTable.items) {
+        for (var cell in _tHashTable.items) {
             xy = cell.toString().split('$');
             minX = xy[0] < minX ? xy[0] : minX;
             maxX = xy[0] > maxX ? xy[0] : maxX;
@@ -135,34 +137,97 @@ var PatternDraw = function PatternDraw() {
             maxY = xy[1] > maxY ? xy[1] : maxY;
         }   
 
-        l = (maxX - minX) + 1;
-        ll = (maxY - minY) + 1;
-        l = ll > l ? ll : l;
+        w = (maxX - minX) + 1;
+        h = (maxY - minY) + 1;
+        l = h > w ? h : w;
 
-        console.log('tx:' + _tmpX + ' ty:' + _tmpY + ' l:' + l + ' ll:' + ll);
+        console.log('tx:' + _tmpX + ' ty:' + _tmpY + ' w:' + w + ' h:' + h + ' l:' + l);
 
-        m = buildMatrix(l);
-        mrot = buildMatrix(l);
-        for (var cell in _hastTable.items) {
+        
+        m = buildMatrix(l, l);
+        for (var cell in _tHashTable.items) {
             xy = cell.toString().split('$');
-            m[parseInt(xy[0]) - _tmpX][parseInt(xy[1]) - _tmpY] = true;
+            m[parseInt(xy[0])][parseInt(xy[1])] = true;
         }
 
+        //logM(m, l, l);
+        
+        _hastTable.clear(); 
+        _tHashTable.clear();       
+        mTransposed = buildMatrix(l, l);
+        for (var x = 0; x < l; x++) {
+            for (var y = 0; y < l; y++) {
+                mTransposed[x][y] = m[l - y - 1][x];
+                if (mTransposed[x][y]) {
+                    ++_cellCount;
+                    _hastTable.setItem(formatCell(x + _tmpX, y + _tmpY), 
+                        _cellCount.toString());
+                    _tHashTable.setItem(formatCell(x, y), _cellCount.toString());
+                }
+            }
+        }
+
+        //logM(mTransposed, l, l);
+        
+        /*
         _hastTable.clear();
-        for (var i = 0; i < l; ++i) {
+        for (var i = 0; i < ll; ++i) {
             for (var j = 0; j < l; ++j) {
-                mrot[i][j] = m[l - j - 1][i];
-                if (mrot[i][j] === true) {
+                if (m[i][j] === true) {
                     ++_cellCount;
                     _hastTable.setItem(formatCell(i + _tmpX, j + _tmpY), 
                         _cellCount.toString());
                 }
             }
         }
+        */
+
+        /*
+        mTransposed = buildMatrix(l, ll);
+        for (var x = 0; x < l; x++) {
+            for (var y = 0; y < ll; y++) {
+                mTransposed[x][y] = m[y][x];
+            }
+        }
+
+        logM(mTransposed, l, ll);
+
+        _hastTable.clear();
+        for (var i = 0; i < l; ++i) {
+            for (var j = 0; j < l; ++j) {
+                if (mTransposed[i][j] === true) {
+                    ++_cellCount;
+                    _hastTable.setItem(formatCell(i + _tmpX, j + _tmpY), 
+                        _cellCount.toString());
+                }
+            }
+        }
+        */
+
+        /*for (var i = 0; i < l; ++i) {
+            for (var j = 0; j < l; ++j) {
+                mTransposed[i][j] = m[l - j - 1][i];
+                if (mTransposed[i][j] === true) {
+                    ++_cellCount;
+                    _hastTable.setItem(formatCell(i + _tmpX, j + _tmpY), 
+                        _cellCount.toString());
+                }
+            }
+        }*/
 
         clearCanvas();        
         reDraw();
-        */
+    };
+
+    var logM = function(m, w, h) {
+
+        var s = '';
+        for (var y = 0; y < w; y++) {
+            for (var x = 0; x < h; x++) s += m[x][y] === true ? 'X' : ' ';
+            s += '\n';
+        }
+
+        console.log('\n' + s);
     };
 
     var clearCanvas = function() {
@@ -220,9 +285,9 @@ var PatternDraw = function PatternDraw() {
     	return x.toString() + '$' + y.toString();
     };
 
-    var buildMatrix = function(l) {
-        var m = new Array(l);
-        for (var i = 0; i < l; i++) m[i] = new Array(l);
+    var buildMatrix = function(w, h) {
+        var m = new Array(w);
+        for (var i = 0; i < w; i++) m[i] = new Array(h);
         return m;        
     };
 
