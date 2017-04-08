@@ -209,20 +209,12 @@ function initGolCommands() {
         gol.setAllowLibTransfer(true);
         patternDrawer.cleanup();
     });
-
-
-
-
     $('#gol-cmd-pattern-lib').on('click', function() {
         gol.setLibTransfer(false);
         gol.setAllowLibTransfer(true);
         patternDrawer.cleanup();
         updateCmdDisplay('gol-library');
     });
-
-
-
-
     $('#gol-cmd-turn-pattern').on('click', function() {
         patternDrawer.rotate();
     });

@@ -11,6 +11,8 @@ var PatternDraw = function PatternDraw() {
 	var _cellCount;
     var _tmpX = undefined, _tmpY = undefined;
     var _patternMode;
+    var MAX_INT = 1000000000;
+    var MIN_INT = -1000000000;
 
 	this.init = function(gol, drawCanvasId) {
 		_gol = gol;
@@ -23,7 +25,6 @@ var PatternDraw = function PatternDraw() {
 	};
 
 	this.initCanvas = function(drawCanvasId) {
-
 		_canvas = document.getElementById(drawCanvasId);
 		var cWidth = $(window).width();
         var cHeight = $(window).height();
@@ -61,8 +62,8 @@ var PatternDraw = function PatternDraw() {
         // Affect virtual grid coordinates based on celle size.
         x = Math.floor(x / _gol.getCellSize());
         y = Math.floor(y / _gol.getCellSize());
-        _tmpX = _tmpX === undefined ? x : _tmpX;
-        _tmpY = _tmpY === undefined ? y : _tmpY;
+        _tmpX = x;
+        _tmpY = y;
 
         if (_gol.isLibTransfer() === true) {
 
@@ -74,7 +75,7 @@ var PatternDraw = function PatternDraw() {
             var xy;
             for (var i = 0; i < libData.length; ++i) {
                 xy = libData[i].split('$');
-                tmpCell = formatCell(parseInt(x) + parseInt(xy[0]), parseInt(y) + parseInt(xy[1]));
+                tmpCell = formatCell(parseInt(_tmpX) + parseInt(xy[0]), parseInt(_tmpY) + parseInt(xy[1]));
                 ++_cellCount;
                 _hashTable.setItem(tmpCell, _cellCount.toString());
                 _tHashTable.setItem(formatCell(parseInt(xy[0]), parseInt(xy[1])), _cellCount.toString());
@@ -119,21 +120,17 @@ var PatternDraw = function PatternDraw() {
     		_gol.getDisplayZone()[1], _gol.getGridWidth(), _gol.getGridHeight(), 
     		_gol.getCellColor(), _gol.getNickName(), pattern)
 	    );
-        _patternMode = false;
-        _tmpX = undefined;
-        _tmpY = undefined;
+        this.cleanup();
     };
 
     this.rotate = function() {
         
         var w = 0, h = 0, l = 0;
         var xy, m;
-        var minX = Number.MAX_VALUE, minY = Number.MAX_VALUE;
-        var maxX = -Number.MAX_VALUE, maxY = -Number.MAX_VALUE;
+        var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
         _cellCount = 0;
-        var c = 0;
-
-        for (var cell in _hashTable.items) {
+ 
+        for (var cell in _tHashTable.items) {
             xy = cell.toString().split('$');
             minX = xy[0] < minX ? xy[0] : minX;
             maxX = xy[0] > maxX ? xy[0] : maxX;
@@ -141,23 +138,23 @@ var PatternDraw = function PatternDraw() {
             maxY = xy[1] > maxY ? xy[1] : maxY;
         }   
 
-        w = (maxX - minX) + 1;
-        h = (maxY - minY) + 1;
-        l = h > w ? h : w;
-        
+        w = maxX;
+        h = maxY;
+        l = h > w ? parseInt(h) + 2 : parseInt(w) + 2;
+
         m = buildMatrix(l, l);
         for (var cell in _tHashTable.items) {
             xy = cell.toString().split('$');
             m[parseInt(xy[0])][parseInt(xy[1])] = true;
         }
 
-        _hashTable.clear(); 
-        _tHashTable.clear();       
+        _hashTable.clear()
+        _tHashTable.clear();   
         for (var x = 0; x < l; x++) {
             for (var y = 0; y < l; y++) {
                 if (m[l - y - 1][x]) {
                     ++_cellCount;
-                    _hashTable.setItem(formatCell(x + _tmpX, y + _tmpY), 
+                    _hashTable.setItem(formatCell(parseInt(x) + _tmpX, parseInt(y) + _tmpY), 
                         _cellCount.toString());
                     _tHashTable.setItem(formatCell(x, y), _cellCount.toString());
                 }
@@ -229,7 +226,7 @@ var PatternDraw = function PatternDraw() {
 
     var buildMatrix = function(w, h) {
         var m = new Array(w);
-        for (var i = 0; i < w; i++) m[i] = new Array(h);
+        for (var i = 0; i < w; i++) m[parseInt(i)] = new Array(parseInt(h));
         return m;        
     };
 
