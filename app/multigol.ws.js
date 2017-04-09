@@ -62,7 +62,7 @@ io.on('connection', function(socket) {
     });
 
     socket.on('hashmap-append', function(data) {
-        console.log('|_ hashmap-append: ' + data.toString());
+        console.log('|_ hashmap-append: '.black + data.toString());
         var client = patternAppender.append(gol, data, sanitizer);
         io.in(tmpNSPACE).emit('hashmap-append-done', client);
     });

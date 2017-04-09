@@ -13,6 +13,7 @@ var PatternDraw = function PatternDraw() {
     var _patternMode;
     var MAX_INT = 1000000000;
     var MIN_INT = -1000000000;
+    var _rotating = false;
 
 	this.init = function(gol, drawCanvasId) {
 		_gol = gol;
@@ -22,6 +23,7 @@ var PatternDraw = function PatternDraw() {
         _tHashTable = new HashTable();
 		this.addListeners();
         _patternMode = false;
+        _rotating = false;
 	};
 
 	this.initCanvas = function(drawCanvasId) {
@@ -37,6 +39,7 @@ var PatternDraw = function PatternDraw() {
 
     this.cleanup = function() {
         _patternMode = false;
+        _rotating = false;
         _hashTable.clear();
         _tHashTable.clear();
         _cellCount = 0;
@@ -85,6 +88,7 @@ var PatternDraw = function PatternDraw() {
             _gol.setLibTransfer(false);
             _gol.setAllowLibTransfer(true);
             cursorDeny();
+            drawField(getMinMaxYX());
 
         } else if (!_patternMode) {
 
@@ -93,7 +97,6 @@ var PatternDraw = function PatternDraw() {
             for (var cell in _hashTable.items) {
                 if (cell.toString() === tmpCell) {
                     _hashTable.removeItem(tmpCell);
-                    _tHashTable.removeItem(tmpCell);
                     --_cellCount;
                     clearCanvas();
                     reDraw();
@@ -102,7 +105,6 @@ var PatternDraw = function PatternDraw() {
             }
 
             ++_cellCount;
-            _tHashTable.setItem(tmpCell, _cellCount.toString());
             _hashTable.setItem(tmpCell, _cellCount.toString());
             draw(x, y); 
         }
@@ -129,18 +131,20 @@ var PatternDraw = function PatternDraw() {
         var xy, m;
         var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
         _cellCount = 0;
+        var c = 0;
  
         for (var cell in _tHashTable.items) {
             xy = cell.toString().split('$');
-            minX = xy[0] < minX ? xy[0] : minX;
-            maxX = xy[0] > maxX ? xy[0] : maxX;
-            minY = xy[1] < minY ? xy[1] : minY;
-            maxY = xy[1] > maxY ? xy[1] : maxY;
-        }   
+            minX = parseInt(xy[0]) < minX ? parseInt(xy[0]) : minX;
+            maxX = parseInt(xy[0]) > maxX ? parseInt(xy[0]) : maxX;
+            minY = parseInt(xy[1]) < minY ? parseInt(xy[1]) : minY;
+            maxY = parseInt(xy[1]) > maxY ? parseInt(xy[1]) : maxY;
+            ++c;
+        } 
 
         w = maxX;
         h = maxY;
-        l = h > w ? parseInt(h) + 2 : parseInt(w) + 2;
+        l = h > w ? parseInt(h) + 1 : parseInt(w) + 1;
 
         m = buildMatrix(l, l);
         for (var cell in _tHashTable.items) {
@@ -154,7 +158,8 @@ var PatternDraw = function PatternDraw() {
             for (var y = 0; y < l; y++) {
                 if (m[l - y - 1][x]) {
                     ++_cellCount;
-                    _hashTable.setItem(formatCell(parseInt(x) + _tmpX, parseInt(y) + _tmpY), 
+                    _hashTable.setItem(formatCell(parseInt(x) + parseInt(_tmpX), 
+                        parseInt(y) + parseInt(_tmpY)), 
                         _cellCount.toString());
                     _tHashTable.setItem(formatCell(x, y), _cellCount.toString());
                 }
@@ -163,6 +168,9 @@ var PatternDraw = function PatternDraw() {
 
         clearCanvas();        
         reDraw();
+        var a = getMinMaxYX();
+        updateTmpXYWH(a);
+        drawField(a);
     };
 
     this.reDraw = function() {
@@ -176,6 +184,36 @@ var PatternDraw = function PatternDraw() {
             xy = cell.toString().split('$');
             draw(xy[0], xy[1]);
         }
+    };
+
+    var updateTmpXYWH = function(a) {
+        
+        if (!_rotating) {
+            _rotating = true;            
+            _tmpX = parseInt(a[0]);
+            _tmpY = parseInt(a[1]);
+        }    
+    };
+
+    var getMinMaxYX = function() {
+
+        var a = new Array(4);        
+        var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
+
+        for (var cell in _hashTable.items) {
+            xy = cell.toString().split('$');
+            minX = parseInt(xy[0]) < minX ? parseInt(xy[0]) : minX;
+            maxX = parseInt(xy[0]) > maxX ? parseInt(xy[0]) : maxX;
+            minY = parseInt(xy[1]) < minY ? parseInt(xy[1]) : minY;
+            maxY = parseInt(xy[1]) > maxY ? parseInt(xy[1]) : maxY;
+        }   
+
+        a[0] = minX
+        a[1] = minY;
+        a[2] = maxX;
+        a[3] = maxY;
+
+        return a;
     };
 
     var clearCanvas = function() {
@@ -218,6 +256,19 @@ var PatternDraw = function PatternDraw() {
                 cellSize, cellSize);
         }
 
+    };
+
+    var drawField = function(a) {
+        _ctx.beginPath();
+        _ctx.lineWidth = '1';
+        _ctx.strokeStyle = 'cyan';
+        _ctx.rect(
+            Math.floor((parseInt(a[0]) * _gol.getCellSize()) - 3), 
+            Math.floor((parseInt(a[1]) * _gol.getCellSize()) - 3), 
+            Math.floor(((parseInt(a[2] - a[0]) + 1) * _gol.getCellSize()) + 6), 
+            Math.floor(((parseInt(a[3] - a[1]) + 1) * _gol.getCellSize()) + 6)
+        );
+        _ctx.stroke();
     };
 
     var formatCell = function(x, y) {

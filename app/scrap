@@ -67,3 +67,10 @@ var MouseUtils = function() {
         */
     };
 }
+
+
+
+
+
+        console.log('tmpxy x:' + _tmpX + '-y:' + _tmpY + ' / x:' + 
+            (parseInt(minX)) + '-y:' + (parseInt(minY)));

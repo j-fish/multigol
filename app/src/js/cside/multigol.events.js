@@ -176,6 +176,7 @@ function initGolCommands() {
         hideAllSidePanes();
         hideAllIcons();
         showDrawCanvas();
+        $('#gol-cmd-turn-pattern').hide();
     });
     $('#gol-cmd-close-all').on('click', function() {
         hideAllSidePanes();
