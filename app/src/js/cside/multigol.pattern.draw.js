@@ -7,12 +7,10 @@ var PatternDraw = function PatternDraw() {
 	var _canvas;
 	var _ctx;
 	var _hashTable; // main map for drawing.
-    var _tHashTable; // secondary map for transposing.
 	var _cellCount;
     var _tmpX = undefined, _tmpY = undefined;
-    var _patternMode;
-    var MAX_INT = 1000000000;
-    var MIN_INT = -1000000000;
+    var MAX_INT = 1000000000000; // 10^12
+    var MIN_INT = -1000000000000; // -10^12
     var _rotating = false;
 
 	this.init = function(gol, drawCanvasId) {
@@ -20,9 +18,7 @@ var PatternDraw = function PatternDraw() {
 		_cellCount = 0;
 		this.initCanvas(drawCanvasId);
 		_hashTable = new HashTable();
-        _tHashTable = new HashTable();
 		this.addListeners();
-        _patternMode = false;
         _rotating = false;
 	};
 
@@ -38,10 +34,8 @@ var PatternDraw = function PatternDraw() {
 	};
 
     this.cleanup = function() {
-        _patternMode = false;
         _rotating = false;
         _hashTable.clear();
-        _tHashTable.clear();
         _cellCount = 0;
         _tmpX = undefined;
         _tmpY = undefined;
@@ -55,7 +49,7 @@ var PatternDraw = function PatternDraw() {
 
     this.canvasClicked = function(e) {
 
-        if (_patternMode) return;
+        var delCell = false;
         var x = e.clientX - _canvas.clientLeft;
         var y = e.clientY - _canvas.clientTop;
         var tmpCell;
@@ -70,10 +64,7 @@ var PatternDraw = function PatternDraw() {
 
         if (_gol.isLibTransfer() === true) {
 
-            _patternMode = true;
-            _hashTable.clear();
             _cellCount = 0;
-            clearCanvas();
             var libData = gol.getXyFromLib();
             var xy;
             for (var i = 0; i < libData.length; ++i) {
@@ -81,33 +72,33 @@ var PatternDraw = function PatternDraw() {
                 tmpCell = formatCell(parseInt(_tmpX) + parseInt(xy[0]), parseInt(_tmpY) + parseInt(xy[1]));
                 ++_cellCount;
                 _hashTable.setItem(tmpCell, _cellCount.toString());
-                _tHashTable.setItem(formatCell(parseInt(xy[0]), parseInt(xy[1])), _cellCount.toString());
-                reDraw(); 
             }
 
             _gol.setLibTransfer(false);
             _gol.setAllowLibTransfer(true);
-            cursorDeny();
-            drawField(getMinMaxYX());
 
-        } else if (!_patternMode) {
+        } else {
 
             tmpCell = formatCell(x, y);
             // If canvas has cell then remove it (as if unselected).
             for (var cell in _hashTable.items) {
                 if (cell.toString() === tmpCell) {
                     _hashTable.removeItem(tmpCell);
-                    --_cellCount;
-                    clearCanvas();
-                    reDraw();
-                    return;
+                    --_cellCount;    
+                    delCell = true;
                 }
             }
 
-            ++_cellCount;
-            _hashTable.setItem(tmpCell, _cellCount.toString());
-            draw(x, y); 
+            if (!delCell) {
+                ++_cellCount;
+                _hashTable.setItem(tmpCell, _cellCount.toString());
+                draw(x, y); 
+            }
         }
+
+        clearCanvas();
+        reDraw();
+        drawField(getMinMaxYX());
     };
 
     this.send = function() {
@@ -127,33 +118,26 @@ var PatternDraw = function PatternDraw() {
 
     this.rotate = function() {
         
-        var w = 0, h = 0, l = 0;
+        if (_tmpX === undefined || _tmpY === undefined) return;
+        var w = 0, h = 0, l = 0, dX = 0, dY = 0;
         var xy, m;
-        var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
+        var a = getMinMaxYX(); // { min x, min y, max x, max y }
+        var minX = a[0], maxX = a[2], minY = a[1], maxY = a[3];
         _cellCount = 0;
-        var c = 0;
- 
-        for (var cell in _tHashTable.items) {
-            xy = cell.toString().split('$');
-            minX = parseInt(xy[0]) < minX ? parseInt(xy[0]) : minX;
-            maxX = parseInt(xy[0]) > maxX ? parseInt(xy[0]) : maxX;
-            minY = parseInt(xy[1]) < minY ? parseInt(xy[1]) : minY;
-            maxY = parseInt(xy[1]) > maxY ? parseInt(xy[1]) : maxY;
-            ++c;
-        } 
 
-        w = maxX;
-        h = maxY;
+        dX = maxX - minX;
+        dY = maxY - minY;
+        w = dX;
+        h = dY;
         l = h > w ? parseInt(h) + 1 : parseInt(w) + 1;
 
         m = buildMatrix(l, l);
-        for (var cell in _tHashTable.items) {
+        for (var cell in _hashTable.items) {
             xy = cell.toString().split('$');
-            m[parseInt(xy[0])][parseInt(xy[1])] = true;
+            m[parseInt(xy[0]) - minX][parseInt(xy[1]) - minY] = true;
         }
 
-        _hashTable.clear()
-        _tHashTable.clear();   
+        _hashTable.clear();
         for (var x = 0; x < l; x++) {
             for (var y = 0; y < l; y++) {
                 if (m[l - y - 1][x]) {
@@ -161,14 +145,13 @@ var PatternDraw = function PatternDraw() {
                     _hashTable.setItem(formatCell(parseInt(x) + parseInt(_tmpX), 
                         parseInt(y) + parseInt(_tmpY)), 
                         _cellCount.toString());
-                    _tHashTable.setItem(formatCell(x, y), _cellCount.toString());
                 }
             }
         }
 
         clearCanvas();        
         reDraw();
-        var a = getMinMaxYX();
+        a = getMinMaxYX();
         updateTmpXYWH(a);
         drawField(a);
     };
@@ -176,6 +159,10 @@ var PatternDraw = function PatternDraw() {
     this.reDraw = function() {
         clearCanvas();
         reDraw();        
+    };
+
+    this.reDrawField = function() {
+        drawField(getMinMaxYX()); 
     };
 
     var reDraw = function() {
@@ -193,27 +180,6 @@ var PatternDraw = function PatternDraw() {
             _tmpX = parseInt(a[0]);
             _tmpY = parseInt(a[1]);
         }    
-    };
-
-    var getMinMaxYX = function() {
-
-        var a = new Array(4);        
-        var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
-
-        for (var cell in _hashTable.items) {
-            xy = cell.toString().split('$');
-            minX = parseInt(xy[0]) < minX ? parseInt(xy[0]) : minX;
-            maxX = parseInt(xy[0]) > maxX ? parseInt(xy[0]) : maxX;
-            minY = parseInt(xy[1]) < minY ? parseInt(xy[1]) : minY;
-            maxY = parseInt(xy[1]) > maxY ? parseInt(xy[1]) : maxY;
-        }   
-
-        a[0] = minX
-        a[1] = minY;
-        a[2] = maxX;
-        a[3] = maxY;
-
-        return a;
     };
 
     var clearCanvas = function() {
@@ -258,19 +224,6 @@ var PatternDraw = function PatternDraw() {
 
     };
 
-    var drawField = function(a) {
-        _ctx.beginPath();
-        _ctx.lineWidth = '1';
-        _ctx.strokeStyle = 'cyan';
-        _ctx.rect(
-            Math.floor((parseInt(a[0]) * _gol.getCellSize()) - 3), 
-            Math.floor((parseInt(a[1]) * _gol.getCellSize()) - 3), 
-            Math.floor(((parseInt(a[2] - a[0]) + 1) * _gol.getCellSize()) + 6), 
-            Math.floor(((parseInt(a[3] - a[1]) + 1) * _gol.getCellSize()) + 6)
-        );
-        _ctx.stroke();
-    };
-
     var formatCell = function(x, y) {
     	return x.toString() + '$' + y.toString();
     };
@@ -290,6 +243,40 @@ var PatternDraw = function PatternDraw() {
         }
 
         console.log('\n' + s);
+    };
+
+    var drawField = function(a) {
+        _ctx.beginPath();
+        _ctx.lineWidth = '1';
+        _ctx.strokeStyle = 'cyan';
+        _ctx.rect(
+            Math.floor((parseInt(a[0]) * _gol.getCellSize()) - 3), 
+            Math.floor((parseInt(a[1]) * _gol.getCellSize()) - 3), 
+            Math.floor(((parseInt(a[2] - a[0]) + 1) * _gol.getCellSize()) + 6), 
+            Math.floor(((parseInt(a[3] - a[1]) + 1) * _gol.getCellSize()) + 6)
+        );
+        _ctx.stroke();
+    };
+
+    var getMinMaxYX = function() {
+
+        var a = new Array(4);        
+        var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
+
+        for (var cell in _hashTable.items) {
+            xy = cell.toString().split('$');
+            minX = parseInt(xy[0]) < minX ? parseInt(xy[0]) : minX;
+            maxX = parseInt(xy[0]) > maxX ? parseInt(xy[0]) : maxX;
+            minY = parseInt(xy[1]) < minY ? parseInt(xy[1]) : minY;
+            maxY = parseInt(xy[1]) > maxY ? parseInt(xy[1]) : maxY;
+        }   
+
+        a[0] = minX
+        a[1] = minY;
+        a[2] = maxX;
+        a[3] = maxY;
+
+        return a;
     };
 
 }

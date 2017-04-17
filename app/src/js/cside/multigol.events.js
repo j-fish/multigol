@@ -176,7 +176,6 @@ function initGolCommands() {
         hideAllSidePanes();
         hideAllIcons();
         showDrawCanvas();
-        $('#gol-cmd-turn-pattern').hide();
     });
     $('#gol-cmd-close-all').on('click', function() {
         hideAllSidePanes();
@@ -213,7 +212,6 @@ function initGolCommands() {
     $('#gol-cmd-pattern-lib').on('click', function() {
         gol.setLibTransfer(false);
         gol.setAllowLibTransfer(true);
-        patternDrawer.cleanup();
         updateCmdDisplay('gol-library');
     });
     $('#gol-cmd-turn-pattern').on('click', function() {
@@ -222,10 +220,12 @@ function initGolCommands() {
     $('#gol-cmd-zoomout-pattern').on('click', function() {
         zoomOutGol();
         patternDrawer.reDraw();
+        patternDrawer.reDrawField();
     });
     $('#gol-cmd-zoomin-pattern').on('click', function() {
         zoomInGol();
         patternDrawer.reDraw();
+        patternDrawer.reDrawField();
     });
     $('.gol-pattern-cmd-items').mouseover(function() {
         $('#' + this.id + '-desc').css('display', 'inline');
