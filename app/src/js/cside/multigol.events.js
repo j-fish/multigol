@@ -1,7 +1,8 @@
 var domUtils = new DOMUtils();
 var gol = new GOL();
 var mouseUtils = new MouseUtils();
-var patternDrawer = new PatternDraw();
+var patternUtils = new PatternUtils();
+var patternDrawer = new PatternDraw(patternUtils);
 gol.init();
 mouseUtils.init(gol, patternDrawer);
 gol.addListeners(mouseUtils);
