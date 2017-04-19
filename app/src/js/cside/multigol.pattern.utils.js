@@ -3,10 +3,7 @@
  */
 var PatternUtils = function PatternUtils() {
 
-	var MAX_INT = 1000000000000; // 10^12
-    var MIN_INT = -1000000000000; // -10^12
-
-	this.getMinMaxYX = function(ht) {
+	this.getMinMaxYX = function(ht, MAX_INT, MIN_INT) {
 
         var a = new Array(4);        
         var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
@@ -63,7 +60,7 @@ var PatternUtils = function PatternUtils() {
 
     };
 
-    this.drawField = function(a, ctx, gol) {
+    this.drawField = function(a, ctx, gol, drawCanvasId) {
 
         ctx.beginPath();
         ctx.lineWidth = '1';

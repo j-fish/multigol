@@ -3,7 +3,10 @@
  */
 var PatternDraw = function PatternDraw(patternUtils) {
 
+    var MAX_INT = 1000000000000; // 10^12
+    var MIN_INT = -1000000000000; // -10^12
     var _utils = patternUtils;
+    var _drawCanvasId;
 	var _gol;
 	var _canvas;
 	var _ctx;
@@ -11,17 +14,20 @@ var PatternDraw = function PatternDraw(patternUtils) {
 	var _cellCount;
     var _tmpX = undefined, _tmpY = undefined;
     var _mouseX = undefined, _mouseY = undefined;
-    var MAX_INT = 1000000000000; // 10^12
-    var MIN_INT = -1000000000000; // -10^12
     var _rotating = false;
+    var _draggableState = false;
+    var _mouseDown = false;
 
 	this.init = function(gol, drawCanvasId) {
+        _drawCanvasId = drawCanvasId;
 		_gol = gol;
 		_cellCount = 0;
 		this.initCanvas(drawCanvasId);
 		_hashTable = new HashTable();
 		this.addListeners();
         _rotating = false;
+        _draggableState = false;
+        _mouseDown = false;
 	};
 
 	this.initCanvas = function(drawCanvasId) {
@@ -37,6 +43,8 @@ var PatternDraw = function PatternDraw(patternUtils) {
 
     this.cleanup = function() {
         _rotating = false;
+        _draggableState = false;
+        _mouseDown = false;
         _hashTable.clear();
         _cellCount = 0;
         _tmpX = undefined;
@@ -46,9 +54,10 @@ var PatternDraw = function PatternDraw(patternUtils) {
     };
 
 	this.addListeners = function() {
-        _canvas.addEventListener('click', this.canvasClicked, false);
+        _canvas.addEventListener('dblclick', this.canvasClicked, false);
         _canvas.addEventListener('mousedown', this.canvasMouseDown, false);
         _canvas.addEventListener('mouseup', this.canvasMouseUp, false);
+        _canvas.addEventListener('mousemove', this.canvasMouseMouved, false);
     };
 
     this.canvasClicked = function(e) {
@@ -84,8 +93,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
             _gol.setAllowLibTransfer(true);
 
         } else {
-
-            if (_mouseX !== x || _mouseY !== y) return;
+            
             tmpCell = _utils.formatCell(x, y);
             
             // If canvas has cell then remove it (as if unselected).
@@ -98,7 +106,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
                 }
 
                 // temp x,y must be updated :
-                var a = _utils.getMinMaxYX(_hashTable);
+                var a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT);
                 _tmpX = a[0];
                 _tmpY = a[1];
             }
@@ -112,28 +120,31 @@ var PatternDraw = function PatternDraw(patternUtils) {
 
         _utils.clearCanvas(_ctx, _canvas);
         reDraw();
-        _utils.drawField(_utils.getMinMaxYX(_hashTable), _ctx, _gol);
+        _utils.drawField(_utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT), _ctx, _gol, _drawCanvasId);
     };
 
     this.canvasMouseDown = function(e) {
-        _mouseX = e.clientX - _canvas.clientLeft;
-        _mouseY = e.clientY - _canvas.clientTop;
-        _mouseX -= _canvas.offsetLeft;
-        _mouseY -= _canvas.offsetTop;
-        _mouseX = Math.floor(_mouseX / _gol.getCellSize());
-        _mouseY = Math.floor(_mouseY / _gol.getCellSize());
+        _mouseDown = true;
+        setTimeout(function() { 
+            if (!_mouseDown) return;  
+            _draggableState = true;                
+            updateMouseXY(e);
+        }, 254);
     };
 
     this.canvasMouseUp = function(e) { 
-        _mouseX = e.clientX - _canvas.clientLeft;
-        _mouseY = e.clientY - _canvas.clientTop;
-        _mouseX -= _canvas.offsetLeft;
-        _mouseY -= _canvas.offsetTop;
-        _mouseX = Math.floor(_mouseX / _gol.getCellSize());
-        _mouseY = Math.floor(_mouseY / _gol.getCellSize());
+        _mouseDown = false;
+        _draggableState = false;
+        updateMouseXY(e);
+    };
+
+    this.canvasMouseMouved = function(e) {
+        if (!_mouseDown) return;
+        updateMouseXY(e);
     };
 
     this.send = function() {
+
 		var pattern = '';
     	for (var cell in _hashTable.items) pattern += cell.toString() + '~';
     	_hashTable.clear();
@@ -145,6 +156,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
     		_gol.getDisplayZone()[1], _gol.getGridWidth(), _gol.getGridHeight(), 
     		_gol.getCellColor(), _gol.getNickName(), pattern)
 	    );
+
         this.cleanup();
     };
 
@@ -153,7 +165,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
         if (_tmpX === undefined || _tmpY === undefined) return;
         var w = 0, h = 0, l = 0, dX = 0, dY = 0;
         var xy, m;
-        var a = _utils.getMinMaxYX(_hashTable); // { min x, min y, max x, max y }
+        var a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT); // { min x, min y, max x, max y }
         var minX = a[0], maxX = a[2], minY = a[1], maxY = a[3];
         _cellCount = 0;
 
@@ -183,9 +195,9 @@ var PatternDraw = function PatternDraw(patternUtils) {
 
         _utils.clearCanvas(_ctx, _canvas);        
         reDraw();
-        a = _utils.getMinMaxYX(_hashTable);
+        a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT);
         updateTmpXYWH(a);
-        _utils.drawField(a, _ctx, _gol);
+        _utils.drawField(a, _ctx, _gol, _drawCanvasId);
     };
 
     this.reDraw = function() {
@@ -194,7 +206,14 @@ var PatternDraw = function PatternDraw(patternUtils) {
     };
 
     this.reDrawField = function() {
-        _utils.drawField(_utils.getMinMaxYX(_hashTable), _ctx, _gol); 
+        _utils.drawField(_utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT), _ctx, _gol, _drawCanvasId); 
+    };
+
+    var updateMouseXY = function(e) {       
+        _mouseX = e.clientX - _canvas.clientLeft;
+        _mouseY = e.clientY - _canvas.clientTop;
+        _mouseX -= _canvas.offsetLeft;
+        _mouseY -= _canvas.offsetTop;
     };
 
     var reDraw = function() {
