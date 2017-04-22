@@ -60,7 +60,7 @@ var PatternUtils = function PatternUtils() {
 
     };
 
-    this.drawField = function(a, ctx, gol, drawCanvasId) {
+    this.drawField = function(a, ctx, gol, drawCanvasId, fieldCanvas) {
 
         ctx.beginPath();
         ctx.lineWidth = '1';
@@ -74,13 +74,13 @@ var PatternUtils = function PatternUtils() {
         
         ctx.stroke();
 
-        $('#pattern-field-block').css({
-            width: ((parseInt(a[2] - a[0]) + 1) * gol.getCellSize()) + 12, 
-            height: ((parseInt(a[3] - a[1]) + 1) * gol.getCellSize()) + 12,
-            top: (parseInt(a[1]) * gol.getCellSize()) - 6, 
-            left: (parseInt(a[0]) * gol.getCellSize()) - 6,            
+        fieldCanvas.height = ((parseInt(a[3] - a[1]) + 1) * gol.getCellSize());
+        fieldCanvas.width = ((parseInt(a[2] - a[0]) + 1) * gol.getCellSize());
+        $('#gol_pattern_field').css({
+            top: (parseInt(a[1]) * gol.getCellSize()), 
+            left: (parseInt(a[0]) * gol.getCellSize())           
         });
-        $('#pattern-field-block').show();      
+        $('#gol_pattern_field').show(); 
     };
 
     this.clearCanvas = function(ctx, canvas) {
