@@ -34,13 +34,16 @@ function bodyHeight() {
  */
 function cursorClear() {
     $('#gol_canvas_draw').css('cursor', 'default');
-}
+};
 function cursorCopy() {
     $('#gol_canvas_draw').css('cursor', 'copy');
-}
+};
 function cursorDeny() {
     $('#gol_canvas_draw').css('cursor', 'not-allowed');   
-}
+};
+function cursorGrab() {
+    $('#gol_canvas_draw').css('cursor', 'move');
+};
 
 /*
  * The keycodes that will be mapped when a user presses a button.

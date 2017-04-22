@@ -73,6 +73,14 @@ var PatternUtils = function PatternUtils() {
         );
         
         ctx.stroke();
+
+        $('#pattern-field-block').css({
+            width: ((parseInt(a[2] - a[0]) + 1) * gol.getCellSize()) + 12, 
+            height: ((parseInt(a[3] - a[1]) + 1) * gol.getCellSize()) + 12,
+            top: (parseInt(a[1]) * gol.getCellSize()) - 6, 
+            left: (parseInt(a[0]) * gol.getCellSize()) - 6,            
+        });
+        $('#pattern-field-block').show();      
     };
 
     this.clearCanvas = function(ctx, canvas) {

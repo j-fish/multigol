@@ -49,7 +49,8 @@ var PatternDraw = function PatternDraw(patternUtils) {
         _cellCount = 0;
         _tmpX = undefined;
         _tmpY = undefined;
-        _utils.clearCanvas(_ctx, _canvas);
+        _utils.clearCanvas(_ctx, _canvas);        
+        $('#pattern-field-block').hide();
         reDraw();
     };
 
@@ -127,7 +128,9 @@ var PatternDraw = function PatternDraw(patternUtils) {
         _mouseDown = true;
         setTimeout(function() { 
             if (!_mouseDown) return;  
-            _draggableState = true;                
+            _draggableState = true;  
+            cursorGrab();      
+            $('#pattern-field-block').css('background-color', 'rgba(0,255,100,0.5)');     
             updateMouseXY(e);
         }, 254);
     };
@@ -135,6 +138,8 @@ var PatternDraw = function PatternDraw(patternUtils) {
     this.canvasMouseUp = function(e) { 
         _mouseDown = false;
         _draggableState = false;
+        cursorCopy();
+        $('#pattern-field-block').css('background-color', 'rgba(0,255,100,0.3)');
         updateMouseXY(e);
     };
 

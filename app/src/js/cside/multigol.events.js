@@ -438,12 +438,14 @@ function updateCmdDisplay(id) {
             $('#gol_canvas').css('margin-left', '360px');
             $('#gol_canvas_grid').css('margin-left', '360px');
             $('#gol_canvas_draw').css('margin-left', '360px');
+            $('#pattern-field-block').css('margin-left', '360px');
             $('#gol-cmd').css('margin-left', '360px');
         }) : $('#' + id).hide(120, function() {
             $('#gol_canvas').css('margin-left', '0px');
             $('#gol_canvas_grid').css('margin-left', '0px');
             $('#gol_canvas_draw').css('margin-left', '0px');
             $('#gol-cmd').css('margin-left', '0px');
+            $('#pattern-field-block').css('margin-left', '0px');
         });
 }
 
@@ -464,6 +466,7 @@ function hideAllSidePanes() {
     $('#gol_canvas').css('margin-left', '0px');
     $('#gol_canvas_grid').css('margin-left', '0px');
     $('#gol-cmd').css('margin-left', '0px');
+    $('#pattern-field-block').css('margin-left', '0px');
     $('#gol_canvas_draw').css('margin-left', '0px');
 }
 

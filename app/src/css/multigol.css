@@ -26,8 +26,14 @@ a.gollib-pattern-link {
 	z-index: 1;	
 }
 
+#pattern-field-block {
+	position: absolute;
+	background-color: rgba(0,255,100,0.3);
+	display: none;
+	z-index: -1;
+}
+
 #gol-cmd {
-	/*background-color: green;*/
 	position: absolute;
 }
 
