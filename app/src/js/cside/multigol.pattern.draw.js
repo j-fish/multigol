@@ -3,8 +3,9 @@
  */
 var PatternDraw = function PatternDraw(patternUtils) {
 
-    var MAX_INT = 1000000000000; // 10^12
-    var MIN_INT = -1000000000000; // -10^12
+    const MAX_INT = 1000000000000; // 10^12
+    const MIN_INT = -1000000000000; // -10^12
+    const _fieldCanvasId = '#gol_pattern_field';
     var _utils = patternUtils;
     var _drawCanvasId;
 	var _gol;
@@ -32,14 +33,14 @@ var PatternDraw = function PatternDraw(patternUtils) {
         _rotating = false;
         _draggableState = false;
         _mouseDown = false;
-        _fieldCanvas = document.getElementById('gol_pattern_field');
+        _fieldCanvas = document.getElementById(_fieldCanvasId.replace('#',''));
         _ctxField = _fieldCanvas.getContext('2d');
 	};
 
 	this.initCanvas = function(drawCanvasId) {
 		_canvas = document.getElementById(drawCanvasId);
-		var cWidth = $(window).width();
-        var cHeight = $(window).height();
+		let cWidth = $(window).width();
+        let cHeight = $(window).height();
         _canvas.height = cHeight;
         _canvas.width = cWidth;
         _ctx = _canvas.getContext('2d');
@@ -57,8 +58,8 @@ var PatternDraw = function PatternDraw(patternUtils) {
         _tmpX = undefined;
         _tmpY = undefined;
         _utils.clearCanvas(_ctx, _canvas); 
-        _ctxField.clearRect(0, 0, _fieldCanvas.width, _fieldCanvas.height);        
-        $('#gol_pattern_field').hide();
+        _utils.clearFieldCanvas(_ctxField, _fieldCanvas);      
+        $(_fieldCanvasId).hide();
         reDraw();
     };
 
@@ -71,11 +72,11 @@ var PatternDraw = function PatternDraw(patternUtils) {
 
     this.canvasClicked = function(e) {
 
-        var delCell = false;
-        var x = e.clientX - _canvas.clientLeft;
-        var y = e.clientY - _canvas.clientTop;
-        var tmpCell;
-        var cellFound = false;
+        let delCell = false;
+        let x = e.clientX - _canvas.clientLeft;
+        let y = e.clientY - _canvas.clientTop;
+        let tmpCell;
+        let cellFound = false;
         x -= _canvas.offsetLeft;
         y -= _canvas.offsetTop;
 
@@ -88,8 +89,8 @@ var PatternDraw = function PatternDraw(patternUtils) {
         if (_gol.isLibTransfer() === true) {
 
             _cellCount = 0;
-            var libData = gol.getXyFromLib();
-            var xy;
+            let libData = gol.getXyFromLib();
+            let xy;
             for (var i = 0; i < libData.length; ++i) {
                 xy = libData[i].split('$');
                 tmpCell = _utils.formatCell(parseInt(_tmpX) + parseInt(xy[0]), 
@@ -115,7 +116,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
                 }
 
                 // temp x,y must be updated :
-                var a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT);
+                let a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT);
                 _tmpX = a[0];
                 _tmpY = a[1];
             }
@@ -130,7 +131,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
         _utils.clearCanvas(_ctx, _canvas);
         reDraw();
         _utils.drawField(_utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT), _ctx, _gol, 
-            _drawCanvasId, _fieldCanvas);
+            _drawCanvasId, _fieldCanvas, _fieldCanvasId);
     };
 
     this.canvasMouseDown = function(e) {
@@ -138,36 +139,34 @@ var PatternDraw = function PatternDraw(patternUtils) {
         setTimeout(function() { 
             if (!_mouseDown) return;  
             _draggableState = true;  
-            cursorGrab();      
-            $('#gol_pattern_field').css('background-color', 'rgba(0,255,100,0.5)');     
+            cursorGrab();    
             updateMouseXY(e);
             updateFieldDelta(e);
             drawPatternField();
-        }, 254);
+        }, 700);
     };
 
     this.canvasMouseUp = function(e) { 
         _mouseDown = false;
         _draggableState = false;
         cursorCopy();
-        $('#gol_pattern_field').css('background-color', 'rgba(0,255,100,0.3)');
         updateMouseXY(e);
         appendFieldPattern();
-        _ctxField.clearRect(0, 0, _fieldCanvas.width, _fieldCanvas.height);
+        _utils.clearFieldCanvas(_ctxField, _fieldCanvas);
         reDraw();
         _utils.drawField(_utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT), _ctx, _gol, 
-            _drawCanvasId, _fieldCanvas);
+            _drawCanvasId, _fieldCanvas, _fieldCanvasId);
     };
 
     this.canvasMouseMouved = function(e) {
-        if (!_mouseDown) return;
+        if (!_mouseDown || !_draggableState) return;
         updateMouseXY(e);
         updateFieldPosition(e);
     };
 
     this.send = function() {
 
-		var pattern = '';
+		let pattern = '';
     	for (var cell in _hashTable.items) pattern += cell.toString() + '~';
     	_hashTable.clear();
     	if (pattern.length <= 0) return;
@@ -185,10 +184,10 @@ var PatternDraw = function PatternDraw(patternUtils) {
     this.rotate = function() {
         
         if (_tmpX === undefined || _tmpY === undefined) return;
-        var w = 0, h = 0, l = 0, dX = 0, dY = 0;
-        var xy, m;
-        var a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT); // { min x, min y, max x, max y }
-        var minX = a[0], maxX = a[2], minY = a[1], maxY = a[3];
+        let w = 0, h = 0, l = 0, dX = 0, dY = 0;
+        let xy, m;
+        let a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT); // { min x, min y, max x, max y }
+        let minX = a[0], maxX = a[2], minY = a[1], maxY = a[3];
         _cellCount = 0;
 
         dX = maxX - minX;
@@ -219,7 +218,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
         reDraw();
         a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT);
         updateTmpXYWH(a);
-        _utils.drawField(a, _ctx, _gol, _drawCanvasId, _fieldCanvas);
+        _utils.drawField(a, _ctx, _gol, _drawCanvasId, _fieldCanvas, _fieldCanvasId);
     };
 
     this.reDraw = function() {
@@ -229,13 +228,13 @@ var PatternDraw = function PatternDraw(patternUtils) {
 
     this.reDrawField = function() {
         _utils.drawField(_utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT), _ctx, 
-            _gol, _drawCanvasId, _fieldCanvas); 
+            _gol, _drawCanvasId, _fieldCanvas, _fieldCanvasId); 
     };
 
     var appendFieldPattern = function() {
 
-        var xy, tmpCell;
-        var p = $('#gol_pattern_field').position();
+        let xy, tmpCell;
+        let p = $(_fieldCanvasId).position();
         _tmpX = Math.floor(parseInt(p.left) / _gol.getCellSize());
         _tmpY = Math.floor(parseInt(p.top) / _gol.getCellSize());
         _cellCount = 0;
@@ -253,9 +252,9 @@ var PatternDraw = function PatternDraw(patternUtils) {
 
     var drawPatternField = function() {
 
-        var xy;
-        var a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT); // { min x, min y, max x, max y }
-        var minX = a[0], minY = a[1];
+        let xy;
+        let a = _utils.getMinMaxYX(_hashTable, MAX_INT, MIN_INT); // { min x, min y, max x, max y }
+        let minX = a[0], minY = a[1];
         _cellCount = 0;
 
         for (var cell in _hashTable.items) {
@@ -267,7 +266,7 @@ var PatternDraw = function PatternDraw(patternUtils) {
 
         _hashTable.clear();
         _utils.clearCanvas(_ctx, _canvas);
-        _ctxField.clearRect(0, 0, _fieldCanvas.width, _fieldCanvas.height);
+        _utils.clearFieldCanvas(_ctxField, _fieldCanvas);
         for (var cell in _fieldHashTable.items) {
             xy = cell.toString().split('$');
             _utils.draw(xy[0], xy[1], _ctxField, _gol);
@@ -282,20 +281,20 @@ var PatternDraw = function PatternDraw(patternUtils) {
     };
 
     var updateFieldPosition = function(e) {
-        $('#gol_pattern_field').css({
+        $(_fieldCanvasId).css({
             top: _mouseY - _deltaY,
             left: _mouseX - _deltaX            
         });
     };
 
     var updateFieldDelta = function(e) {
-        var p = $('#gol_pattern_field').position();
+        let p = $(_fieldCanvasId).position();
         _deltaX = _mouseX - p.left;
         _deltaY = _mouseY - p.top;
     };
 
     var reDraw = function() {
-        var xy;
+        let xy;
         for (var cell in _hashTable.items) {
             xy = cell.toString().split('$');
             _utils.draw(xy[0], xy[1], _ctx, _gol);

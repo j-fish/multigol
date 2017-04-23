@@ -3,7 +3,8 @@
  */ 
 function hashString(str) {
 
-    var hash = 0;
+    let hash = 0;
+    let char;
     if (str.length == 0) return hash;
 
     for (var i = 0; i < str.length; i++) {

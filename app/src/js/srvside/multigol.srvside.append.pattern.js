@@ -3,19 +3,19 @@
  */
 exports.append = function(gol, data, sanitizer) {
 
-	var appendData = JSON.parse(data);
-	var pattern = appendData.pattern.split('~');
-	var xy; 
+	let appendData = JSON.parse(data);
+	let pattern = appendData.pattern.split('~');
+	let xy; 
 
-    var mousex = sanitizer.perform(appendData.mousex);
-    var mousey = sanitizer.perform(appendData.mousey);
-    var color = sanitizer.perform(appendData.color);
-    var zx = sanitizer.perform(appendData.zonex);
-    var zy = sanitizer.perform(appendData.zoney);
-    var gw = sanitizer.perform(appendData.gridW);
-    var gh = sanitizer.perform(appendData.gridH);
-    var cli = sanitizer.perform(appendData.client);
-    var csize = sanitizer.perform(appendData.cellSize);
+    let mousex = sanitizer.perform(appendData.mousex);
+    let mousey = sanitizer.perform(appendData.mousey);
+    let color = sanitizer.perform(appendData.color);
+    let zx = sanitizer.perform(appendData.zonex);
+    let zy = sanitizer.perform(appendData.zoney);
+    let gw = sanitizer.perform(appendData.gridW);
+    let gh = sanitizer.perform(appendData.gridH);
+    let cli = sanitizer.perform(appendData.client);
+    let csize = sanitizer.perform(appendData.cellSize);
 
 	for (var i = 0; i < pattern.length; i++) {    
         xy = pattern[i].split('$');

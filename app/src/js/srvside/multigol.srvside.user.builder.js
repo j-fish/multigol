@@ -1,9 +1,9 @@
 exports.build = function(data, sanitizer) {
 
-	var fs = require('fs');
+	let fs = require('fs');
 	eval(fs.readFileSync(__dirname + '/../dto/multigol.client.js').toString());
 	eval(fs.readFileSync(__dirname + '/../dto/multigol.hashstring.js').toString());
-	var client = JSON.parse(data);
+	let client = JSON.parse(data);
 
 	return new User(
 		sanitizer.perform(client.userName), 

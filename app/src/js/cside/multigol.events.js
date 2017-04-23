@@ -51,27 +51,27 @@ window.onresize = function() {
 
 document.getElementById('multigol-tmpimg-file').onchange = function(evt) {
     
-    var tgt = evt.target || window.event.srcElement, files = tgt.files;
+    let tgt = evt.target || window.event.srcElement, files = tgt.files;
     // FileReader support
     if (FileReader && files && files.length) {
 
-        var iconimage = new Image();
+        let iconimage = new Image();
         iconimage = $('#multigol-tmpimg-input');
         $(iconimage).attr('src', null);
         $(iconimage).css('display', 'none');
 
         $(iconimage).load(function() {
-            var c = document.getElementById('multigol-tmpimg-canvas');
-            var ctx = c.getContext('2d');
+            let c = document.getElementById('multigol-tmpimg-canvas');
+            let ctx = c.getContext('2d');
             ctx.clearRect(0, 0, c.width, c.height);
             ctx.drawImage(this, 0, 0, gol.getCellSize(), gol.getCellSize());
-            var resizedB64 = c.toDataURL();
+            let resizedB64 = c.toDataURL();
             this.src = resizedB64;
             $('#multigol-tmpimg-loading-img').attr('hidden', true);
             this.style.display = 'inline';
         });
 
-        var fr = new FileReader();
+        let fr = new FileReader();
         fr.onload = function () {
             $(iconimage).attr('src', fr.result);
         }
@@ -134,8 +134,8 @@ function initEnterDialog() {
     });
 
     $('#enter-dialog-nickname').keyup(function() {
-        var nickname = $('#enter-dialog-nickname').val();
-        var tmpNickname = '';
+        let nickname = $('#enter-dialog-nickname').val();
+        let tmpNickname = '';
         for (var i = 0; i < nickname.length; ++i) {
             if (nickname[i] != '$' && nickname[i] != '-' && nickname[i] != '/' && 
                 nickname[i] != '\\' && nickname[i] != '~') {
@@ -261,8 +261,8 @@ function enterDialogSubmit(nickname, color, fader, dialog) {
     gol.setCellColor($('#' + color).val());
     gol.setNickName($('#' + nickname).val());
 
-    var tmpNickname = '';
-    var golNickname = gol.getNickName();
+    let tmpNickname = '';
+    let golNickname = gol.getNickName();
     for (var i = 0; i < golNickname.length; ++i) {
         if (golNickname[i] != '$' && golNickname[i] != '-' && golNickname[i] != '/' && 
             golNickname[i] != '\\' && golNickname[i] != '<' && golNickname[i] != '>') {
@@ -279,21 +279,21 @@ function enterDialogSubmit(nickname, color, fader, dialog) {
     }
 
     // src = base64 encoded.
-    var b64 = $('#multigol-tmpimg-input').attr('src');
+    let b64 = $('#multigol-tmpimg-input').attr('src');
     gol.setCellimg(0);
 
     if (b64 !== 'null' && b64 !== null && b64 !== '' && b64 !== undefined) {
         gol.setCellimg(1);
         gol.setCellColor(undefined);
-        var c = document.getElementById('multigol-tmpimg-canvas');
-        var resizedB64 = c.toDataURL();
+        let c = document.getElementById('multigol-tmpimg-canvas');
+        let resizedB64 = c.toDataURL();
         gol.setB64cell(resizedB64);
     }
     
     $('#' + fader).hide();
     $('#' + dialog).hide();
 
-    var client = new User(gol.getNickName(), gol.getNickName(), 
+    let client = new User(gol.getNickName(), gol.getNickName(), 
             gol.getCellColor(), gol.getCellimg().toString(),  gol.getB64cell(), 
             undefined, undefined, 0);
     
@@ -309,8 +309,8 @@ function enterDialogSubmit(nickname, color, fader, dialog) {
  */
 $('#enter-dialog-nickname').bind('change paste keyup', function() {
 
-    var textValue = $('#enter-dialog-nickname').val();
-    var tmpNickname = ''
+    let textValue = $('#enter-dialog-nickname').val();
+    let tmpNickname = ''
     for (var i = 0; i < textValue.length; ++i) {
         if (textValue[i] != '$' && textValue[i] != '-' 
             && textValue[i] != '/' && textValue[i] != '\\') {
@@ -353,7 +353,7 @@ function addKeyEvents() {
 
         // Firefox and opera use charCode instead of keyCode to
         // return which key was pressed.
-        var keyCode = (e.keyCode) ? e.keyCode : e.charCode;
+        let keyCode = (e.keyCode) ? e.keyCode : e.charCode;
 
         if (KEY_CODES[keyCode]) {
             e.preventDefault();
@@ -366,7 +366,7 @@ function addKeyEvents() {
 
     document.onkeyup = function (e) {
 
-        var keyCode = (e.keyCode) ? e.keyCode : e.charCode;
+        let keyCode = (e.keyCode) ? e.keyCode : e.charCode;
         if (KEY_CODES[keyCode]) {
             e.preventDefault();
             KEY_STATUS[KEY_CODES[keyCode]] = false;
@@ -385,11 +385,11 @@ function quit() {
 // Display & Zoom in-out :
 function zoomInGol() {
 
-    var cellSize = gol.getCellSize();
+    let cellSize = gol.getCellSize();
     if (cellSize < 30) {
         ++cellSize;
-        var canvasW = gol.getCanvasWidth();
-        var canvasH = gol.getCanvasHeight();
+        let canvasW = gol.getCanvasWidth();
+        let canvasH = gol.getCanvasHeight();
         gol.setGridWidth(canvasW / cellSize);
         gol.setGridHeight(canvasH / cellSize);
         gol.setCellSize(cellSize);
@@ -403,11 +403,11 @@ function zoomInGol() {
 
 function zoomOutGol() {
 
-    var cellSize = gol.getCellSize();
+    let cellSize = gol.getCellSize();
     if (cellSize > 1) {
         --cellSize;
-        var canvasW = gol.getCanvasWidth();
-        var canvasH = gol.getCanvasHeight();
+        let canvasW = gol.getCanvasWidth();
+        let canvasH = gol.getCanvasHeight();
         gol.setGridWidth(canvasW / cellSize);
         gol.setGridHeight(canvasH / cellSize);
         gol.setCellSize(cellSize);
@@ -421,10 +421,10 @@ function zoomOutGol() {
 
 function resetToDefaultZoom() {
 
-    var cellSize = gol.getDefaultCellSize();
+    let cellSize = gol.getDefaultCellSize();
     gol.setCellSize(cellSize);
-    var canvasW = gol.getCanvasWidth();
-    var canvasH = gol.getCanvasHeight();
+    let canvasW = gol.getCanvasWidth();
+    let canvasH = gol.getCanvasHeight();
     gol.setGridWidth(canvasW / cellSize);
     gol.setGridHeight(canvasH / cellSize);
     gol.setDrawDetailedCells(true);

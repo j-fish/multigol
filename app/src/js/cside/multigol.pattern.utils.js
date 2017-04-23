@@ -5,8 +5,8 @@ var PatternUtils = function PatternUtils() {
 
 	this.getMinMaxYX = function(ht, MAX_INT, MIN_INT) {
 
-        var a = new Array(4);        
-        var minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
+        let a = new Array(4);        
+        let minX = MAX_INT, minY = MAX_INT, maxX = MIN_INT, maxY = MIN_INT;
 
         for (var cell in ht.items) {
             xy = cell.toString().split('$');
@@ -26,11 +26,12 @@ var PatternUtils = function PatternUtils() {
 
     this.draw = function(x, y, ctx, gol) {
 
-    	var image;
-    	var cellSize = gol.getCellSize();
-    	var clientNicknameHash = hashString(gol.getNickName());
-    	var elem = document.getElementById('is-client-icon-' + clientNicknameHash);        
-        if (elem != null) var cellimg = elem.innerText || elem.textContent;
+    	let image;
+    	let cellSize = gol.getCellSize();
+    	let clientNicknameHash = hashString(gol.getNickName());
+    	let elem = document.getElementById('is-client-icon-' + clientNicknameHash); 
+        let cellimg;       
+        if (elem != null) cellimg = elem.innerText || elem.textContent;
 
         if (gol.isDrawDetailedCells()) {
         
@@ -60,27 +61,15 @@ var PatternUtils = function PatternUtils() {
 
     };
 
-    this.drawField = function(a, ctx, gol, drawCanvasId, fieldCanvas) {
-
-        ctx.beginPath();
-        ctx.lineWidth = '1';
-        ctx.strokeStyle = 'cyan';
-        ctx.rect(
-            Math.floor((parseInt(a[0]) * gol.getCellSize()) - 3), 
-            Math.floor((parseInt(a[1]) * gol.getCellSize()) - 3), 
-            Math.floor(((parseInt(a[2] - a[0]) + 1) * gol.getCellSize()) + 6), 
-            Math.floor(((parseInt(a[3] - a[1]) + 1) * gol.getCellSize()) + 6)
-        );
-        
-        ctx.stroke();
+    this.drawField = function(a, ctx, gol, drawCanvasId, fieldCanvas, fieldCanvasId) {
 
         fieldCanvas.height = ((parseInt(a[3] - a[1]) + 1) * gol.getCellSize());
         fieldCanvas.width = ((parseInt(a[2] - a[0]) + 1) * gol.getCellSize());
-        $('#gol_pattern_field').css({
+        $(fieldCanvasId).css({
             top: (parseInt(a[1]) * gol.getCellSize()), 
             left: (parseInt(a[0]) * gol.getCellSize())           
-        });
-        $('#gol_pattern_field').show(); 
+        });        
+        $(fieldCanvasId).show(); 
     };
 
     this.clearCanvas = function(ctx, canvas) {
@@ -89,19 +78,23 @@ var PatternUtils = function PatternUtils() {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     };
 
+    this.clearFieldCanvas = function(ctx, canvas) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    };
+
     this.formatCell = function(x, y) {
     	return x.toString() + '$' + y.toString();
     };
 
     this.buildMatrix = function(w, h) {
-        var m = new Array(w);
+        let m = new Array(w);
         for (var i = 0; i < w; i++) m[parseInt(i)] = new Array(parseInt(h));
         return m;        
     };
 
     this.logM = function(m, w, h) {
 
-        var s = '';
+        let s = '';
         for (var y = 0; y < w; y++) {
             for (var x = 0; x < h; x++) s += m[x][y] === true ? 'X' : ' ';
             s += '\n';

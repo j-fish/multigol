@@ -8,26 +8,31 @@ function draw(ht, totalCells) {
 
     // Reset zone population.
     gol.setZonePopulation(0);
-    var imgHt = new HashTable();
-    var ctx = gol.getCtx();
-    var cellSize = gol.getCellSize();
-    var displayZone = gol.getDisplayZone();
-    var gridWidth = gol.getGridWidth();
-    var gridHeight = gol.getGridHeight();
-    var zonePopulation = gol.getZonePopulation();
+    let imgHt = new HashTable();
+    let ctx = gol.getCtx();
+    let cellSize = gol.getCellSize();
+    let displayZone = gol.getDisplayZone();
+    let gridWidth = gol.getGridWidth();
+    let gridHeight = gol.getGridHeight();
+    let zonePopulation = gol.getZonePopulation();
     ctx.clearRect(0, 0, gol.getCanvasWidth(), gol.getCanvasHeight());
-    var image = null;
-    var xy;
+    let image = null;
+    let xy;
+    let clientNickname;
+    let clientNicknameHash;
+    let painted;
+    let elem;
+    let cellimg;
 
     for (var cell in ht.items) {
 
     	xy = cell.toString().split('$');
-        var clientNickname = ht.getItem(cell).nickname;
-        var clientNicknameHash = hashString(ht.getItem(cell).nickname);
-        var painted = false;
-        var elem = document.getElementById('is-client-icon-' + clientNicknameHash);
+        clientNickname = ht.getItem(cell).nickname;
+        clientNicknameHash = hashString(ht.getItem(cell).nickname);
+        painted = false;
+        elem = document.getElementById('is-client-icon-' + clientNicknameHash);
         
-        if (elem != null) var cellimg = elem.innerText || elem.textContent;
+        if (elem != null) cellimg = elem.innerText || elem.textContent;
 
         if (gol.isDrawDetailedCells()) {
         
@@ -48,9 +53,7 @@ function draw(ht, totalCells) {
                     parseInt(((parseInt(xy[1]) - (gridHeight * displayZone[1])) * cellSize)), 
                     cellSize, cellSize);
 
-                if (painted === false) {
-                    imgHt.setItem(clientNickname, image);
-                }
+                if (painted === false) imgHt.setItem(clientNickname, image);
                 painted = false;
 
             } else {
@@ -79,7 +82,6 @@ function draw(ht, totalCells) {
     $('#gol-status-data-cellsize').text('cell size: ' + cellSize);
     // Set zone or frame population :
     gol.setZonePopulation(zonePopulation);
+
     return totalCells;
-}
-
-
+};

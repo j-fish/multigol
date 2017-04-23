@@ -22,12 +22,10 @@ function displayPatternDescrition(id) {
 */
 function getGolLibPattern(patternId, linkId) {
 
-    if (gol.isAllowLibTransfer() === false) {
-        return;
-    }
+    if (gol.isAllowLibTransfer() === false) return;
 
     // Get coordiantes.
-    var pattern = $('#' + patternId).text();
+    let pattern = $('#' + patternId).text();
     gol.setXyFromLibStringValue(gol.applyXyFromLibStringValue(pattern));
     gol.setXyFromLib(pattern.split('-')); // get all the coordinates.
     gol.setLibTransfer(true); // transfering is true.

@@ -24,9 +24,10 @@ var DOMUtils = function DOM() {
 	 */ 
 	this.updateCellcount = function(data) {
 
-		var cellcounts = JSON.parse(data);
+		let cellcounts = JSON.parse(data);
+		let count;
 		for (var i = 0; i < cellcounts.length; ++i) {
-			var count = cellcounts[i];
+			count = cellcounts[i];
 			$('#multigol-client-cellcount' + count.client).html(' -> cell count: ' + 
 				count.population);
 		}

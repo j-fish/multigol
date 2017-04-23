@@ -3,17 +3,17 @@
 */
 exports.buildLibrary = function(libArray, filePath) {
 
-    var file = filePath;
-    var LineByLineReader = require('line-by-line');
-    var fs = require('fs');
+    let file = filePath;
+    let LineByLineReader = require('line-by-line');
+    let fs = require('fs');
     eval(fs.readFileSync(__dirname + '/../dto/multigol.hashstring.js').toString());
     lr = new LineByLineReader(file);
 
-    var pattern = '';
-    var description = '';
-    var patternCode = '';
-    var c = 0;
-    var check = 0;
+    let pattern = '';
+    let description = '';
+    let patternCode = '';
+    let c = 0;
+    let check = 0;
 
     lr.on('error', function(err) { console.log('|_' + err); });
 
@@ -35,7 +35,7 @@ exports.buildLibrary = function(libArray, filePath) {
         }
 
         if (check === 3) {
-            var hId = hashString(pattern) + c.toString();
+            let hId = hashString(pattern) + c.toString();
             libArray.push({'name':pattern, 'desc':description, 'code':patternCode, 'id':c, 'hashid':hId});
             ++c;
             pattern = '';

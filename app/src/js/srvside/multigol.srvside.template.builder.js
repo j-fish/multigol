@@ -3,12 +3,13 @@
  */
 exports.buildClients = function(jade, clients) {
 
-	var fs = require('fs');
+	let fs = require('fs');
 	eval(fs.readFileSync(__dirname + '/../dto/multigol.client.js').toString());
-	var templateData = [];
-	
+	let templateData = [];
+	let l;
+
     for (var i = 0; i < clients.length; i++) {            
-        var l = templateData.push({
+        l = templateData.push({
             'nickname': clients[i].getUserName(), 
             'nicknamehash': clients[i].getUserNameHash(),
             'hexc': clients[i].getHexc(),
@@ -17,8 +18,8 @@ exports.buildClients = function(jade, clients) {
         });
     }
 
-    var template = __dirname + '/../../view/clients.jade';
-    var html = jade.renderFile(template, {clients: templateData});
+    let template = __dirname + '/../../view/clients.jade';
+    let html = jade.renderFile(template, {clients: templateData});
 
     return html;
 }

@@ -1,10 +1,10 @@
-/**
+/*
  * GOL server side.
  */
 var GOLSrv = function GOLSrv() {
 
     var _generation = 0;
-    var _intervalSpeed = 200;
+    const _intervalSpeed = 200;
     var _interval;
     var _hashTable;
     var _newBornCellsHashTable;
@@ -27,40 +27,35 @@ var GOLSrv = function GOLSrv() {
     };
 
     /*
-    * Add from lib to hashtable.
-    * Spatial display zone must be calculated with the pattern coordinates,
-    * this way patterns can be added anywhere in "infinite" space. 
-    *
-    * params :
-    * x : client mouse click x
-    * y : client mouse click y
-    * xx : cells absolute X position in a virtual viewport starting at x:0 y:0
-    * yy : cells absolute Y position in a virtual viewport starting at x:0 y:0
-    * cellColor : hex, string or rgb color value for drawing
-    * zX : the zone X coordinate (-infinity too +infinity)
-    * zY : the zone Y coordinate (-infinity too +infinity)
-    * gW : clients grid width size in cell values (viewport width / cell size in px)
-    * gH : clients grid height size
-    * cellSize : cellSize used by client (from >0 to 30 @see client side gol script)
-    * clientNickname for retreiving data from global hash table.
-    */
+     * Add from lib to hashtable.
+     * Spatial display zone must be calculated with the pattern coordinates,
+     * this way patterns can be added anywhere in "infinite" space. 
+     *
+     * params :
+     * x : client mouse click x
+     * y : client mouse click y
+     * xx : cells absolute X position in a virtual viewport starting at x:0 y:0
+     * yy : cells absolute Y position in a virtual viewport starting at x:0 y:0
+     * cellColor : hex, string or rgb color value for drawing
+     * zX : the zone X coordinate (-infinity too +infinity)
+     * zY : the zone Y coordinate (-infinity too +infinity)
+     * gW : clients grid width size in cell values (viewport width / cell size in px)
+     * gH : clients grid height size
+     * cellSize : cellSize used by client (from >0 to 30 @see client side gol script)
+     * clientNickname for retreiving data from global hash table.
+     */
     this.iORunLibInput = function(x, y, xx, yy, cellColor, zX, zY, gW, gH, clientNickname, cellSize) {
 
-        var gridX = parseInt(x / cellSize) + parseInt(xx) + parseInt(gW * zX);
-        var gridY = parseInt(y / cellSize) + parseInt(yy) + parseInt(gH * zY);
-
-        if (checkCoordinates(gridX, gridY) === false) {
-            return;
-        }
-
-        var key = gridX.toString() + '$' + gridY.toString();
-
+        let gridX = parseInt(x / cellSize) + parseInt(xx) + parseInt(gW * zX);
+        let gridY = parseInt(y / cellSize) + parseInt(yy) + parseInt(gH * zY);
+        if (checkCoordinates(gridX, gridY) === false) return;
+        let key = gridX.toString() + '$' + gridY.toString();
         if (_hashTable.hasItem(key) === false) {
             _hashTable.setItem(key, {life:1, nickname:clientNickname, hexc:cellColor});
         }
     };
 
-    /**
+    /*
      * Remove cells by nickname.
      */
     this.removeCellsByNickname = function(nn) {
@@ -72,7 +67,7 @@ var GOLSrv = function GOLSrv() {
         }
     };
 
-    /**
+    /*
      * Remove cells by color.
      */
     this.removeCellsByColor = function(color) {
@@ -88,14 +83,12 @@ var GOLSrv = function GOLSrv() {
     /* private scope *************************************/
 
     /*
-    * Start the process.
-    */
+     * Start the process.
+     */
     function startGol() {
 
         _interval = setInterval(function() {   
-            if (_ready === false) {
-                return;
-            }
+            if (_ready === false) return;
             main();
         }, _intervalSpeed);
     }
@@ -107,7 +100,7 @@ var GOLSrv = function GOLSrv() {
 
         _ready = false;
         iterateGOL();
-        var data = '';
+        let data = '';
         for (var cell in _hashTable.items) {
             data += _hashTable.getItem(cell).nickname + '$';
             data += _hashTable.getItem(cell).hexc + '$';
@@ -120,12 +113,12 @@ var GOLSrv = function GOLSrv() {
     }
 
     /*
-    * main GOL loop.
-    * Decide if Cell lives or dies.
-    */
+     * main GOL loop.
+     * Decide if Cell lives or dies.
+     */
     function iterateGOL() { 
         
-        var totalCells = 0;
+        let totalCells = 0;
 
         // Search for cells around the coordiantes.
         for (var cell in _hashTable.items) { 
@@ -159,19 +152,19 @@ var GOLSrv = function GOLSrv() {
     }
 
     /*
-    * Cell lives or dies : return bool. Calculates for one cell.
-    * Param : deadCell is boolean. If seeking for new born cells this param = true.
-    * This function is used in a recursive way when dealing with dead cells.
-    */
+     * Cell lives or dies : return bool. Calculates for one cell.
+     * Param : deadCell is boolean. If seeking for new born cells this param = true.
+     * This function is used in a recursive way when dealing with dead cells.
+     */
     function cellLife(cell, deadCell) {
         
-        var liveCount = 0;
-        var xy = cell.toString().split('$');
-        var x = parseInt(xy[0]);
-        var y = parseInt(xy[1]);
+        let liveCount = 0;
+        let xy = cell.toString().split('$');
+        let x = parseInt(xy[0]);
+        let y = parseInt(xy[1]);
 
         // Neighbour cells. Based on coordinates of param cell.
-        var neighbourCells = new Array(
+        let neighbourCells = new Array(
                 (x - 1) + '$' +  (y - 1),
                 x + '$' +  (y - 1),
                 (x + 1) + '$' +  (y - 1),
@@ -241,8 +234,8 @@ var GOLSrv = function GOLSrv() {
     }
 
     /*
-    * Check value for NaN or other reasons. 
-    */
+     * Check value for NaN or other reasons. 
+     */
     function checkCoordinates(x, y) {
         return x != NaN && y != NaN;
     }
